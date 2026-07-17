@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WitnessRecord Privacy Policy</title>
+<title>WitnessRecord — Document encounters. Preserve the footage.</title>
+<meta name="description" content="WitnessRecord is an iOS app for civilians to document police encounters. Footage uploads to your own Google Drive while you record, so it survives even if your phone doesn't.">
 <style>
   :root {
     color-scheme: dark;
@@ -18,13 +19,14 @@
     padding: 48px 24px 96px;
   }
   h1 {
-    font-size: 1.8em;
+    font-size: 2.1em;
     margin-bottom: 0;
+    line-height: 1.2;
   }
-  .updated {
+  .tagline {
     color: #9a9a9a;
-    font-size: 0.9em;
-    margin-top: 4px;
+    font-size: 1.1em;
+    margin-top: 8px;
     margin-bottom: 2em;
   }
   h2 {
@@ -34,115 +36,99 @@
     padding-bottom: 0.3em;
   }
   a { color: #ff6b5e; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 0.95em;
+  .rec-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #ff3b30;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: baseline;
   }
-  th, td {
-    text-align: left;
-    padding: 8px 10px;
-    border-bottom: 1px solid #2a2a2e;
-    vertical-align: top;
-  }
-  th { color: #b6b6b6; font-weight: 600; }
-  code {
-    background: #1c1c1f;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  .summary {
+  .card {
     background: #16161a;
     border: 1px solid #2a2a2e;
     border-radius: 10px;
     padding: 18px 20px;
+    margin: 1em 0;
   }
-  .summary ul { margin: 0; padding-left: 1.2em; }
-  .summary li { margin-bottom: 0.5em; }
+  .card h3 {
+    margin: 0 0 0.4em;
+    font-size: 1.05em;
+  }
+  .card p { margin: 0; color: #c2c2c2; font-size: 0.95em; }
+  .privacy-note {
+    background: #101a12;
+    border: 1px solid #1f3a26;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 1.5em 0;
+  }
+  .privacy-note p { margin: 0.3em 0; font-size: 0.95em; }
+  .disclaimer {
+    color: #9a9a9a;
+    font-size: 0.9em;
+  }
   footer {
     margin-top: 3em;
     color: #7a7a7a;
     font-size: 0.85em;
+    border-top: 1px solid #2a2a2e;
+    padding-top: 1.5em;
   }
+  footer a { color: #9a9a9a; }
 </style>
 </head>
 <body>
 
-<h1>WitnessRecord Privacy Policy</h1>
-<p class="updated">Last updated: July 16, 2026</p>
+<h1><span class="rec-dot"></span>WitnessRecord</h1>
+<p class="tagline">Document encounters. Preserve the footage — even if your phone doesn't make it.</p>
 
-<p>WitnessRecord ("the app") is built to help people document encounters with law enforcement and preserve that footage off-device. This policy explains what data the app handles, where it goes, and who can see it.</p>
+<p>WitnessRecord is an iOS app for civilians documenting police encounters. It records video with the screen fully black, and uploads the footage to <strong>your own Google Drive</strong> in small pieces <em>while you're still recording</em> — so what you've captured is already safe off-device if your phone is seized, destroyed, or lost.</p>
 
-<h2>Summary</h2>
-<div class="summary">
-<ul>
-  <li>WitnessRecord does not have a server. There is no backend operated by the developer.</li>
-  <li>Video, audio, location, and event logs the app records go <strong>directly from your device to your own Google Drive account</strong> — nowhere else.</li>
-  <li>The developer of WitnessRecord cannot see, access, or receive your recordings, your location, or your Google account data at any point.</li>
-  <li>The app requests the Google Drive <code>drive.file</code> scope only, which limits it to files the app itself creates. It cannot read, list, or modify any other file in your Drive.</li>
-</ul>
+<h2>How it works</h2>
+
+<div class="card">
+  <h3>Instant start</h3>
+  <p>Bind recording to the iPhone Action Button, a lock screen widget, or "Hey Siri, start recording with WitnessRecord." No unlocking, no menus — the app launches straight into recording.</p>
 </div>
 
-<h2>What the app collects, and why</h2>
-<table>
-<tr><th>Data</th><th>Purpose</th><th>Where it goes</th></tr>
-<tr>
-  <td>Video and audio</td>
-  <td>The core recording feature</td>
-  <td>Written to your device, then uploaded to your Google Drive</td>
-</tr>
-<tr>
-  <td>GPS location</td>
-  <td>Embedded in video metadata and a chain-of-custody sidecar file, so footage can be tied to where it was captured</td>
-  <td>Stored in the video file and sidecar file, uploaded to your Google Drive</td>
-</tr>
-<tr>
-  <td>Timestamps (UTC) and device time zone</td>
-  <td>Chain-of-custody / evidentiary record of when footage was captured</td>
-  <td>Stored locally in an event log and per-clip sidecar files, uploaded to your Google Drive</td>
-</tr>
-<tr>
-  <td>Google account authorization (OAuth token)</td>
-  <td>Lets the app upload to your Drive on your behalf</td>
-  <td>Stored in your device's Keychain; sent only to Google's servers to authenticate upload requests</td>
-</tr>
-<tr>
-  <td>Emergency contact names/numbers (if you add any)</td>
-  <td>Reserved for an upcoming notification feature</td>
-  <td>Stored locally on your device only; not transmitted anywhere by the current version of the app</td>
-</tr>
-</table>
+<div class="card">
+  <h3>Black screen while recording</h3>
+  <p>The display goes dark at minimum brightness for the entire recording. To anyone watching, the phone looks idle. Triple-tap and hold to stop — hard to trigger by accident.</p>
+</div>
 
-<p>The app does not collect analytics, does not use advertising or tracking SDKs, and does not transmit any data to the developer or any third party other than Google (for the sole purpose of uploading files to your own Drive account).</p>
+<div class="card">
+  <h3>Footage leaves the device as it's captured</h3>
+  <p>Video is recorded in ~25-second chunks that upload immediately over cellular or Wi-Fi. Nothing waits for the recording to end. If there's no signal, chunks queue locally and upload the moment connectivity returns — nothing is deleted until your Drive confirms it arrived.</p>
+</div>
 
-<h2>Google Drive access</h2>
-<p>WitnessRecord uses Google Sign-In to request the <code>drive.file</code> OAuth scope. This is Google's most restricted Drive scope: it only grants access to files and folders the app itself creates in your Drive. The app cannot see your existing files, folders, or any other data in your Google account.</p>
-<p>You can revoke this access at any time from your Google Account's <a href="https://myaccount.google.com/permissions">Third-Party Apps &amp; Services</a> settings, or by deleting the WitnessRecord folder from your Drive. Revoking access does not delete footage already uploaded to your Drive — that footage is yours, stored in your own account, and is managed the same as any other file in your Drive.</p>
+<div class="card">
+  <h3>Built for evidence</h3>
+  <p>Every chunk is fingerprinted with a SHA-256 hash and paired with a record of when and where it was captured — a basic chain-of-custody trail, with GPS and UTC timestamps embedded in the video metadata. The frame itself stays clean, with no visible overlay.</p>
+</div>
 
-<h2>Local storage</h2>
-<p>Video is recorded in short chunks on your device and deleted automatically once Google Drive confirms it has received both the video and its accompanying metadata file. If the device has no network connection, chunks remain in local storage until a connection is available, so no footage is deleted before it is safely uploaded.</p>
+<h2>Your data stays yours</h2>
+<div class="privacy-note">
+  <p><strong>WitnessRecord has no server.</strong> Footage goes directly from your device to your own Google Drive account and nowhere else. The developer cannot see or access your recordings, your location, or your Google account.</p>
+  <p>The app requests Google's most restricted Drive permission (<code>drive.file</code>), which only allows access to files the app itself creates.</p>
+  <p>Full details: <a href="privacy.html">Privacy Policy</a></p>
+</div>
 
-<h2>Location data</h2>
-<p>WitnessRecord requests "Always" location access so it can continue logging location while the screen is off (recording runs with the display dimmed) or the app is briefly backgrounded. Location is used exclusively to timestamp and geotag recordings for evidentiary purposes. It is not used for any other purpose, is not shared with any third party, and is not used to track you outside of active recording sessions.</p>
+<h2>Know your rights</h2>
+<p>In most U.S. states, openly recording on-duty police officers in public is constitutionally protected activity, so long as you don't physically interfere. Laws vary by state and change over time — see the <a href="https://www.aclu.org/know-your-rights/protesters-rights">ACLU's know-your-rights guidance</a> for current information.</p>
+<p class="disclaimer">WitnessRecord provides no legal advice. Stay at a safe distance, and announce that you are recording if it is safe to do so.</p>
 
-<h2>Data retention and deletion</h2>
-<p>Because recordings are stored in your own Google Drive, you control retention and deletion directly through Drive — the developer has no copy of your data to retain or delete. Deleting a file from your Drive removes it from Google's storage subject to Google's own retention policies (see Google's Privacy Policy, linked below).</p>
-
-<h2>Children's privacy</h2>
-<p>WitnessRecord is not directed at children and is not intended for use by anyone under 13.</p>
-
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the "Last updated" date above will be revised and the updated policy will be published at this same URL.</p>
+<h2>Availability</h2>
+<p>WitnessRecord is in development for iOS 17+. An App Store link will appear here when the app is available.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy can be directed to: <strong>olmaster13@gmail.com</strong></p>
+<p>Questions or feedback: <strong>olmaster13@gmail.com</strong></p>
 
-<h2>Third-party services</h2>
-<p>This app uses the Google Drive API and Google Sign-In. Your use of those services is also subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
-
-<footer>WitnessRecord — a tool for civilians to document police encounters.</footer>
+<footer>
+  WitnessRecord — a tool for civilians to document police encounters.<br>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
 
 </body>
 </html>
