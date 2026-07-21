@@ -109,6 +109,11 @@
   <td>Stored in your device's Keychain; sent only to Google's servers to authenticate upload requests</td>
 </tr>
 <tr>
+  <td>A copy of each recording, saved to your Photos library</td>
+  <td>On-device backup, independent of Google Drive, so footage survives even if the app is removed</td>
+  <td>Saved to your device's Photos library; if you have iCloud Photos enabled, Apple syncs it to your iCloud account</td>
+</tr>
+<tr>
   <td>Emergency contact names/numbers (if you add any)</td>
   <td>Reserved for an upcoming notification feature</td>
   <td>Stored locally on your device only; not transmitted anywhere by the current version of the app</td>
@@ -123,6 +128,10 @@
 
 <h2>Local storage</h2>
 <p>Video is recorded in short chunks on your device and deleted automatically once Google Drive confirms it has received both the video and its accompanying metadata file. If the device has no network connection, chunks remain in local storage until a connection is available, so no footage is deleted before it is safely uploaded.</p>
+
+<h2>Photos library</h2>
+<p>Unless you turn it off in the app's settings, WitnessRecord also saves a full copy of each recording session to your device's Photos library, as an on-device backup independent of Google Drive. The app requests only "add-only" Photos access: it can add its own recordings to your library, but it cannot see, read, or access any of your existing photos or videos.</p>
+<p>If you have iCloud Photos enabled on your device, Apple will sync these recordings to your iCloud account like any other video in your library, subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. You can turn off the Photos backup in the app's settings while still uploading to Google Drive, and you can delete saved recordings from your Photos library at any time.</p>
 
 <h2>Location data</h2>
 <p>WitnessRecord requests "Always" location access so it can continue logging location while the screen is off (recording runs with the display dimmed) or the app is briefly backgrounded. Location is used exclusively to timestamp and geotag recordings for evidentiary purposes. It is not used for any other purpose, is not shared with any third party, and is not used to track you outside of active recording sessions.</p>
