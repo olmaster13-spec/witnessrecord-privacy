@@ -114,9 +114,9 @@
   <td>Saved to your device's Photos library; if you have iCloud Photos enabled, Apple syncs it to your iCloud account</td>
 </tr>
 <tr>
-  <td>Emergency contact names and email addresses (if you add any)</td>
-  <td>Automatically sharing each recording with people you trust, as it happens</td>
-  <td>Stored on your device; when a recording starts uploading, each contact's email address is sent to Google Drive's sharing API to grant them view access to that recording's folder (Google then emails them a notification)</td>
+  <td>Emergency contact names/emails (if you add any)</td>
+  <td>Automatically sharing each recording with people you trust, as it uploads</td>
+  <td>Stored on your device; when a recording starts uploading, each contact's email is sent to Google Drive's sharing API to grant them view access to that recording's folder</td>
 </tr>
 </table>
 
@@ -130,7 +130,7 @@
 <p>Video is recorded in short chunks on your device and deleted automatically once Google Drive confirms it has received both the video and its accompanying metadata file. If the device has no network connection, chunks remain in local storage until a connection is available, so no footage is deleted before it is safely uploaded.</p>
 
 <h2>Emergency contacts</h2>
-<p>You can optionally add emergency contacts in the app's settings. When a recording starts uploading, WitnessRecord grants each contact's email address view access to that recording's folder in your Google Drive, and Google Drive sends them a notification email. This means people you choose can see your footage as it arrives — and keep access even if your phone is taken.</p>
+<p>You can optionally add emergency contacts in the app's settings. When a recording starts uploading, WitnessRecord grants each contact view access to that recording's folder in your Google Drive via their email address, and Google Drive sends them a notification. This means people you choose can see your footage as it arrives — and keep access even if your phone is taken.</p>
 <p>Contact details are stored on your device and are used only for this purpose: the email address is sent to Google's Drive sharing API and to no one else. Contacts are shared with only when you record. You can remove a contact at any time in the app, and you can revoke access to any already-shared folder from Google Drive's own sharing controls.</p>
 
 <h2>Photos library</h2>
