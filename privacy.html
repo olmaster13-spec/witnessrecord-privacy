@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WitnessRecord Privacy Policy</title>
+<title>Witness Privacy Policy</title>
 <style>
   :root {
     color-scheme: dark;
@@ -70,17 +70,17 @@
 </head>
 <body>
 
-<h1>WitnessRecord Privacy Policy</h1>
-<p class="updated">Last updated: July 16, 2026</p>
+<h1>Witness Privacy Policy</h1>
+<p class="updated">Last updated: August 25, 2026</p>
 
-<p>WitnessRecord ("the app") is built to help people document encounters with law enforcement and preserve that footage off-device. This policy explains what data the app handles, where it goes, and who can see it.</p>
+<p>Witness ("the app") is built to help people document encounters with law enforcement and preserve that footage off-device. This policy explains what data the app handles, where it goes, and who can see it.</p>
 
 <h2>Summary</h2>
 <div class="summary">
 <ul>
-  <li>WitnessRecord does not have a server. There is no backend operated by the developer.</li>
+  <li>Witness does not have a server. There is no backend operated by the developer.</li>
   <li>Video, audio, location, and event logs the app records go <strong>directly from your device to your own Google Drive account</strong> — nowhere else.</li>
-  <li>The developer of WitnessRecord cannot see, access, or receive your recordings, your location, or your Google account data at any point.</li>
+  <li>The developer of Witness cannot see, access, or receive your recordings, your location, or your Google account data at any point.</li>
   <li>The app requests the Google Drive <code>drive.file</code> scope only, which limits it to files the app itself creates. It cannot read, list, or modify any other file in your Drive.</li>
 </ul>
 </div>
@@ -120,31 +120,36 @@
 </tr>
 </table>
 
-<p>The app does not collect analytics, does not use advertising or tracking SDKs, and does not transmit any data to the developer or any third party other than Google (for the sole purpose of uploading files to your own Drive account).</p>
+<p>The app does not collect analytics, does not use advertising or tracking SDKs, and does not transmit any data to the developer. The only third parties contacted are Google, for the sole purpose of uploading files to your own Drive account, and a time-stamp authority, which receives nothing but a cryptographic hash (see below).</p>
 
 <h2>Google Drive access</h2>
-<p>WitnessRecord uses Google Sign-In to request the <code>drive.file</code> OAuth scope. This is Google's most restricted Drive scope: it only grants access to files and folders the app itself creates in your Drive. The app cannot see your existing files, folders, or any other data in your Google account.</p>
-<p>You can revoke this access at any time from your Google Account's <a href="https://myaccount.google.com/permissions">Third-Party Apps &amp; Services</a> settings, or by deleting the WitnessRecord folder from your Drive. Revoking access does not delete footage already uploaded to your Drive — that footage is yours, stored in your own account, and is managed the same as any other file in your Drive.</p>
+<p>Witness uses Google Sign-In to request the <code>drive.file</code> OAuth scope. This is Google's most restricted Drive scope: it only grants access to files and folders the app itself creates in your Drive. The app cannot see your existing files, folders, or any other data in your Google account.</p>
+<p>You can revoke this access at any time from your Google Account's <a href="https://myaccount.google.com/permissions">Third-Party Apps &amp; Services</a> settings, or by deleting the Witness folder from your Drive. Revoking access does not delete footage already uploaded to your Drive — that footage is yours, stored in your own account, and is managed the same as any other file in your Drive.</p>
 
 <h2>Local storage</h2>
 <p>Video is recorded in short chunks on your device and deleted automatically once Google Drive confirms it has received both the video and its accompanying metadata file. If the device has no network connection, chunks remain in local storage until a connection is available, so no footage is deleted before it is safely uploaded.</p>
 
+<h2>Proof of integrity (time-stamping)</h2>
+<p>When a recording finishes, Witness sends a <strong>SHA-256 hash</strong> of that session's manifest file to an independent time-stamping authority (currently <a href="https://freetsa.org">freetsa.org</a>), which returns a signed token certifying that the file existed in exactly that form at that moment. This is what allows footage to be shown later as unaltered, by a party with no connection to you or to this app.</p>
+<p><strong>Only the hash is transmitted.</strong> A hash is a short fingerprint computed from a file; it cannot be reversed. The authority never receives your video, your manifest, your location, your identity, or any information about what was recorded, and cannot reconstruct any of it from what it does receive.</p>
+<p>The signed token is stored alongside your recording in your own Drive, and a copy is kept on your device so a report can be produced later. If the authority cannot be reached, the recording and its hashes are kept exactly as before — only the external certification is missing.</p>
+
 <h2>Emergency contacts</h2>
-<p>You can optionally add emergency contacts in the app's settings. When a recording starts uploading, WitnessRecord grants each contact view access to that recording's folder in your Google Drive via their email address, and Google Drive sends them a notification. This means people you choose can see your footage as it arrives — and keep access even if your phone is taken.</p>
+<p>You can optionally add emergency contacts in the app's settings. When a recording starts uploading, Witness grants each contact view access to that recording's folder in your Google Drive via their email address, and Google Drive sends them a notification. This means people you choose can see your footage as it arrives — and keep access even if your phone is taken.</p>
 <p>Contact details are stored on your device and are used only for this purpose: the email address is sent to Google's Drive sharing API and to no one else. Contacts are shared with only when you record. You can remove a contact at any time in the app, and you can revoke access to any already-shared folder from Google Drive's own sharing controls.</p>
 
 <h2>Photos library</h2>
-<p>Unless you turn it off in the app's settings, WitnessRecord also saves a full copy of each recording session to your device's Photos library, as an on-device backup independent of Google Drive. The app requests only "add-only" Photos access: it can add its own recordings to your library, but it cannot see, read, or access any of your existing photos or videos.</p>
+<p>Unless you turn it off in the app's settings, Witness also saves a full copy of each recording session to your device's Photos library, as an on-device backup independent of Google Drive. The app requests only "add-only" Photos access: it can add its own recordings to your library, but it cannot see, read, or access any of your existing photos or videos.</p>
 <p>If you have iCloud Photos enabled on your device, Apple will sync these recordings to your iCloud account like any other video in your library, subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. You can turn off the Photos backup in the app's settings while still uploading to Google Drive, and you can delete saved recordings from your Photos library at any time.</p>
 
 <h2>Location data</h2>
-<p>WitnessRecord requests "Always" location access so it can continue logging location while the screen is off (recording runs with the display dimmed) or the app is briefly backgrounded. Location is used exclusively to timestamp and geotag recordings for evidentiary purposes. It is not used for any other purpose, is not shared with any third party, and is not used to track you outside of active recording sessions.</p>
+<p>Witness requests "While Using the App" location access. Recording runs with the display dimmed to zero brightness but the app genuinely in the foreground, so this level of access is sufficient and the app does not ask for background location. Location is used exclusively to timestamp and geotag recordings for evidentiary purposes. It is not used for any other purpose, is not shared with any third party, and is not used to track you outside of active recording sessions.</p>
 
 <h2>Data retention and deletion</h2>
 <p>Because recordings are stored in your own Google Drive, you control retention and deletion directly through Drive — the developer has no copy of your data to retain or delete. Deleting a file from your Drive removes it from Google's storage subject to Google's own retention policies (see Google's Privacy Policy, linked below).</p>
 
 <h2>Children's privacy</h2>
-<p>WitnessRecord is not directed at children and is not intended for use by anyone under 13.</p>
+<p>Witness is not directed at children and is not intended for use by anyone under 13.</p>
 
 <h2>Changes to this policy</h2>
 <p>If this policy changes, the "Last updated" date above will be revised and the updated policy will be published at this same URL.</p>
@@ -155,7 +160,7 @@
 <h2>Third-party services</h2>
 <p>This app uses the Google Drive API and Google Sign-In. Your use of those services is also subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
-<footer>WitnessRecord — a tool for civilians to document police encounters.<br>
+<footer>Witness — a tool for civilians to document police encounters.<br>
 <a href="./">Home</a></footer>
 
 </body>
