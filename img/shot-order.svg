@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 268" role="img"
+     aria-labelledby="t4 d4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="t4">Film wide first, then medium, then the identifying detail</title>
+  <desc id="d4">Three framings in order. First a wide shot establishing how many people are present, where they are standing and what street it is. Then a medium shot showing who is doing what to whom. Then close detail: badge and helmet numbers, name tags, vehicle plates and unit numbers, and any weapon in use. Without the wide shot first, a close-up can be made to mean almost anything.</desc>
+
+  <text x="0" y="16" fill="#f2f2f3" font-size="14" font-weight="640">Film in this order</text>
+  <text x="0" y="36" fill="#85858f" font-size="12.5">Context first. A close-up with nothing establishing it can be made to mean almost anything.</text>
+
+  <g stroke="#34343c" stroke-width="1.5" fill="none">
+    <rect x="0" y="54" width="240" height="120" rx="8"/>
+    <rect x="260" y="54" width="240" height="120" rx="8"/>
+    <rect x="520" y="54" width="240" height="120" rx="8"/>
+  </g>
+
+  <!-- 1. Wide: several small figures, a vehicle, a street line -->
+  <g>
+    <line x1="16" y1="150" x2="224" y2="150" stroke="#26262c" stroke-width="2"/>
+    <rect x="26" y="128" width="42" height="20" rx="4" fill="#34343c"/>
+    <g fill="#85858f">
+      <circle cx="96" cy="132" r="5"/><circle cx="112" cy="136" r="5"/>
+      <circle cx="132" cy="130" r="5"/><circle cx="150" cy="137" r="5"/>
+      <circle cx="172" cy="133" r="5"/><circle cx="190" cy="138" r="5"/>
+    </g>
+    <text x="120" y="98" fill="#b9b9c0" font-size="12" text-anchor="middle">whole scene</text>
+  </g>
+  <text x="0" y="200" fill="#f2f2f3" font-size="13" font-weight="640">1. Wide</text>
+  <text x="0" y="222" fill="#85858f" font-size="12">How many people, where</text>
+  <text x="0" y="240" fill="#85858f" font-size="12">they stand, what street.</text>
+
+  <!-- 2. Medium: fewer, larger figures -->
+  <g>
+    <line x1="276" y1="152" x2="484" y2="152" stroke="#26262c" stroke-width="2"/>
+    <g fill="#85858f">
+      <circle cx="342" cy="122" r="13"/><rect x="331" y="136" width="22" height="16" rx="4"/>
+      <circle cx="392" cy="124" r="13"/><rect x="381" y="138" width="22" height="14" rx="4"/>
+      <circle cx="438" cy="126" r="12"/><rect x="428" y="139" width="21" height="13" rx="4"/>
+    </g>
+    <text x="380" y="94" fill="#b9b9c0" font-size="12" text-anchor="middle">who, and to whom</text>
+  </g>
+  <text x="260" y="200" fill="#f2f2f3" font-size="13" font-weight="640">2. Medium</text>
+  <text x="260" y="222" fill="#85858f" font-size="12">Who is doing what to</text>
+  <text x="260" y="240" fill="#85858f" font-size="12">whom, and in what order.</text>
+
+  <!-- 3. Detail: a badge, filling the frame -->
+  <g>
+    <rect x="596" y="80" width="88" height="66" rx="10" fill="#1c1c21" stroke="#e82e3b" stroke-width="1.5"/>
+    <circle cx="640" cy="102" r="9" fill="none" stroke="#85858f" stroke-width="1.5"/>
+    <text x="640" y="134" fill="#f2f2f3" font-size="17" font-weight="700" text-anchor="middle" font-family="ui-monospace, Menlo, monospace">4172</text>
+  </g>
+  <text x="520" y="200" fill="#f2f2f3" font-size="13" font-weight="640">3. Detail</text>
+  <text x="520" y="222" fill="#85858f" font-size="12">Badge and helmet numbers,</text>
+  <text x="520" y="240" fill="#85858f" font-size="12">plates, unit numbers, weapons.</text>
+
+  <text x="520" y="262" fill="#e82e3b" font-size="11.5">Cannot read it? Say it out loud.</text>
+</svg>
