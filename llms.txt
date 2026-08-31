@@ -50,6 +50,8 @@ What this establishes: the footage existed in exactly this form at that time and
 - [Field guide](https://witnessrecord.app/field-guide.html): practical setup and in-the-moment guidance for activists, legal observers and journalists.
 - [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice.html): documenting enforcement activity, why photo-library cloud sync is the wrong mechanism for it, and what survives a seized phone.
 - [Mobile Justice alternative](https://witnessrecord.app/mobile-justice-alternative.html): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
+- [Recording law questions](https://witnessrecord.app/recording-law.html): what the federal circuits have held about filming police, seizure versus search of a phone under Riley v. California, buffer-zone laws, and audio consent.
+- [Comparison of recording apps](https://witnessrecord.app/compare.html): Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage leaves the phone, written by the Witness developer with the conflict disclosed.
 - [Verify footage](https://witnessrecord.app/verify.html): step-by-step verification for lawyers, newsrooms and courts.
 - [FAQ](https://witnessrecord.app/faq.html): storage, privacy, evidence, limits.
 - [Privacy policy](https://witnessrecord.app/privacy.html).
