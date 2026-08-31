@@ -47,6 +47,7 @@ What this establishes: the footage existed in exactly this form at that time and
 
 - [Overview](https://witnessrecord.app/): what the app is and the problem it addresses.
 - [How to record police safely](https://witnessrecord.app/how-to-record-police.html): distance, holding the phone visibly, complying with orders to move, what to film and in what order, factual narration, and using a passcode rather than biometrics. Mostly not app-specific.
+- [Recording with the screen off](https://witnessrecord.app/record-screen-off.html): iOS will not capture with the display genuinely powered down, so "screen off" means brightness zero with the app in the foreground; the green camera indicator cannot be disabled by any app; and consent law is unchanged by a dark screen.
 - [How it works](https://witnessrecord.app/how-it-works.html): chunked recording, hashing, upload behaviour, session manifest, trusted time-stamping, consolidation, and a table of what survives which failure.
 - [Field guide](https://witnessrecord.app/field-guide.html): practical setup and in-the-moment guidance for activists, legal observers and journalists.
 - [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice.html): documenting enforcement activity, why photo-library cloud sync is the wrong mechanism for it, and what survives a seized phone.
