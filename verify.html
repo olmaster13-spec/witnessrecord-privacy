@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to verify Witness footage, for lawyers, newsrooms and courts</title>
-<meta name="description" content="Step-by-step instructions for independently verifying video recorded with Witness: checking SHA-256 hashes against the session manifest and validating the RFC 3161 time-stamp token with OpenSSL.">
+<title>How to verify video evidence has not been altered | Witness</title>
+<meta name="description" content="Confirm a recording is unedited and predates a given moment, using OpenSSL on your own machine. Written for lawyers, newsrooms and courts.">
 <link rel="canonical" href="https://witnessrecord.app/verify.html">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#08080a">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to verify Witness footage">
+<meta property="og:title" content="How to verify video evidence has not been altered">
 <meta property="og:description" content="Check the hashes, check the time-stamp. Instructions for anyone who receives Witness footage and needs to confirm it is unaltered.">
 <meta property="og:url" content="https://witnessrecord.app/verify.html">
 
@@ -146,7 +146,9 @@ certutil -hashfile recording_rear.mp4 SHA256   # Windows</code></pre>
       <nav class="foot-links" aria-label="Footer">
         <a href="how-it-works.html">How it works</a>
         <a href="field-guide.html">Field guide</a>
+        <a href="recording-ice.html">Recording ICE</a>
         <a href="verify.html">Verify footage</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
         <a href="faq.html">FAQ</a>
         <a href="privacy.html">Privacy</a>
       </nav>

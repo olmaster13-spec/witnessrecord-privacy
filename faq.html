@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Witness FAQ: questions about recording police, storage and evidence</title>
-<meta name="description" content="Answers about the Witness iOS app: whether the developer can see your footage, what happens if your phone is seized, which cloud services are supported, whether footage holds up as evidence, and what the app cannot do.">
+<title>Recording police: storage, privacy and evidence questions | Witness</title>
+<meta name="description" content="Can the developer see your footage, what happens if your phone is seized, which cloud services work, and whether the recording holds up as evidence.">
 <link rel="canonical" href="https://witnessrecord.app/faq.html">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#08080a">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Witness FAQ">
+<meta property="og:title" content="Recording police: storage, privacy and evidence questions">
 <meta property="og:description" content="Straight answers about storage, privacy, evidence, and the app's limits.">
 <meta property="og:url" content="https://witnessrecord.app/faq.html">
 
@@ -55,6 +55,16 @@
       "@type": "Question",
       "name": "Is Witness free?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Black-screen recording, continuous chunked upload, hashing, time-stamping and emergency contacts are all free. Witness Pro is an optional purchase adding capture quality only: 4K, 24/25/60 fps, Apple Log and ProRes, for $1.99 per month or $24.99 once. Nothing that protects footage is behind the paywall." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happened to the ACLU Mobile Justice app?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ACLU Mobile Justice was discontinued in February 2025, after running in seventeen states and the District of Columbia. Two separate capabilities were lost with it: footage leaving the phone so it survives seizure, which other apps still provide, and an ACLU affiliate receiving and reviewing that footage, which no consumer app replaces." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Witness to record ICE or immigration enforcement?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The relevant properties are the same as for a police encounter: footage leaves the device continuously during the encounter rather than after it, and recording starts without unlocking the phone via the Action Button, a Lock Screen widget or Siri. Photo-library cloud sync is a weaker safeguard because it typically defers uploads and waits for a recording to finish. Witness provides no legal advice." }
     },
     {
       "@type": "Question",
@@ -186,6 +196,16 @@
   <p>Send the whole session folder (video, manifest and time-stamp token) and point them at <a href="verify.html">the verification instructions</a>. Send originals: messaging apps and social platforms re-encode video, which changes the file and breaks hash matching.</p>
 </div>
 
+<div class="qa">
+  <h3>What happened to the ACLU Mobile Justice app?</h3>
+  <p>It was discontinued in February 2025, after running in seventeen states and the District of Columbia. Two separate things went away with it: footage leaving the phone, which other apps still do, and an ACLU affiliate receiving and reviewing that footage, which no consumer app replaces. <a href="mobile-justice-alternative.html">What it did and how to choose a replacement</a> covers the difference.</p>
+</div>
+
+<div class="qa">
+  <h3>Can I use this to record ICE or immigration enforcement?</h3>
+  <p>Yes, and the same properties matter there: footage leaving the device during the encounter rather than after it, and starting without unlocking. <a href="recording-ice.html">Recording immigration enforcement</a> goes into the specifics, including why photo-library cloud sync is a weaker safeguard than it appears. It is not legal advice, and the know-your-rights organisations linked there are the authority on the rest.</p>
+</div>
+
 <h2>Using it</h2>
 
 <div class="qa">
@@ -240,7 +260,9 @@
       <nav class="foot-links" aria-label="Footer">
         <a href="how-it-works.html">How it works</a>
         <a href="field-guide.html">Field guide</a>
+        <a href="recording-ice.html">Recording ICE</a>
         <a href="verify.html">Verify footage</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
         <a href="faq.html">FAQ</a>
         <a href="privacy.html">Privacy</a>
       </nav>

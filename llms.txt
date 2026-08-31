@@ -48,6 +48,8 @@ What this establishes: the footage existed in exactly this form at that time and
 - [Overview](https://witnessrecord.app/): what the app is and the problem it addresses.
 - [How it works](https://witnessrecord.app/how-it-works.html): chunked recording, hashing, upload behaviour, session manifest, trusted time-stamping, consolidation, and a table of what survives which failure.
 - [Field guide](https://witnessrecord.app/field-guide.html): practical setup and in-the-moment guidance for activists, legal observers and journalists.
+- [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice.html): documenting enforcement activity, why photo-library cloud sync is the wrong mechanism for it, and what survives a seized phone.
+- [Mobile Justice alternative](https://witnessrecord.app/mobile-justice-alternative.html): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
 - [Verify footage](https://witnessrecord.app/verify.html): step-by-step verification for lawyers, newsrooms and courts.
 - [FAQ](https://witnessrecord.app/faq.html): storage, privacy, evidence, limits.
 - [Privacy policy](https://witnessrecord.app/privacy.html).
