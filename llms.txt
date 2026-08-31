@@ -18,7 +18,7 @@ Developer: an independent solo developer. Contact: olmaster13@gmail.com
 - **Emergency contacts** nominated by the user are granted access to each recording's folder automatically as footage arrives. This works on Google Drive and Dropbox; WebDAV has no sharing API, so it does not, and the app says so.
 - **Instant start** via the iPhone Action Button, a Lock Screen widget, or a Siri phrase, with no unlocking required.
 - **Stopping** requires a triple-tap followed by a press-and-hold, deliberately hard to trigger accidentally.
-- **Witness Pro** ($1.99/month or $24.99 one-time) adds 4K, 24/25/60 fps, Apple Log and ProRes 422 LT/HQ, plus exportable PDF evidence packages. It gates nothing that protects footage.
+- **Witness Pro** ($1.99/month or $9.99 one-time) adds 4K, 24/25/60 fps, Apple Log and ProRes 422 LT/HQ, plus exportable PDF evidence packages. It gates nothing that protects footage.
 
 ## Stated limitations
 
