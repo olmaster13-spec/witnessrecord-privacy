@@ -3,131 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WitnessRecord — Document encounters. Preserve the footage.</title>
-<meta name="description" content="WitnessRecord is an iOS app for civilians to document police encounters. Footage uploads to your own Google Drive while you record, so it survives even if your phone doesn't.">
-<style>
-  :root {
-    color-scheme: dark;
-  }
-  body {
-    background: #0b0b0d;
-    color: #e6e6e6;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  h1 {
-    font-size: 2.1em;
-    margin-bottom: 0;
-    line-height: 1.2;
-  }
-  .tagline {
-    color: #9a9a9a;
-    font-size: 1.1em;
-    margin-top: 8px;
-    margin-bottom: 2em;
-  }
-  h2 {
-    margin-top: 2.2em;
-    font-size: 1.25em;
-    border-bottom: 1px solid #2a2a2e;
-    padding-bottom: 0.3em;
-  }
-  a { color: #ff6b5e; }
-  .rec-dot {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: #ff3b30;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: baseline;
-  }
-  .card {
-    background: #16161a;
-    border: 1px solid #2a2a2e;
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin: 1em 0;
-  }
-  .card h3 {
-    margin: 0 0 0.4em;
-    font-size: 1.05em;
-  }
-  .card p { margin: 0; color: #c2c2c2; font-size: 0.95em; }
-  .privacy-note {
-    background: #101a12;
-    border: 1px solid #1f3a26;
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin: 1.5em 0;
-  }
-  .privacy-note p { margin: 0.3em 0; font-size: 0.95em; }
-  .disclaimer {
-    color: #9a9a9a;
-    font-size: 0.9em;
-  }
-  footer {
-    margin-top: 3em;
-    color: #7a7a7a;
-    font-size: 0.85em;
-    border-top: 1px solid #2a2a2e;
-    padding-top: 1.5em;
-  }
-  footer a { color: #9a9a9a; }
-</style>
+<title>Witness: record police encounters, keep the footage</title>
+<meta name="description" content="Witness is an iOS app for documenting police encounters. It records with the screen black and uploads footage every 15 seconds to a cloud account you own, so evidence survives even if the phone is seized or destroyed.">
+<link rel="canonical" href="https://witnessrecord.app/">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Witness">
+<meta property="og:title" content="Witness: record police encounters, keep the footage">
+<meta property="og:description" content="Records with the screen black and uploads every 15 seconds to a cloud account you own. Hashed and time-stamped for a verifiable chain of custody.">
+<meta property="og:url" content="https://witnessrecord.app/">
+<meta property="og:image" content="https://witnessrecord.app/img/app-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Witness: record police encounters, keep the footage">
+<meta name="twitter:description" content="Footage leaves the phone while you are still filming, to storage you control.">
+<meta name="twitter:image" content="https://witnessrecord.app/img/app-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://witnessrecord.app/#app",
+      "name": "Witness: Record Beyond Reach",
+      "alternateName": "Witness",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS 17.0 or later",
+      "description": "An iOS app for documenting police encounters. It records video with the screen fully black and uploads footage in roughly 15-second pieces while recording is still in progress, to a cloud storage account the user owns. Each piece is fingerprinted with a SHA-256 hash and each session manifest is counter-signed by an RFC 3161 time-stamp authority, producing a verifiable chain of custody.",
+      "featureList": [
+        "Black-screen recording so the phone appears idle",
+        "Continuous upload in roughly 15-second chunks during recording",
+        "Google Drive, Dropbox, Nextcloud and WebDAV as storage destinations",
+        "SHA-256 hash per chunk and a per-session chain-of-custody manifest",
+        "RFC 3161 trusted time-stamping of each session manifest",
+        "Emergency contacts granted access to footage automatically",
+        "Instant start via Action Button, Siri or Lock Screen widget",
+        "Low-resolution stand-in uploads when the network is failing"
+      ],
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Witness" },
+        { "@type": "Offer", "price": "1.99", "priceCurrency": "USD", "name": "Witness Pro Monthly" },
+        { "@type": "Offer", "price": "24.99", "priceCurrency": "USD", "name": "Witness Pro Lifetime" }
+      ],
+      "isAccessibleForFree": true,
+      "privacyPolicy": "https://witnessrecord.app/privacy.html"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://witnessrecord.app/#website",
+      "url": "https://witnessrecord.app/",
+      "name": "Witness",
+      "about": { "@id": "https://witnessrecord.app/#app" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<h1><span class="rec-dot"></span>WitnessRecord</h1>
-<p class="tagline">Document encounters. Preserve the footage — even if your phone doesn't make it.</p>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./" aria-current="page">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
 
-<p>WitnessRecord is an iOS app for civilians documenting police encounters. It records video with the screen fully black, and uploads the footage to <strong>your own Google Drive</strong> in small pieces <em>while you're still recording</em> — so what you've captured is already safe off-device if your phone is seized, destroyed, or lost.</p>
+<main id="main">
 
-<h2>How it works</h2>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>They can take the phone.<br><span class="hero-accent">Not the footage.</span></h1>
+      <p class="lede">Witness records with the screen black and uploads to a cloud account you own every 15 seconds, while you are still filming.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
+        <a class="btn btn-ghost" href="how-it-works.html">How it works</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <div class="device">
+        <div class="phone-screen">
+          <img src="img/tut-1.webp" width="560" height="1217" fetchpriority="high"
+               alt="Witness intro screen: preserve footage automatically, even if your phone is taken.">
+          <img src="img/tut-2.webp" width="560" height="1217" loading="lazy"
+               alt="How it works: the screen goes black, footage uploads live every 15 seconds, each piece is hashed and time-stamped.">
+          <img src="img/tut-3.webp" width="560" height="1217" loading="lazy"
+               alt="Start in one press: assigning recording to the iPhone Action Button.">
+          <img src="img/tut-4.webp" width="560" height="1217" loading="lazy"
+               alt="Connect your storage: Google Drive marked recommended, Dropbox, Nextcloud and WebDAV.">
+          <img src="img/tut-5.webp" width="560" height="1217" loading="lazy"
+               alt="Add someone who will know: nominating an emergency contact who receives footage automatically.">
+        </div>
+      </div>
+      <figcaption class="phone-caption" aria-hidden="true">
+        <span>Set it up once, before you need it.</span>
+        <span>Records black. Uploads every 15 seconds.</span>
+        <span>One press of the Action Button starts it.</span>
+        <span>Straight to storage you already own.</span>
+        <span>Someone else gets it, automatically.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
-<div class="card">
-  <h3>Instant start</h3>
-  <p>Bind recording to the iPhone Action Button, a lock screen widget, or "Hey Siri, start recording with WitnessRecord." No unlocking, no menus — the app launches straight into recording.</p>
-</div>
+<section id="problem">
+  <div class="wrap split">
+    <figure class="figure-diagram" aria-hidden="true">
+      <svg viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg">
+        <rect class="d-body" x="76" y="14" width="148" height="302" rx="26"/>
+        <rect class="d-screen" x="86" y="26" width="128" height="278" rx="18"/>
+        <!-- Footage, stacked as the pieces a recording is actually made of. -->
+        <rect class="d-chunk" x="100" y="46" width="100" height="13" rx="3"/>
+        <rect class="d-chunk" x="100" y="66" width="100" height="13" rx="3"/>
+        <rect class="d-chunk" x="100" y="86" width="100" height="13" rx="3"/>
+        <rect class="d-chunk" x="100" y="106" width="100" height="13" rx="3"/>
+        <!-- Below the break nothing survives, so the same rows go to ruin. -->
+        <rect class="d-lost" x="100" y="176" width="62" height="13" rx="3"/>
+        <rect class="d-lost" x="171" y="176" width="29" height="13" rx="3"/>
+        <rect class="d-lost" x="100" y="196" width="38" height="13" rx="3"/>
+        <rect class="d-lost" x="147" y="196" width="20" height="13" rx="3"/>
+        <rect class="d-lost" x="100" y="216" width="74" height="13" rx="3"/>
+        <rect class="d-lost" x="100" y="236" width="26" height="13" rx="3"/>
+        <rect class="d-lost" x="135" y="236" width="47" height="13" rx="3"/>
+        <rect class="d-lost" x="100" y="256" width="55" height="13" rx="3"/>
+        <path class="d-crack" d="M62 128 L104 146 L124 132 L158 158 L186 140 L214 156 L238 144"/>
+      </svg>
+    </figure>
+    <div>
+      <h2 class="section-title">A phone is a single point of failure</h2>
+      <p class="lede">It can be grabbed, smashed, ordered unlocked and wiped, or simply run out of battery. Video that exists only on the device is evidence for exactly as long as the device survives, and the moments most worth recording are the moments it is least likely to.</p>
+      <p>Witness treats a recording as something to get <em>off</em> the phone immediately, rather than something to save when you press stop.</p>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-  <h3>Black screen while recording</h3>
-  <p>The display goes dark at minimum brightness for the entire recording. To anyone watching, the phone looks idle. Triple-tap and hold to stop — hard to trigger by accident.</p>
-</div>
+<section id="how">
+  <div class="wrap">
+    <h2 class="section-title">What happens when you hit record</h2>
+    <p class="section-intro">Four things, continuously, for as long as you are filming.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n" aria-hidden="true">01</div>
+        <div>
+          <h3>The screen goes black</h3>
+          <p>The display is fully dark for the whole recording, so the phone reads as idle. Stopping takes a triple-tap and then a press-and-hold, which is hard to trigger by accident or by someone grabbing it.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n" aria-hidden="true">02</div>
+        <div>
+          <h3>Footage is cut into 15-second pieces</h3>
+          <p>Each piece is finalised as a complete, playable file the moment it ends. Nothing waits for you to press stop, so there is no half-written file to lose.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n" aria-hidden="true">03</div>
+        <div>
+          <h3>Each piece is fingerprinted, then uploaded</h3>
+          <p>A SHA-256 hash is computed on the device before anything moves, then the piece uploads over cellular or Wi-Fi. Nothing is deleted locally until your storage provider confirms it arrived.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n" aria-hidden="true">04</div>
+        <div>
+          <h3>A custody record is written alongside it</h3>
+          <p>Every hash, capture time and GPS reading goes into a session manifest that is re-uploaded as you record. If the phone is seized mid-encounter, the record of what was captured is already safe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-  <h3>Footage leaves the device as it's captured</h3>
-  <p>Video is recorded in ~15-second chunks that upload immediately over cellular or Wi-Fi. Nothing waits for the recording to end. If there's no signal, chunks queue locally and upload the moment connectivity returns — nothing is deleted until your Drive confirms it arrived.</p>
-</div>
+<section id="storage">
+  <div class="wrap">
+    <h2 class="section-title">Your footage, your account</h2>
+    <p class="section-intro">Witness has no server. Recordings go from the phone to storage you already control, and nowhere else.</p>
+    <dl class="stores">
+      <div class="store">
+        <dt><img src="img/google-drive.webp" alt="" width="26" height="26">Google Drive</dt>
+        <dd>Requested with the restricted <code>drive.file</code> scope, which reaches only the files the app itself creates. The rest of your Drive stays invisible to it.</dd>
+      </div>
+      <div class="store">
+        <dt><img src="img/dropbox.webp" alt="" width="26" height="26">Dropbox</dt>
+        <dd>App-folder access, confined to its own directory. Emergency contacts can be granted access automatically here too.</dd>
+      </div>
+      <div class="store">
+        <dt><span class="glyph" aria-hidden="true">DAV</span>Nextcloud or WebDAV</dt>
+        <dd>Your own server, including one you host yourself, with no third-party company holding the footage. The protocol has no sharing API, so emergency contacts are not automatic on this one.</dd>
+      </div>
+    </dl>
+    <div class="note" style="margin-top:24px">
+      <p><strong>The developer cannot see any of it.</strong> There is no backend, so there is no copy to hand over, subpoena or lose. The only thing sent to a third party is an irreversible hash of the session manifest, submitted to a time-stamp authority, which carries no footage, location or identity.</p>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-  <h3>Built for evidence</h3>
-  <p>Every chunk is fingerprinted with a SHA-256 hash and paired with a record of when and where it was captured — a basic chain-of-custody trail, with GPS and UTC timestamps embedded in the video metadata. The frame itself stays clean, with no visible overlay.</p>
-</div>
+<section id="contact">
+  <div class="wrap split split-lead">
+    <div>
+      <h2 class="section-title">Someone else has it before you can ask</h2>
+      <p class="lede">Name a colleague, an editor or a legal support number once. From then on, every recording's folder is shared with them automatically as the footage arrives.</p>
+      <p>You do not send anything. You do not unlock anything. If you are detained, arrested or simply out of contact, the person you nominated already has the material and can act on it while you cannot.</p>
+      <p class="muted">Automatic sharing works on Google Drive and Dropbox. WebDAV has no sharing interface, so on that destination you share the folder yourself, and the app says so rather than letting you assume otherwise.</p>
+    </div>
+    <figure class="shot">
+      <img src="img/app-contact.webp" width="620" height="873" loading="lazy"
+           alt="The Witness emergency contact screen, showing a nominated contact who is granted access to each recording automatically.">
+    </figure>
+  </div>
+</section>
 
-<h2>Your data stays yours</h2>
-<div class="privacy-note">
-  <p><strong>WitnessRecord has no server.</strong> Footage goes directly from your device to your own Google Drive account and nowhere else. The developer cannot see or access your recordings, your location, or your Google account.</p>
-  <p>The app requests Google's most restricted Drive permission (<code>drive.file</code>), which only allows access to files the app itself creates.</p>
-  <p>Full details: <a href="privacy.html">Privacy Policy</a></p>
-</div>
+<section id="evidence">
+  <div class="wrap split split-lead">
+    <div>
+      <h2 class="section-title">Proof that does not depend on trusting you</h2>
+      <p>Every 15-second piece is hashed with SHA-256 on the device before it moves. Those hashes are listed in a session manifest alongside UTC capture times and GPS coordinates, and the manifest is counter-signed by an independent RFC 3161 time-stamp authority.</p>
+      <p>A newsroom or a court can check all of it with OpenSSL on their own machine: the footage hashes to the manifest, the manifest hashes to the signed token, and the token comes from a third party with no stake in the outcome. Neither the app nor its developer is anywhere in that chain.</p>
+      <p><a href="verify.html">Read the verification steps</a></p>
+    </div>
+    <figure class="terminal">
+      <div class="terminal-bar" aria-hidden="true">Verified on any machine, without the app</div>
+      <div class="terminal-body">
+<div><span class="t-prompt">$</span> <span class="t-cmd">shasum -a 256 chunk_0007.mov</span></div>
+<div>a3f1c9e4b2718d0a... chunk_0007.mov</div>
+<div class="t-note">matches chunks[7] in the manifest</div>
+<div>&nbsp;</div>
+<div><span class="t-prompt">$</span> <span class="t-cmd">openssl ts -verify \</span></div>
+<div><span class="t-cmd">    -data manifest_9F2C.json \</span></div>
+<div><span class="t-cmd">    -in timestamp_9F2C.tsr \</span></div>
+<div><span class="t-cmd">    -CAfile tsa-ca.pem</span></div>
+<div class="t-ok">Verification: OK</div>
+      </div>
+    </figure>
+  </div>
+</section>
 
-<h2>Know your rights</h2>
-<p>In most U.S. states, openly recording on-duty police officers in public is constitutionally protected activity, so long as you don't physically interfere. Laws vary by state and change over time — see the <a href="https://www.aclu.org/know-your-rights/protesters-rights">ACLU's know-your-rights guidance</a> for current information.</p>
-<p class="disclaimer">WitnessRecord provides no legal advice. Stay at a safe distance, and announce that you are recording if it is safe to do so.</p>
+<section id="who">
+  <div class="wrap">
+    <h2 class="section-title">Built for people who cannot afford to lose the recording</h2>
+    <p class="section-intro">Witness was made for civilians documenting police conduct. The same properties matter to anyone filming where equipment gets taken.</p>
+    <div class="audience">
+      <div class="panel panel-tint">
+        <h3>Legal observers</h3>
+        <p>A record that survives arrest, with times and locations already attached to every piece of it.</p>
+        <p>Recording continues while the phone is in someone else's hands, and the custody manifest is written to your storage as the encounter happens rather than after it. Whatever reached the account before the phone was taken is complete and checkable.</p>
+      </div>
+      <div class="panel">
+        <h3>Journalists</h3>
+        <p>Provenance that stands up when footage is challenged, and survives confiscation in the field.</p>
+      </div>
+      <div class="panel">
+        <h3>Community organisers</h3>
+        <p>Documentation of conduct over time, held in an account your group controls.</p>
+      </div>
+    </div>
+    <p style="margin-top:26px"><a href="field-guide.html">Practical field guide for activists and journalists</a></p>
+  </div>
+</section>
 
-<h2>Availability</h2>
-<p>WitnessRecord is in development for iOS 17+. An App Store link will appear here when the app is available.</p>
+<section id="limits">
+  <div class="wrap">
+    <h2 class="section-title">What it will not do</h2>
+    <p class="section-intro">Being straight about the limits is part of being usable under pressure.</p>
+    <ul class="limits">
+      <li><strong>It cannot upload without a network.</strong> With no signal, chunks queue on the device until there is one.</li>
+      <li><strong>It cannot help if you are compelled to unlock the phone.</strong> Uploaded footage is beyond the reach of the device, but not of the cloud account the phone is signed into.</li>
+      <li><strong>ProRes recordings stay on the device.</strong> They are far too large to send live, and the app says so before you switch to that mode.</li>
+      <li><strong>It is not legal advice</strong> and does not make recording lawful where it is not.</li>
+    </ul>
+  </div>
+</section>
 
-<h2>Contact</h2>
-<p>Questions or feedback: <strong>olmaster13@gmail.com</strong></p>
+<section id="pro">
+  <div class="wrap split">
+    <figure class="device" style="max-width:270px;justify-self:center">
+      <img src="img/app-pro.webp" width="660" height="1149" loading="lazy"
+           alt="Witness Pro settings showing resolution, frame rate, codec and Apple Log options.">
+    </figure>
+    <div>
+    <h2 class="section-title">Witness Pro</h2>
+    <p class="section-intro">Everything that protects footage is free and stays free. Pro adds capture quality for professional work: 4K, 24/25/60&nbsp;fps, Apple Log, ProRes 422, and exportable evidence packages.</p>
+    <div class="price-row">
+      <div class="price">
+        <span class="amount">$1.99 <span class="per">/ month</span></span>
+        <p class="muted" style="margin:0">Cancel any time in your App Store settings.</p>
+      </div>
+      <div class="price">
+        <span class="amount">$24.99 <span class="per">once</span></span>
+        <p class="muted" style="margin:0">A one-time purchase. Nothing renews.</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:20px">Pro exists mainly so a one-person project can keep an App Store listing active. It gates nothing that keeps footage safe.</p>
+    </div>
+  </div>
+</section>
 
-<footer>
-  WitnessRecord — a tool for civilians to document police encounters.<br>
-  <a href="privacy.html">Privacy Policy</a>
+<section id="rights">
+  <div class="wrap narrow">
+    <h2 class="section-title">Know your rights</h2>
+    <p>In most US states, openly recording on-duty police in public is constitutionally protected, provided you do not physically interfere. Rules on distance, audio consent and interference vary by jurisdiction and change over time. The <a href="https://www.aclu.org/know-your-rights/protesters-rights">ACLU's know-your-rights guidance</a> is a starting point in the United States.</p>
+    <p class="muted">Witness provides no legal advice. Check your local laws, keep a safe distance, and say that you are recording if it is safe to do so.</p>
+    <div class="actions" style="margin-top:30px">
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
+      <a class="btn btn-ghost" href="faq.html">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
 </footer>
 
 </body>

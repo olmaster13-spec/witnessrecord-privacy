@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field guide: using Witness at protests, stops and immigration raids</title>
+<meta name="description" content="Practical guidance for activists, legal observers and journalists using Witness: setting it up before you need it, starting without unlocking, what happens if the phone is taken, and the limits worth knowing in advance.">
+<link rel="canonical" href="https://witnessrecord.app/field-guide.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Field guide: using Witness at protests, stops and raids">
+<meta property="og:description" content="Set it up before you need it. What to do in the moment, what happens if the phone is taken, and where the limits actually are.">
+<meta property="og:url" content="https://witnessrecord.app/field-guide.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Field guide: using Witness at protests, traffic stops and immigration enforcement",
+  "description": "Practical setup and in-the-moment guidance for activists, legal observers and journalists documenting police conduct with the Witness iOS app.",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Activists, legal observers, journalists and documentary filmmakers"
+  },
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html" aria-current="page">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Field guide</h1>
+<p class="tagline">For activists, legal observers and journalists.</p>
+
+<p class="lede">The single most important thing about Witness is that it has to be set up <strong>before</strong> you need it. In the moment you will not have time to connect a cloud account or grant permissions, and an app that has not been configured will not save anything.</p>
+
+<h2>Before the day</h2>
+<ol>
+  <li><strong>Connect your storage.</strong> Google Drive, Dropbox, or your own Nextcloud/WebDAV server. Nothing uploads until this is done. Footage stays on the device, which is the situation the app exists to avoid.</li>
+  <li><strong>Grant camera, microphone and location.</strong> Location is what ties footage to a place in the chain-of-custody record. If you would rather not record location, you can decline it and everything else still works.</li>
+  <li><strong>Add an emergency contact.</strong> A colleague, an editor, a legal support number. They are granted access to each recording's folder automatically as footage arrives, so someone else has your material if you are detained. This is the step most people skip and most regret.</li>
+  <li><strong>Bind a fast trigger.</strong> On iPhone 15 Pro and newer, assign the Action Button. Otherwise add the Lock Screen widget, or set up the Siri phrase. Practise it once.</li>
+  <li><strong>Practise stopping.</strong> Triple-tap, then press and hold. The app walks you through this once on first run. It is deliberately awkward so it cannot be triggered by accident or by someone grabbing the phone.</li>
+</ol>
+
+<div class="note">
+  <p><strong>Test it properly, once.</strong> Record thirty seconds, then check the footage actually appeared in your cloud account. Discovering a misconfigured account afterwards is the most common way this fails, and the only way to catch it is to look.</p>
+</div>
+
+<h2>Choosing where footage goes</h2>
+<p>All three destinations protect footage from device loss equally. They differ in who else is involved:</p>
+<ul>
+  <li><strong>Google Drive or Dropbox.</strong> The simplest options, and the only options where emergency contacts can be granted access automatically. Both are large US companies subject to legal process; footage in your account is reachable by warrant served on them.</li>
+  <li><strong>Nextcloud or WebDAV.</strong> Your own server, or one run by an organisation you trust. No US cloud provider in the middle. The trade-off is that WebDAV has no sharing mechanism, so emergency contacts are <em>not</em> granted access automatically and you would need to share a folder yourself.</li>
+</ul>
+<p>If you are documenting in a context where the adversary can plausibly obtain a warrant against a US provider, that is worth thinking about before the day rather than after.</p>
+
+<h2>In the moment</h2>
+<ul>
+  <li><strong>Start early.</strong> Uploads happen during the recording, so footage that has been running for a minute is already partly safe. Footage started as things escalate is not.</li>
+  <li><strong>The screen stays black.</strong> The phone looks idle and off. You do not need to hold it up like a camera, and you can put it in a pocket facing outward.</li>
+  <li><strong>Say that you are recording,</strong> if it is safe to. In most US jurisdictions openly recording on-duty police in public is protected; covert recording is treated differently in some places, particularly for audio.</li>
+  <li><strong>Keep your distance.</strong> Interference is the thing most often charged, and it is the thing the recording cannot protect you from.</li>
+  <li><strong>Do not rely on the battery.</strong> Continuous recording and upload is demanding. Bring a power bank for anything long.</li>
+</ul>
+
+<h2>If the phone is taken</h2>
+<p>Everything already uploaded is in your cloud account and unaffected by anything done to the device. The manifest describing it is there too, because it is re-uploaded continuously rather than written at the end.</p>
+<p>What to do afterwards:</p>
+<ul>
+  <li><strong>Check the account from another device</strong> as soon as you can, and confirm what arrived.</li>
+  <li><strong>Change your cloud account password</strong> if the phone was unlocked when it was taken. This is the real remaining exposure: someone with access to your unlocked phone can reach the cloud account through its own app and delete footage there. The app's in-app guidance covers hardening this in advance.</li>
+  <li><strong>Preserve the originals.</strong> Do not re-encode, trim or re-upload the files you want to rely on. Any of that breaks the hash match. Keep untouched copies and share duplicates.</li>
+</ul>
+
+<h2>Handing footage to a lawyer or newsroom</h2>
+<p>Give them the <em>whole session folder</em>, not just the video: the manifest and time-stamp token are what let them confirm the footage is unaltered without taking your word for it.</p>
+<p>Send it in a way that does not re-compress. Messaging apps and social platforms re-encode video by default, which changes the file and breaks hash verification. Share a cloud link, or transfer the original files directly.</p>
+<p>Point them at <a href="verify.html">the verification instructions</a>, written for someone who has never used the app.</p>
+
+<h2>Things worth knowing in advance</h2>
+<div class="caveat">
+  <p><strong>No signal means no upload.</strong> Chunks queue on the device and go when connectivity returns. In a basement, a jail, or a jammed crowd, footage stays on the phone until it can leave.</p>
+  <p><strong>Witness cannot help if you are compelled to unlock the phone.</strong> It protects footage from the device being lost, not from every kind of coercion. Uploaded footage is out of reach of the phone, but not of your cloud account.</p>
+  <p><strong>ProRes and 4K Log recordings do not upload.</strong> Pro capture modes produce files too large to send live. ProRes stays on the device by design. If your priority is that footage survives, record in H.264 or HEVC.</p>
+  <p><strong>Recording is not always lawful.</strong> Rules on audio consent, distance and covert recording vary widely by jurisdiction. Witness gives no legal advice and does not make an unlawful recording lawful.</p>
+</div>
+
+<h2>For newsrooms and organisations</h2>
+<p>If you are deploying this across a team (legal observers, a bureau, a documentary crew), a few things are worth deciding centrally: which storage destination everyone uses, who the standing emergency contact is, and who on the desk knows how to run the verification steps. Questions welcome at <strong>olmaster13@gmail.com</strong>.</p>
+
+<h2>Know your rights</h2>
+<p>The <a href="https://www.aclu.org/know-your-rights/photographers-what-to-do-if-you-are-stopped-or-detained-for-taking-photographs">ACLU's guidance for photographers</a> and its <a href="https://www.aclu.org/know-your-rights/protesters-rights">protesters' rights</a> pages are the standard starting points in the United States. Outside the US, national press-freedom and civil-liberties organisations publish equivalents, and the rules genuinely differ.</p>
+<p class="disclaimer">Nothing on this page is legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

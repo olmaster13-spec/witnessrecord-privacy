@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to verify Witness footage, for lawyers, newsrooms and courts</title>
+<meta name="description" content="Step-by-step instructions for independently verifying video recorded with Witness: checking SHA-256 hashes against the session manifest and validating the RFC 3161 time-stamp token with OpenSSL.">
+<link rel="canonical" href="https://witnessrecord.app/verify.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to verify Witness footage">
+<meta property="og:description" content="Check the hashes, check the time-stamp. Instructions for anyone who receives Witness footage and needs to confirm it is unaltered.">
+<meta property="og:url" content="https://witnessrecord.app/verify.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to verify Witness video footage",
+  "description": "Independently confirm that video recorded with the Witness iOS app is unaltered and existed at the claimed time, using its session manifest and RFC 3161 time-stamp token.",
+  "totalTime": "PT10M",
+  "tool": [
+    { "@type": "HowToTool", "name": "OpenSSL" },
+    { "@type": "HowToTool", "name": "A terminal / command line" }
+  ],
+  "supply": [
+    { "@type": "HowToSupply", "name": "The video files" },
+    { "@type": "HowToSupply", "name": "The session manifest (manifest_*.json)" },
+    { "@type": "HowToSupply", "name": "The time-stamp token (timestamp_*.tsr)" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Hash the video files",
+      "text": "Compute the SHA-256 of each video file and compare it against the hash recorded for that chunk in the session manifest."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Verify the time-stamp token",
+      "text": "Use openssl ts -verify to confirm the time-stamp authority signed a hash of this exact manifest, establishing that it existed unmodified at that time."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Read the token contents",
+      "text": "Use openssl ts -reply -text to read the timestamp and the digest the authority attested to."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html" aria-current="page">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Verifying Witness footage</h1>
+<p class="tagline">For lawyers, newsrooms, investigators and courts receiving a recording.</p>
+
+<p class="lede">You do not need the app, the developer, or any cooperation from whoever filmed it. Everything needed to check a Witness recording travels with the footage, and the verification uses standard OpenSSL rather than anything proprietary.</p>
+
+<h2>What you should have received</h2>
+<p>A Witness session folder contains three kinds of file:</p>
+<ul>
+  <li><strong>The video.</strong> Either the individual <code>.mp4</code> chunks, or a single consolidated <code>recording_rear.mp4</code> / <code>recording_front.mp4</code> once the session was merged.</li>
+  <li><strong>The manifest.</strong> <code>manifest_&lt;session-id&gt;.json</code>, listing every chunk with its SHA-256 hash, capture times in UTC, and GPS coordinates.</li>
+  <li><strong>The time-stamp token.</strong> <code>timestamp_&lt;session-id&gt;.tsr</code>, a signed RFC 3161 response from an independent authority.</li>
+</ul>
+<p>If the time-stamp file is missing, the authority was unreachable when the recording ended. That is a gap in corroboration, not a sign of tampering. The hashes remain checkable.</p>
+
+<h2>Step 1. Do the videos match the manifest?</h2>
+<p>Compute the SHA-256 of a video file:</p>
+<pre><code>shasum -a 256 recording_rear.mp4        # macOS / Linux
+certutil -hashfile recording_rear.mp4 SHA256   # Windows</code></pre>
+<p>Open the manifest and find the corresponding entry. Every chunk appears with a <code>sha256</code> field, and consolidated videos appear under <code>mergedVideos</code>. The values must match exactly.</p>
+<p>A mismatch means the file is not byte-for-byte what the phone recorded. Note that <em>any</em> re-encoding will cause this, including the re-compression applied automatically by most messaging apps and social platforms. If footage reached you through WhatsApp, Signal, email or a social upload, expect the hash to differ, and ask for the original file.</p>
+
+<h2>Step 2. Is the manifest itself authentic and dated?</h2>
+<p>This is the step that does not rely on trusting the person who filmed it. The time-stamp token was issued by a third party who signed a hash of the manifest at a moment they attest to.</p>
+<pre><code>openssl ts -verify \
+  -data manifest_&lt;session-id&gt;.json \
+  -in timestamp_&lt;session-id&gt;.tsr \
+  -CAfile &lt;authority-ca-cert&gt;.pem</code></pre>
+<p>A successful run prints <code>Verification: OK</code>. The manifest names the authority it used in its <code>timestampAuthority</code> field; the CA certificate comes from that authority's website.</p>
+<div class="caveat">
+  <p><strong>A failure here is not automatically evidence of tampering.</strong> The most common cause by far is a missing or wrong CA certificate, which is a local configuration problem. Read the token's contents (step 3) before drawing any conclusion.</p>
+</div>
+
+<h2>Step 3. Read what the authority actually attested</h2>
+<p>To inspect the token directly, without CA validation:</p>
+<pre><code>openssl ts -reply -in timestamp_&lt;session-id&gt;.tsr -text</code></pre>
+<p>This prints the status, the timestamp, and the message digest the authority signed. Confirm that digest equals the SHA-256 of the manifest file:</p>
+<pre><code>shasum -a 256 manifest_&lt;session-id&gt;.json</code></pre>
+<p>If the two match, the authority signed <em>this</em> manifest, unmodified, at the time shown.</p>
+
+<h2>What the chain establishes</h2>
+<ol>
+  <li>Each video file hashes to a value listed in the manifest, so the footage is exactly what was recorded.</li>
+  <li>The manifest hashes to the digest inside the time-stamp token, so the list of hashes has not been edited.</li>
+  <li>The token is signed by an independent authority at a specific time, so that manifest, and therefore that footage, existed in this form at that moment.</li>
+</ol>
+<p>Editing the video breaks step 1. Editing the manifest to match the edited video breaks step 2. Reproducing the token requires the authority's private key. The three checks together are what makes the record hard to fake, and each one is independently checkable by you.</p>
+
+<h2>What it does not establish</h2>
+<p>Being precise about this matters if the material is going to be relied on.</p>
+<ul>
+  <li>It proves the footage <strong>existed at a time and has not changed since</strong>. It does not prove what the footage depicts, nor that it was recorded when it appears to have been, only that it cannot postdate the timestamp.</li>
+  <li>Locations come from the device's GPS and inherit its accuracy, which is recorded per chunk in the manifest.</li>
+  <li>Capture times come from the device clock and are corroborated, not replaced, by the time-stamp token.</li>
+  <li>Absence of a manifest or token means the material is unverified by these means, not that it is false.</li>
+</ul>
+
+<h2>The instructions shipped with the footage</h2>
+<p>Every manifest carries its own verification note, so the method travels with the evidence even if this page does not:</p>
+<blockquote class="card"><p>This manifest is counter-signed by an independent RFC 3161 time-stamp authority, proving it existed unmodified before the time in the accompanying .tsr file. Because every chunk's SHA-256 is listed above, that proof extends to the footage itself. To verify: <code>openssl ts -verify -data &lt;this file&gt; -in &lt;timestampFileName&gt; -CAfile &lt;authority CA cert&gt;</code>. Any edit to this manifest, or to any file whose hash it lists, breaks the check.</p></blockquote>
+
+<h2>Questions about a specific recording</h2>
+<p>If you are examining Witness footage professionally and something does not check out, get in touch: <strong>olmaster13@gmail.com</strong>. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
