@@ -73,6 +73,14 @@
 <p>That instruction is right, and the mechanism usually suggested for it is weaker than people assume. iCloud Photos and Google Photos are built for convenience, not for this. Both routinely defer uploads until the phone is on Wi-Fi, charging, or above a battery threshold, and both generally wait for a recording to finish before it becomes eligible to sync at all. A ten-minute video is one file, and that file does not begin uploading until you stop recording.</p>
 <p>So the gap is precise: <strong>the footage most worth having is the footage recorded in the minutes before a phone is taken, and that is exactly the footage still sitting on the device.</strong></p>
 
+<figure>
+  <div class="fig-diagram">
+    <img src="img/upload-timeline.svg" width="760" height="322"
+         alt="Bar chart comparing how much of a nine minute recording survives a seized phone. Stock camera with iCloud sync and upload-on-stop apps lose all nine minutes. Uploading in 45 second pieces loses up to 45 seconds. Uploading in 15 second pieces loses up to 15 seconds.">
+  </div>
+  <figcaption>The top two rows are what most know-your-rights guidance currently recommends. They are not wrong so much as built for a different problem.</figcaption>
+</figure>
+
 <h2>Closing that gap</h2>
 <p>The fix is to stop treating a recording as one file that uploads at the end. Witness cuts continuously into roughly 15-second pieces, finalises each one the moment it ends, and uploads it while you are still filming. A phone taken at minute nine has already sent minutes one through eight to storage you own.</p>
 <p>Other properties that matter in this specific situation:</p>
@@ -82,6 +90,11 @@
   <li><strong>Someone else gets it automatically.</strong> Nominate a rapid response coordinator, an organiser or a lawyer once, and each recording's folder is shared with them as footage arrives, without you doing anything in the moment.</li>
   <li><strong>Nothing passes through the developer.</strong> There is no server and no copy, so there is nothing to subpoena from us. Footage goes from the phone to your own cloud account and nowhere else.</li>
 </ul>
+
+<figure class="fig-shot">
+  <img src="img/app-contact.webp" width="620" height="873" loading="lazy"
+       alt="The Witness emergency contact screen, showing a nominated contact who is granted access to each recording automatically.">
+</figure>
 
 <div class="note">
   <p><strong>Set it up before the day.</strong> An app that has not been connected to a storage account saves nothing. This is the step people skip and the one that decides whether any of the rest matters. The <a href="field-guide.html">field guide</a> covers it in five minutes.</p>

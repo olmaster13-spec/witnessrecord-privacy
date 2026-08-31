@@ -590,3 +590,46 @@ blockquote { margin: 0; }
 .prose tbody tr { border-top: 1px solid var(--line); }
 .prose pre { margin: 1.1em 0; }
 .prose .disclaimer { color: var(--text-3); font-size: 0.93rem; margin-top: 2.4em; }
+
+/* Figures inside long-form pages ----------------------------------------
+   The diagrams are external SVGs so one file serves several pages and the
+   browser caches it once. They carry data, so they sit in a bordered panel
+   like a table would, not bleeding into the prose as decoration. */
+.prose figure { margin: 2.2em 0; }
+.prose figcaption {
+  color: var(--text-3);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin-top: 11px;
+  max-width: var(--measure);
+}
+.fig-diagram {
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  background: var(--bg-raised);
+  padding: clamp(16px, 3vw, 26px);
+}
+.fig-diagram img { display: block; width: 100%; height: auto; }
+.fig-shot {
+  max-width: 340px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-media);
+  overflow: hidden;
+  background: var(--bg-raised);
+}
+.fig-shot img { display: block; width: 100%; height: auto; }
+
+/* Below ~760px the chart would scale its own labels down to about 5px, which
+   is not readable on the device most of this site is read on. It scrolls
+   instead, the same way wide tables here already do, with the right edge
+   faded so the cut reads as intentional. */
+@media (max-width: 760px) {
+  .fig-diagram {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  }
+  .fig-diagram::-webkit-scrollbar { display: none; }
+  .fig-diagram img { min-width: 700px; }
+}

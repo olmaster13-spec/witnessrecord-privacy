@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 322" role="img"
+     aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="t">How much footage survives a phone seized nine minutes into a ten minute recording</title>
+  <desc id="d">With the stock camera and photo library sync, or with an app that uploads when you press stop, none of the nine minutes has left the device and all of it is lost. An app uploading in 45 second pieces has saved everything up to 8 minutes 15 seconds, losing up to 45 seconds. An app uploading in 15 second pieces has saved everything up to 8 minutes 45 seconds, losing up to 15 seconds.</desc>
+
+  <!-- Scale: the timeline spans 10 minutes across 378px, so 42px per minute.
+       Every bar below is measured against that, not drawn by eye. -->
+
+  <text x="0" y="16" fill="#f2f2f3" font-size="14" font-weight="640">Phone seized nine minutes into a ten minute recording</text>
+  <text x="0" y="36" fill="#85858f" font-size="12.5">Pale bar is footage already uploaded and safe. Red is footage still on the phone when it goes.</text>
+
+  <!-- Seizure marker -->
+  <line x1="563" y1="56" x2="563" y2="292" stroke="#e82e3b" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="563" y="50" fill="#e82e3b" font-size="12" font-weight="640" text-anchor="middle">seized 9:00</text>
+
+  <!-- Row 1 -->
+  <text x="0" y="88" fill="#f2f2f3" font-size="13">Stock camera + iCloud sync</text>
+  <rect x="185" y="76" width="378" height="20" rx="4" fill="#e82e3b"/>
+  <text x="583" y="90" fill="#85858f" font-size="12">all 9:00 lost</text>
+
+  <!-- Row 2 -->
+  <text x="0" y="140" fill="#f2f2f3" font-size="13">Uploads when you press stop</text>
+  <rect x="185" y="128" width="378" height="20" rx="4" fill="#e82e3b"/>
+  <text x="583" y="142" fill="#85858f" font-size="12">all 9:00 lost</text>
+
+  <!-- Row 3: 45s pieces, safe through 8:15 -->
+  <text x="0" y="192" fill="#f2f2f3" font-size="13">Uploads in 45 second pieces</text>
+  <rect x="185" y="180" width="346.5" height="20" rx="4" fill="#b9b9c0"/>
+  <rect x="531.5" y="180" width="31.5" height="20" fill="#e82e3b"/>
+  <text x="583" y="194" fill="#85858f" font-size="12">up to 45s lost</text>
+
+  <!-- Row 4: 15s pieces, safe through 8:45 -->
+  <text x="0" y="244" fill="#f2f2f3" font-size="13">Uploads in 15 second pieces</text>
+  <rect x="185" y="232" width="367.5" height="20" rx="4" fill="#b9b9c0"/>
+  <rect x="552.5" y="232" width="10.5" height="20" fill="#e82e3b"/>
+  <text x="583" y="246" fill="#85858f" font-size="12">up to 15s lost</text>
+
+  <!-- Axis -->
+  <line x1="185" y1="272" x2="563" y2="272" stroke="#34343c" stroke-width="1"/>
+  <g fill="#85858f" font-size="11" text-anchor="middle">
+    <text x="185" y="288">0:00</text>
+    <text x="311" y="288">3:00</text>
+    <text x="437" y="288">6:00</text>
+    <text x="563" y="288">9:00</text>
+  </g>
+</svg>
