@@ -1,0 +1,22 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "x": 0,    "y": 0,    "w": 1080, "h": 1920, "title": "1 · Hook" },
+    { "file": "WhyThePhone.dc.html", "x": 1200, "y": 0,    "w": 1080, "h": 1920, "title": "2 · Why the phone" },
+    { "file": "Minneapolis.dc.html", "x": 2400, "y": 0,    "w": 1080, "h": 1920, "title": "3 · Minneapolis" },
+    { "file": "Ice.dc.html",         "x": 3600, "y": 0,    "w": 1080, "h": 1920, "title": "4 · ICE" },
+    { "file": "WestBank.dc.html",    "x": 0,    "y": 2160, "w": 1080, "h": 1920, "title": "5 · West Bank" },
+    { "file": "Turn.dc.html",        "x": 1200, "y": 2160, "w": 1080, "h": 1920, "title": "6 · The turn" },
+    { "file": "Idea.dc.html",        "x": 2400, "y": 2160, "w": 1080, "h": 1920, "title": "7 · The idea" },
+    { "file": "Proof.dc.html",       "x": 3600, "y": 2160, "w": 1080, "h": 1920, "title": "8 · Proof" },
+    { "file": "Means.dc.html",       "x": 0,    "y": 4320, "w": 1080, "h": 1920, "title": "9 · What it means" },
+    { "file": "NoServer.dc.html",    "x": 1200, "y": 4320, "w": 1080, "h": 1920, "title": "10 · No server" },
+    { "file": "Cta.dc.html",         "x": 2400, "y": 4320, "w": 1080, "h": 1920, "title": "11 · Call to action" }
+  ],
+  "annotations": [
+    { "id": "structure", "x": 3600, "y": 4320, "w": 1080,
+      "text": "STRUCTURE\n\n1-2 set the pattern. 3-5 are the three scenes, and each loses a recording a different way: it survives (Minneapolis), it is the only record there is (ICE), it is confiscated and destroyed (West Bank). 6 names the real problem as storage, not filming. 7-10 are the answer. 11 asks.\n\nThe product does not appear until slide 7, by which point the viewer has felt the need for it." },
+    { "id": "photos", "x": 3600, "y": 4920, "w": 1080,
+      "text": "PHOTOS\n\nAll three are press photographs supplied by hand — check the rights before posting. They are run monochrome with contrast lifted and brightness cut, both to unify a 256px source with a 2400px one and to keep white text legible over them.\n\nSlide 5 is anchored to the ICJ advisory opinion of 19 July 2024, UNSC 2334 and Fourth Geneva Convention Art. 49(6)." }
+  ],
+  "launch": { "view": "canvas" }
+}
