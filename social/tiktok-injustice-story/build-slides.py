@@ -84,7 +84,26 @@ def scene_label(text):
 
 # --------------------------------------------------------------- slide kinds
 
-def type_slide(n, headline, body, label=None, headline_size=64, accent=None):
+def providers():
+    """Where the footage actually goes. Only the two logos the repo already
+    ships are drawn; Nextcloud has no mark here and WebDAV is a protocol, not a
+    brand, so both are named in text rather than approximated."""
+    chip = ('    <div style="display: flex; align-items: center; gap: 14px; border: 1px solid %s; '
+            'background: %s; border-radius: 999px; padding: 10px 26px 10px 14px;">\n'
+            '      <img src="%s" alt="" style="height: 46px; width: auto; display: block;">\n'
+            '      <span style="font-size: 28px; font-weight: 600; color: %s;">%s</span>\n'
+            '    </div>')
+    return (
+        '  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 44px;">\n'
+        + chip % (LINE_S, SURFACE, 'logo-google-drive.png', TEXT, 'Google Drive') + '\n'
+        + chip % (LINE_S, SURFACE, 'logo-dropbox.png', TEXT, 'Dropbox') + '\n'
+        '  </div>\n'
+        '  <div style="margin-top: 20px; font-size: 28px; line-height: 1.4; color: %s;">'
+        'or any Nextcloud or WebDAV server, including one you host yourself.</div>' % TEXT_3
+    )
+
+
+def type_slide(n, headline, body, label=None, headline_size=64, accent=None, extra=None):
     """A slide carried entirely by its words."""
     parts = [kicker(n),
              '<div style="flex: 1; display: flex; flex-direction: column; '
@@ -97,6 +116,8 @@ def type_slide(n, headline, body, label=None, headline_size=64, accent=None):
                  'line-height: 1.04; color: %s; text-wrap: pretty;">%s</h2>' % (headline_size, TEXT, headline))
     parts.append('  <p style="margin: 38px 0 0; font-size: 37px; line-height: 1.4; letter-spacing: -0.012em; '
                  'color: %s; max-width: 756px; text-wrap: pretty;">%s</p>' % (TEXT_2, body))
+    if extra:
+        parts.append(extra)
     parts.append('</div>')
     parts.append(footer())
     return SHELL.format(font=FONT, red_s=RED_S, body=frame('\n'.join(parts)))
@@ -274,8 +295,9 @@ slides['Turn.dc.html'] = photo_slide(
 slides['Idea.dc.html'] = type_slide(
     6, 'So I built it backwards.',
     'Not record, then upload. Upload <em style="font-style: normal; color: %s;">while</em> '
-    'recording &#8212; roughly 15 seconds at a time, to a cloud account you own, while the '
-    'camera is still rolling.' % TEXT, headline_size=76, label='The idea')
+    'recording &#8212; roughly 15 seconds at a time, while the camera is still rolling, to a '
+    'cloud account <em style="font-style: normal; color: %s;">you</em> own.' % (TEXT, TEXT),
+    headline_size=76, label='The idea', extra=providers())
 
 slides['Proof.dc.html'] = type_slide(
     7, 'Surviving is not enough.<br>It gets called fake.',
