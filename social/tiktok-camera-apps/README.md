@@ -9,6 +9,10 @@ them out and carries the draft caption. `camera-apps-carousel.html` is the
 assembled canvas — export each artboard as PNG from its toolbar and post them
 in canvas order.
 
+The four third-party icon tiles are placeholders: drop the real icons in as
+icon-blackmagic.png, icon-kino.png, icon-filmicpro.png and icon-finalcutcamera.png
+and re-run the build, which picks up any icon-<stem>.png it finds.
+
 The Witness slide leads on the one thing no other app here does — footage
 leaving the phone mid-record — and states the ProRes limitation and the
 authorship conflict on the slide itself, the same way compare.html does.

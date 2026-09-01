@@ -1,12 +1,61 @@
 {
   "artboards": [
-    { "file": "Main.dc.html",           "x": 0,    "y": 0,    "w": 1080, "h": 1920, "title": "1 · Hook" },
-    { "file": "Blackmagic.dc.html",     "x": 1200, "y": 0,    "w": 1080, "h": 1920, "title": "2 · No.1 Blackmagic" },
-    { "file": "Witness.dc.html",        "x": 2400, "y": 0,    "w": 1080, "h": 1920, "title": "3 · No.2 Witness" },
-    { "file": "Kino.dc.html",           "x": 3600, "y": 0,    "w": 1080, "h": 1920, "title": "4 · No.3 Kino" },
-    { "file": "FilmicPro.dc.html",      "x": 0,    "y": 2160, "w": 1080, "h": 1920, "title": "5 · No.4 Filmic Pro" },
-    { "file": "FinalCutCamera.dc.html", "x": 1200, "y": 2160, "w": 1080, "h": 1920, "title": "6 · No.5 Final Cut Camera" },
-    { "file": "Outro.dc.html",          "x": 2400, "y": 2160, "w": 1080, "h": 1920, "title": "7 · Recap + CTA" }
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1920,
+      "title": "1 · Hook"
+    },
+    {
+      "file": "Blackmagic.dc.html",
+      "x": 1200,
+      "y": 0,
+      "w": 1080,
+      "h": 1920,
+      "title": "2 · No.1 Blackmagic"
+    },
+    {
+      "file": "Witness.dc.html",
+      "x": 2400,
+      "y": 0,
+      "w": 1080,
+      "h": 1920,
+      "title": "3 · No.2 Witness"
+    },
+    {
+      "file": "Kino.dc.html",
+      "x": 3600,
+      "y": 0,
+      "w": 1080,
+      "h": 1920,
+      "title": "4 · No.3 Kino"
+    },
+    {
+      "file": "FilmicPro.dc.html",
+      "x": 0,
+      "y": 2160,
+      "w": 1080,
+      "h": 1920,
+      "title": "5 · No.4 Filmic Pro"
+    },
+    {
+      "file": "FinalCutCamera.dc.html",
+      "x": 1200,
+      "y": 2160,
+      "w": 1080,
+      "h": 1920,
+      "title": "6 · No.5 Final Cut Camera"
+    },
+    {
+      "file": "Outro.dc.html",
+      "x": 2400,
+      "y": 2160,
+      "w": 1080,
+      "h": 1920,
+      "title": "7 · Recap + CTA"
+    }
   ],
   "annotations": [
     {
@@ -21,8 +70,10 @@
       "x": 3600,
       "y": 2760,
       "w": 1080,
-      "text": "Export each artboard as PNG from the toolbar — they're 1080×1920, TikTok photo-mode size. Post in canvas order, 1 through 7."
+      "text": "Export each artboard as PNG from the toolbar — they're 1080×1920, TikTok photo-mode size. Post in canvas order, 1 through 7.\n\nThe four dashed icon tiles are placeholders. Drop the real icons into the repo folder as icon-blackmagic.png, icon-kino.png, icon-filmicpro.png and icon-finalcutcamera.png, then re-run build-slides.py — they get picked up automatically."
     }
   ],
-  "launch": { "view": "canvas" }
+  "launch": {
+    "view": "canvas"
+  }
 }
