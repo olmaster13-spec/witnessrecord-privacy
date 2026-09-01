@@ -1,9 +1,30 @@
-Number 2 isn't a filmmaking app. It might still save your shoot.
+PRIMARY
 
-Blackmagic Camera, Kino, Filmic Pro and Final Cut Camera all do what you'd expect — manual control, Apple Log, ProRes. Witness does one thing none of them do: it pushes your footage to a cloud account you own in ~15-second pieces while you're still rolling, and it films with the screen fully black. If the phone goes, the footage doesn't.
+Five camera apps that will change how your iPhone footage looks.
 
-I built that one, so weigh it accordingly. The other four I just use.
+Most people shoot on the stock camera and wonder why it doesn't look cinematic. It's usually not the phone. It's the app.
 
-Which one's on your home screen?
+01 Blackmagic Camera — free, full manual control, Apple Log and ProRes, LUT preview on set
+02 Witness — uploads to a cloud account you own while you're still recording
+03 Kino — Instant Grade, so Log footage never lands flat and grey
+04 Filmic Pro — the deepest set of controls on iOS
+05 Final Cut Camera — free, and it runs four iPhones as one multicam rig
 
-#iphonefilmmaking #filmmaking #cameraapps #applelog #prores #blackmagiccamera #kino #filmicpro #finalcutcamera #documentary #runandgun #filmmakingtips
+Save this before your next shoot. Which one are you actually using?
+
+(#2 is mine. The other four aren't.)
+
+#iphonefilmmaking #shotoniphone #filmmaking #filmmakingtips #cinematography #cameraapps #applelog #prores #blackmagiccamera #kino #filmicpro #finalcutcamera #videography #colorgrading #indiefilm #runandgun
+
+
+SHORTER ALTERNATE
+
+Your iPhone already shoots Apple Log and ProRes. The stock camera just won't let you.
+
+Five apps that will, ranked — Blackmagic Camera, Witness, Kino, Filmic Pro, Final Cut Camera.
+
+Save it before your next shoot. Which one's actually on your phone?
+
+(#2 is mine. The other four aren't.)
+
+#iphonefilmmaking #shotoniphone #filmmaking #cameraapps #applelog #prores #cinematography #filmmakingtips
