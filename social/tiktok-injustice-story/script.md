@@ -7,19 +7,16 @@ at slide 6 as the answer to a problem the viewer has already felt.
 
 Voice: first person singular, matching compare.html ("I built one of these").
 Slide 10 clears the trust objection; slide 11 asks. That order, not the reverse.
-Eleven slides, 1080x1920, same dark brand as the camera-apps carousel.
+Ten slides, 1080x1920. Everything sits inside a TikTok-safe box
+(192px top, 384px bottom, 128/196px sides) so the chrome cannot cut it, same dark brand as the camera-apps carousel.
 
 ---
 
 ## 1 — Hook
-Kicker: WHY I BUILT WITNESS
-**The first move is always the same. Take the phone.**
-Three places with nothing else in common.
-
-## 2 — Why the phone
-**They go for the phone because filming works.**
-A recording is the one thing that survives someone else's version of events.
-Which is exactly why it is not allowed to survive.
+**Why I built an app that lets you record with your screen off and backs up
+the footage every 15 seconds.**
+Illustrated with the real screen-off capture in a CSS iPhone, camera indicator
+ringed and labelled.
 
 ## 3 — Scene one
 Kicker: MINNEAPOLIS, 2020
@@ -41,9 +38,17 @@ The settlements are illegal under international law — the ICJ said so again
 in 2024. The people documenting what that looks like keep losing the file.
 
 ## 6 — The turn
-**Every one of those recordings existed. Most never made it out.**
-The footage lives on the one object the other side can take. That is not a
-filming problem. It is a storage problem.
+Kicker: WHAT HAPPENS TO THE REST
+Photo: officer holding a phone
+**For every recording that makes it out, there is another one that gets
+illegally deleted.**
+- Baltimore, 2010 — officers deleted every video on a man's phone after he
+  filmed an arrest. The city paid $250,000. The DOJ issued a statement of
+  interest in 2012 affirming the right to record.
+- Des Moines, 2018 — police seized a man's phone and camera without a warrant
+  and kept them twelve days. $125,000, settled 2022 after the Eighth Circuit.
+- Philadelphia, 2021 — an officer is accused in a lawsuit of deleting a man's
+  recording of his own arrest. Marked as an accusation, because it is one.
 
 ## 7 — The idea
 **So I built it backwards.**
@@ -62,15 +67,9 @@ Smash it — already left. It records with the screen fully black, and stopping
 takes a triple-tap and a hold, so it does not stop by accident.
 
 ## 10 — Close
-**I cannot hold your footage. That is the point.**
-No server of mine sits in the middle. It goes from your phone to your cloud
-and nowhere else. I cannot read it, hand it over, or lose it.
-## 11 — Call to action
-Kicker: BEFORE YOU NEED IT
-**You cannot download this while it is happening.**
-Two minutes, today: install it, link the cloud account you already have, put
-it on your Action Button. Then forget about it.
-Footer: Witness — witnessrecord.app
+**So I built Witness: Record Beyond Reach.**
+So that next time you are in trouble, you can document safely, for free.
+Carries the App Store card.
 
 ---
 

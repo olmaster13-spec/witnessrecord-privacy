@@ -4,7 +4,7 @@ import { chromium } from 'playwright-core';
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { basename } from 'path';
 
-const ORDER = ['Main', 'WhyThePhone', 'Minneapolis', 'Ice', 'WestBank', 'Turn', 'Idea', 'Proof', 'Means', 'NoServer', 'Cta'];
+const ORDER = ['Main', 'Minneapolis', 'Ice', 'WestBank', 'Turn', 'Idea', 'Proof', 'Means', 'NoServer', 'Cta'];
 const images = {};
 for (const f of readdirSync('.').filter((f) => /\.(png|jpg)$/.test(f) && !f.startsWith('slide-'))) {
   const mime = f.endsWith('.jpg') ? 'image/jpeg' : 'image/png';
