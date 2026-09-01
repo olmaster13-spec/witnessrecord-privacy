@@ -107,7 +107,14 @@ def icon(stem, initials):
     """The app's icon, if we have it. The four third-party icons are not in
     this repo and Apple's endpoints are not reachable from the build box, so
     those render as an obvious placeholder until someone drops the real PNG in
-    as icon-<stem>.png and re-runs this script."""
+    as icon-<stem>.png and re-runs this script. The icons live on these App
+    Store listings:
+
+        Blackmagic  apps.apple.com/us/app/blackmagic-camera/id6449580241
+        Kino        apps.apple.com/us/app/kino-pro-video-camera/id6472380172
+        FilmicPro   apps.apple.com/us/app/filmic-pro-video-camera/id436577167
+        FinalCut    apps.apple.com/us/app/final-cut-camera/id6469552837
+    """
     path = 'witness-icon.png' if stem == 'Witness' else 'icon-%s.png' % stem.lower()
     if os.path.exists(path):
         return ('<img src="%s" alt="" style="width: 168px; height: 168px; '
@@ -298,7 +305,7 @@ outro_body = '\n'.join([
     '<div style="background: %s; border: 1px solid %s; border-radius: 14px; '
     'padding: 30px 34px; margin-bottom: 34px;">' % (RAISED, LINE),
     '  <div style="font-size: 32px; line-height: 1.4; color: %s;">'
-    'Which one is on your home screen? Tell me what I got wrong.</div>' % TEXT,
+    'Which one is on your home screen?</div>' % TEXT,
     '</div>',
     footer(),
 ])
