@@ -1,0 +1,28 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",           "x": 0,    "y": 0,    "w": 1080, "h": 1920, "title": "1 · Hook" },
+    { "file": "Blackmagic.dc.html",     "x": 1200, "y": 0,    "w": 1080, "h": 1920, "title": "2 · No.1 Blackmagic" },
+    { "file": "Witness.dc.html",        "x": 2400, "y": 0,    "w": 1080, "h": 1920, "title": "3 · No.2 Witness" },
+    { "file": "Kino.dc.html",           "x": 3600, "y": 0,    "w": 1080, "h": 1920, "title": "4 · No.3 Kino" },
+    { "file": "FilmicPro.dc.html",      "x": 0,    "y": 2160, "w": 1080, "h": 1920, "title": "5 · No.4 Filmic Pro" },
+    { "file": "FinalCutCamera.dc.html", "x": 1200, "y": 2160, "w": 1080, "h": 1920, "title": "6 · No.5 Final Cut Camera" },
+    { "file": "Outro.dc.html",          "x": 2400, "y": 2160, "w": 1080, "h": 1920, "title": "7 · Recap + CTA" }
+  ],
+  "annotations": [
+    {
+      "id": "caption",
+      "x": 3600,
+      "y": 2160,
+      "w": 1080,
+      "text": "CAPTION\n\nFour of these are the apps everyone recommends. Number 2 is the one that uploads your footage to your own cloud while you're still rolling — so a phone that gets taken, smashed or dropped in a river doesn't take the shoot with it. I built that one, so weigh it accordingly.\n\nWhich is on your home screen?\n\n#filmmaking #iphonefilmmaking #blackmagiccamera #kino #filmicpro #finalcutcamera #applelog #prores #documentary #cameraapps"
+    },
+    {
+      "id": "export-note",
+      "x": 3600,
+      "y": 2760,
+      "w": 1080,
+      "text": "Export each artboard as PNG from the toolbar — they're 1080×1920, TikTok photo-mode size. Post in canvas order, 1 through 7."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

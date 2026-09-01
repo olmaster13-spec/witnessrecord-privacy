@@ -1,0 +1,5 @@
+# Source that lives in the repo but is not part of the published site.
+# Cloudflare serves everything under assets.directory ("." here), so anything
+# that is working material rather than a page has to be named here or it goes
+# out on witnessrecord.app and gets indexed.
+social/
