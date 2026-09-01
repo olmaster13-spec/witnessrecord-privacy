@@ -187,8 +187,9 @@ slide3 = app_slide(
     'It uploads your footage while you are still rolling.',
     [
         'Every ~15 seconds goes to a cloud account <em style="font-style: normal; color: %s;">you own</em>, mid&#8209;record &#8212; Drive, Dropbox or your own server' % TEXT,
-        'Each piece is hashed and timestamped independently, so the footage holds up when it is challenged',
-        'Pro adds 4K, Apple&nbsp;Log and ProRes&nbsp;422. ProRes is too big to upload live and stays on the phone',
+        'Films with the screen fully black &#8212; no preview, no glow, nothing to read over your shoulder',
+        'Each piece is hashed and timestamped, so the footage holds up when it is challenged',
+        'Pro adds 4K, Apple&nbsp;Log and ProRes&nbsp;422 &#8212; ProRes stays on the phone, too big to upload live',
     ],
     'Documentary, protest and field work &#8212; anywhere the phone might not make it back.',
     disclosure='Full disclosure: I built this one. The other four are not mine, and they are genuinely good.',

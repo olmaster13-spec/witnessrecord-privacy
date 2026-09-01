@@ -1,3 +1,8 @@
 # The assembled canvas is ~2.5 MB of generated editor payload, rebuilt from
 # build-slides.py and the .dc.html artboards. It lives at its Artifact URL.
 camera-apps-carousel.html
+
+# Playwright, installed only to render the PNGs.
+node_modules/
+package.json
+package-lock.json
