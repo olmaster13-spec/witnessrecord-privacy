@@ -1,0 +1,9 @@
+Number 2 isn't a filmmaking app. It might still save your shoot.
+
+Blackmagic Camera, Kino, Filmic Pro and Final Cut Camera all do what you'd expect — manual control, Apple Log, ProRes. Witness does one thing none of them do: it pushes your footage to a cloud account you own in ~15-second pieces while you're still rolling, and it films with the screen fully black. If the phone goes, the footage doesn't.
+
+I built that one, so weigh it accordingly. The other four I just use.
+
+Which one's on your home screen?
+
+#iphonefilmmaking #filmmaking #cameraapps #applelog #prores #blackmagiccamera #kino #filmicpro #finalcutcamera #documentary #runandgun #filmmakingtips
