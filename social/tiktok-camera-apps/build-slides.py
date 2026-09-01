@@ -127,11 +127,14 @@ def icon(stem, initials):
     )
 
 
-def app_slide(n, rank, name, pills, hook, specs, best_for, stem, initials, disclosure=None):
+def app_slide(n, rank, name, pills, hook, specs, stem, initials, disclosure=None):
     rank_color = RED if disclosure else GHOST
     parts = []
     parts.append(kicker(n))
-    parts.append('<div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 0;">')
+    # Top-anchored, not centred: with the bottom band gone, centring would park
+    # each slide's numeral at a different height and make the set jump on swipe.
+    parts.append('<div style="flex: 1; display: flex; flex-direction: column; '
+                 'justify-content: flex-start; padding-top: 104px; gap: 0;">')
     parts.append(
         '  <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px;">\n'
         '    <div style="font-size: 200px; font-weight: 700; letter-spacing: -0.06em; '
@@ -162,14 +165,6 @@ def app_slide(n, rank, name, pills, hook, specs, best_for, stem, initials, discl
             '  </div>' % (RED, TEXT_3, disclosure)
         )
     parts.append('</div>')
-    parts.append(
-        '<div style="background: %s; border: 1px solid %s; border-radius: 14px; '
-        'padding: 30px 34px; margin-bottom: 34px;">\n'
-        '  <div style="font-size: 23px; font-weight: 600; letter-spacing: 0.16em; '
-        'text-transform: uppercase; color: %s; margin-bottom: 10px;">Best for</div>\n'
-        '  <div style="font-size: 34px; line-height: 1.35; color: %s;">%s</div>\n'
-        '</div>' % (RAISED, LINE, TEXT_3, TEXT, best_for)
-    )
     parts.append(footer())
     return SHELL.format(font=FONT, red_s=RED_S, body=frame('\n'.join(parts)))
 
@@ -208,7 +203,6 @@ slide2 = app_slide(
         'Apple&nbsp;Log and ProRes, with a LUT preview so Log is watchable on set',
         'Uploads straight to Blackmagic Cloud, so the edit starts before you are home',
     ],
-    'Anyone who finishes in DaVinci Resolve.',
     stem='Blackmagic', initials='BM',
 )
 
@@ -222,7 +216,6 @@ slide3 = app_slide(
         'Each piece is hashed and timestamped, so the footage holds up when it is challenged',
         'Pro adds 4K, Apple&nbsp;Log and ProRes&nbsp;422 &#8212; ProRes stays on the phone, too big to upload live',
     ],
-    'Documentary, protest and field work &#8212; anywhere the phone might not make it back.',
     stem='Witness', initials='W',
     disclosure='Full disclosure: I built this one. The other four are not mine, and they are genuinely good.',
 )
@@ -236,7 +229,6 @@ slide4 = app_slide(
         'AutoMotion holds a cinematic 180&#176; shutter while the light moves',
         'One&#8209;hand controls that are not fighting you at minute forty',
     ],
-    'Shooting fast, alone, with no colourist waiting.',
     stem='Kino', initials='K',
 )
 
@@ -249,7 +241,6 @@ slide5 = app_slide(
         'LogV3 capture and manual control over every parameter you can name',
         'The lifetime licence became a subscription &#8212; check before you commit',
     ],
-    'Controlled shoots where you want every dial.',
     stem='FilmicPro', initials='FP',
 )
 
@@ -262,7 +253,6 @@ slide6 = app_slide(
         'Each phone still records locally at full quality &#8212; the link is only the monitor',
         'Apple&nbsp;Log in HEVC or ProRes on supported models',
     ],
-    'Interviews and two&#8209; or three&#8209;camera setups on no budget.',
     stem='FinalCutCamera', initials='FC',
 )
 
@@ -301,11 +291,6 @@ outro_body = '\n'.join([
     'Chunked upload, hashing and timestamping, all in the app.</div>' % TEXT_3,
     '    </div>',
     '  </div>',
-    '</div>',
-    '<div style="background: %s; border: 1px solid %s; border-radius: 14px; '
-    'padding: 30px 34px; margin-bottom: 34px;">' % (RAISED, LINE),
-    '  <div style="font-size: 32px; line-height: 1.4; color: %s;">'
-    'Which one is on your home screen?</div>' % TEXT,
     '</div>',
     footer(),
 ])
