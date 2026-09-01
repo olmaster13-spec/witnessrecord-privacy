@@ -6,7 +6,8 @@ evidence sits on the one object the other side can seize. The product arrives
 at slide 6 as the answer to a problem the viewer has already felt.
 
 Voice: first person singular, matching compare.html ("I built one of these").
-Ten slides, 1080x1920, same dark brand as the camera-apps carousel.
+Slide 10 clears the trust objection; slide 11 asks. That order, not the reverse.
+Eleven slides, 1080x1920, same dark brand as the camera-apps carousel.
 
 ---
 
@@ -63,6 +64,11 @@ takes a triple-tap and a hold, so it does not stop by accident.
 **I cannot hold your footage. That is the point.**
 No server of mine sits in the middle. It goes from your phone to your cloud
 and nowhere else. I cannot read it, hand it over, or lose it.
+## 11 — Call to action
+Kicker: BEFORE YOU NEED IT
+**You cannot download this while it is happening.**
+Two minutes, today: install it, link the cloud account you already have, put
+it on your Action Button. Then forget about it.
 Footer: Witness — witnessrecord.app
 
 ---
