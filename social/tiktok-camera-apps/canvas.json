@@ -68,9 +68,9 @@
     {
       "id": "export-note",
       "x": 3600,
-      "y": 2760,
+      "y": 2160,
       "w": 1080,
-      "text": "Export each artboard as PNG from the toolbar — they're 1080×1920, TikTok photo-mode size. Post in canvas order, 1 through 7.\n\nThe four dashed tiles are placeholders. Grab each icon from its App Store listing, save it into the repo folder under the name below, and re-run build-slides.py — it picks them up automatically.\n\nicon-blackmagic.png\n  apps.apple.com/us/app/blackmagic-camera/id6449580241\nicon-kino.png\n  apps.apple.com/us/app/kino-pro-video-camera/id6472380172\nicon-filmicpro.png\n  apps.apple.com/us/app/filmic-pro-video-camera/id436577167\nicon-finalcutcamera.png\n  apps.apple.com/us/app/final-cut-camera/id6469552837"
+      "text": "Export each artboard as PNG from the toolbar — they're 1080×1920, TikTok photo-mode size. Post in canvas order, 1 through 7.\n\nApp icons were supplied by hand and live in the repo as icon-<stem>.png; build-slides.py picks up whatever it finds there."
     }
   ],
   "launch": {
