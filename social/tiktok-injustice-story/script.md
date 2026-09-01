@@ -28,10 +28,10 @@ A 17-year-old's phone said otherwise. The only reason anyone knows is that
 the phone made it home.
 
 ## 4 — Scene two
-Kicker: A DOORWAY AT 6 A.M.
-**Filming a raid only helps if the file outlives the raid.**
-Phones get taken. Recordings go with them. Families are left arguing against
-a report they never saw written.
+Kicker: AN ICE ARREST
+**The phone goes into a property bag with everything else.**
+If you were the one filming, and you are the one detained, your footage is now
+in the custody of the people you filmed.
 
 ## 5 — Scene three
 Kicker: THE OCCUPIED WEST BANK
@@ -72,6 +72,19 @@ it on your Action Button. Then forget about it.
 Footer: Witness — witnessrecord.app
 
 ---
+
+## Alternates for slide 4
+The three scenes are three different ways to lose a recording: it survives (3),
+it is taken into custody with you (4), it is confiscated and destroyed (5).
+Slide 4 carries the storage failure, which is what slide 6 turns on.
+
+- Masked and unmarked / "When the agents are masked and the vehicle is
+  unmarked, your video is the only record that exists." No badge number to
+  write down. No name. Just whatever your phone caught before someone told you
+  to stop.
+- Moved before anyone asks / "By the time a lawyer asks what happened, the only
+  witness is in a facility three states away." People get transferred fast.
+  Their phone does not go with them.
 
 ## Alternate hooks for slide 1
 - "Three countries. One reflex: take the phone."
