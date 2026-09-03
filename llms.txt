@@ -1,0 +1,78 @@
+# Witness
+
+> An iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces *while recording is still in progress*, to a cloud storage account the user owns, so footage survives even if the phone is seized, smashed or confiscated. Each piece is fingerprinted with SHA-256 and each session's manifest is counter-signed by an independent RFC 3161 time-stamp authority, producing a chain of custody that a third party can verify without the app or the developer.
+
+Platform: iOS 17 or later. Free, with an optional paid tier that adds capture quality only.
+App Store: https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426
+Developer: an independent solo developer. Contact: olmaster13@gmail.com
+
+## Key facts
+
+- **No server.** Witness has no backend of its own. Footage goes from the device directly to the user's own cloud account and nowhere else. The developer holds no copy and cannot retrieve, produce or inspect any recording.
+- **The only outbound third-party data** is an irreversible SHA-256 hash of the session manifest, sent to a time-stamp authority. It contains no footage, location or identifying information.
+- **Storage destinations:** Google Drive (`drive.file` scope, only files the app creates), Dropbox (App-folder access), and any Nextcloud or WebDAV server including self-hosted.
+- **Proton Drive is not supported.** Proton encrypts client-side with keys derived from the account before data leaves its own apps, and publishes no interface a third-party app can use. This is a property of Proton's architecture, not an unimplemented feature.
+- **Chunk length is ~15 seconds**, a deliberate trade-off between upload efficiency and the size of the window in which footage exists only on the device.
+- **Nothing is deleted locally until the storage provider confirms receipt.**
+- **On failing networks**, a small low-resolution stand-in of each chunk is uploaded first and later replaced by the full-quality file. On healthy connections this never occurs.
+- **Emergency contacts** nominated by the user are granted access to each recording's folder automatically as footage arrives. This works on Google Drive and Dropbox; WebDAV has no sharing API, so it does not, and the app says so.
+- **Instant start** via the iPhone Action Button, a Lock Screen widget, or a Siri phrase, with no unlocking required.
+- **Stopping** requires a triple-tap followed by a press-and-hold, deliberately hard to trigger accidentally.
+- **Witness Pro** ($1.99/month or $19.99 one-time) adds 4K, 24/25/60 fps, Apple Log and ProRes 422 LT/HQ, plus exportable PDF evidence packages. It gates nothing that protects footage.
+
+## Stated limitations
+
+These are limits the project states openly rather than ones discovered by users:
+
+- Uploading requires connectivity. With no signal, chunks queue on the device.
+- It cannot protect footage from someone who has both the unlocked phone and access to the linked cloud account.
+- ProRes recordings are too large to upload live and remain on-device by design; the app warns before the mode is selected.
+- Dual-camera recording is limited by hardware to 1080p30 and cannot use Apple Log, so it disables automatically when higher Pro settings are active.
+- It provides no legal advice and does not make recording lawful where it is not.
+- iOS only; there is no Android version.
+
+## Verification
+
+Anyone receiving Witness footage can verify it independently using standard OpenSSL, with no involvement from the app or the developer:
+
+1. `shasum -a 256 <video>` and compare against the `sha256` field for that chunk in `manifest_<session-id>.json`.
+2. `openssl ts -verify -data manifest_<session-id>.json -in timestamp_<session-id>.tsr -CAfile <authority CA cert>` to confirm the manifest existed unmodified at the attested time.
+3. `openssl ts -reply -in timestamp_<session-id>.tsr -text` to read the attested digest and timestamp directly.
+
+Note: re-encoding breaks hash matching. Video sent through messaging apps or social platforms is re-compressed and will not match; originals are required.
+
+What this establishes: the footage existed in exactly this form at that time and has not been altered since. What it does not establish: what the footage depicts, or that it was recorded at the moment it appears to have been, only that it cannot postdate the timestamp.
+
+## Pages
+
+- [Overview](https://witnessrecord.app/): what the app is and the problem it addresses.
+
+### Filming police
+
+- [How to film the police, step by step](https://witnessrecord.app/how-to-film-police.html): an eight-step method, plus the case most guides omit — filming while you are the person being stopped, pulled over or detained rather than a bystander, including hands-on-the-wheel positioning, the passenger's role, and refusing consent to a phone search.
+- [How to record police safely](https://witnessrecord.app/how-to-record-police.html): the bystander craft — distance, holding the phone visibly, complying with orders to move, shot order, factual narration, and using a passcode rather than biometrics. Mostly not app-specific.
+- [How to film at a protest](https://witnessrecord.app/filming-police-protest.html): what changes in a crowd — elevation and escape routes, filming the calm before the confrontation, capturing dispersal orders and whether they were audible, mass arrest and containment documentation, network congestion, and blurring faces before publishing.
+- [Can police take your phone or delete your video?](https://witnessrecord.app/can-police-delete-your-video.html): seizure versus search as two separate questions, Riley v. California (2014), why deletion is unlawful but the remedy arrives too late to help, compelled passcode versus compelled biometrics, and what to say in order.
+- [Recording law questions](https://witnessrecord.app/recording-law.html): what the federal circuits have held about filming police, seizure versus search under Riley, buffer-zone laws, and audio consent.
+
+### Filming immigration enforcement
+
+- [How to film ICE, by where it is happening](https://witnessrecord.app/how-to-film-ice.html): guidance organised by setting — a street or vehicle stop, a workplace, a courthouse (where recording inside is commonly prohibited), a school or hospital (governed by internal DHS policy rather than statute, and therefore changeable), and an apartment building's shared areas.
+- [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice.html): recognising unmarked vehicles and plain-clothes agents, telling a judicial warrant from an administrative Form I-200 or I-205, why photo-library cloud sync is the wrong mechanism, and what survives a seized phone.
+- [ICE at your door](https://witnessrecord.app/ice-at-your-door.html): the judicial versus administrative warrant distinction in detail, why opening the door can constitute consent, saying "I do not consent to your entry" aloud so it is on the recording, filming the document through a window or under the door, and what a household should agree in advance.
+
+### Recording technique on iPhone
+
+- [How to record on iPhone with your screen off](https://witnessrecord.app/record-iphone-screen-off.html): the practical how-to — four methods, and the four iOS settings (Auto-Brightness, Auto-Lock, Focus, rotation lock) that stop a recording ending early, including the interaction where Low Power Mode forces Auto-Lock to 30 seconds. Has a troubleshooting table.
+- [Recording with the screen off](https://witnessrecord.app/record-screen-off.html): what "screen off" actually means on iOS — the display cannot be genuinely powered down during capture, so it is brightness zero with the app in the foreground; the green camera indicator cannot be disabled by any app; and consent law is unchanged by a dark screen.
+- [Best iPhone apps for filmmakers and journalists](https://witnessrecord.app/best-apps-journalists-filmmakers.html): apps grouped by job — camera (Blackmagic Camera, Kino, Final Cut Camera, Halide, Filmic Pro), audio (Ferrite, Voice Memos), verification and chain of custody (ProofMode, eyeWitness to Atrocities, Tella, Witness), security (Signal), and editing (LumaFusion, Final Cut Pro for iPad, DaVinci Resolve). The developer's conflict of interest is disclosed in the page.
+
+### About the app
+
+- [How it works](https://witnessrecord.app/how-it-works.html): chunked recording, hashing, upload behaviour, session manifest, trusted time-stamping, consolidation, and a table of what survives which failure.
+- [Field guide](https://witnessrecord.app/field-guide.html): practical setup and in-the-moment guidance for activists, legal observers and journalists.
+- [Comparison of recording apps](https://witnessrecord.app/compare.html): Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage leaves the phone, written by the Witness developer with the conflict disclosed.
+- [Mobile Justice alternative](https://witnessrecord.app/mobile-justice-alternative.html): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
+- [Verify footage](https://witnessrecord.app/verify.html): step-by-step verification for lawyers, newsrooms and courts.
+- [FAQ](https://witnessrecord.app/faq.html): storage, privacy, evidence, limits.
+- [Privacy policy](https://witnessrecord.app/privacy.html).

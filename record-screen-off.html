@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to record video with the screen off on iPhone, and what iOS will not allow</title>
+<meta name="description" content="What a black screen actually means on iOS, why the camera indicator cannot be hidden, when discreet recording is lawful, and how to record with the display dark.">
+<link rel="canonical" href="https://witnessrecord.app/record-screen-off.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to record video with the screen off on iPhone">
+<meta property="og:description" content="What a black screen actually means, what iOS will not let any app hide, and where the legal line sits.">
+<meta property="og:url" content="https://witnessrecord.app/record-screen-off.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can an iPhone record video with the screen completely off?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not literally. iOS stops camera capture when an app is sent to the background or the device is locked, so no third-party app can film with the display genuinely powered down. What is possible is holding the app in the foreground while setting display brightness to zero, which makes the screen appear black while recording continues. That is what apps describing a black screen or stealth mode are doing." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an app hide the green camera dot on iPhone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The green camera indicator and orange microphone indicator have been mandatory in the iOS status bar since iOS 14 and cannot be disabled by any ordinary app. At zero display brightness the indicator is rendered but not perceptible, because the entire display including the status bar is dark. The indicator is not defeated, only unlit along with everything else." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to record with the screen off?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on what is being recorded and where. Openly recording on-duty law enforcement in public is constitutionally protected in the United States. Recording private individuals without consent is a very different question: a minority of US states require all-party consent for audio, and recording people in places where they have a reasonable expectation of privacy can be a serious criminal offence regardless of state. A dark screen changes none of that." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a black screen save battery while recording?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Some, and less than people expect. On an OLED iPhone black pixels draw very little power, so the display cost falls close to zero. But the camera sensor, video encoding and any upload continue at full cost, and those dominate. Expect a modest improvement in recording time, not a transformative one." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+
+<h1>Recording with the screen off</h1>
+<p class="tagline">What that actually means on iOS, and what no app can do for you.</p>
+
+<p class="lede">I build an app whose main feature is this, so I have an obvious interest. I am going to start with the two things most pages on this topic leave out, both of which are limits rather than features.</p>
+
+<h2>iOS will not record with the screen truly off</h2>
+<p>This is the first thing to be clear about, because a lot of writing on this implies otherwise.</p>
+<p>iOS stops camera capture when an app goes to the background or the device locks. No ordinary third-party app can film with the display genuinely powered down, and any app claiming to is either doing something else or describing it loosely.</p>
+<p>What is actually possible is keeping the app in the foreground and setting the display brightness to zero. The screen is on and rendering; it is just rendering nothing at no brightness. On an OLED iPhone that is visually indistinguishable from a phone that is off. This is what my app does, and it restores your previous brightness when the recording ends.</p>
+<p>So the honest phrasing is <em>dark screen</em>, not <em>screen off</em>. The distinction matters because it tells you the failure modes: leaving the app, taking a call, or the phone locking will all stop the recording.</p>
+
+<h2>No app can hide the camera indicator</h2>
+<p>Since iOS 14 a green dot appears in the status bar whenever the camera is in use, and an orange one for the microphone. <strong>These cannot be turned off by any normal app, including mine.</strong> Apple made them mandatory precisely so that apps cannot record without the user knowing.</p>
+<p>At zero brightness the indicator is still being drawn. It just is not visible, because the entire display including the status bar is dark. The indicator is not defeated, only unlit along with everything else. If someone raises the brightness, it is right there.</p>
+<p>I mention this because "undetectable recording" is a claim some apps make and none of them can honour on a current iPhone.</p>
+
+<h2>The part that decides whether you should do this at all</h2>
+<div class="caveat">
+  <p><strong>A dark screen changes what a recording looks like. It changes nothing about whether you are allowed to make it.</strong></p>
+  <p><strong>Recording on-duty police in public</strong> is constitutionally protected in the United States when you are lawfully present and not interfering. Every federal circuit that has squarely considered it has said so. This is the use this app is built for, and the one I would defend.</p>
+  <p><strong>Recording private individuals is a completely different question.</strong> Federal law and most states allow recording a conversation you are part of, but a minority require every party to consent, and those statutes carry real penalties. Recording anyone in a place where they have a reasonable expectation of privacy, a bathroom, a changing room, a bedroom, is a serious criminal offence essentially everywhere, and no framing of intent changes that.</p>
+  <p>If your reason for wanting a dark screen is that the person being recorded would object if they knew, stop and find out what the law where you live actually says before you do it. That is not a disclaimer, it is the practical advice.</p>
+</div>
+
+<h2>Why you would legitimately want it</h2>
+<p>Three reasons, in the order they actually matter:</p>
+<p><strong>The phone does not read as a camera.</strong> Safety guidance for filming law enforcement is consistent that you should hold your phone openly rather than half-concealed, because an unidentifiable object in a hand is what gets mistaken for a weapon. A dark screen is what makes that advice cheap to follow: you can hold the phone up in plain sight without it visibly being a camera pointed at someone. You get the safety of visible without the escalation of obvious.</p>
+<p><strong>It works in a pocket or on a dashboard.</strong> A bright viewfinder in a dark car or a pocket is a light source. A dark one is not.</p>
+<p><strong>It does not advertise how long you have been recording,</strong> or that you are recording at all, to someone glancing at the phone.</p>
+
+<h2>How to actually do it</h2>
+<p>Options, from free to less free.</p>
+<p><strong>Turn your brightness all the way down manually.</strong> Free, works today, no install. Swipe into Control Centre and drag the brightness slider to the bottom before you start the stock Camera app. The screen will be very dim rather than black, the viewfinder is still faintly visible in the dark, and auto-brightness may fight you, so turn that off first in Settings, Accessibility, Display and Text Size. This is a genuinely reasonable answer if you need it once.</p>
+<p><strong>Add a Siri shortcut.</strong> "Hey Siri, I'm getting pulled over" style shortcuts typically dim the display, start recording and message a contact. Free, hands-free, and worth setting up regardless of what else you use. It records to your camera roll and uploads when the recording finishes.</p>
+<p><strong>Use an app built for it.</strong> Mine sets brightness to zero, renders a fully black view, and requires a deliberate triple-tap followed by a press-and-hold to stop, so it cannot be ended by a stray touch or by someone grabbing the phone. It also uploads while recording, which is a separate feature and the one I would argue matters more.</p>
+
+<h2>Does it save battery?</h2>
+<p>Some, and less than you would hope.</p>
+<p>On an OLED iPhone a black pixel is essentially off, so the display cost of a dark screen falls close to zero, and the display is normally a large share of power draw. But while recording, the camera sensor, the video encoder and any upload are all running at full cost, and they dominate. You will get a useful improvement in recording time, not a transformative one.</p>
+<p>For anything long, bring a power bank. That advice has not changed in a decade.</p>
+
+<h2>What a dark screen does not do</h2>
+<div class="caveat">
+  <p><strong>It does not protect the footage.</strong> A phone that is taken still has the recording on it. Getting the video off the device while you are still filming is a different problem and, I would argue, the more important one.</p>
+  <p><strong>It does not survive leaving the app.</strong> A call, a lock, or switching apps ends the recording, because iOS ends camera capture.</p>
+  <p><strong>It does not make you invisible.</strong> You are still a person holding a phone up, and anyone can raise the brightness.</p>
+  <p><strong>It does not make an unlawful recording lawful.</strong></p>
+</div>
+
+<figure>
+  <div class="fig-diagram">
+    <img src="img/upload-timeline.svg" width="760" height="322"
+         alt="Bar chart comparing how much of a nine minute recording survives a seized phone. Stock camera with iCloud sync and upload-on-stop apps lose all nine minutes. Uploading in 45 second pieces loses up to 45 seconds. Uploading in 15 second pieces loses up to 15 seconds.">
+  </div>
+  <figcaption>The problem worth solving. A dark screen affects none of this, which is why I would not choose an app on that feature alone. <a href="compare.html">Compared the options here</a>, including where mine loses.</figcaption>
+</figure>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="record-iphone-screen-off.html">The practical how-to</a>: four methods step by step, and the four iOS settings that stop a recording ending early.</li>
+  <li><a href="how-to-record-police.html">How to record police safely</a>, where the dark screen fits into the wider question of distance, framing and narration.</li>
+  <li><a href="recording-law.html">What the courts have actually held</a> about filming law enforcement, seizure and audio consent.</li>
+  <li><a href="how-it-works.html">How the upload works</a>, if the footage surviving is what you actually came for.</li>
+</ul>
+
+<div class="actions" style="margin-top:30px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
+  <a class="btn btn-ghost" href="how-to-record-police.html">Recording safely</a>
+</div>
+
+<p class="disclaimer">Written August 2026, against iOS 26. Apple changes these behaviours between releases. Nothing here is legal advice.</p>
+
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-film-police.html">How to film police</a>
+        <a href="how-to-record-police.html">Recording safely</a>
+        <a href="filming-police-protest.html">Filming at a protest</a>
+        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
+        <a href="recording-law.html">Recording law</a>
+        <a href="how-to-film-ice.html">How to film ICE</a>
+        <a href="recording-ice.html">Recognising ICE</a>
+        <a href="ice-at-your-door.html">ICE at your door</a>
+        <a href="record-iphone-screen-off.html">Recording screen-off</a>
+        <a href="record-screen-off.html">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
+        <a href="compare.html">Compare apps</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

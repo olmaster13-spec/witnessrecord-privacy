@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to record on iPhone with your screen off: four methods, and the settings that stop it failing</title>
+<meta name="description" content="Step-by-step methods for recording video on an iPhone with a dark screen, the Settings changes that stop the recording ending early, how to start without unlocking, and what to do when it stops on its own.">
+<link rel="canonical" href="https://witnessrecord.app/record-iphone-screen-off.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to record on iPhone with your screen off">
+<meta property="og:description" content="Four methods, the Settings that stop it failing halfway, and how to start a recording without unlocking the phone.">
+<meta property="og:url" content="https://witnessrecord.app/record-iphone-screen-off.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to record video on an iPhone with the screen dark",
+  "description": "Methods for recording video on an iPhone without a lit display, including manual brightness, a Siri shortcut and a purpose-built app, plus the iOS settings that prevent the recording from ending early.",
+  "inLanguage": "en",
+  "tool": [{ "@type": "HowToTool", "name": "iPhone running iOS 17 or later" }],
+  "step": [
+    { "@type": "HowToStep", "name": "Turn off auto-brightness", "text": "Settings, Accessibility, Display and Text Size, and turn off Auto-Brightness. Without this, iOS raises the display again when lighting changes and the dark screen does not stay dark." },
+    { "@type": "HowToStep", "name": "Set auto-lock to never", "text": "Settings, Display and Brightness, Auto-Lock, Never. iOS ends camera capture when the device locks, so an auto-lock timer is the most common cause of a recording stopping on its own." },
+    { "@type": "HowToStep", "name": "Silence interruptions", "text": "Turn on a Focus mode or Do Not Disturb. An incoming call moves the camera app to the background, which ends the recording." },
+    { "@type": "HowToStep", "name": "Lock the orientation", "text": "Turn on rotation lock in Control Centre so the framing does not change if the phone tilts while you cannot see the screen." },
+    { "@type": "HowToStep", "name": "Choose a start method that needs no screen", "text": "The Action Button, a Lock Screen widget, Back Tap, or a Siri phrase all begin a recording without unlocking the phone or looking at it." },
+    { "@type": "HowToStep", "name": "Drop the brightness and record", "text": "Drag the Control Centre brightness slider to the bottom, or use an app that sets brightness to zero and renders a black view, then start recording." }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+
+<h1>How to record on iPhone with your screen off</h1>
+<p class="tagline">Four methods, the settings that stop it failing halfway, and how to start without unlocking.</p>
+
+<p class="lede">One correction before the instructions, because it saves you an hour: iOS will not record with the display genuinely powered down. Camera capture ends when an app leaves the foreground or the device locks, and no ordinary third-party app is exempt. What is achievable is a screen at zero brightness rendering nothing, which on an OLED iPhone is indistinguishable from a phone that is off.</p>
+
+<p>Why that limit exists, what the green camera indicator is and why nothing can hide it, and when recording discreetly is lawful in the first place, are all worked through on the <a href="record-screen-off.html">page about what screen-off recording actually means</a>. This page is the practical one: what to tap, in what order, and what to change first so it does not stop on you.</p>
+
+<h2>Step one: the four settings that matter</h2>
+<p>Do these before you try any of the methods. Every "it stopped recording by itself" report I have had traced back to one of the first two.</p>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-n" aria-hidden="true">01</div>
+    <div>
+      <h3>Turn off Auto-Brightness</h3>
+      <p><em>Settings &rarr; Accessibility &rarr; Display &amp; Text Size &rarr; Auto-Brightness, off.</em></p>
+      <p>Leave it on and iOS will quietly raise the display when the ambient light changes, which is exactly what happens when you walk out of a building. Your dark screen lights back up and you do not find out until someone tells you.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-n" aria-hidden="true">02</div>
+    <div>
+      <h3>Set Auto-Lock to Never</h3>
+      <p><em>Settings &rarr; Display &amp; Brightness &rarr; Auto-Lock &rarr; Never.</em></p>
+      <p>This is the big one. A locking device ends camera capture, so a thirty-second auto-lock timer will end a recording thirty seconds after you last touched the screen. Note that Low Power Mode forces Auto-Lock to thirty seconds and greys the setting out, which is a genuinely nasty interaction: the moment the battery drops below twenty per cent and you tap Yes on the prompt, your recording is on a thirty-second fuse.</p>
+      <p>Apps built for this generally hold a wake lock so the phone will not sleep, which sidesteps the problem. The stock Camera app does not need to, because it is in the foreground with the screen on. Shortcut-based approaches are where this bites.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-n" aria-hidden="true">03</div>
+    <div>
+      <h3>Turn on a Focus mode</h3>
+      <p><em>Control Centre &rarr; Focus &rarr; Do Not Disturb.</em></p>
+      <p>An incoming call takes over the screen and pushes the camera to the background, which ends the recording. Calls are the second most common cause after auto-lock. If you want calls from one person to still come through, set that as an allowed contact rather than leaving the whole thing open.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-n" aria-hidden="true">04</div>
+    <div>
+      <h3>Lock the rotation</h3>
+      <p><em>Control Centre &rarr; the padlock-with-arrow button.</em></p>
+      <p>You cannot see the frame, so you cannot see it flip. Decide landscape or portrait before you start and lock it. Landscape is the better default for anything that might be evidence: it matches how footage is reviewed and it gives you more of the scene either side.</p>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <p><strong>Worth doing once, tonight.</strong> All four are permanent settings, not per-recording steps. Set them now and the only decision left in the moment is how to start.</p>
+</div>
+
+<h2>Step two: pick a method</h2>
+
+<h3>Method 1 — Manual brightness with the stock Camera app</h3>
+<p>Free, no install, works right now.</p>
+<ol>
+  <li>Swipe into Control Centre and drag the brightness slider all the way to the bottom.</li>
+  <li>Open Camera, switch to Video.</li>
+  <li>Start recording.</li>
+</ol>
+<p><strong>What you get:</strong> a very dim screen. Not black. In daylight it reads as a phone someone has turned down; in a dark room the viewfinder is faintly visible and recognisable as a camera if someone is looking. Apple's slider does not reach zero.</p>
+<p><strong>Where it fails:</strong> your recording is one file that iCloud will not begin uploading until you press stop, and a large one at that. If the phone leaves your hands mid-recording, the whole thing goes with it.</p>
+
+<h3>Method 2 — A Siri shortcut</h3>
+<p>Free, hands-free, and worth setting up whatever else you use, because it is the fastest way to start a recording without touching the phone.</p>
+<ol>
+  <li>Open the Shortcuts app and create a new shortcut.</li>
+  <li>Add <em>Set Brightness</em> to 0%, then <em>Set Focus</em> to Do Not Disturb.</li>
+  <li>Add <em>Open App &rarr; Camera</em>, or the recording app you use.</li>
+  <li>Optionally add <em>Send Message</em> to a contact with your current location.</li>
+  <li>Rename the shortcut to the phrase you want to say. Something you would plausibly say out loud, and would not say by accident.</li>
+</ol>
+<p><strong>What you get:</strong> one spoken phrase that dims the display, silences the phone, tells someone where you are and opens the camera. Apple publishes several variations on this and there are good community ones.</p>
+<p><strong>Where it fails:</strong> Shortcuts cannot press the record button in the stock Camera app, so the last tap is still yours unless you point it at an app that starts recording on launch. And it still records to the camera roll, which means it still uploads only after you stop.</p>
+
+<h3>Method 3 — The Action Button or a Lock Screen widget</h3>
+<p>On iPhone 15 Pro and later there is a physical Action Button, and every modern iPhone has Lock Screen widgets and Control Centre controls. Any of these can launch a shortcut or an app from a locked phone without Face ID, without unlocking, and without looking at the screen.</p>
+<p>This is the part most people skip and it is the part that matters most in practice. A method that requires you to unlock the phone, find an app and tap a button is a method that takes eight seconds and a look down. A physical button is one press with the phone still at your side.</p>
+<p>Back Tap is worth knowing too: <em>Settings &rarr; Accessibility &rarr; Touch &rarr; Back Tap</em> assigns a shortcut to a double or triple tap on the back of the phone. It is less reliable than a real button and it works through most cases.</p>
+
+<h3>Method 4 — An app built for it</h3>
+<p>I make one, so treat this section as interested rather than neutral.</p>
+<p>A purpose-built app can do the two things the methods above cannot: render an actually black view at zero brightness rather than a dim viewfinder, and require a deliberate gesture to stop so a stray touch or someone grabbing the phone does not end the recording. Witness uses a triple-tap followed by a press-and-hold, and restores your previous brightness when the recording ends.</p>
+<p>The feature I would actually argue for is a different one, and it has nothing to do with the screen: uploading while the recording is still running.</p>
+
+<figure>
+  <div class="fig-diagram">
+    <img src="img/upload-timeline.svg" width="760" height="322"
+         alt="Bar chart comparing how much of a nine minute recording survives a seized phone. Stock camera with iCloud sync and upload-on-stop apps lose all nine minutes. Uploading in 45 second pieces loses up to 45 seconds. Uploading in 15 second pieces loses up to 15 seconds.">
+  </div>
+  <figcaption>A dark screen affects none of this. It is why I would not choose an app on that feature alone, and I have <a href="compare.html">compared the options including where mine loses</a>.</figcaption>
+</figure>
+
+<h2>Troubleshooting</h2>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>What happened</th><th>Almost always</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Recording stopped after 30 seconds</td><td>Low Power Mode forced Auto-Lock to 30 seconds. Charge above 20% or turn Low Power Mode off.</td></tr>
+    <tr><td>Recording stopped after a minute or two</td><td>Auto-Lock. Set it to Never.</td></tr>
+    <tr><td>Screen brightened by itself</td><td>Auto-Brightness. Turn it off in Accessibility, not in Control Centre.</td></tr>
+    <tr><td>Recording ended when someone called</td><td>Calls background the app. Use a Focus mode.</td></tr>
+    <tr><td>Footage is sideways</td><td>Rotation was not locked. Lock it before starting.</td></tr>
+    <tr><td>Green dot still visible</td><td>Working as designed. No app can disable it; at zero brightness it is unlit along with everything else, but raising the brightness reveals it.</td></tr>
+    <tr><td>Nothing uploaded</td><td>Either no signal, or the app uploads only on stop. These are different problems with different fixes.</td></tr>
+    <tr><td>Phone got hot and quality dropped</td><td>Thermal throttling, common at 4K. Drop to 1080p for anything long.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Battery, honestly</h2>
+<p>A black screen on an OLED iPhone costs close to nothing to display, and the display is normally a large share of power draw, so you do gain. But while recording, the camera sensor, the video encoder and any upload are all running at full cost and they dominate the total. Expect a useful improvement in recording time, not a transformative one.</p>
+<p>Dropping from 4K to 1080p does more for battery and heat than the screen does. For anything long, bring a power bank; that advice has not changed in a decade.</p>
+
+<h2>The part that decides whether you should do this</h2>
+<div class="caveat">
+  <p><strong>A dark screen changes what a recording looks like. It changes nothing about whether you are allowed to make it.</strong></p>
+  <p>Recording on-duty police in public is constitutionally protected in the United States when you are lawfully present and not interfering, and every federal circuit to squarely consider it has said so. Recording private individuals is an entirely different question: a minority of states require every party to a conversation to consent, and those statutes carry real penalties. Recording anyone somewhere they have a reasonable expectation of privacy is a serious criminal offence essentially everywhere.</p>
+  <p>If the reason you want a dark screen is that the person being recorded would object if they knew, find out what the law where you live says before you do it. That is practical advice, not a disclaimer.</p>
+</div>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="record-screen-off.html">What "screen off" actually means on iOS</a>, the camera indicator, and the limits no app can work around.</li>
+  <li><a href="how-to-film-police.html">How to film the police, step by step</a>, where a dark screen fits into distance, framing and narration.</li>
+  <li><a href="recording-law.html">What the courts have held</a> about filming law enforcement, seizure, and audio consent.</li>
+  <li><a href="how-it-works.html">How the upload works</a>, if footage surviving is what you actually came for.</li>
+</ul>
+
+<div class="actions" style="margin-top:30px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
+  <a class="btn btn-ghost" href="record-screen-off.html">What screen-off really means</a>
+</div>
+
+<p class="disclaimer">Written September 2026, against iOS 26. Apple moves these settings and changes these behaviours between releases, so check the menu paths if yours differ. Nothing here is legal advice.</p>
+
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-film-police.html">How to film police</a>
+        <a href="how-to-record-police.html">Recording safely</a>
+        <a href="filming-police-protest.html">Filming at a protest</a>
+        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
+        <a href="recording-law.html">Recording law</a>
+        <a href="how-to-film-ice.html">How to film ICE</a>
+        <a href="recording-ice.html">Recognising ICE</a>
+        <a href="ice-at-your-door.html">ICE at your door</a>
+        <a href="record-iphone-screen-off.html">Recording screen-off</a>
+        <a href="record-screen-off.html">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
+        <a href="compare.html">Compare apps</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

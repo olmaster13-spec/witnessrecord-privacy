@@ -1,0 +1,635 @@
+/* Witness site styles.
+   Native CSS, no framework, no build step, no JavaScript. This site is read on
+   congested protest networks and by crawlers; both are served best by markup
+   that paints on the first byte.
+
+   Type is the system stack on purpose. On Apple devices it resolves to SF Pro,
+   which is what the app itself uses, so the site and the product share a voice
+   at zero network cost.
+
+   Shape rule, applied everywhere: interactive elements are pills, surfaces are
+   14px, media is 18px. */
+
+:root {
+  color-scheme: dark;
+
+  /* Brand. The red is the app's own accent, sRGB(232, 46, 59). */
+  --red: #e82e3b;
+  --red-soft: #ff6b5e;
+
+  --bg: #08080a;
+  --bg-raised: #101013;
+  --surface: #16161a;
+  --surface-2: #1c1c21;
+  --line: #26262c;
+  --line-strong: #34343c;
+
+  --text: #f2f2f3;
+  --text-2: #b9b9c0;
+  --text-3: #85858f;
+
+  --amber: #f0b429;
+  --green: #4ade80;
+
+  --r-surface: 14px;
+  --r-media: 18px;
+  --r-pill: 999px;
+
+  --measure: 68ch;
+  --page: 1080px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.narrow { max-width: 760px; margin-inline: auto; }
+
+a { color: var(--red-soft); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: #ff8f85; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+:focus-visible {
+  outline: 2px solid var(--red-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link, for keyboard and screen-reader users ------------------------ */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--text);
+  color: var(--bg);
+  padding: 12px 18px;
+  border-radius: 0 0 var(--r-surface) 0;
+  font-weight: 600;
+  z-index: 100;
+}
+.skip:focus { left: 0; }
+
+/* Header ---------------------------------------------------------------- */
+.site-head {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 8, 10, 0.82);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .site-head { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+.site-head .wrap {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: auto;
+  flex: none;
+}
+.brand img { width: 26px; height: 26px; }
+.site-nav { display: flex; gap: 24px; align-items: center; font-size: 0.93rem; }
+.site-nav a { color: var(--text-3); text-decoration: none; white-space: nowrap; transition: color 0.18s var(--ease); }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
+
+@media (max-width: 800px) {
+  .site-head .wrap { height: 60px; gap: 16px; }
+  /* The nav scrolls rather than wrapping or dropping links. The fade tells
+     the reader there is more to the right instead of leaving a hard cut. */
+  .site-nav {
+    gap: 16px;
+    font-size: 0.86rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+    padding-right: 14px;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+}
+
+/* Typography ------------------------------------------------------------ */
+h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.12; margin: 0; }
+h1 { font-size: clamp(2.15rem, 4.4vw, 3.1rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.15rem); font-weight: 650; }
+h3 { font-size: 1.06rem; font-weight: 640; line-height: 1.35; }
+
+p { margin: 0 0 1.1em; max-width: var(--measure); }
+.lede { font-size: clamp(1.06rem, 1.9vw, 1.22rem); color: var(--text-2); }
+.muted { color: var(--text-3); font-size: 0.94rem; }
+
+section { padding: clamp(56px, 9vw, 104px) 0; }
+section + section { border-top: 1px solid var(--line); }
+.section-title { margin-bottom: 14px; }
+.section-intro { color: var(--text-2); margin-bottom: 40px; max-width: 62ch; }
+
+/* Hero ------------------------------------------------------------------ */
+.hero { padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(56px, 8vw, 96px); border-top: 0; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+.hero h1 { margin-bottom: 20px; }
+.hero .lede { margin-bottom: 30px; }
+.hero-accent { color: var(--red); }
+
+.hero-figure {
+  position: relative;
+  justify-self: center;
+  /* Explicit width: the loop frames are absolutely positioned, so nothing
+     inside gives this box an intrinsic size to inherit. */
+  width: 278px;
+  max-width: 100%;
+  margin: 0;
+}
+/* Device bezel drawn in CSS so the screenshot itself stays an unmodified
+   capture of the real app. */
+.device {
+  border: 1px solid var(--line-strong);
+  border-radius: 42px;
+  padding: 9px;
+  background: linear-gradient(160deg, #202027, #0e0e11);
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  width: 100%;
+}
+.device img { border-radius: 34px; }
+
+/* Hero loop -------------------------------------------------------------
+   Three real captures of the app crossfading: the promise, the mechanism,
+   the control. Pure CSS keyframes rather than a video or JavaScript, so it
+   costs one paint and no main-thread work, and it degrades to a single
+   still frame for anyone who has asked for less motion. */
+.phone-screen {
+  position: relative;
+  width: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  /* Reserves the box before the images decode, so the hero never shifts. */
+  aspect-ratio: 560 / 1217;
+  background: #0b0b0d;
+}
+.phone-screen img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: hero-cycle 15s infinite;
+}
+.phone-screen img:nth-child(1) { animation-delay: 0s; opacity: 1; }
+.phone-screen img:nth-child(2) { animation-delay: 3s; }
+.phone-screen img:nth-child(3) { animation-delay: 6s; }
+.phone-screen img:nth-child(4) { animation-delay: 9s; }
+.phone-screen img:nth-child(5) { animation-delay: 12s; }
+
+/* Five frames over 15s: each holds long enough to actually be read, which is
+   the point of showing the tutorial rather than just animating something. */
+@keyframes hero-cycle {
+  0%       { opacity: 0; }
+  2%, 18%  { opacity: 1; }
+  20%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+/* Caption tracks the frames, so the loop reads as an explanation rather
+   than decoration. */
+.phone-caption {
+  position: relative;
+  margin-top: 16px;
+  min-height: 2.6em;
+  text-align: center;
+}
+.phone-caption span {
+  position: absolute;
+  inset: 0;
+  color: var(--text-3);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  opacity: 0;
+  animation: hero-cycle 15s infinite;
+}
+.phone-caption span:nth-child(1) { animation-delay: 0s; opacity: 1; }
+.phone-caption span:nth-child(2) { animation-delay: 3s; }
+.phone-caption span:nth-child(3) { animation-delay: 6s; }
+.phone-caption span:nth-child(4) { animation-delay: 9s; }
+.phone-caption span:nth-child(5) { animation-delay: 12s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-screen img,
+  .phone-caption span { animation: none; }
+  .phone-screen img:nth-child(n+2),
+  .phone-caption span:nth-child(n+2) { display: none; }
+  .phone-screen img:nth-child(1),
+  .phone-caption span:nth-child(1) { opacity: 1; }
+}
+
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  /* The headline leads on narrow screens. A full-height phone above it would
+     push the actual message off the first screen. */
+  .hero-figure { width: 250px; margin-top: 10px; }
+}
+
+/* Buttons --------------------------------------------------------------- */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 26px;
+  border-radius: var(--r-pill);
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: transform 0.16s var(--ease), background-color 0.16s var(--ease), border-color 0.16s var(--ease);
+}
+.btn-primary { background: var(--text); color: #08080a; }
+.btn-primary:hover { background: #fff; color: #08080a; }
+.btn-ghost { border-color: var(--line-strong); color: var(--text); }
+.btn-ghost:hover { border-color: var(--text-3); color: var(--text); }
+.btn:active { transform: translateY(1px); }
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:active { transform: none; }
+}
+/* Stacked buttons of unequal width read as unfinished; on narrow screens
+   they take the full measure instead. */
+@media (max-width: 480px) {
+  .actions { gap: 10px; }
+  .actions .btn { flex: 1 1 100%; }
+}
+
+/* Steps (numbered sequence) --------------------------------------------- */
+.steps { display: grid; gap: 0; margin-top: 8px; }
+.step {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  align-items: start;
+}
+.step + .step { border-top: 1px solid var(--line); }
+.step-n {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--red);
+  border: 1px solid rgba(232, 46, 59, 0.35);
+  border-radius: var(--r-pill);
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: rgba(232, 46, 59, 0.08);
+}
+.step h3 { margin-bottom: 6px; }
+.step p { color: var(--text-2); margin: 0; font-size: 0.97rem; }
+
+@media (max-width: 560px) {
+  .step { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* Feature grid (varied cells, not three equal cards) --------------------- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+/* Audiences --------------------------------------------------------------
+   Asymmetric on purpose: the leading case carries the most detail and gets
+   the height to hold it, instead of three identical tiles padded to match. */
+.audience {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  grid-auto-rows: min-content;
+  gap: 20px;
+}
+.audience > :first-child { grid-row: span 2; }
+@media (max-width: 820px) {
+  .audience { grid-template-columns: 1fr; }
+  .audience > :first-child { grid-row: auto; }
+}
+.span-2 { grid-column: span 2; }
+@media (max-width: 820px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .span-2 { grid-column: auto; }
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  padding: 26px;
+}
+.panel h3 { margin-bottom: 8px; }
+.panel p { color: var(--text-2); font-size: 0.96rem; margin: 0; }
+.panel p + p { margin-top: 0.7em; }
+.panel-tint {
+  background:
+    radial-gradient(120% 100% at 0% 0%, rgba(232, 46, 59, 0.14), transparent 62%),
+    var(--surface);
+}
+.panel-media { padding: 0; overflow: hidden; background: var(--bg-raised); }
+.panel-media .panel-body { padding: 24px 26px 26px; }
+.panel-media img { border-bottom: 1px solid var(--line); }
+
+/* Split feature (image + text), used at most twice ---------------------- */
+.split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+/* Storage destinations ---------------------------------------------------
+   A divided list rather than three boxed tiles. The three options are not
+   equivalent (one of them has a caveat the others do not), so a row that
+   gives each the width its explanation actually needs beats a symmetric
+   grid that forces all three into the same shape. */
+.stores { margin: 0; border-top: 1px solid var(--line); }
+.store {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: clamp(20px, 4vw, 56px);
+  align-items: baseline;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.store dt {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-weight: 640;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+}
+.store dd { margin: 0; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; }
+.store img { width: 26px; height: 26px; object-fit: contain; flex: none; }
+.store .glyph {
+  width: 26px; height: 26px; flex: none;
+  display: grid; place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  color: var(--text-2);
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.04em;
+}
+@media (max-width: 820px) {
+  .store { grid-template-columns: 1fr; gap: 10px; padding: 22px 0; }
+}
+
+/* Callouts -------------------------------------------------------------- */
+.note, .caveat {
+  border-radius: var(--r-surface);
+  padding: 22px 24px;
+  border: 1px solid;
+}
+.note { background: rgba(74, 222, 128, 0.05); border-color: rgba(74, 222, 128, 0.2); }
+.caveat { background: rgba(240, 180, 41, 0.05); border-color: rgba(240, 180, 41, 0.22); }
+.note p, .caveat p { font-size: 0.96rem; margin: 0 0 0.7em; max-width: none; }
+.note p:last-child, .caveat p:last-child { margin-bottom: 0; }
+.caveat strong { color: var(--amber); }
+.note strong { color: var(--green); }
+
+/* Limits list ----------------------------------------------------------- */
+.limits { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+.limits li {
+  background: var(--surface);
+  border-left: 2px solid var(--amber);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-2);
+  font-size: 0.96rem;
+  margin: 0;
+}
+.limits strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+/* Q&A ------------------------------------------------------------------- */
+.qa { padding: 24px 0; }
+.qa + .qa { border-top: 1px solid var(--line); }
+.qa h3 { margin-bottom: 8px; }
+.qa p { color: var(--text-2); margin-bottom: 0.7em; }
+.qa p:last-child { margin-bottom: 0; }
+
+/* Tables ---------------------------------------------------------------- */
+.table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--line); border-radius: var(--r-surface); }
+table { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
+th, td { text-align: left; padding: 14px 18px; vertical-align: top; }
+thead th { color: var(--text-3); font-weight: 600; font-size: 0.84rem; letter-spacing: 0.02em; background: var(--bg-raised); }
+tbody tr + tr td { border-top: 1px solid var(--line); }
+
+/* Code ------------------------------------------------------------------ */
+code {
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.86em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+pre {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+pre code { background: none; padding: 0; }
+
+/* Lists ----------------------------------------------------------------- */
+ul, ol { padding-left: 1.3em; max-width: var(--measure); }
+li { margin: 0.5em 0; }
+li::marker { color: var(--text-3); }
+
+blockquote { margin: 0; }
+
+/* Pricing --------------------------------------------------------------- */
+.price-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.price { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-surface); padding: 26px; }
+.price .amount { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.03em; display: block; margin-bottom: 4px; }
+.price .per { color: var(--text-3); font-size: 0.9rem; font-weight: 500; }
+@media (max-width: 820px) { .price-row { grid-template-columns: 1fr; } }
+
+/* Footer ---------------------------------------------------------------- */
+.site-foot {
+  border-top: 1px solid var(--line);
+  padding: 44px 0 64px;
+  color: var(--text-3);
+  font-size: 0.9rem;
+}
+.foot-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.site-foot a { color: var(--text-2); text-decoration: none; }
+.site-foot a:hover { color: var(--text); text-decoration: underline; }
+.foot-note { margin-top: 28px; max-width: 60ch; line-height: 1.6; }
+
+/* App Store button glyph. Apple wordmark path from Simple Icons (CC0), used
+   to signal platform rather than as decoration. */
+.btn svg { width: 16px; height: 16px; flex: none; }
+.btn-primary svg { fill: #08080a; }
+
+/* Terminal block. The proof section's claim is that verification happens
+   away from the app, on someone else's machine, so the honest illustration
+   is the command itself rather than a picture of the app. */
+.terminal {
+  background: #0d0d10;
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+.terminal-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-raised);
+  color: var(--text-3);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+}
+.terminal-body { padding: 16px 18px; overflow-x: auto; }
+.terminal-body div { white-space: pre; }
+.t-prompt { color: var(--text-3); }
+.t-cmd { color: var(--text); }
+/* The one place green appears on the site. It is terminal status output,
+   quoted rather than styled, and it is the payoff of the whole section. */
+.t-ok { color: var(--green); font-weight: 600; }
+.t-note { color: var(--text-3); }
+
+/* Split with the text in the wider, leading column. */
+.split-lead { grid-template-columns: 1.1fr 0.9fr; }
+@media (max-width: 860px) {
+  .split-lead { grid-template-columns: 1fr; }
+  /* Keeps the picture under its own heading rather than above it. */
+  .split-lead > figure { order: 2; }
+}
+
+/* Failure diagram -------------------------------------------------------
+   Drawn rather than photographed: the subject is a phone that has stopped
+   existing, which no screenshot can show. */
+.figure-diagram {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+.figure-diagram svg { width: 100%; height: auto; display: block; }
+.d-body { fill: var(--bg-raised); stroke: var(--line-strong); stroke-width: 1.5; }
+.d-screen { fill: #0b0b0d; }
+.d-chunk { fill: var(--text-3); }
+.d-lost { fill: var(--text-3); opacity: 0.28; }
+.d-crack { stroke: var(--red); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.d-label { fill: var(--text-3); font-size: 11px; font-family: inherit; letter-spacing: 0.04em; }
+
+/* Cropped app capture, shown as media rather than in a device bezel: the
+   image is already a detail, so a phone frame around it would be a lie. */
+.shot {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 330px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-media);
+  overflow: hidden;
+  background: var(--bg-raised);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.85);
+}
+.shot img { display: block; width: 100%; height: auto; }
+
+/* Long-form pages ------------------------------------------------------
+   The home page is composed section by section; these pages are documents,
+   so they get vertical rhythm from the element flow instead. */
+.prose { padding: clamp(44px, 6vw, 76px) 0 clamp(64px, 9vw, 110px); }
+.prose > h1 { margin-bottom: 12px; }
+.prose > h2 { margin: 2.2em 0 0.7em; padding-bottom: 0.45em; border-bottom: 1px solid var(--line); }
+.prose > h3 { margin: 1.9em 0 0.55em; }
+.prose > h1 + .tagline,
+.prose > h1 + .lede { margin-top: 0; }
+.prose .tagline { color: var(--text-2); font-size: 1.06rem; margin-bottom: 1.6em; }
+.prose > ul, .prose > ol { margin: 0 0 1.3em; }
+.prose .note, .prose .caveat { margin: 1.7em 0; }
+.prose table { margin: 1.4em 0; }
+.prose tbody tr { border-top: 1px solid var(--line); }
+.prose pre { margin: 1.1em 0; }
+.prose .disclaimer { color: var(--text-3); font-size: 0.93rem; margin-top: 2.4em; }
+
+/* Figures inside long-form pages ----------------------------------------
+   The diagrams are external SVGs so one file serves several pages and the
+   browser caches it once. They carry data, so they sit in a bordered panel
+   like a table would, not bleeding into the prose as decoration. */
+.prose figure { margin: 2.2em 0; }
+.prose figcaption {
+  color: var(--text-3);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin-top: 11px;
+  max-width: var(--measure);
+}
+.fig-diagram {
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  background: var(--bg-raised);
+  padding: clamp(16px, 3vw, 26px);
+}
+.fig-diagram img { display: block; width: 100%; height: auto; }
+.fig-shot {
+  max-width: 340px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-media);
+  overflow: hidden;
+  background: var(--bg-raised);
+}
+.fig-shot img { display: block; width: 100%; height: auto; }
+
+/* Below ~760px the chart would scale its own labels down to about 5px, which
+   is not readable on the device most of this site is read on. It scrolls
+   instead, the same way wide tables here already do, with the right edge
+   faded so the cut reads as intentional. */
+@media (max-width: 760px) {
+  .fig-diagram {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  }
+  .fig-diagram::-webkit-scrollbar { display: none; }
+  .fig-diagram img { min-width: 700px; }
+}

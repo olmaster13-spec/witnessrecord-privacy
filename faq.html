@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recording police: storage, privacy and evidence questions | Witness</title>
+<meta name="description" content="Can the developer see your footage, what happens if your phone is seized, which cloud services work, and whether the recording holds up as evidence.">
+<link rel="canonical" href="https://witnessrecord.app/faq.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Recording police: storage, privacy and evidence questions">
+<meta property="og:description" content="Straight answers about storage, privacy, evidence, and the app's limits.">
+<meta property="og:url" content="https://witnessrecord.app/faq.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Witness?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Witness is an iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces while recording is still in progress, to a cloud storage account the user owns, so footage survives even if the phone is seized or destroyed." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the developer see my footage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Witness has no server. Footage goes directly from the device to the cloud account you connected (Google Drive, Dropbox, Nextcloud or WebDAV) and nowhere else. The developer holds no copy and cannot retrieve your recordings. The only data sent to any third party is an irreversible SHA-256 hash of the session manifest, submitted to a time-stamp authority, which contains no footage, location or identifying information." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the police take or destroy my phone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Everything already uploaded is in your cloud account and is unaffected. Because footage uploads in roughly 15-second pieces during the recording rather than at the end, at most the last few seconds are lost. The chain-of-custody manifest is also uploaded continuously, so the record covering what was captured is already safe." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cloud storage services does Witness support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Google Drive, Dropbox, and any Nextcloud or WebDAV server including self-hosted ones. Proton Drive is not supported because Proton encrypts files client-side with keys derived from the account before they leave Proton's own apps, and publishes no interface a third-party app can use." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Witness work without an internet connection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recording works normally offline. Uploading does not: chunks queue on the device and upload automatically the moment connectivity returns. Nothing is deleted locally until the storage provider confirms it was received." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will footage from Witness hold up as evidence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Witness produces a verifiable chain of custody: every chunk is fingerprinted with a SHA-256 hash, listed in a session manifest with UTC capture times and GPS coordinates, and that manifest is counter-signed by an independent RFC 3161 time-stamp authority. Anyone can verify this with standard OpenSSL, without the app or the developer. Whether specific footage is admissible in a given proceeding is a legal question that depends on jurisdiction and circumstances, and the app provides no legal advice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Witness free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Black-screen recording, continuous chunked upload, hashing, time-stamping and emergency contacts are all free. Witness Pro is an optional purchase adding capture quality only: 4K, 24/25/60 fps, Apple Log and ProRes, for $1.99 per month or $19.99 once. Nothing that protects footage is behind the paywall." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happened to the ACLU Mobile Justice app?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ACLU Mobile Justice was discontinued in February 2025, after running in seventeen states and the District of Columbia. Two separate capabilities were lost with it: footage leaving the phone so it survives seizure, which other apps still provide, and an ACLU affiliate receiving and reviewing that footage, which no consumer app replaces." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Witness to record ICE or immigration enforcement?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The relevant properties are the same as for a police encounter: footage leaves the device continuously during the encounter rather than after it, and recording starts without unlocking the phone via the Action Button, a Lock Screen widget or Siri. Photo-library cloud sync is a weaker safeguard because it typically defers uploads and waits for a recording to finish. Witness provides no legal advice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the screen really stay black while recording?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The display goes fully dark for the entire recording so the phone reads as idle. Stopping requires a triple-tap followed by a press-and-hold, which is difficult to trigger accidentally or by someone grabbing the phone. An optional viewfinder can be enabled if you would rather see what you are filming." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start recording without unlocking my phone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Witness can be bound to the iPhone Action Button on iPhone 15 Pro and newer, added as a Lock Screen widget, or started with a Siri phrase. Each launches straight into recording without a passcode or navigating the app." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to record the police?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In most US states, openly recording on-duty police officers in public is constitutionally protected activity provided you do not physically interfere. Rules on distance, audio consent and covert recording vary by jurisdiction and change over time, and differ substantially outside the United States. Witness provides no legal advice and does not make an unlawful recording lawful." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the limits of Witness?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It cannot upload without a network connection. It cannot protect footage if you are compelled to unlock your phone and delete it from the cloud account itself. ProRes recordings are too large to upload live and stay on the device by design. It does not make recording lawful where it is not, and it is not legal advice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Witness require an account or collect personal data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There is no Witness account. You sign in only to your own cloud storage provider, and that connection is between you and them. The app collects no personal data for the developer, has no analytics server, and its App Store privacy declaration reflects that." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a chain of custody and why does it matter for video?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A chain of custody is a documented record showing that evidence is what it claims to be and has not been altered. For video it matters because a file alone proves little: timestamps can be changed and footage can be edited. Witness establishes one by hashing each chunk as it is recorded, listing those hashes in a session manifest, and having an independent time-stamp authority counter-sign that manifest, so any later modification is detectable by a third party." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Frequently asked questions</h1>
+
+<h2>The basics</h2>
+
+<div class="qa">
+  <h3>What is Witness?</h3>
+  <p>Witness is an iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black, and uploads the footage in roughly 15-second pieces while recording is still in progress, to a cloud storage account you own, so the footage survives even if the phone does not.</p>
+</div>
+
+<div class="qa">
+  <h3>Is it free?</h3>
+  <p>Yes. Black-screen recording, continuous upload, hashing, time-stamping and emergency contacts are all free and stay free. Witness Pro is optional and adds capture quality only (4K, 24/25/60&nbsp;fps, Apple Log and ProRes) at $1.99 per month or $19.99 once. Nothing that protects footage sits behind the paywall.</p>
+</div>
+
+<div class="qa">
+  <h3>What does it need?</h3>
+  <p>An iPhone running iOS 17 or later, and a cloud storage account you already have.</p>
+</div>
+
+<h2>Privacy</h2>
+
+<div class="qa">
+  <h3>Can the developer see my footage?</h3>
+  <p>No. Witness has no server. Footage travels from your device directly to the account you connected and nowhere else. There is no copy for the developer to hold, hand over, or lose.</p>
+  <p>The one thing that goes to any third party is an irreversible SHA-256 hash of the session manifest, sent to the time-stamp authority. It contains no footage, no location and nothing identifying. The authority learns that some document existed, never what it said.</p>
+</div>
+
+<div class="qa">
+  <h3>Do I need a Witness account?</h3>
+  <p>No. There is no account, no sign-up and no analytics server. You authenticate only with your own storage provider, and that relationship is between you and them.</p>
+</div>
+
+<div class="qa">
+  <h3>How much access does the app request to my cloud storage?</h3>
+  <p>The minimum available. On Google Drive it requests <code>drive.file</code>, which grants access only to files the app itself creates, so it cannot read anything else in your Drive. Dropbox uses App-folder access, the equivalent. With WebDAV you supply a server and credentials directly, and we recommend an app-specific password where your server offers one, since it can be revoked on its own.</p>
+</div>
+
+<h2>If something goes wrong</h2>
+
+<div class="qa">
+  <h3>What happens if my phone is seized or destroyed?</h3>
+  <p>Everything already uploaded is safe in your cloud account and unaffected by anything done to the device. Because upload runs continuously rather than at the end, the loss is at most the last few seconds. The manifest documenting the session is uploaded continuously too, so the custody record is there as well.</p>
+</div>
+
+<div class="qa">
+  <h3>What if someone makes me unlock my phone?</h3>
+  <p>Uploaded footage is beyond the reach of the phone, but not beyond the reach of your <em>cloud account</em>, and the phone is usually signed into that account. Someone with your unlocked phone could open the Drive or Dropbox app and delete footage there. The app includes guidance on hardening this in advance, and it is worth reading before you need it.</p>
+</div>
+
+<div class="qa">
+  <h3>Does it work without signal?</h3>
+  <p>Recording works normally. Uploading cannot happen without a connection, so chunks queue on the device and upload the moment signal returns. Nothing is deleted locally until receipt is confirmed.</p>
+</div>
+
+<div class="qa">
+  <h3>What if the connection is bad but not dead?</h3>
+  <p>If uploads start falling behind, Witness encodes a small low-resolution stand-in of each new chunk and sends that first, so something arrives during the event. The full-quality file follows and replaces it once the network allows. On a healthy connection this never happens.</p>
+</div>
+
+<h2>Evidence</h2>
+
+<div class="qa">
+  <h3>Will this hold up as evidence?</h3>
+  <p>Witness produces a genuinely verifiable record: a SHA-256 hash of every chunk, a session manifest listing those hashes with UTC times and GPS coordinates, and an independent RFC 3161 time-stamp counter-signing that manifest. Anyone can check it with standard OpenSSL, without the app and without trusting the person who filmed it.</p>
+  <p>Whether particular footage is <em>admissible</em> is a legal question that turns on jurisdiction and circumstance, and this is not legal advice. What the app can do is make the technical objections, that video was altered or backdated, answerable.</p>
+</div>
+
+<div class="qa">
+  <h3>What is a chain of custody, and why does video need one?</h3>
+  <p>It is a documented record showing evidence is what it claims to be and has not been altered. A video file on its own proves very little: file timestamps can be changed and footage can be edited convincingly. Witness builds the record while recording, hashing each chunk, listing the hashes, and having a third party counter-sign the list, so a later modification is detectable by someone who trusts neither party.</p>
+</div>
+
+<div class="qa">
+  <h3>How does someone verify footage I send them?</h3>
+  <p>Send the whole session folder (video, manifest and time-stamp token) and point them at <a href="verify.html">the verification instructions</a>. Send originals: messaging apps and social platforms re-encode video, which changes the file and breaks hash matching.</p>
+</div>
+
+<div class="qa">
+  <h3>What happened to the ACLU Mobile Justice app?</h3>
+  <p>It was discontinued in February 2025, after running in seventeen states and the District of Columbia. Two separate things went away with it: footage leaving the phone, which other apps still do, and an ACLU affiliate receiving and reviewing that footage, which no consumer app replaces. <a href="mobile-justice-alternative.html">What it did and how to choose a replacement</a> covers the difference.</p>
+</div>
+
+<div class="qa">
+  <h3>Can I use this to record ICE or immigration enforcement?</h3>
+  <p>Yes, and the same properties matter there: footage leaving the device during the encounter rather than after it, and starting without unlocking. <a href="recording-ice.html">Recording immigration enforcement</a> goes into the specifics, including why photo-library cloud sync is a weaker safeguard than it appears. It is not legal advice, and the know-your-rights organisations linked there are the authority on the rest.</p>
+</div>
+
+<h2>Using it</h2>
+
+<div class="qa">
+  <h3>Does the screen really stay black?</h3>
+  <p>Yes, fully dark for the whole recording, so the phone reads as idle. Stopping takes a triple-tap and then a press-and-hold, which is hard to trigger by accident or by someone snatching the phone. If you would rather see what you are filming, an optional viewfinder can be turned on.</p>
+</div>
+
+<div class="qa">
+  <h3>Can I start it without unlocking the phone?</h3>
+  <p>Yes. The Action Button on iPhone 15 Pro and newer, a Lock Screen widget, or a Siri phrase. Each goes straight into recording.</p>
+</div>
+
+<div class="qa">
+  <h3>Can it record both cameras?</h3>
+  <p>Yes, on devices that support it, producing two synchronised videos per session. Dual-camera recording is limited by hardware to 1080p at 30&nbsp;fps and cannot do Apple Log, so it turns off automatically when higher Pro capture settings are selected, and the app tells you which setting is responsible.</p>
+</div>
+
+<div class="qa">
+  <h3>Which storage should I choose?</h3>
+  <p>All three protect footage from device loss equally. Google Drive and Dropbox are simplest, and are the only options where emergency contacts get access automatically. Nextcloud or WebDAV keeps footage on infrastructure you or your organisation control, at the cost of automatic contact sharing, since the protocol has no sharing mechanism.</p>
+</div>
+
+<h2>Limits</h2>
+
+<div class="qa">
+  <h3>What can't Witness do?</h3>
+  <p>It cannot upload with no network. It cannot protect footage from someone with access to your unlocked phone <em>and</em> your cloud account. ProRes recordings are too large to send live and stay on the device by design. It does not make recording lawful where it is not, and it does not give legal advice.</p>
+</div>
+
+<div class="qa">
+  <h3>Why isn't Proton Drive supported?</h3>
+  <p>Proton encrypts every file client-side, with keys derived from your account, before anything leaves their own apps, and they publish no interface a third-party app can use. This is a property of how Proton is built, not a gap we can close. The app lists Proton and explains this rather than pretending the option exists.</p>
+</div>
+
+<div class="qa">
+  <h3>Is there an Android version?</h3>
+  <p>Not yet. Witness is currently iOS 17 and later.</p>
+</div>
+
+<h2>Something else</h2>
+<p>Questions not answered here, bug reports, or enquiries from newsrooms and legal teams: <strong>olmaster13@gmail.com</strong></p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-film-police.html">How to film police</a>
+        <a href="how-to-record-police.html">Recording safely</a>
+        <a href="filming-police-protest.html">Filming at a protest</a>
+        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
+        <a href="recording-law.html">Recording law</a>
+        <a href="how-to-film-ice.html">How to film ICE</a>
+        <a href="recording-ice.html">Recognising ICE</a>
+        <a href="ice-at-your-door.html">ICE at your door</a>
+        <a href="record-iphone-screen-off.html">Recording screen-off</a>
+        <a href="record-screen-off.html">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
+        <a href="compare.html">Compare apps</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

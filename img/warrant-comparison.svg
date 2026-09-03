@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 366" role="img"
+     aria-labelledby="t3 d3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="t3">How to tell a judicial warrant from an ICE administrative warrant</title>
+  <desc id="d3">A judicial warrant is headed with a court name such as United States District Court and is signed by a judge or magistrate. It can authorise forced entry into a home. An ICE administrative warrant is headed Department of Homeland Security, carries a form number of I-200 or I-205, and is signed by an immigration officer rather than a judge. It does not by itself authorise entry into a home without consent. The signature line is the distinguishing detail. This is a schematic, not a reproduction of either document.</desc>
+
+  <text x="0" y="16" fill="#f2f2f3" font-size="14" font-weight="640">The difference is the signature line</text>
+  <text x="0" y="36" fill="#85858f" font-size="12.5">Schematic, not a reproduction. Layouts vary; what follows is what to look for.</text>
+
+  <!-- Judicial -->
+  <rect x="0" y="52" width="366" height="230" rx="12" fill="#16161a" stroke="#34343c" stroke-width="1.5"/>
+  <text x="24" y="82" fill="#85858f" font-size="11" font-weight="700" letter-spacing="0.06em">JUDICIAL WARRANT</text>
+  <rect x="24" y="96" width="318" height="1" fill="#34343c"/>
+  <text x="24" y="122" fill="#f2f2f3" font-size="13.5" font-weight="640">"United States District Court"</text>
+  <text x="24" y="142" fill="#85858f" font-size="12.5">or a named state court, at the top</text>
+  <text x="24" y="172" fill="#b9b9c0" font-size="12.5">Named person, recent date</text>
+
+  <rect x="24" y="188" width="318" height="52" rx="8" fill="#101013" stroke="#e82e3b" stroke-width="1.5"/>
+  <text x="38" y="208" fill="#e82e3b" font-size="11" font-weight="700" letter-spacing="0.05em">SIGNED BY</text>
+  <text x="38" y="228" fill="#f2f2f3" font-size="13.5" font-weight="640">A judge or magistrate</text>
+
+  <text x="24" y="264" fill="#f2f2f3" font-size="13" font-weight="640">Can authorise forced entry.</text>
+
+  <!-- Administrative -->
+  <rect x="394" y="52" width="366" height="230" rx="12" fill="#16161a" stroke="#34343c" stroke-width="1.5"/>
+  <text x="418" y="82" fill="#85858f" font-size="11" font-weight="700" letter-spacing="0.06em">ICE ADMINISTRATIVE WARRANT</text>
+  <rect x="418" y="96" width="318" height="1" fill="#34343c"/>
+  <text x="418" y="122" fill="#f2f2f3" font-size="13.5" font-weight="640">"Department of Homeland Security"</text>
+  <text x="418" y="142" fill="#85858f" font-size="12.5">at the top</text>
+  <text x="418" y="172" fill="#b9b9c0" font-size="12.5">Form number <tspan font-weight="640" fill="#f2f2f3">I-200</tspan> or <tspan font-weight="640" fill="#f2f2f3">I-205</tspan></text>
+
+  <rect x="418" y="188" width="318" height="52" rx="8" fill="#101013" stroke="#e82e3b" stroke-width="1.5"/>
+  <text x="432" y="208" fill="#e82e3b" font-size="11" font-weight="700" letter-spacing="0.05em">SIGNED BY</text>
+  <text x="432" y="228" fill="#f2f2f3" font-size="13.5" font-weight="640">An immigration officer</text>
+
+  <text x="418" y="264" fill="#f2f2f3" font-size="13" font-weight="640">Does not authorise entry without consent.</text>
+
+  <!-- Takeaway -->
+  <rect x="0" y="300" width="760" height="54" rx="12" fill="#101013" stroke="#26262c" stroke-width="1"/>
+  <text x="24" y="324" fill="#b9b9c0" font-size="12.5">If it is safe to, ask for the warrant to be held up to a window or slid under the door, and film it. A document that</text>
+  <text x="24" y="343" fill="#b9b9c0" font-size="12.5">nobody will let you read is itself worth recording.</text>
+</svg>

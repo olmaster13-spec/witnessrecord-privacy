@@ -1,0 +1,9 @@
+# Witness. https://witnessrecord.app/
+# Everything here is public and intended to be indexed, including by AI
+# crawlers: people find this app by asking how to keep footage of a police
+# encounter from being destroyed, and an accurate answer is the point.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://witnessrecord.app/sitemap.xml

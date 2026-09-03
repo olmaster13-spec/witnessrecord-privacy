@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to keep police footage safe: chunked upload, hashing, timestamps</title>
+<meta name="description" content="Footage leaves the phone in 15-second pieces while you film, each SHA-256 hashed and counter-signed by an RFC 3161 time-stamp authority.">
+<link rel="canonical" href="https://witnessrecord.app/how-it-works.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to keep police footage safe: chunked upload, hashing, timestamps">
+<meta property="og:description" content="Chunked live upload, SHA-256 per chunk, a session manifest, and an RFC 3161 time-stamp: how footage becomes evidence that can be checked by someone who does not trust you.">
+<meta property="og:url" content="https://witnessrecord.app/how-it-works.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How Witness works: chunked upload, hashing and trusted time-stamping",
+  "description": "A technical account of how the Witness iOS app preserves footage during police encounters and establishes a verifiable chain of custody.",
+  "about": "Video evidence chain of custody, trusted timestamping, and resilient mobile upload",
+  "proficiencyLevel": "Expert",
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html" aria-current="page">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>How Witness works</h1>
+<p class="tagline">The mechanics, in enough detail to evaluate rather than trust.</p>
+
+<h2>The design constraint</h2>
+<p>Ordinary camera apps write one file and finish it when you press stop. If the recording is interrupted, whether the phone is taken, smashed, or the battery dies, that file is often unfinalised and unplayable, and in any case it is still sitting on the device that was taken.</p>
+<p>Witness inverts this. The recording is treated as a stream to be evacuated continuously, and every design decision follows from that.</p>
+
+<h2>1. Recording in chunks</h2>
+<p>Video is written in segments of roughly 15 seconds. Each segment is finalised as a complete, independently playable file the moment it ends, and the next one begins immediately.</p>
+<p>Fifteen seconds is a deliberate trade. Shorter chunks mean less footage sits in the gap between "captured" and "safely uploaded," which is the window where evidence can be lost. Longer chunks would upload more efficiently but widen that window. Fifteen seconds keeps the exposure small while remaining practical on cellular.</p>
+
+<h2>2. Hashing before anything moves</h2>
+<p>As soon as a chunk is finalised, Witness computes its <strong>SHA-256 hash</strong>, a 64-character fingerprint that changes completely if even one byte of the file changes.</p>
+<p>The hash is computed on the device, before the file is uploaded anywhere. That ordering matters: it means the fingerprint describes the footage as it came off the camera, not as it arrived somewhere else.</p>
+
+<h2>3. Uploading during the recording</h2>
+<p>Each chunk uploads as soon as it exists, over cellular or Wi-Fi, using a background transfer session so uploads continue even if the app is suspended or the phone is locked.</p>
+<p>Three behaviours matter under stress:</p>
+<ul>
+  <li><strong>Nothing is deleted locally until receipt is confirmed.</strong> A chunk stays on the device until the storage provider acknowledges it. A failed upload is retried with exponential backoff, and the queue flushes the moment connectivity returns.</li>
+  <li><strong>Uploads are idempotent.</strong> A retry after a partial failure lands on the same destination file rather than creating duplicates.</li>
+  <li><strong>Degraded networks get a stand-in.</strong> If the queue is visibly falling behind, with several chunks outstanding or repeated failures, Witness encodes a small low-resolution copy of each new chunk and sends that first, so something arrives during the event. The full-quality file follows and replaces it once the network allows. On a healthy connection this never happens and no extra copy is made.</li>
+</ul>
+
+<h2>4. The session manifest</h2>
+<p>Alongside the footage, Witness maintains a <strong>manifest</strong> for each recording session: a JSON document listing every chunk, its SHA-256 hash, its capture start and end times in UTC, and its GPS coordinates with accuracy.</p>
+<p>The manifest is rewritten and re-uploaded as the recording proceeds, overwriting the same file. This means custody records exist in your storage <em>during</em> the encounter, not only if the session is ended normally. If the phone is seized mid-recording, the manifest describing everything captured so far is already safe.</p>
+
+<h2>5. Trusted time-stamping</h2>
+<p>A timestamp written by your own phone proves little; a device's clock can be changed. So when a session finishes, Witness takes a SHA-256 hash of the completed manifest and submits it to an independent <strong>RFC 3161 time-stamp authority</strong>, which returns a cryptographically signed token asserting that this exact hash was presented at that exact moment.</p>
+<p>The result is a claim that does not depend on trusting the person who made the recording: the footage hashes to the manifest, the manifest hashes to the value in the token, and the token is signed by a third party who has no stake in the matter. Together they establish that the footage existed in precisely this form at that time and has not been modified since.</p>
+<div class="note">
+  <p>Only the hash is transmitted to the authority. It is irreversible and carries no footage, no location, and nothing identifying. The authority learns that <em>some</em> document existed, never what it contained.</p>
+</div>
+
+<h2>6. Consolidation</h2>
+<p>Once every chunk of a session is confirmed uploaded, Witness merges them into a single continuous video per camera, uploads that, and then removes the small chunks, leaving one clean file per camera rather than a folder of fragments. The manifest retains every original per-chunk hash, so the fragmented record remains verifiable after the fragments themselves are gone.</p>
+<p>This only ever runs after the individual chunks are safely stored, so nothing is at risk while it happens.</p>
+
+<h2>Where footage goes</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Destination</th><th>Access requested</th><th>Emergency contact sharing</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Google Drive</td><td><code>drive.file</code>, only files the app creates</td><td>Yes, automatic</td></tr>
+    <tr><td>Dropbox</td><td>App folder, confined to its own directory</td><td>Yes, automatic</td></tr>
+    <tr><td>Nextcloud / WebDAV</td><td>Your server, your credentials</td><td>No, the protocol has no sharing API</td></tr>
+    <tr><td>Proton Drive</td><td colspan="2">Not supported. Proton encrypts client-side with keys derived from your account before anything leaves their own apps, and publishes no interface a third-party app can use.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Witness has no server. Nothing passes through infrastructure belonging to the developer, which is also why the developer cannot produce your footage if asked. There is no copy to produce.</p>
+
+<h2>What survives what</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Event</th><th>Outcome</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Phone seized mid-recording</td><td>Everything already uploaded is safe, plus the manifest covering it</td></tr>
+    <tr><td>Phone destroyed</td><td>Same</td></tr>
+    <tr><td>App force-quit</td><td>Completed chunks are already uploaded or queued; the queue resumes on next launch</td></tr>
+    <tr><td>Footage deleted from the phone</td><td>No effect on what reached your cloud account</td></tr>
+    <tr><td>Signal lost entirely</td><td>Chunks queue locally and upload when signal returns</td></tr>
+    <tr><td>Someone edits the video afterwards</td><td>Hashes no longer match the manifest, and the mismatch is demonstrable</td></tr>
+    <tr><td>Cloud account credentials compromised</td><td>Footage can be deleted there, see the in-app guidance on protecting the account</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Verifying it later</h2>
+<p>Everything above is worth nothing if a court, editor or opposing party cannot check it independently. The verification steps travel inside every manifest, and are written out in full here: <a href="verify.html">how to verify Witness footage →</a></p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-film-police.html">How to film police</a>
+        <a href="how-to-record-police.html">Recording safely</a>
+        <a href="filming-police-protest.html">Filming at a protest</a>
+        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
+        <a href="recording-law.html">Recording law</a>
+        <a href="how-to-film-ice.html">How to film ICE</a>
+        <a href="recording-ice.html">Recognising ICE</a>
+        <a href="ice-at-your-door.html">ICE at your door</a>
+        <a href="record-iphone-screen-off.html">Recording screen-off</a>
+        <a href="record-screen-off.html">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
+        <a href="compare.html">Compare apps</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

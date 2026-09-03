@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apps for recording police, compared honestly by one of the developers</title>
+<meta name="description" content="Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage actually leaves the phone. Written by the developer of one of them.">
+<link rel="canonical" href="https://witnessrecord.app/compare.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apps for recording police, compared honestly by one of the developers">
+<meta property="og:description" content="Compared on the thing that actually matters: when footage leaves the phone. Including where mine loses.">
+<meta property="og:url" content="https://witnessrecord.app/compare.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Apps for recording police, compared honestly by one of the developers",
+  "description": "A comparison of iOS apps for recording law enforcement encounters, focused on when footage leaves the device. Written by the developer of Witness, with the conflict of interest disclosed and the competitor claims sourced to their own store listings.",
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="field-guide.html">Field guide</a>
+      <a href="verify.html">Verify</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+
+<h1>What else is out there</h1>
+<p class="tagline">I built one of these. Here is the honest version anyway.</p>
+
+<p class="lede">I get asked how Witness compares to the other options often enough that it seemed worth writing down properly, including the parts where mine is not the answer. I have a stake in this, so read it with that in mind, and check the store listings yourself.</p>
+
+<div class="note">
+  <p><strong>What I actually verified.</strong> Everything below about other apps comes from their own App Store or Google Play listings, read in August 2026. I have not run any of them through a real encounter, and I am not going to pretend otherwise. If I got something wrong about your app, email me and I will fix it.</p>
+</div>
+
+<h2>The only question that really matters</h2>
+<p>Ignore feature lists for a second. There is one question that decides whether any of this works: <strong>when does the video leave the phone?</strong></p>
+<p>If the answer is "when you press stop," then a phone taken during the encounter takes everything with it. That is not a small gap. It is the entire scenario. Everything else, black screens, widgets, emergency contacts, is secondary to that.</p>
+<p>Almost every guide to filming police tells you to make sure your video is syncing to the cloud. Almost nobody points out that the usual way of doing that has exactly this problem.</p>
+
+<figure>
+  <div class="fig-diagram">
+    <img src="img/upload-timeline.svg" width="760" height="322"
+         alt="Bar chart comparing how much of a nine minute recording survives a seized phone. Stock camera with iCloud sync and upload-on-stop apps lose all nine minutes. Uploading in 45 second pieces loses up to 45 seconds. Uploading in 15 second pieces loses up to 15 seconds.">
+  </div>
+  <figcaption>Assumes a phone taken at nine minutes. The gap between the 45 second and 15 second rows is real but small; the gap between either of them and the top two rows is the whole argument.</figcaption>
+</figure>
+
+<h2>Cop Watch Video Recorder</h2>
+<p>$1.99, 4.0 stars from 34 ratings, by Pelau Imagineering.</p>
+<p>This is the closest thing to a direct competitor, and I want to be straight about it: <strong>it does continuous upload too.</strong> Its listing says the app "uploads your video every 45 seconds," alongside the older behaviour of starting the upload when you stop. So the core idea is not something I invented, and any page telling you otherwise is selling you something.</p>
+<p>Where it differs: it uploads to iCloud only, so you get whatever iCloud storage you have and no choice of destination. There is no black screen, though it has a Silent Mode so it stops announcing itself out loud. And there is nothing about hashing or timestamps, so you get the video but not a way to prove it is unedited.</p>
+<p>The thing I would actually weigh: <strong>the listing shows version 3.4, last updated 16 August 2021.</strong> Five years without an update, across five major iOS releases. That does not mean it is broken. It does mean nobody is fixing it when it breaks.</p>
+
+<h2>TurnSignl</h2>
+<p>Subscription, iOS 15 and up.</p>
+<p>This is a genuinely different product and honestly the more interesting one. It connects you to a real attorney licensed in your state, live on video, while the stop is happening. The recording is a side effect; the lawyer is the point. In 2026 they added 60-plus languages and support for immigration matters.</p>
+<p><strong>If what you want is a lawyer, buy this, not mine.</strong> I do not offer legal help of any kind and never will. The recording goes to your own cloud, which is fine, but you are paying for the attorney network, and if that is what you need then that is what you should pay for.</p>
+<p>The obvious trade: it is a subscription with people on the other end, so it costs real money, and it is oriented around traffic stops rather than protests or raids.</p>
+
+<h2>Legal Equalizer</h2>
+<p>Its listing describes stream-to-cloud recording, sending video to three emergency contacts, and help finding a lawyer. I could not confirm the upload timing from public material, so I am not going to guess at it. Worth a look if the emergency-contact side is your priority.</p>
+
+<h2>Your phone's camera plus iCloud or Google Photos</h2>
+<p>This is what most people actually use, and it deserves a serious answer rather than being dismissed.</p>
+<p>It is free, it is already on your phone, there is nothing to set up, and no app can be blamed for failing. For a lot of situations that is genuinely enough, and I would rather someone film with the stock camera than not film.</p>
+<p>The problem is specific. Photo library sync was built for convenience, not for this. It commonly waits for Wi-Fi, holds off when the battery is low, and, most importantly, treats your recording as one file that is not eligible to upload until you stop recording. A twelve minute video uploads nothing at minute eleven.</p>
+<p>So the footage you most want to survive, the last few minutes before someone takes the phone, is precisely the footage still sitting on it.</p>
+
+<h2>The Siri shortcut</h2>
+<p>"Hey Siri, I'm getting pulled over" dims the screen, starts the front camera, messages a contact and drops the video in iCloud when it finishes. Free, hands-free, no install.</p>
+<p>I think everyone should set this up regardless of what else they use. It costs nothing. It has the same upload-at-the-end limitation as everything above, and it is front-camera oriented, which suits a traffic stop and not much else.</p>
+
+<h2>Where Witness stands</h2>
+<p>Roughly 15 second pieces instead of 45. Your choice of Google Drive, Dropbox, Nextcloud or WebDAV instead of iCloud only. The screen is fully black rather than dimmed. Every piece is SHA-256 hashed on the device and the session manifest gets counter-signed by an independent timestamp authority, so someone can <a href="verify.html">check the footage is unaltered</a> without trusting me. There is no server on my end, so there is no copy of anything to subpoena.</p>
+
+<h3>Where it loses</h3>
+<div class="caveat">
+  <p><strong>No lawyer.</strong> TurnSignl puts a licensed attorney on the line. I put a file in your cloud account. If you are choosing between us for a traffic stop and you can afford it, theirs is the more useful product.</p>
+  <p><strong>Nobody is watching.</strong> Mobile Justice sent footage to an ACLU affiliate who might act on it. Mine sends footage to you. That is better for privacy and worse if what you wanted was backup from an organisation.</p>
+  <p><strong>iOS only.</strong> No Android version. If you are on Android, Police Encounter on Google Play describes a similar continuous-upload approach and is worth looking at, though I have not used it.</p>
+  <p><strong>It needs setting up first.</strong> Not connected to a storage account, it saves nothing. Every app here works on the day; mine punishes you harder for skipping the five minutes beforehand.</p>
+  <p><strong>Two ratings.</strong> Cop Watch has 34 and years of history. I have almost none. That is a real reason to be cautious and I would rather say it than have you discover it.</p>
+</div>
+
+<h2>What I would actually tell a friend</h2>
+<p>Set up the Siri shortcut today, because it takes two minutes and costs nothing.</p>
+<p>If you are documenting anything where the phone might be taken, protests, raids, anything with a crowd, use something that uploads during the recording. Mine or Cop Watch, but check whether Cop Watch still works on your iOS version before you rely on it.</p>
+<p>If you drive a lot and worry about traffic stops specifically, and money is not the constraint, TurnSignl solves a problem none of the rest of us touch.</p>
+<p>If what you actually want is a wider kit rather than this one category, the <a href="best-apps-journalists-filmmakers.html">roundup of iPhone apps for filmmakers and journalists</a> covers camera, audio, verification and editing, with the same conflict disclosed.</p>
+<p>And if you are a legal observer or a journalist and the footage may end up contested, you want the hashing and timestamps, because "that video was edited" is the argument you will actually face.</p>
+
+<div class="actions" style="margin-top:30px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
+  <a class="btn btn-ghost" href="recording-law.html">Questions about the law</a>
+</div>
+
+<p class="disclaimer">Prices, ratings and features read from public store listings in August 2026 and they change. Nothing here is legal advice.</p>
+
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-film-police.html">How to film police</a>
+        <a href="how-to-record-police.html">Recording safely</a>
+        <a href="filming-police-protest.html">Filming at a protest</a>
+        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
+        <a href="recording-law.html">Recording law</a>
+        <a href="how-to-film-ice.html">How to film ICE</a>
+        <a href="recording-ice.html">Recognising ICE</a>
+        <a href="ice-at-your-door.html">ICE at your door</a>
+        <a href="record-iphone-screen-off.html">Recording screen-off</a>
+        <a href="record-screen-off.html">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
+        <a href="compare.html">Compare apps</a>
+        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="field-guide.html">Field guide</a>
+        <a href="verify.html">Verify footage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
