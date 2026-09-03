@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "witnessrecord",
+  "compatibility_date": "2026-08-28",
+  "assets": {
+    "directory": ".",
+    // "none" turned out to also disable the implicit "/" -> "/index.html"
+    // mapping, taking the homepage down. Back to the platform default, which
+    // costs inner pages one redirect hop but keeps "/" working.
+    "html_handling": "auto-trailing-slash",
+    // Serves our own styled 404.html (with a real 404 status) instead of the
+    // platform's default not-found response.
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
