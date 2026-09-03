@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to keep police footage safe: chunked upload, hashing, timestamps</title>
 <meta name="description" content="Footage leaves the phone in 15-second pieces while you film, each SHA-256 hashed and counter-signed by an RFC 3161 time-stamp authority.">
-<link rel="canonical" href="https://witnessrecord.app/how-it-works.html">
+<link rel="canonical" href="https://witnessrecord.app/how-it-works">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
 <link rel="apple-touch-icon" href="img/app-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to keep police footage safe: chunked upload, hashing, timestamps">
 <meta property="og:description" content="Chunked live upload, SHA-256 per chunk, a session manifest, and an RFC 3161 time-stamp: how footage becomes evidence that can be checked by someone who does not trust you.">
-<meta property="og:url" content="https://witnessrecord.app/how-it-works.html">
+<meta property="og:url" content="https://witnessrecord.app/how-it-works">
 
 <script type="application/ld+json">
 {
@@ -39,20 +39,28 @@
       "dateModified": "2026-09-03",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://witnessrecord.app/how-it-works.html"
+        "@id": "https://witnessrecord.app/how-it-works"
       }
     },
     {
       "@type": "Organization",
       "@id": "https://witnessrecord.app/#org",
-      "name": "Witness",
+      "name": "Witness Record",
       "url": "https://witnessrecord.app/",
       "email": "olmaster13@gmail.com",
       "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
       "logo": {
         "@type": "ImageObject",
         "url": "https://witnessrecord.app/img/app-icon.png"
-      }
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Record Beyond Reach",
+        "Witness Record app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"
+      ]
     }
   ]
 }
@@ -64,13 +72,13 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
     <nav class="site-nav" aria-label="Main">
       <a href="./">Overview</a>
-      <a href="how-it-works.html" aria-current="page">How it works</a>
-      <a href="field-guide.html">Field guide</a>
-      <a href="verify.html">Verify</a>
-      <a href="faq.html">FAQ</a>
+      <a href="how-it-works" aria-current="page">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
     </nav>
   </div>
 </header>
@@ -151,7 +159,7 @@
 </div>
 
 <h2>Verifying it later</h2>
-<p>Everything above is worth nothing if a court, editor or opposing party cannot check it independently. The verification steps travel inside every manifest, and are written out in full here: <a href="verify.html">how to verify Witness footage →</a></p>
+<p>Everything above is worth nothing if a court, editor or opposing party cannot check it independently. The verification steps travel inside every manifest, and are written out in full here: <a href="verify">how to verify Witness footage →</a></p>
 </article>
 </main>
 
@@ -159,28 +167,29 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
         <div class="muted">Document encounters. Preserve the footage.</div>
       </div>
       <nav class="foot-links" aria-label="Footer">
-        <a href="how-to-film-police.html">How to film police</a>
-        <a href="how-to-record-police.html">Recording safely</a>
-        <a href="filming-police-protest.html">Filming at a protest</a>
-        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
-        <a href="recording-law.html">Recording law</a>
-        <a href="how-to-film-ice.html">How to film ICE</a>
-        <a href="recording-ice.html">Recognising ICE</a>
-        <a href="ice-at-your-door.html">ICE at your door</a>
-        <a href="record-iphone-screen-off.html">Recording screen-off</a>
-        <a href="record-screen-off.html">What screen-off means</a>
-        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
-        <a href="compare.html">Compare apps</a>
-        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="field-guide.html">Field guide</a>
-        <a href="verify.html">Verify footage</a>
-        <a href="faq.html">FAQ</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="witness-record">About Witness Record</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
       </nav>
     </div>
     <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App to record police encounters that uploads as you film | Witness</title>
-<meta name="description" content="Records with the screen black and uploads to your own cloud every 15 seconds, so footage survives even if the phone is seized, smashed or wiped.">
+<title>Witness Record: the police recording app that uploads as you film</title>
+<meta name="description" content="Witness Record is a free iOS app that films with the screen black and uploads to your own cloud every 15 seconds, so footage survives even if the phone is seized, smashed or wiped.">
 <link rel="canonical" href="https://witnessrecord.app/">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
@@ -12,13 +12,13 @@
 <meta name="theme-color" content="#08080a">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Witness">
-<meta property="og:title" content="App to record police encounters that uploads as you film">
+<meta property="og:site_name" content="Witness Record">
+<meta property="og:title" content="Witness Record: the police recording app that uploads as you film">
 <meta property="og:description" content="Records with the screen black and uploads every 15 seconds to a cloud account you own. Hashed and time-stamped for a verifiable chain of custody.">
 <meta property="og:url" content="https://witnessrecord.app/">
 <meta property="og:image" content="https://witnessrecord.app/img/app-icon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="App to record police encounters that uploads as you film">
+<meta name="twitter:title" content="Witness Record: the police recording app that uploads as you film">
 <meta name="twitter:description" content="Footage leaves the phone while you are still filming, to storage you control.">
 <meta name="twitter:image" content="https://witnessrecord.app/img/app-icon.png">
 
@@ -29,8 +29,11 @@
     {
       "@type": "SoftwareApplication",
       "@id": "https://witnessrecord.app/#app",
-      "name": "Witness: Record Beyond Reach",
-      "alternateName": "Witness",
+      "name": "Witness Record",
+      "alternateName": [
+        "Witness",
+        "Witness: Record Beyond Reach"
+      ],
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "iOS 17.0 or later",
       "description": "An iOS app for documenting police encounters. It records video with the screen fully black and uploads footage in roughly 15-second pieces while recording is still in progress, to a cloud storage account the user owns. Each piece is fingerprinted with a SHA-256 hash and each session manifest is counter-signed by an RFC 3161 time-stamp authority, producing a verifiable chain of custody.",
@@ -65,7 +68,7 @@
         }
       ],
       "isAccessibleForFree": true,
-      "privacyPolicy": "https://witnessrecord.app/privacy.html",
+      "privacyPolicy": "https://witnessrecord.app/privacy",
       "author": {
         "@type": "Organization",
         "@id": "https://witnessrecord.app/#org"
@@ -73,32 +76,46 @@
       "publisher": {
         "@type": "Organization",
         "@id": "https://witnessrecord.app/#org"
-      }
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"
+      ],
+      "downloadUrl": "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426",
+      "installUrl": "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"
     },
     {
       "@type": "WebSite",
       "@id": "https://witnessrecord.app/#website",
       "url": "https://witnessrecord.app/",
-      "name": "Witness",
+      "name": "Witness Record",
       "about": {
         "@id": "https://witnessrecord.app/#app"
       },
       "publisher": {
         "@type": "Organization",
         "@id": "https://witnessrecord.app/#org"
-      }
+      },
+      "alternateName": "Witness"
     },
     {
       "@type": "Organization",
       "@id": "https://witnessrecord.app/#org",
-      "name": "Witness",
+      "name": "Witness Record",
       "url": "https://witnessrecord.app/",
       "email": "olmaster13@gmail.com",
       "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
       "logo": {
         "@type": "ImageObject",
         "url": "https://witnessrecord.app/img/app-icon.png"
-      }
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Record Beyond Reach",
+        "Witness Record app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"
+      ]
     }
   ]
 }
@@ -109,13 +126,13 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
     <nav class="site-nav" aria-label="Main">
       <a href="./" aria-current="page">Overview</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="field-guide.html">Field guide</a>
-      <a href="verify.html">Verify</a>
-      <a href="faq.html">FAQ</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
     </nav>
   </div>
 </header>
@@ -126,10 +143,10 @@
   <div class="wrap hero-grid">
     <div>
       <h1>They can take the phone.<br><span class="hero-accent">Not the footage.</span></h1>
-      <p class="lede">Witness records with the screen black and uploads to a cloud account you own every 15 seconds, while you are still filming.</p>
+      <p class="lede"><strong>Witness Record</strong> films with the screen black and uploads to a cloud account you own every 15 seconds, while you are still filming. Free, iOS, no account, no server. <a href="witness-record">What Witness Record is, in full</a>.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
-        <a class="btn btn-ghost" href="how-it-works.html">How it works</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Record for Free</a>
+        <a class="btn btn-ghost" href="how-it-works">How it works</a>
       </div>
     </div>
     <figure class="hero-figure">
@@ -271,7 +288,7 @@
       <h2 class="section-title">Proof that does not depend on trusting you</h2>
       <p>Every 15-second piece is hashed with SHA-256 on the device before it moves. Those hashes are listed in a session manifest alongside UTC capture times and GPS coordinates, and the manifest is counter-signed by an independent RFC 3161 time-stamp authority.</p>
       <p>A newsroom or a court can check all of it with OpenSSL on their own machine: the footage hashes to the manifest, the manifest hashes to the signed token, and the token comes from a third party with no stake in the outcome. Neither the app nor its developer is anywhere in that chain.</p>
-      <p><a href="verify.html">Read the verification steps</a></p>
+      <p><a href="verify">Read the verification steps</a></p>
     </div>
     <figure class="terminal">
       <div class="terminal-bar" aria-hidden="true">Verified on any machine, without the app</div>
@@ -309,9 +326,9 @@
         <p>Documentation of conduct over time, held in an account your group controls.</p>
       </div>
     </div>
-    <p style="margin-top:26px"><a href="field-guide.html">Practical field guide for activists and journalists</a><br>
-    <a href="best-apps-journalists-filmmakers.html">Best iPhone apps for filmmakers and journalists</a><br>
-    <a href="mobile-justice-alternative.html">Replacing the discontinued ACLU Mobile Justice app</a></p>
+    <p style="margin-top:26px"><a href="field-guide">Practical field guide for activists and journalists</a><br>
+    <a href="best-apps-journalists-filmmakers">Best iPhone apps for filmmakers and journalists</a><br>
+    <a href="mobile-justice-alternative">Replacing the discontinued ACLU Mobile Justice app</a></p>
   </div>
 </section>
 
@@ -359,12 +376,12 @@
     <p class="muted">Witness provides no legal advice. Check your local laws, keep a safe distance, and say that you are recording if it is safe to do so.</p>
 
     <h3 style="margin-top:34px">Guides</h3>
-    <p><strong>Filming police.</strong> <a href="how-to-film-police.html">How to film the police, step by step</a>, including when you are the one being stopped. <a href="how-to-record-police.html">Where to stand and what to say</a> as a bystander. <a href="filming-police-protest.html">Filming at a protest</a>, where a crowd changes the job. <a href="can-police-delete-your-video.html">Can police take your phone or delete your video?</a> and <a href="recording-law.html">what the courts have actually held</a>.</p>
-    <p><strong>Filming immigration enforcement.</strong> <a href="how-to-film-ice.html">How to film ICE</a> at a street stop, a workplace, a courthouse or a shared building. <a href="recording-ice.html">Recognising unmarked vehicles and plain-clothes agents</a>. <a href="ice-at-your-door.html">ICE at your door</a>, and the warrant that is not a warrant.</p>
-    <p><strong>Recording technique.</strong> <a href="record-iphone-screen-off.html">How to record on iPhone with the screen off</a>, and <a href="record-screen-off.html">what a dark screen actually does and does not do</a>. <a href="best-apps-journalists-filmmakers.html">The apps worth having</a> for film and reporting work.</p>
+    <p><strong>Filming police.</strong> <a href="how-to-film-police">How to film the police, step by step</a>, including when you are the one being stopped. <a href="how-to-record-police">Where to stand and what to say</a> as a bystander. <a href="filming-police-protest">Filming at a protest</a>, where a crowd changes the job. <a href="can-police-delete-your-video">Can police take your phone or delete your video?</a> and <a href="recording-law">what the courts have actually held</a>.</p>
+    <p><strong>Filming immigration enforcement.</strong> <a href="how-to-film-ice">How to film ICE</a> at a street stop, a workplace, a courthouse or a shared building. <a href="recording-ice">Recognising unmarked vehicles and plain-clothes agents</a>. <a href="ice-at-your-door">ICE at your door</a>, and the warrant that is not a warrant.</p>
+    <p><strong>Recording technique.</strong> <a href="record-iphone-screen-off">How to record on iPhone with the screen off</a>, and <a href="record-screen-off">what a dark screen actually does and does not do</a>. <a href="best-apps-journalists-filmmakers">The apps worth having</a> for film and reporting work.</p>
     <div class="actions" style="margin-top:30px">
       <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
-      <a class="btn btn-ghost" href="faq.html">Read the FAQ</a>
+      <a class="btn btn-ghost" href="faq">Read the FAQ</a>
     </div>
   </div>
 </section>
@@ -375,28 +392,29 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
         <div class="muted">Document encounters. Preserve the footage.</div>
       </div>
       <nav class="foot-links" aria-label="Footer">
-        <a href="how-to-film-police.html">How to film police</a>
-        <a href="how-to-record-police.html">Recording safely</a>
-        <a href="filming-police-protest.html">Filming at a protest</a>
-        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
-        <a href="recording-law.html">Recording law</a>
-        <a href="how-to-film-ice.html">How to film ICE</a>
-        <a href="recording-ice.html">Recognising ICE</a>
-        <a href="ice-at-your-door.html">ICE at your door</a>
-        <a href="record-iphone-screen-off.html">Recording screen-off</a>
-        <a href="record-screen-off.html">What screen-off means</a>
-        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
-        <a href="compare.html">Compare apps</a>
-        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="field-guide.html">Field guide</a>
-        <a href="verify.html">Verify footage</a>
-        <a href="faq.html">FAQ</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="witness-record">About Witness Record</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
       </nav>
     </div>
     <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>

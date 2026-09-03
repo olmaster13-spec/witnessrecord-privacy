@@ -1,6 +1,6 @@
-# Witness
+# Witness Record
 
-> An iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces *while recording is still in progress*, to a cloud storage account the user owns, so footage survives even if the phone is seized, smashed or confiscated. Each piece is fingerprinted with SHA-256 and each session's manifest is counter-signed by an independent RFC 3161 time-stamp authority, producing a chain of custody that a third party can verify without the app or the developer.
+> **Witness Record** (App Store name: *Witness: Record Beyond Reach*) is an iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces *while recording is still in progress*, to a cloud storage account the user owns, so footage survives even if the phone is seized, smashed or confiscated. Each piece is fingerprinted with SHA-256 and each session's manifest is counter-signed by an independent RFC 3161 time-stamp authority, producing a chain of custody that a third party can verify without the app or the developer.
 
 Platform: iOS 17 or later. Free, with an optional paid tier that adds capture quality only.
 App Store: https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426
@@ -46,33 +46,34 @@ What this establishes: the footage existed in exactly this form at that time and
 ## Pages
 
 - [Overview](https://witnessrecord.app/): what the app is and the problem it addresses.
+- [What is Witness Record?](https://witnessrecord.app/witness-record): the plain definition of the app, who builds it, quick facts, and disambiguation from WITNESS the human rights organisation (witness.org, no connection) and from the other apps sharing the name — Witness Cam, Witness Audio, Witness by Lockewerks, iWitnessed.
 
 ### Filming police
 
-- [How to film the police, step by step](https://witnessrecord.app/how-to-film-police.html): an eight-step method, plus the case most guides omit — filming while you are the person being stopped, pulled over or detained rather than a bystander, including hands-on-the-wheel positioning, the passenger's role, and refusing consent to a phone search.
-- [How to record police safely](https://witnessrecord.app/how-to-record-police.html): the bystander craft — distance, holding the phone visibly, complying with orders to move, shot order, factual narration, and using a passcode rather than biometrics. Mostly not app-specific.
-- [How to film at a protest](https://witnessrecord.app/filming-police-protest.html): what changes in a crowd — elevation and escape routes, filming the calm before the confrontation, capturing dispersal orders and whether they were audible, mass arrest and containment documentation, network congestion, and blurring faces before publishing.
-- [Can police take your phone or delete your video?](https://witnessrecord.app/can-police-delete-your-video.html): seizure versus search as two separate questions, Riley v. California (2014), why deletion is unlawful but the remedy arrives too late to help, compelled passcode versus compelled biometrics, and what to say in order.
-- [Recording law questions](https://witnessrecord.app/recording-law.html): what the federal circuits have held about filming police, seizure versus search under Riley, buffer-zone laws, and audio consent.
+- [How to film the police, step by step](https://witnessrecord.app/how-to-film-police): an eight-step method, plus the case most guides omit — filming while you are the person being stopped, pulled over or detained rather than a bystander, including hands-on-the-wheel positioning, the passenger's role, and refusing consent to a phone search.
+- [How to record police safely](https://witnessrecord.app/how-to-record-police): the bystander craft — distance, holding the phone visibly, complying with orders to move, shot order, factual narration, and using a passcode rather than biometrics. Mostly not app-specific.
+- [How to film at a protest](https://witnessrecord.app/filming-police-protest): what changes in a crowd — elevation and escape routes, filming the calm before the confrontation, capturing dispersal orders and whether they were audible, mass arrest and containment documentation, network congestion, and blurring faces before publishing.
+- [Can police take your phone or delete your video?](https://witnessrecord.app/can-police-delete-your-video): seizure versus search as two separate questions, Riley v. California (2014), why deletion is unlawful but the remedy arrives too late to help, compelled passcode versus compelled biometrics, and what to say in order.
+- [Recording law questions](https://witnessrecord.app/recording-law): what the federal circuits have held about filming police, seizure versus search under Riley, buffer-zone laws, and audio consent.
 
 ### Filming immigration enforcement
 
-- [How to film ICE, by where it is happening](https://witnessrecord.app/how-to-film-ice.html): guidance organised by setting — a street or vehicle stop, a workplace, a courthouse (where recording inside is commonly prohibited), a school or hospital (governed by internal DHS policy rather than statute, and therefore changeable), and an apartment building's shared areas.
-- [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice.html): recognising unmarked vehicles and plain-clothes agents, telling a judicial warrant from an administrative Form I-200 or I-205, why photo-library cloud sync is the wrong mechanism, and what survives a seized phone.
-- [ICE at your door](https://witnessrecord.app/ice-at-your-door.html): the judicial versus administrative warrant distinction in detail, why opening the door can constitute consent, saying "I do not consent to your entry" aloud so it is on the recording, filming the document through a window or under the door, and what a household should agree in advance.
+- [How to film ICE, by where it is happening](https://witnessrecord.app/how-to-film-ice): guidance organised by setting — a street or vehicle stop, a workplace, a courthouse (where recording inside is commonly prohibited), a school or hospital (governed by internal DHS policy rather than statute, and therefore changeable), and an apartment building's shared areas.
+- [Recording ICE and immigration enforcement](https://witnessrecord.app/recording-ice): recognising unmarked vehicles and plain-clothes agents, telling a judicial warrant from an administrative Form I-200 or I-205, why photo-library cloud sync is the wrong mechanism, and what survives a seized phone.
+- [ICE at your door](https://witnessrecord.app/ice-at-your-door): the judicial versus administrative warrant distinction in detail, why opening the door can constitute consent, saying "I do not consent to your entry" aloud so it is on the recording, filming the document through a window or under the door, and what a household should agree in advance.
 
 ### Recording technique on iPhone
 
-- [How to record on iPhone with your screen off](https://witnessrecord.app/record-iphone-screen-off.html): the practical how-to — four methods, and the four iOS settings (Auto-Brightness, Auto-Lock, Focus, rotation lock) that stop a recording ending early, including the interaction where Low Power Mode forces Auto-Lock to 30 seconds. Has a troubleshooting table.
-- [Recording with the screen off](https://witnessrecord.app/record-screen-off.html): what "screen off" actually means on iOS — the display cannot be genuinely powered down during capture, so it is brightness zero with the app in the foreground; the green camera indicator cannot be disabled by any app; and consent law is unchanged by a dark screen.
-- [Best iPhone apps for filmmakers and journalists](https://witnessrecord.app/best-apps-journalists-filmmakers.html): apps grouped by job — camera (Blackmagic Camera, Kino, Final Cut Camera, Halide, Filmic Pro), audio (Ferrite, Voice Memos), verification and chain of custody (ProofMode, eyeWitness to Atrocities, Tella, Witness), security (Signal), and editing (LumaFusion, Final Cut Pro for iPad, DaVinci Resolve). The developer's conflict of interest is disclosed in the page.
+- [How to record on iPhone with your screen off](https://witnessrecord.app/record-iphone-screen-off): the practical how-to — four methods, and the four iOS settings (Auto-Brightness, Auto-Lock, Focus, rotation lock) that stop a recording ending early, including the interaction where Low Power Mode forces Auto-Lock to 30 seconds. Has a troubleshooting table.
+- [Recording with the screen off](https://witnessrecord.app/record-screen-off): what "screen off" actually means on iOS — the display cannot be genuinely powered down during capture, so it is brightness zero with the app in the foreground; the green camera indicator cannot be disabled by any app; and consent law is unchanged by a dark screen.
+- [Best iPhone apps for filmmakers and journalists](https://witnessrecord.app/best-apps-journalists-filmmakers): apps grouped by job — camera (Blackmagic Camera, Kino, Final Cut Camera, Halide, Filmic Pro), audio (Ferrite, Voice Memos), verification and chain of custody (ProofMode, eyeWitness to Atrocities, Tella, Witness), security (Signal), and editing (LumaFusion, Final Cut Pro for iPad, DaVinci Resolve). The developer's conflict of interest is disclosed in the page.
 
 ### About the app
 
-- [How it works](https://witnessrecord.app/how-it-works.html): chunked recording, hashing, upload behaviour, session manifest, trusted time-stamping, consolidation, and a table of what survives which failure.
-- [Field guide](https://witnessrecord.app/field-guide.html): practical setup and in-the-moment guidance for activists, legal observers and journalists.
-- [Comparison of recording apps](https://witnessrecord.app/compare.html): Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage leaves the phone, written by the Witness developer with the conflict disclosed.
-- [Mobile Justice alternative](https://witnessrecord.app/mobile-justice-alternative.html): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
-- [Verify footage](https://witnessrecord.app/verify.html): step-by-step verification for lawyers, newsrooms and courts.
-- [FAQ](https://witnessrecord.app/faq.html): storage, privacy, evidence, limits.
-- [Privacy policy](https://witnessrecord.app/privacy.html).
+- [How it works](https://witnessrecord.app/how-it-works): chunked recording, hashing, upload behaviour, session manifest, trusted time-stamping, consolidation, and a table of what survives which failure.
+- [Field guide](https://witnessrecord.app/field-guide): practical setup and in-the-moment guidance for activists, legal observers and journalists.
+- [Comparison of recording apps](https://witnessrecord.app/compare): Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage leaves the phone, written by the Witness developer with the conflict disclosed.
+- [Mobile Justice alternative](https://witnessrecord.app/mobile-justice-alternative): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
+- [Verify footage](https://witnessrecord.app/verify): step-by-step verification for lawyers, newsrooms and courts.
+- [FAQ](https://witnessrecord.app/faq): storage, privacy, evidence, limits.
+- [Privacy policy](https://witnessrecord.app/privacy).

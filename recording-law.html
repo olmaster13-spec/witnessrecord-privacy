@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Is it legal to record police? Can they take your phone? Answers</title>
 <meta name="description" content="What the federal circuits have actually held about filming police, whether officers can seize or search your phone, buffer-zone laws, audio consent, and whether the footage holds up.">
-<link rel="canonical" href="https://witnessrecord.app/recording-law.html">
+<link rel="canonical" href="https://witnessrecord.app/recording-law">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
 <link rel="apple-touch-icon" href="img/app-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Is it legal to record police? Can they take your phone?">
 <meta property="og:description" content="What the courts have actually held, what is still unsettled, and where the real risk sits.">
-<meta property="og:url" content="https://witnessrecord.app/recording-law.html">
+<meta property="og:url" content="https://witnessrecord.app/recording-law">
 
 <script type="application/ld+json">
 {
@@ -76,20 +76,28 @@
       "dateModified": "2026-09-03",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://witnessrecord.app/recording-law.html"
+        "@id": "https://witnessrecord.app/recording-law"
       }
     },
     {
       "@type": "Organization",
       "@id": "https://witnessrecord.app/#org",
-      "name": "Witness",
+      "name": "Witness Record",
       "url": "https://witnessrecord.app/",
       "email": "olmaster13@gmail.com",
       "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
       "logo": {
         "@type": "ImageObject",
         "url": "https://witnessrecord.app/img/app-icon.png"
-      }
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Record Beyond Reach",
+        "Witness Record app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"
+      ]
     }
   ]
 }
@@ -100,13 +108,13 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
     <nav class="site-nav" aria-label="Main">
       <a href="./">Overview</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="field-guide.html">Field guide</a>
-      <a href="verify.html">Verify</a>
-      <a href="faq.html">FAQ</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
     </nav>
   </div>
 </header>
@@ -155,7 +163,7 @@
 <p>No, and there are officers who have been criminally charged for it. A Philadelphia officer was charged with evidence tampering, obstruction and official oppression after appearing on video deleting footage from someone's phone during an arrest.</p>
 <p>That is the right outcome and it is close to useless to you in the moment. The charge lands months later. The footage is already gone. A rule that is enforced retroactively is not a safeguard, it is a remedy, and those are different things.</p>
 <p>Which is the whole argument for getting a copy off the device while you are still filming rather than afterwards.</p>
-<p>Seizure, search, deletion and compelled unlocking are four separate questions and they get run together constantly. I have pulled them apart, with what to say in each case, on the page about <a href="can-police-delete-your-video.html">whether police can take your phone or delete your video</a>.</p>
+<p>Seizure, search, deletion and compelled unlocking are four separate questions and they get run together constantly. I have pulled them apart, with what to say in each case, on the page about <a href="can-police-delete-your-video">whether police can take your phone or delete your video</a>.</p>
 
 <h2>Do I have to say I am recording?</h2>
 <p>This one is genuinely inconsistent and I am not going to flatten it.</p>
@@ -166,11 +174,11 @@
 <h2>Will the video actually hold up?</h2>
 <p>Here is the part that surprised me most when I started looking into it, and the reason the app does what it does.</p>
 <p>The challenge to footage is increasingly not "that did not happen." It is "that video has been edited." And a plain video file is remarkably weak against that. File timestamps can be changed trivially. Editing software is good and cheap. Generated video is now good enough that courts are actively worrying about it.</p>
-<p>What answers that is a chain of custody: a cryptographic hash of the file computed before it moves anywhere, and independent proof of when it existed. That is why every piece gets SHA-256 hashed on the device and the manifest gets counter-signed by an outside timestamp authority. Anyone can <a href="verify.html">run the check themselves with OpenSSL</a>, no app and no trust in me required.</p>
+<p>What answers that is a chain of custody: a cryptographic hash of the file computed before it moves anywhere, and independent proof of when it existed. That is why every piece gets SHA-256 hashed on the device and the manifest gets counter-signed by an outside timestamp authority. Anyone can <a href="verify">run the check themselves with OpenSSL</a>, no app and no trust in me required.</p>
 <p>One thing that catches people constantly: sending footage through a messaging app or posting it to social media re-compresses the file. That changes the bytes, which breaks the hash match. Keep the originals untouched and share copies.</p>
 
 <h2>What about ICE and immigration enforcement?</h2>
-<p>Same First Amendment analysis, different practical picture, and enough of a topic on its own that I gave it <a href="recording-ice.html">its own page</a> with the relevant organisations linked.</p>
+<p>Same First Amendment analysis, different practical picture, and enough of a topic on its own that I gave it <a href="recording-ice">its own page</a> with the relevant organisations linked.</p>
 
 <h2>Things I could not give you a clean answer on</h2>
 <p>Being straight about the edges, since everything above sounds tidier than the reality:</p>
@@ -191,7 +199,7 @@
 
 <div class="actions" style="margin-top:30px">
   <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness for Free</a>
-  <a class="btn btn-ghost" href="compare.html">Compare the options</a>
+  <a class="btn btn-ghost" href="compare">Compare the options</a>
 </div>
 
 <p class="disclaimer">Written August 2026. Law changes, and this page will not always keep up. Nothing here is legal advice.</p>
@@ -203,28 +211,29 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness</a>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
         <div class="muted">Document encounters. Preserve the footage.</div>
       </div>
       <nav class="foot-links" aria-label="Footer">
-        <a href="how-to-film-police.html">How to film police</a>
-        <a href="how-to-record-police.html">Recording safely</a>
-        <a href="filming-police-protest.html">Filming at a protest</a>
-        <a href="can-police-delete-your-video.html">Can they take your phone?</a>
-        <a href="recording-law.html">Recording law</a>
-        <a href="how-to-film-ice.html">How to film ICE</a>
-        <a href="recording-ice.html">Recognising ICE</a>
-        <a href="ice-at-your-door.html">ICE at your door</a>
-        <a href="record-iphone-screen-off.html">Recording screen-off</a>
-        <a href="record-screen-off.html">What screen-off means</a>
-        <a href="best-apps-journalists-filmmakers.html">Apps for journalists</a>
-        <a href="compare.html">Compare apps</a>
-        <a href="mobile-justice-alternative.html">Mobile Justice alternative</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="field-guide.html">Field guide</a>
-        <a href="verify.html">Verify footage</a>
-        <a href="faq.html">FAQ</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="witness-record">About Witness Record</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
       </nav>
     </div>
     <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
