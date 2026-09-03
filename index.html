@@ -45,19 +45,60 @@
         "Low-resolution stand-in uploads when the network is failing"
       ],
       "offers": [
-        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Witness" },
-        { "@type": "Offer", "price": "1.99", "priceCurrency": "USD", "name": "Witness Pro Monthly" },
-        { "@type": "Offer", "price": "19.99", "priceCurrency": "USD", "name": "Witness Pro Lifetime" }
+        {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "name": "Witness"
+        },
+        {
+          "@type": "Offer",
+          "price": "1.99",
+          "priceCurrency": "USD",
+          "name": "Witness Pro Monthly"
+        },
+        {
+          "@type": "Offer",
+          "price": "19.99",
+          "priceCurrency": "USD",
+          "name": "Witness Pro Lifetime"
+        }
       ],
       "isAccessibleForFree": true,
-      "privacyPolicy": "https://witnessrecord.app/privacy.html"
+      "privacyPolicy": "https://witnessrecord.app/privacy.html",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://witnessrecord.app/#website",
       "url": "https://witnessrecord.app/",
       "name": "Witness",
-      "about": { "@id": "https://witnessrecord.app/#app" }
+      "about": {
+        "@id": "https://witnessrecord.app/#app"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
     }
   ]
 }

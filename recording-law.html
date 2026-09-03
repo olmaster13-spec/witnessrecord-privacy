@@ -19,32 +19,77 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Is it legal to record police in the United States?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Every federal circuit court that has squarely considered the question has recognised a First Amendment right to record police performing their duties in public, provided you are lawfully present and not physically interfering. The First, Second, Third, Fourth, Fifth, Seventh, Ninth, Tenth and Eleventh Circuits have all so held. The Second Circuit joined them in August 2026, in a case about filming a police station from a public sidewalk. This is not legal advice and the limits on time, place and manner still apply." }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it legal to record police in the United States?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every federal circuit court that has squarely considered the question has recognised a First Amendment right to record police performing their duties in public, provided you are lawfully present and not physically interfering. The First, Second, Third, Fourth, Fifth, Seventh, Ninth, Tenth and Eleventh Circuits have all so held. The Second Circuit joined them in August 2026, in a case about filming a police station from a public sidewalk. This is not legal advice and the limits on time, place and manner still apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can police seize my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Riley v. California (2014), officers may seize and secure a phone incident to arrest, but they generally may not search the digital contents without a warrant. The Supreme Court held unanimously that a warrantless search of a phone's data is not justified by officer safety or by the risk of evidence destruction. Seizure and search are different things."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can police delete my video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, and doing so can be a crime. Officers have been criminally charged with evidence tampering and obstruction for deleting footage from a person's phone. The practical problem is that the charge comes long after the footage is gone, which is why getting a copy off the device during the encounter matters more than the rule does."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far away do I have to stand when filming police?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single national distance. Several states have passed buffer-zone laws setting a fixed minimum, and their constitutionality is contested. Arizona's eight-foot law is the clearest example: the state stipulated in federal court that criminalising recording within eight feet violates a clearly established First Amendment right. Local rules vary and change, so check your own state."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to tell police that I am recording them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the state and on whether audio is involved. Federal law and most states require only one-party consent. A minority require all-party consent, and those statutes are generally aimed at private conversations rather than on-duty officers acting publicly, which is why courts have often declined to apply them to filming police. The law here is genuinely inconsistent, so check your state rather than relying on a general rule."
+          }
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/recording-law.html"
+      }
     },
     {
-      "@type": "Question",
-      "name": "Can police seize my phone?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Under Riley v. California (2014), officers may seize and secure a phone incident to arrest, but they generally may not search the digital contents without a warrant. The Supreme Court held unanimously that a warrantless search of a phone's data is not justified by officer safety or by the risk of evidence destruction. Seizure and search are different things." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can police delete my video?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No, and doing so can be a crime. Officers have been criminally charged with evidence tampering and obstruction for deleting footage from a person's phone. The practical problem is that the charge comes long after the footage is gone, which is why getting a copy off the device during the encounter matters more than the rule does." }
-    },
-    {
-      "@type": "Question",
-      "name": "How far away do I have to stand when filming police?",
-      "acceptedAnswer": { "@type": "Answer", "text": "There is no single national distance. Several states have passed buffer-zone laws setting a fixed minimum, and their constitutionality is contested. Arizona's eight-foot law is the clearest example: the state stipulated in federal court that criminalising recording within eight feet violates a clearly established First Amendment right. Local rules vary and change, so check your own state." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I have to tell police that I am recording them?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the state and on whether audio is involved. Federal law and most states require only one-party consent. A minority require all-party consent, and those statutes are generally aimed at private conversations rather than on-duty officers acting publicly, which is why courts have often declined to apply them to filming police. The law here is genuinely inconsistent, so check your state rather than relying on a general rule." }
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
     }
   ]
 }

@@ -19,27 +19,69 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Can an iPhone record video with the screen completely off?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Not literally. iOS stops camera capture when an app is sent to the background or the device is locked, so no third-party app can film with the display genuinely powered down. What is possible is holding the app in the foreground while setting display brightness to zero, which makes the screen appear black while recording continues. That is what apps describing a black screen or stealth mode are doing." }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can an iPhone record video with the screen completely off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not literally. iOS stops camera capture when an app is sent to the background or the device is locked, so no third-party app can film with the display genuinely powered down. What is possible is holding the app in the foreground while setting display brightness to zero, which makes the screen appear black while recording continues. That is what apps describing a black screen or stealth mode are doing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an app hide the green camera dot on iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The green camera indicator and orange microphone indicator have been mandatory in the iOS status bar since iOS 14 and cannot be disabled by any ordinary app. At zero display brightness the indicator is rendered but not perceptible, because the entire display including the status bar is dark. The indicator is not defeated, only unlit along with everything else."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it legal to record with the screen off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends entirely on what is being recorded and where. Openly recording on-duty law enforcement in public is constitutionally protected in the United States. Recording private individuals without consent is a very different question: a minority of US states require all-party consent for audio, and recording people in places where they have a reasonable expectation of privacy can be a serious criminal offence regardless of state. A dark screen changes none of that."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a black screen save battery while recording?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some, and less than people expect. On an OLED iPhone black pixels draw very little power, so the display cost falls close to zero. But the camera sensor, video encoding and any upload continue at full cost, and those dominate. Expect a modest improvement in recording time, not a transformative one."
+          }
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/record-screen-off.html"
+      }
     },
     {
-      "@type": "Question",
-      "name": "Can an app hide the green camera dot on iPhone?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. The green camera indicator and orange microphone indicator have been mandatory in the iOS status bar since iOS 14 and cannot be disabled by any ordinary app. At zero display brightness the indicator is rendered but not perceptible, because the entire display including the status bar is dark. The indicator is not defeated, only unlit along with everything else." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it legal to record with the screen off?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on what is being recorded and where. Openly recording on-duty law enforcement in public is constitutionally protected in the United States. Recording private individuals without consent is a very different question: a minority of US states require all-party consent for audio, and recording people in places where they have a reasonable expectation of privacy can be a serious criminal offence regardless of state. A dark screen changes none of that." }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a black screen save battery while recording?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Some, and less than people expect. On an OLED iPhone black pixels draw very little power, so the display cost falls close to zero. But the camera sensor, video encoding and any upload continue at full cost, and those dominate. Expect a modest improvement in recording time, not a transformative one." }
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
     }
   ]
 }

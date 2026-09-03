@@ -19,34 +19,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to verify Witness video footage",
-  "description": "Independently confirm that video recorded with the Witness iOS app is unaltered and existed at the claimed time, using its session manifest and RFC 3161 time-stamp token.",
-  "totalTime": "PT10M",
-  "tool": [
-    { "@type": "HowToTool", "name": "OpenSSL" },
-    { "@type": "HowToTool", "name": "A terminal / command line" }
-  ],
-  "supply": [
-    { "@type": "HowToSupply", "name": "The video files" },
-    { "@type": "HowToSupply", "name": "The session manifest (manifest_*.json)" },
-    { "@type": "HowToSupply", "name": "The time-stamp token (timestamp_*.tsr)" }
-  ],
-  "step": [
+  "@graph": [
     {
-      "@type": "HowToStep",
-      "name": "Hash the video files",
-      "text": "Compute the SHA-256 of each video file and compare it against the hash recorded for that chunk in the session manifest."
+      "@type": "HowTo",
+      "name": "How to verify Witness video footage",
+      "description": "Independently confirm that video recorded with the Witness iOS app is unaltered and existed at the claimed time, using its session manifest and RFC 3161 time-stamp token.",
+      "totalTime": "PT10M",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "OpenSSL"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "A terminal / command line"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "The video files"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "The session manifest (manifest_*.json)"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "The time-stamp token (timestamp_*.tsr)"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Hash the video files",
+          "text": "Compute the SHA-256 of each video file and compare it against the hash recorded for that chunk in the session manifest."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Verify the time-stamp token",
+          "text": "Use openssl ts -verify to confirm the time-stamp authority signed a hash of this exact manifest, establishing that it existed unmodified at that time."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Read the token contents",
+          "text": "Use openssl ts -reply -text to read the timestamp and the digest the authority attested to."
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/verify.html"
+      }
     },
     {
-      "@type": "HowToStep",
-      "name": "Verify the time-stamp token",
-      "text": "Use openssl ts -verify to confirm the time-stamp authority signed a hash of this exact manifest, establishing that it existed unmodified at that time."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Read the token contents",
-      "text": "Use openssl ts -reply -text to read the timestamp and the digest the authority attested to."
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
     }
   ]
 }

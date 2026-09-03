@@ -19,12 +19,42 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "How Witness works: chunked upload, hashing and trusted time-stamping",
-  "description": "A technical account of how the Witness iOS app preserves footage during police encounters and establishes a verifiable chain of custody.",
-  "about": "Video evidence chain of custody, trusted timestamping, and resilient mobile upload",
-  "proficiencyLevel": "Expert",
-  "inLanguage": "en"
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "How Witness works: chunked upload, hashing and trusted time-stamping",
+      "description": "A technical account of how the Witness iOS app preserves footage during police encounters and establishes a verifiable chain of custody.",
+      "about": "Video evidence chain of custody, trusted timestamping, and resilient mobile upload",
+      "proficiencyLevel": "Expert",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/how-it-works.html"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
+    }
+  ]
 }
 </script>
 </head>

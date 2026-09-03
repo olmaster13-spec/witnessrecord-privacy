@@ -19,18 +19,77 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to record video on an iPhone with the screen dark",
-  "description": "Methods for recording video on an iPhone without a lit display, including manual brightness, a Siri shortcut and a purpose-built app, plus the iOS settings that prevent the recording from ending early.",
-  "inLanguage": "en",
-  "tool": [{ "@type": "HowToTool", "name": "iPhone running iOS 17 or later" }],
-  "step": [
-    { "@type": "HowToStep", "name": "Turn off auto-brightness", "text": "Settings, Accessibility, Display and Text Size, and turn off Auto-Brightness. Without this, iOS raises the display again when lighting changes and the dark screen does not stay dark." },
-    { "@type": "HowToStep", "name": "Set auto-lock to never", "text": "Settings, Display and Brightness, Auto-Lock, Never. iOS ends camera capture when the device locks, so an auto-lock timer is the most common cause of a recording stopping on its own." },
-    { "@type": "HowToStep", "name": "Silence interruptions", "text": "Turn on a Focus mode or Do Not Disturb. An incoming call moves the camera app to the background, which ends the recording." },
-    { "@type": "HowToStep", "name": "Lock the orientation", "text": "Turn on rotation lock in Control Centre so the framing does not change if the phone tilts while you cannot see the screen." },
-    { "@type": "HowToStep", "name": "Choose a start method that needs no screen", "text": "The Action Button, a Lock Screen widget, Back Tap, or a Siri phrase all begin a recording without unlocking the phone or looking at it." },
-    { "@type": "HowToStep", "name": "Drop the brightness and record", "text": "Drag the Control Centre brightness slider to the bottom, or use an app that sets brightness to zero and renders a black view, then start recording." }
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "name": "How to record video on an iPhone with the screen dark",
+      "description": "Methods for recording video on an iPhone without a lit display, including manual brightness, a Siri shortcut and a purpose-built app, plus the iOS settings that prevent the recording from ending early.",
+      "inLanguage": "en",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "iPhone running iOS 17 or later"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Turn off auto-brightness",
+          "text": "Settings, Accessibility, Display and Text Size, and turn off Auto-Brightness. Without this, iOS raises the display again when lighting changes and the dark screen does not stay dark."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Set auto-lock to never",
+          "text": "Settings, Display and Brightness, Auto-Lock, Never. iOS ends camera capture when the device locks, so an auto-lock timer is the most common cause of a recording stopping on its own."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Silence interruptions",
+          "text": "Turn on a Focus mode or Do Not Disturb. An incoming call moves the camera app to the background, which ends the recording."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Lock the orientation",
+          "text": "Turn on rotation lock in Control Centre so the framing does not change if the phone tilts while you cannot see the screen."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Choose a start method that needs no screen",
+          "text": "The Action Button, a Lock Screen widget, Back Tap, or a Siri phrase all begin a recording without unlocking the phone or looking at it."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Drop the brightness and record",
+          "text": "Drag the Control Centre brightness slider to the bottom, or use an app that sets brightness to zero and renders a black view, then start recording."
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-09-03",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/record-iphone-screen-off.html"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
+    }
   ]
 }
 </script>

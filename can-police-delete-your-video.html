@@ -19,33 +19,78 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "en",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Can police take your phone?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, yes. Officers may seize and secure a phone in circumstances such as an arrest, or where they have reason to believe evidence would otherwise be destroyed. Seizing the device is a separate question from being allowed to look at what is on it." }
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can police take your phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes, yes. Officers may seize and secure a phone in circumstances such as an arrest, or where they have reason to believe evidence would otherwise be destroyed. Seizing the device is a separate question from being allowed to look at what is on it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can police search your phone without a warrant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally no. In Riley v. California (2014) the Supreme Court held unanimously that police must ordinarily obtain a warrant before searching the digital contents of a phone seized incident to arrest. Narrow exceptions exist, and consent is the one people give away most easily."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can police delete your video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Deleting footage from someone's phone is unlawful and officers have faced criminal charges for it, including evidence tampering and obstruction. That remedy arrives months later and does not bring the footage back, which is why getting a copy off the device during recording matters more than the rule does."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have to unlock your phone for police?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "US courts have generally treated a compelled passcode as testimony protected by the Fifth Amendment, and a compelled face or fingerprint as more like a physical sample that is not protected. The law is unsettled and varies, but the asymmetry runs against using biometric unlock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it legal to film the police?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the United States, filming on-duty officers in public is protected First Amendment activity where you are lawfully present and not interfering. Every federal circuit that has squarely considered the question has recognised the right, though the details of qualified immunity differ."
+          }
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnessrecord.app/#org"
+      },
+      "datePublished": "2026-09-03",
+      "dateModified": "2026-09-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnessrecord.app/can-police-delete-your-video.html"
+      }
     },
     {
-      "@type": "Question",
-      "name": "Can police search your phone without a warrant?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Generally no. In Riley v. California (2014) the Supreme Court held unanimously that police must ordinarily obtain a warrant before searching the digital contents of a phone seized incident to arrest. Narrow exceptions exist, and consent is the one people give away most easily." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can police delete your video?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Deleting footage from someone's phone is unlawful and officers have faced criminal charges for it, including evidence tampering and obstruction. That remedy arrives months later and does not bring the footage back, which is why getting a copy off the device during recording matters more than the rule does." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you have to unlock your phone for police?",
-      "acceptedAnswer": { "@type": "Answer", "text": "US courts have generally treated a compelled passcode as testimony protected by the Fifth Amendment, and a compelled face or fingerprint as more like a physical sample that is not protected. The law is unsettled and varies, but the asymmetry runs against using biometric unlock." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it legal to film the police?",
-      "acceptedAnswer": { "@type": "Answer", "text": "In the United States, filming on-duty officers in public is protected First Amendment activity where you are lawfully present and not interfering. Every federal circuit that has squarely considered the question has recognised the right, though the details of qualified immunity differ." }
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnessrecord.app/img/app-icon.png"
+      }
     }
   ]
 }
