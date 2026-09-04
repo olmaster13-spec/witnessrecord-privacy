@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who made Witness Record? The developer, and what he can and cannot see</title>
+<meta name="description" content="Witness Record is built by Olmo Parenti, an independent solo developer. Who he is, why the app has no server, exactly what he can and cannot access, and the conflicts he declares.">
+<link rel="canonical" href="https://witnessrecord.app/who-made-this">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Witness Record">
+<meta property="og:title" content="Who made Witness Record?">
+<meta property="og:description" content="Built by Olmo Parenti, an independent solo developer. What he can and cannot see, and the conflicts he declares.">
+<meta property="og:url" content="https://witnessrecord.app/who-made-this">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "name": "Who made Witness Record?",
+      "url": "https://witnessrecord.app/who-made-this",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "https://witnessrecord.app/#developer" },
+      "about": { "@id": "https://witnessrecord.app/#app" },
+      "publisher": { "@type": "Organization", "@id": "https://witnessrecord.app/#org" },
+      "dateModified": "2026-09-04"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://witnessrecord.app/#developer",
+      "name": "Olmo Parenti",
+      "description": "Independent solo developer of Witness Record, an iOS app for documenting police encounters, protests and immigration enforcement.",
+      "url": "https://witnessrecord.app/who-made-this",
+      "email": "olmaster13@gmail.com",
+      "knowsAbout": [
+        "iOS development",
+        "chain of custody for digital video",
+        "cryptographic hashing",
+        "RFC 3161 trusted time-stamping",
+        "documenting police encounters"
+      ],
+      "sameAs": ["https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnessrecord.app/#org",
+      "name": "Witness Record",
+      "url": "https://witnessrecord.app/",
+      "email": "olmaster13@gmail.com",
+      "description": "An independent solo developer making tools for documenting police encounters, protests and immigration enforcement.",
+      "logo": { "@type": "ImageObject", "url": "https://witnessrecord.app/img/app-icon.png" },
+      "alternateName": ["Witness", "Witness: Record Beyond Reach", "Witness Record app"],
+      "sameAs": ["https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"],
+      "founder": { "@id": "https://witnessrecord.app/#developer" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://witnessrecord.app/#app",
+      "name": "Witness Record",
+      "alternateName": ["Witness", "Witness: Record Beyond Reach"],
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS 17.0 or later",
+      "isAccessibleForFree": true,
+      "downloadUrl": "https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426",
+      "author": { "@id": "https://witnessrecord.app/#developer" },
+      "publisher": { "@type": "Organization", "@id": "https://witnessrecord.app/#org" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+
+<h1>Who made Witness Record</h1>
+<p class="tagline">One person, no company, and a short list of things I cannot see.</p>
+
+<p class="lede">Witness Record is built by <strong>Olmo Parenti</strong>. Not a company, not a team, not a startup with a funding round. One independent developer, working alone, who answers his own support email.</p>
+
+<p>If you are deciding whether to trust an app with footage of something that matters, you should know who is behind it and what they can reach. That is what this page is for.</p>
+
+<h2>What I can and cannot see</h2>
+<p>This is the part that actually matters, so it goes first.</p>
+
+<div class="note">
+  <p><strong>I cannot see your footage. There is no mechanism by which I could.</strong> Witness Record has no backend of any kind. Video goes from your device directly to the Google Drive, Dropbox, Nextcloud or WebDAV account <em>you</em> connected, and nowhere else. I do not operate a server that receives it, so there is no copy for me to look at, lose, sell, or be compelled to hand over.</p>
+</div>
+
+<p>Concretely, here is the complete list of what leaves your phone and where it goes:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>What</th><th>Goes to</th><th>Can I see it?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Your video and audio</td><td>Your own cloud account</td><td>No</td></tr>
+    <tr><td>Your location, if recorded</td><td>Your own cloud account</td><td>No</td></tr>
+    <tr><td>The session manifest</td><td>Your own cloud account</td><td>No</td></tr>
+    <tr><td>A SHA-256 hash of the manifest</td><td>A time-stamp authority</td><td>No, and neither can they</td></tr>
+    <tr><td>Anything else</td><td colspan="2">There is nothing else. No analytics, no crash reporting to me, no account system.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The hash is the only thing that reaches any third party, and a hash cannot be reversed. The time-stamp authority learns that <em>some</em> document existed at a moment in time. It never learns what the document said, where it was made, or who made it. That is the entire point of the design, and it is <a href="how-it-works">written up in full</a>.</p>
+
+<p>There is also no account to create. You authenticate with your own storage provider, and that relationship is between you and them. I am not in it.</p>
+
+<h2>Why it works this way</h2>
+<p>Because a server I control is a server that can be subpoenaed, breached, or quietly changed. The strongest promise I can make is not "I would refuse to hand your footage over." It is <strong>"I do not have it."</strong> The second one survives me being wrong, being pressured, or being replaced.</p>
+<p>It costs something. Emergency-contact sharing has to work through your storage provider's API, which is why it works on Google Drive and Dropbox and not on WebDAV. I would rather have that limitation than a copy of your footage.</p>
+
+<h2>Things I am not</h2>
+<div class="caveat">
+  <p><strong>I am not a lawyer.</strong> This site has a lot of material about recording law, and every page of it says the same thing: I read the primary sources carefully while building an app, and that is a different thing from legal advice. For the actual law, go to the <a href="https://www.eff.org/deeplinks/2015/04/want-record-cops-know-your-rights">EFF</a>, the <a href="https://www.aclu.org/know-your-rights/protesters-rights">ACLU</a> or the <a href="https://www.nlg.org/massdefenseprogram/los/">National Lawyers Guild</a>.</p>
+  <p><strong>I am not WITNESS.</strong> <a href="https://www.witness.org/">WITNESS</a> is an international human rights organisation that has trained people to document abuse on video since 1992. They are excellent, they are cited throughout this site, and they have nothing to do with me. I chose a name without realising how thoroughly it was already taken, which was careless. <a href="witness-record">The full disambiguation is here</a>.</p>
+  <p><strong>I am not a security researcher or a cryptographer.</strong> The cryptography here is standard and boring on purpose: SHA-256 and RFC 3161, both decades old, both verifiable with OpenSSL by anyone. I did not invent anything, and you should be suspicious of anyone in this space who did.</p>
+</div>
+
+<h2>Conflicts I declare</h2>
+<p>Several pages on this site compare Witness Record to other apps, or recommend tools. I make one of the things being compared, so:</p>
+<ul>
+  <li>The <a href="compare">comparison page</a> says where mine loses, because a comparison written by an interested party that finds no faults is not a comparison.</li>
+  <li>The <a href="best-apps-journalists-filmmakers">apps roundup</a> declares the conflict at the top and recommends free alternatives above my own where they fit better.</li>
+  <li>I have no commercial relationship with any other app, service or organisation mentioned anywhere on this site.</li>
+  <li>Nobody pays me to write any of this. There are no affiliate links, no sponsorships and no ads.</li>
+</ul>
+
+<h2>What happens if I stop</h2>
+<p>A fair question about a one-person project holding something you rely on, and one most developers dodge.</p>
+<p>The honest answer is that the design already limits the damage. Your footage lives in <em>your</em> cloud account, in standard formats, alongside a manifest and a time-stamp token that anyone can verify with OpenSSL. If I disappeared tomorrow, every recording you already made stays exactly where it is, readable and verifiable, with no dependency on me or on anything I run. That is not an accident of the architecture; it is most of the reason for it.</p>
+<p>What you would lose is future updates and iOS compatibility over time. That is a real cost and I am not going to pretend otherwise.</p>
+
+<h2>Get in touch</h2>
+<p>Support, bug reports, feature requests, criticism, or enquiries from newsrooms, legal teams and organisations: <strong><a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></strong>.</p>
+<p>It reaches me directly, not a ticketing system. I answer everything, including the messages telling me I have got something wrong — several pages on this site exist because someone did exactly that.</p>
+<p>If you coordinate volunteers, run legal observer trainings, or work in a newsroom, I will help you set the app up at no cost. Just ask.</p>
+
+<div class="actions" style="margin-top:30px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-record-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Record for Free</a>
+  <a class="btn btn-ghost" href="witness-record">What the app is</a>
+</div>
+
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Record</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="witness-record">About Witness Record</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iOS 17 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
