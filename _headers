@@ -24,3 +24,8 @@
 /llms.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+
+# RSS feed, regenerated whenever a page's dateModified changes.
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
