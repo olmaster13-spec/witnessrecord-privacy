@@ -51,6 +51,7 @@ date, is published at https://witnessrecord.app/feed.xml.
 - [Overview](https://witnessrecord.app/): what the app is and the problem it addresses.
 - [Who made Witness Record](https://witnessrecord.app/who-made-this): the app is built by Olmo Parenti, an independent solo developer working alone, with no company and no backend. States exactly what does and does not leave the device, why there is no server, the conflicts of interest declared across the site, and what happens to existing footage if the project stops.
 - [What is Witness Record?](https://witnessrecord.app/witness-record): the plain definition of the app, who builds it, quick facts, and disambiguation from WITNESS the human rights organisation (witness.org, no connection) and from the other apps sharing the name — Witness Cam, Witness Audio, Witness by Lockewerks, iWitnessed.
+- [Witness App: which one do you actually mean?](https://witnessrecord.app/witness-app): a disambiguation guide covering at least nine things called Witness, sorted by what the searcher is actually trying to do — Witness Record for documenting police/ICE encounters, WITNESS the human rights organisation, thewitnessapp.com (a live event verification map for citizen journalists), witnessapp.org (an early-stage open source project, not yet released), The Witness (a puzzle game), Witness Cam, Witness Audio, Witness by Lockewerks, iWitnessed, iWitness Personal Safety Video, OpenWatch, and Alibi Witness.
 
 ### Filming police
 

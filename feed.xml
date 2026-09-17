@@ -5,21 +5,35 @@
   <link>https://witnessrecord.app/</link>
   <description>Guides on filming police and ICE, the law around recording, and how Witness Record works. An independent iOS app for documenting encounters with law enforcement.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 13 Sep 2026 23:47:42 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 17 Sep 2026 14:01:08 +0000</lastBuildDate>
   <atom:link href="https://witnessrecord.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>What is Witness Record? The app, who makes it, and the others with the name</title>
+    <link>https://witnessrecord.app/witness-record</link>
+    <guid isPermaLink="true">https://witnessrecord.app/witness-record</guid>
+    <description>Witness Record is a free iOS app that films with the screen black and uploads footage to your own cloud while you are still recording. What it is, who builds it, and how it differs from the other apps and organisations called Witness.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness App: which one do you actually mean?</title>
+    <link>https://witnessrecord.app/witness-app</link>
+    <guid isPermaLink="true">https://witnessrecord.app/witness-app</guid>
+    <description>Witness App could mean at least nine different things: a police-recording app, a human rights charity, a citizen journalism map, a puzzle game, and more. Find the one you want.</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Apps for recording police, compared honestly by one of the developers</title>
+    <link>https://witnessrecord.app/compare</link>
+    <guid isPermaLink="true">https://witnessrecord.app/compare</guid>
+    <description>Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage actually leaves the phone. Written by the developer of one of them.</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+  </item>
   <item>
     <title>Filming the police in Europe: the law is different in every country</title>
     <link>https://witnessrecord.app/filming-the-police-in-europe</link>
     <guid isPermaLink="true">https://witnessrecord.app/filming-the-police-in-europe</guid>
     <description>Unlike the US, there is no single European right to film the police. What is shared across the continent, what differs by country, and detailed guides for ten European and Latin American countries.</description>
     <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>What is Witness Record? The app, who makes it, and the others with the name</title>
-    <link>https://witnessrecord.app/witness-record</link>
-    <guid isPermaLink="true">https://witnessrecord.app/witness-record</guid>
-    <description>Witness Record is a free iOS app that films with the screen black and uploads footage to your own cloud while you are still recording. What it is, who builds it, and how it differs from the other apps and organisations called Witness.</description>
-    <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>Who made Witness Record? The developer, and what he can and cannot see</title>
@@ -103,13 +117,6 @@
     <link>https://witnessrecord.app/best-apps-journalists-filmmakers</link>
     <guid isPermaLink="true">https://witnessrecord.app/best-apps-journalists-filmmakers</guid>
     <description>Camera, audio, verification, editing and security apps worth having on an iPhone for film and reporting work, what each is actually for, and where the free option is genuinely the right one.</description>
-    <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Apps for recording police, compared honestly by one of the developers</title>
-    <link>https://witnessrecord.app/compare</link>
-    <guid isPermaLink="true">https://witnessrecord.app/compare</guid>
-    <description>Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage actually leaves the phone. Written by the developer of one of them.</description>
     <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
