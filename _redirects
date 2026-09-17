@@ -1,0 +1,14 @@
+# Cloudflare Pages redirects.
+#
+# witnessrecord.app was the original domain; the app and site were renamed
+# Witness Camera in September 2026 and witnesscamera.com is now canonical.
+# This sends every witnessrecord.app URL to its exact equivalent on the new
+# domain, path preserved, so nothing already linked or indexed breaks.
+#
+# For this rule to fire at all, witnessrecord.app must stay attached as a
+# custom domain on this same Cloudflare Pages project (Pages dashboard ->
+# this project -> Custom domains -> add domain). Once witnesscamera.com is
+# added the same way, both serve identically until this rule takes effect;
+# nothing here removes or reconfigures the existing witnessrecord.app
+# attachment on its own.
+https://witnessrecord.app/*  https://witnesscamera.com/:splat  301
