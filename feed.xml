@@ -5,13 +5,20 @@
   <link>https://witnesscamera.com/</link>
   <description>Guides on filming police and ICE, the law around recording, and how Witness Camera works. An independent iOS app for documenting encounters with law enforcement.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 17 Sep 2026 14:01:08 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 02 Oct 2026 11:09:31 +0000</lastBuildDate>
   <atom:link href="https://witnesscamera.com/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
-    <title>What is Witness Camera? The app, who makes it, and the others with the name</title>
+    <title>ICEBlock was removed: what you can still use to document ICE</title>
+    <link>https://witnesscamera.com/iceblock-removed</link>
+    <guid isPermaLink="true">https://witnesscamera.com/iceblock-removed</guid>
+    <description>ICEBlock and similar sighting apps were pulled from the App Store and Google Play. What happened, how reporting apps differ from documenting apps, and what is still available.</description>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness Record is now Witness Camera: what changed, what didn't</title>
     <link>https://witnesscamera.com/witness-record</link>
     <guid isPermaLink="true">https://witnesscamera.com/witness-record</guid>
-    <description>Witness Camera is a free iOS app that films with the screen black and uploads footage to your own cloud while you are still recording. What it is, who builds it, and how it differs from the other apps and organisations called Witness.</description>
+    <description>The app formerly called Witness Record is now Witness Camera, same developer, same design, only the name changed. What it is, who builds it, and how it differs from the other apps and organisations called Witness.</description>
     <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
