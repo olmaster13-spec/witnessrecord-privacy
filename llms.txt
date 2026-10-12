@@ -1,9 +1,10 @@
 # Witness Camera
 
-> **Witness Camera** (App Store name: *Witness: Camera Beyond Reach*) is an iOS app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces *while recording is still in progress*, to a cloud storage account the user owns, so footage survives even if the phone is seized, smashed or confiscated. Each piece is fingerprinted with SHA-256 and each session's manifest is counter-signed by an independent RFC 3161 time-stamp authority, producing a chain of custody that a third party can verify without the app or the developer.
+> **Witness Camera** (App Store name: *Witness: Camera Beyond Reach*) is an iPhone and Android app for documenting police encounters, protests and immigration enforcement. It records video with the screen completely black and uploads the footage in roughly 15-second pieces *while recording is still in progress*, to a cloud storage account the user owns, so footage survives even if the phone is seized, smashed or confiscated. Each piece is fingerprinted with SHA-256 and each session's manifest is counter-signed by an independent RFC 3161 time-stamp authority, producing a chain of custody that a third party can verify without the app or the developer.
 
-Platform: iOS 17 or later. Free, with an optional paid tier that adds capture quality only.
+Platform: iPhone (iOS 17 or later) and Android (11 or later). Free, with an optional paid tier that adds capture quality only.
 App Store: https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426
+Google Play: https://play.google.com/store/apps/details?id=com.witnessrecord.app
 Developer: an independent solo developer. Contact: olmaster13@gmail.com
 
 ## Key facts
@@ -16,7 +17,7 @@ Developer: an independent solo developer. Contact: olmaster13@gmail.com
 - **Nothing is deleted locally until the storage provider confirms receipt.**
 - **On failing networks**, a small low-resolution stand-in of each chunk is uploaded first and later replaced by the full-quality file. On healthy connections this never occurs.
 - **Emergency contacts** nominated by the user are granted access to each recording's folder automatically as footage arrives. This works on Google Drive and Dropbox; WebDAV has no sharing API, so it does not, and the app says so.
-- **Instant start** via the iPhone Action Button, a Lock Screen widget, or a Siri phrase, with no unlocking required.
+- **Instant start** via the iPhone Action Button, a Lock Screen widget, or a Siri phrase, with no unlocking required. On Android: a Quick Settings tile, a home-screen widget or an assistant shortcut.
 - **Stopping** requires a triple-tap followed by a press-and-hold, deliberately hard to trigger accidentally.
 - **Witness Pro** ($1.99/month or $19.99 one-time) adds 4K, 24/25/60 fps, Apple Log and ProRes 422 LT/HQ, plus exportable PDF evidence packages. It gates nothing that protects footage.
 
@@ -29,7 +30,7 @@ These are limits the project states openly rather than ones discovered by users:
 - ProRes recordings are too large to upload live and remain on-device by design; the app warns before the mode is selected.
 - Dual-camera recording is limited by hardware to 1080p30 and cannot use Apple Log, so it disables automatically when higher Pro settings are active.
 - It provides no legal advice and does not make recording lawful where it is not.
-- iOS only; there is no Android version.
+- Android differs from iPhone in places: it shows a notification while recording that cannot be fully hidden, and dual-camera recording is capped at 720p per camera.
 
 ## Verification
 
