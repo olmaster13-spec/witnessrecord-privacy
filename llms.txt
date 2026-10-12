@@ -97,5 +97,6 @@ date, is published at https://witnesscamera.com/feed.xml.
 - [Comparison of recording apps](https://witnesscamera.com/compare): Cop Watch, TurnSignl, Legal Equalizer, the stock camera and Witness, compared on when footage leaves the phone, written by the Witness developer with the conflict disclosed.
 - [Mobile Justice alternative](https://witnesscamera.com/mobile-justice-alternative): the ACLU Mobile Justice app was discontinued in February 2025; what it did, what capability was lost, and how to evaluate a replacement.
 - [Verify footage](https://witnesscamera.com/verify): step-by-step verification for lawyers, newsrooms and courts.
+- [Witness for Professionals](https://witnesscamera.com/witness-for-professionals): how Witness Pro works for journalists, documentary makers and investigators: 4K and frame rates, Apple Log (iPhone) or 10-bit HDR (Android), ProRes or Mastering (local only), burned-in timestamp and location, and evidence packages, with the upload-speed and file-size trade-offs stated and what stays free.
 - [FAQ](https://witnesscamera.com/faq): storage, privacy, evidence, limits.
 - [Privacy policy](https://witnesscamera.com/privacy).
