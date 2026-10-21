@@ -1,0 +1,742 @@
+# Witness Camera: full text of key pages
+
+Witness Camera (App Store name: Witness: Camera Beyond Reach) is a free iPhone and Android app for documenting police encounters. It records with the screen black and uploads every 15 seconds to storage the user owns. Index of all pages: https://witnesscamera.com/llms.txt
+
+---
+
+# Filming the police at student protests across Europe
+URL: https://witnesscamera.com/filming-police-student-protests-europe
+
+Filming the police at student protests across Europe
+
+What is happening, what stays the same everywhere, and where to find the guide for your country.
+
+Since mid-September 2026, school pupils and university students have been protesting across Europe over teacher shortages, school buildings, housing and fees. In some places there have been clashes with police, tear gas and arrests, many of them of minors. Plenty of people are filming a police intervention in a crowd for the first time. This page collects the verified facts and points to a country guide in each language. It takes no side on the demands or on the violence reported on either side. Its purpose is documenting what happens, whoever is in the wrong.
+
+ Short answer. Filming police on duty in a public place is generally protected in the countries we cover (France, Italy, Germany, Greece, Spain). The real risk is physically obstructing an intervention, not the camera. Germany is the exception to watch: sound is the legal risk there (section 201 StGB), and Witness always records sound. As of 21 October 2026, school and student protests with police involvement are reported in France, Italy, Greece and, announced for 31 October, Germany; Spain has a teachers' strike and Portugal a tuition protest. Witness Camera is a free iPhone and Android app that uploads every 15 seconds to storage you own. This is not legal advice.
+
+## What is happening, country by country
+
+As of 21 October 2026, from press reports, with figures attributed to whoever gave them. They change quickly and often disagree.
+
+ - France. A pupil and student movement that began at a school in Créteil in September has spread nationwide. On 13 October the Interior Ministry counted 161,500 demonstrators and the youth unions 480,000, and police used tear gas (Radio-Canada). Time reports over 6,000 arrests, 87% of those detained being minors, citing the Justice Ministry. Guide in French.
+
+ - Italy. On 16 October, the "No Meloni Day", students marched in at least twelve cities. In Turin, stones and torches were thrown at police, who responded with water cannon and some tear gas, and the Turin police headquarters reported three minors arrested for aggravated resistance (ANSA). A general strike is called for 30 October and a European student strike for 20 November. Guide in Italian.
+
+ - Germany. Nationwide school protests are announced for 31 October. The organisers, "GenZ regelt", say they reject violence and claim more than 10,000 registrations in 21 cities. A Federal Interior Ministry spokesperson said security agencies are monitoring the calls (News4teachers). Guide in German.
+
+ - Greece. Students have camped in Athens' Syntagma Square since 13 October over housing and study costs, with a rally at the Propylaia on 21 October (Greek press). In the coverage we found there were no clashes with police. Guide in Greek.
+
+ - Spain. This is mainly a teachers' strike, not a student protest: an indefinite strike in Madrid's public schools since 14 October, with a march from Atocha on 22 October (El Diario de Madrid). Student and family organisations are reported to be joining (El Economista). Guide in Spanish.
+
+ - Portugal. Student associations in Lisbon called a protest on 21 October against the Government's proposal to unfreeze tuition fees from 2027/28 (Observador). We found no reports of police incidents. We do not yet have a Portugal-specific legal guide.
+
+We found no comparable student street protests in the Netherlands, Poland, Romania or Sweden, so there are no guides for them in this series. The general guides for those countries are linked from Filming the police in Europe.
+
+## What stays the same everywhere
+
+ - The law protects filming, not obstructing. Across the countries above, standing at a reasonable distance with the phone visible is generally protected. Physically getting in the way of an intervention is the real risk, camera or not. The country pages have the details, with sources. None of this is legal advice.
+
+ - A crowd is a different job. Stay at the edge, know two exits, film the calm first, say the time aloud every few minutes. See How to film at a protest.
+
+ - Expect the network to fail. Mobile networks saturate in a crowd. Anything that depends on a live connection should queue on the phone and send when it can.
+
+ - Many protesters are minors. Documenting is one thing, publishing is another. Keep the original untouched, and blur the faces of minors and bystanders before posting anything.
+
+ - Prepare beforehand. Passcode instead of biometrics, a full battery, a lawyer's number written on your arm, and a test recording before the day.
+
+## Where Witness fits
+
+Witness records with the screen black and uploads every 15 seconds to a storage account you own, so what was already sent survives a seized or smashed phone. Each piece is hashed and the session is time-stamped, and anyone can verify the footage without the app. It does not replace a lawyer, does not make anything lawful that is not, and does not protect you physically.
+
+ One caution for Germany. Witness always records sound, and the app has no setting to turn the microphone off. German law treats recording the non-publicly spoken word as an offence (section 201 of the Strafgesetzbuch), and whether an officer's announcement at a public operation counts is disputed. The German guide explains this. If you want to work without sound, Witness is currently the wrong tool for that.
+
+## Questions
+
+### Can you film the police at a student protest in Europe?
+
+ In France, Italy, Germany, Greece and Spain, filming police on duty in a public place is generally protected, and the real limit is physically obstructing an intervention. Germany treats recording the non-publicly spoken word as an offence (section 201 StGB), so sound is the risk there. This is not legal advice, and the country guides give the sources.
+
+### Which European countries have student or school protests right now?
+
+ As of 21 October 2026: France (a nationwide pupil and student movement since September), Italy (the 16 October “No Meloni Day”), Germany (school protests announced for 31 October), Greece (students camping in Syntagma Square over housing), Spain (a teachers' strike in Madrid) and Portugal (a tuition protest in Lisbon). We found no comparable student street protests in the Netherlands, Poland, Romania or Sweden.
+
+### How can I keep my footage if police take my phone?
+
+ Use an app that uploads while you record. Witness Camera records with the screen black and uploads a piece every 15 seconds to a cloud account you own, so footage already sent is safe. The piece being recorded and any queued pieces are on the phone.
+
+### Does Witness record sound?
+
+ Yes, always. Witness has no setting to turn the microphone off. In Germany, where recording the non-publicly spoken word is an offence, that matters, and if you want to work without sound Witness is currently the wrong tool.
+
+### Is Witness free?
+
+ Yes. Witness Camera (App Store name: Witness: Camera Beyond Reach) is free on iPhone (iOS 17 and later) and Android (11 and later). An optional paid Pro tier adds capture quality, nothing that protects footage.
+
+## More in this series
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+## Sources
+
+ - Time, “Why Are Students Protesting Across France?”, 2 October 2026
+
+ - Radio-Canada, mobilisation of 13 October 2026 (French)
+
+ - ANSA, student demonstrations in Italy, 16 October 2026 (Italian)
+
+ - News4teachers, security agencies and the 31 October school protests (German)
+
+ - efsyn, students with tents in Syntagma (Greek)
+
+ - El Diario de Madrid, teachers' strike calendar 19 to 23 October 2026 (Spanish)
+
+ - Observador, students protest the tuition proposal, 21 October 2026 (Portuguese)
+
+## Get the app
+
+It is free. Set it up and test it before the next day of action, not during it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+Written on 21 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# Protest phone checklist: 10 steps before you film the police
+URL: https://witnesscamera.com/protest-phone-checklist
+
+Protest phone checklist: 10 steps before you film the police
+
+What to do in the hour before you leave, in the order that matters.
+
+Most footage of protests is lost for boring reasons: a dead battery, a locked-out phone, uploads that never started, a phone taken before anything was saved. This checklist is the preparation that prevents those. It applies to school and university protests across Europe and to any other demonstration.
+
+ Short answer. Before a protest: set a six-digit passcode instead of Face ID, charge to 100% and carry a power bank, connect cloud storage and test-record for 30 seconds, name an emergency contact, write a lawyer's number on your arm, and know two exits. Witness Camera is a free iPhone and Android app that records with the screen black and uploads every 15 seconds, so footage already sent survives a seized phone.
+
+## The ten steps
+
+ - Use a passcode, not biometrics. Set a passcode of at least six digits instead of Face ID or a fingerprint. On iPhone, holding the side button and a volume button together forces the passcode screen.
+
+ - Charge to 100% and bring a power bank. Filming on a congested network with continuous upload is the worst case for a battery, and demonstrations run long.
+
+ - Connect your own storage. In Witness, connect Google Drive, Dropbox, Nextcloud or WebDAV. Footage uploads to an account you own. There is no Witness server and no account with the developer.
+
+ - Test it for 30 seconds. Record half a minute, stop, and check that the file appears in your storage. Do this the day before, not at the protest.
+
+ - Name an emergency contact. Each recording is shared with the contact you name as it is made, so someone else has your material if you are detained.
+
+ - Set up instant start. iPhone: Action Button (iPhone 15 Pro and newer), Lock Screen widget or a Siri phrase. Android: Quick Settings tile, home-screen widget or an assistant shortcut.
+
+ - Write a lawyer's number on your arm. In marker, on skin. A number stored in the phone is unreachable if the phone is taken. Use a lawyer or legal-support group you trust.
+
+ - Tell the people you go with. If you are there to film, say so, so nobody expects you to be somewhere else when it matters.
+
+ - Plan two exits and stay at the edge. The edge of a crowd shows the line, the crowd and the space between them. The middle gives you no exit and no context.
+
+ - Decide now what you will publish. Keep the original untouched. Before posting anything online, blur the faces of minors and bystanders. Many protesters are under 18.
+
+## If you are in Germany, decide about sound first
+
+Witness always records sound and has no setting to turn the microphone off. German law treats recording the non-publicly spoken word as an offence (section 201 of the Strafgesetzbuch), and whether an officer's announcement at a public operation counts is disputed. Our German legal page explains it. If you want to work without sound, Witness is currently the wrong tool.
+
+## What the checklist cannot do
+
+It will not make recording lawful where it is not, protect you physically, or guarantee that a court or newsroom accepts your footage. The law differs by country: see Filming the police at student protests across Europe. This is not legal advice.
+
+## Questions
+
+### What should I do with my phone before a protest?
+
+ Set a six-digit passcode instead of biometrics, charge it fully and carry a power bank, connect cloud storage and test-record for 30 seconds, name an emergency contact, and write a lawyer's number on your arm.
+
+### Will uploads work in a crowd?
+
+ Mobile networks often saturate at large demonstrations. Witness keeps each piece on the phone until your storage confirms it, and uploads when a connection is available, rather than failing.
+
+### What if my phone is taken?
+
+ Pieces that had already uploaded are safe in your own cloud storage. The piece being recorded and any pieces still queued are on the phone, so the practical loss is whatever had not finished sending.
+
+### Do I need a special app to film at a protest?
+
+ No. Any camera app works for filming. Witness adds black-screen recording, uploads every 15 seconds to storage you own, SHA-256 hashing and an independent time-stamp. It is free on iPhone and Android.
+
+## Set up Witness before the next day of action
+
+The app is free. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# Police ask you to delete your protest video or take your phone: Europe
+URL: https://witnesscamera.com/police-ask-you-to-delete-video-protest-europe
+
+Police told you to delete your video or hand over your phone at a protest
+
+A calm sequence for the moment, what the law says in five European countries, and what happens to footage that has already left the phone.
+
+This page is for the specific moment at a European demonstration when an officer tells you to stop recording, to delete what you have, or to hand over the phone. For the United States, see Can police take your phone or delete your video?. Rules differ by country and by circumstance. Nothing here is legal advice.
+
+ Short answer. If an officer at a protest in Europe tells you to stop filming, delete a video or hand over your phone: stay calm, do not obstruct, say you are filming in a public place, ask for the legal basis of any seizure, note the officer's number and the time, and take legal advice afterwards. In Italy and Germany, our legal pages say a verbal order to delete, with no judicial order, has no legal basis. Footage that Witness Camera already uploaded is in your own cloud storage, not on the phone.
+
+## Do not make it a physical argument
+
+In every country our guides cover, the real limit is obstruction, not the camera. Standing at a reasonable distance with the phone visible is generally protected. Physically getting in the way, or refusing a lawful order to move, is not, whether or not you are filming. Arguing the law at the roadside rarely helps and can turn a calm moment into an arrest.
+
+## Say it once, calmly
+
+ - "I am filming in a public place."
+
+ - If asked to delete: you can say politely that you do not agree to delete anything. Whether an officer can then seize the phone is a separate question that depends on the country and the circumstances.
+
+ - If the phone is being taken: ask for the legal basis, and ask for the officer's identification number.
+
+ - Then stop talking about the law. Your remedies come afterwards, with a lawyer.
+
+## What the law says, country by country
+
+These are the short versions from our legal pages, which give the sources and what we could not verify.
+
+ - Italy. A verbal order to stop recording or delete images, without a seizure order from the judicial authority, has no legal basis. Remaining calm and declining without physical opposition is the firmest position. Italian legal page.
+
+ - Germany. A verbal request to delete the recording has no legal basis without a court or prosecutor's order. Sound is the separate risk, under section 201 StGB. German legal page.
+
+ - France. Filming officers on duty in public is protected expression. In 2021 the Constitutional Council struck down a specific offence on publishing identifiable images of officers. An order given on the ground, even without a legal basis, should be handled calmly. French legal page.
+
+ - Spain. The Constitutional Court held in 2020 that capturing images of officers on duty needs no prior authorisation. Using them in a way that creates a real, proven danger can be an administrative infringement under article 36.23 of Organic Law 4/2015. Spanish legal page.
+
+ - Greece. The Areios Pagos has held that recording police conduct on duty is not within the officer's private life. Publication is weighed case by case. Greek legal page.
+
+## Passcodes and unlocking
+
+Whether you can be required to unlock a phone differs by country and situation, and we have not verified it for the countries above. Ask a lawyer before you need to. What you can do in advance is use a six-digit passcode instead of Face ID or a fingerprint, as the protest phone checklist recommends.
+
+## What to remember, and write down at once
+
+ - The officer's identification number or name, if visible. In France, officers on duty have worn an individual identification number (the RIO) since 2014.
+
+ - The time, the place, what was said, and who else saw it.
+
+ - Write it down as soon as you can. Memory degrades quickly under stress.
+
+## Where your footage is
+
+Witness uploads a piece every 15 seconds to the storage account you connected, hashes each piece and time-stamps the session. Log in to Google Drive, Dropbox, Nextcloud or your WebDAV host from another device to see what arrived. Your emergency contact receives each recording as it is made. Anything that had not finished uploading was still on the phone. The hashes and the time-stamp can be checked by anyone with OpenSSL, without the app.
+
+## Afterwards
+
+ - Contact a lawyer or a legal-support organisation before you publish or hand over anything.
+
+ - Do not edit the original. Work on a copy if you want to blur faces.
+
+ - Blur minors and bystanders before posting online.
+
+## Questions
+
+### Can police in Europe make me delete a video?
+
+ It depends on the country and the situation. Our Italian and German legal pages say a verbal order to delete, with no order from the judicial authority, has no legal basis. For France, Spain and Greece our pages advise handling an order on the ground calmly and asserting your rights afterwards with a lawyer. None of this is legal advice.
+
+### Can police take my phone at a protest?
+
+ In some circumstances, such as a seizure under the relevant procedure, they can. Ask for the legal basis and do not resist physically. Whether and when you must unlock the phone differs by country and we have not verified it.
+
+### Is my footage lost if my phone is seized?
+
+ Not what had already uploaded. Witness sends a piece every 15 seconds to your own storage, so that footage is safe. The piece being recorded and any queued pieces are on the phone.
+
+### Should I argue that I have a right to film?
+
+ Say once that you are filming in a public place, then stop. Debating the law on the spot rarely helps. Your remedies come afterwards, with a lawyer.
+
+## Set up Witness before the next day of action
+
+The app is free. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# If your teenager goes to a protest: how to prepare their phone
+URL: https://witnesscamera.com/teenager-protest-phone-preparation
+
+If your teenager is going to a protest: how to prepare their phone
+
+A plan rather than a ban or a blessing, and the practical steps that matter if something goes wrong.
+
+School and university protests across Europe this autumn have included many under-18s. This page does not say whether a young person should go. It is for parents and guardians who have already decided to stay involved and want the practical side right: a plan, a prepared phone, and honest information about what the app does and does not do.
+
+ Short answer. If your teenager is going to a protest, agree a plan: a meeting point and check-in times, a fully charged phone and a power bank, a lawyer's number written on their arm, and a rule to stay at the edge and leave when told to. Witness Camera is free, rated 4+ on the App Store and Everyone on Google Play, and can share each recording with a contact the user names, which should be agreed with the teenager first.
+
+## Why this matters now
+
+Time reports that, in France, 87% of those detained during the school protests were minors, citing the Justice Ministry. In Turin on 16 October, three minors were arrested for aggravated resistance to a public official, according to the local police headquarters reported by ANSA. We take no side on the demands or on the violence reported by either side. The point is that young people are among those at risk, and preparation helps.
+
+## Talk first
+
+ - Where exactly are they going, and with whom?
+
+ - Agree a meeting point and a check-in time, and what to do if they are separated from the group.
+
+ - Agree the rule: stay at the edge of the crowd, know two exits, and leave when told to by police.
+
+ - Agree what happens if they are detained: who they call, and that they ask for a lawyer.
+
+## Prepare the phone
+
+ - A passcode of at least six digits instead of Face ID or a fingerprint.
+
+ - Fully charged, with a power bank. A dead phone helps nobody.
+
+ - A lawyer's or legal-support number written on their arm in marker, because a number stored in the phone is unreachable if the phone is taken.
+
+ - Your number and the meeting point written down as well.
+
+ - Optional: location sharing with you using your phone platform's own feature, if they agree.
+
+## If they want to film
+
+Many young people will film. The basics are the same as for adults: stay at a reasonable distance, never get in the way of police, keep the phone visible. Our country guides cover the law in five countries. Ask them to blur the faces of other young people before posting anything online, and to keep the original untouched.
+
+## What Witness does, and a privacy point to agree on
+
+Witness Camera (App Store name: Witness: Camera Beyond Reach) is free and works on iPhone and Android. It records with the screen black, uploads every 15 seconds to a cloud account the user owns, and hashes and time-stamps each recording. It is rated 4+ on the App Store and Everyone on Google Play. There is no Witness server, so the developer cannot see the footage.
+
+Its emergency-contact feature shares each recording with a person the user names. If that is you, agree it with your teenager first. Receiving live footage of a protest is a significant privacy matter for them, and a teenager who feels watched may simply not use the tool.
+
+## What parents cannot do from a distance
+
+No app protects someone physically or decides what a court accepts. If your child is detained, contact a lawyer or a legal-support organisation immediately. The rules on detaining minors differ by country and we have not verified them. This page is not legal advice.
+
+## Questions
+
+### Is Witness suitable for teenagers?
+
+ It is rated 4+ on the App Store and Everyone on Google Play. It records video and sound, uploads to a cloud account the user owns, and needs no account with the developer. It is not designed specifically for children, so the user should understand what it does.
+
+### Can I see my child's recordings?
+
+ Only if they choose to name you as their emergency contact or to share their storage with you. Witness has no server, and the developer cannot see or retrieve footage.
+
+### Should my teenager go to the protest?
+
+ We do not take a position. This page is for parents who have decided to stay involved and want the practical preparation right.
+
+### What if my teenager is detained?
+
+ Contact a lawyer or a legal-support organisation immediately. Rules for detained minors differ by country and we have not verified them.
+
+## Set up Witness before the next day of action
+
+The app is free. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# How to film at a protest: positioning, kettles, mass arrests and what not to post
+URL: https://witnesscamera.com/filming-police-protest
+
+How to film at a protest
+
+A crowd is a different job from a single encounter, and the differences are not obvious.
+
+Filming one traffic stop is a problem of framing. Filming a demonstration is a problem of position, timing and, uncomfortably, of everyone else in the shot. The technique that produces good footage of a single arrest can produce footage that gets thirty people identified.
+
+The step-by-step method for filming police is the foundation and this page assumes it. What follows is only what changes when there is a crowd. For the autumn 2026 student protests in Europe, see Filming the police at student protests across Europe.
+
+## Before you leave the house
+
+ 01
+
+### Passcode, and a full charge
+
+ Face ID off, six-digit passcode or longer. Then charge to full and bring a power bank, because filming plus a crowded cell tower plus continuous upload is the worst case for a battery and demonstrations run long.
+
+ 02
+
+### Expect the network to fail
+
+ Cell capacity at a large demonstration collapses under simple congestion, and it does so exactly when everyone is trying to upload at once. Anything that depends on a live connection should be assumed to be intermittent. Whatever you use to preserve footage should queue on the device and upload when it can rather than failing.
+
+ 03
+
+### Write the legal support number on your arm
+
+ In marker, on skin. A number in a phone is a number you cannot reach from a holding cell without your phone. The National Lawyers Guild runs legal support at many US demonstrations and publishes local numbers in advance.
+
+ 04
+
+### Decide your job and tell someone
+
+ Documenting and participating pull against each other. If you are there to film, say so to whoever you came with, so nobody is expecting you to be somewhere else when it matters.
+
+## Position, which is most of it
+
+Get height where you can. A step, a wall, a doorway, a first-floor window, a car park deck. Elevation is worth more at a demonstration than at any other kind of filming, because the thing that is disputed afterwards is almost always numbers and geometry: how many people, how far back the line was, who moved first. A shot from ground level in a crowd answers none of that. A shot from four feet up answers all of it.
+
+Film from the edge, not the middle. The middle of a crowd is where you have no exit, no context and no stable frame. The edge gives you the line, the crowd and the space between them in one shot, which is the composition that actually means something.
+
+Know your exit before you need it, and check it again when the crowd moves. The specific hazard at a demonstration is being enclosed: a containment, a blocked side street, a line that closes behind you. If you can see only one way out, you are in the wrong place. This is not primarily about filming; it is about not being arrested for having been standing somewhere.
+
+Do not put your back to a line. Keep officers and the crowd both in your field of view even when you are only filming one of them.
+
+ The single most useful habit: every few minutes, pan slowly across the whole scene and say the time out loud. It costs fifteen seconds and it produces the one thing lawyers consistently cannot get afterwards, which is a reliable record of what the situation looked like immediately before whatever happened next.
+
+## Film the boring part first
+
+The footage people fail to get is not the confrontation. Everyone films the confrontation. It is the twenty minutes beforehand, which is what establishes that a crowd was peaceful, that a street was already blocked, that barricades were placed where they were, that a line formed at a particular time.
+
+So: film the calm. Film the barricades going up. Film the size of the crowd. Film the street layout. Film officers arriving and where they position. None of it is interesting and all of it is the context that makes the interesting part provable.
+
+## Dispersal orders
+
+If an order to disperse is given, that moment is one of the highest-value things you can capture, and it is routinely missed because it happens while everyone is filming something else.
+
+What matters, and what is later disputed:
+
+ - Whether an order was actually given at all, and by whom.
+
+ - Whether it was audible from where the crowd was standing. Film from within the crowd, pointed at the source, so the recording captures what was actually hearable there.
+
+ - Whether it stated a route out, and whether that route was open.
+
+ - How much time passed between the order and enforcement. Say the time when the order is given and say it again when the line moves.
+
+A recording that shows an order was given but was inaudible at the back, and that the named exit was blocked, is worth more than an hour of confrontation footage.
+
+## Mass arrests and containment
+
+If a containment forms, the useful footage changes completely and so does your priority.
+
+Capture the perimeter: where the line is, whether there is any gap, whether people asking to leave are permitted to. Capture time repeatedly. Capture whether food, water or toilets were provided if it goes on for hours; that is frequently the substance of subsequent claims.
+
+During arrests, the thing to get is the pairing: which officer, which person, at what time. That is the link that connects a report to an individual months later and it is very hard to reconstruct from anything else. Badge and helmet numbers, said aloud when you can read them.
+
+ If you are inside the containment, get the footage out of the phone before anything else. A phone taken during a mass arrest may be gone for days, and the recording is on it. This is the situation the app I built exists for, and I would say the same about any of the alternatives: what matters is that footage leaves the device while you are still filming, not after.
+
+## Chemical irritants, projectiles and your own safety
+
+Filming is not protection. If a line advances, if irritants are deployed, if projectiles are used, the correct response is to move, and it does not stop being correct because you are getting a good shot.
+
+Practical points: a camera at eye level is a camera in the path of things aimed at eye level. Contact lenses are a bad idea where irritants may be used. Keep filming while you move rather than stopping to move; a shaky retreat is still evidence and often more informative than a static shot.
+
+## Then the part almost everyone skips
+
+You now have footage full of people who did not agree to be filmed, at a political event, and some of them have specific and serious reasons not to be identified: immigration status, employment, an abusive ex-partner, a protection order, a country they still travel to.
+
+ Blur faces before anything goes public. Signal's image editor detects and blurs faces and is free; you can send a picture to yourself to use it. Apple Photos will let you mark up a still. There are dedicated tools on both platforms for video. Whatever you use, do it before the first post, not after somebody asks.
+
+Two more things follow from that, and they are the ones people get wrong:
+
+ - Keep an unblurred original, untouched. Lawyers need it. Blur the copy you publish.
+
+ - Blurring is a re-encode, so the published version will not match the hash of the original. That is expected and it is why keeping the original matters. Verification runs against what came off the phone.
+
+ - Think about what else is in frame. Placards with names, faces reflected in windows, distinctive tattoos, a licence plate belonging to a participant rather than to police.
+
+WITNESS publishes serious ethical guidance on filming protest and it is worth reading in advance rather than after you have posted something.
+
+## Making sure it survives the day
+
+The failure mode at a demonstration is not that the footage is bad. It is that the phone is taken, dropped, out of battery, or on a network that never uploaded anything.
+
+ Photo library sync generally will not start uploading a video until you stop recording, and defers on cellular besides. At a demonstration, both conditions are usually true at once.
+
+Witness, which I make, uploads in roughly fifteen-second pieces while the recording is still running, to a cloud account you own, queuing on the device when the network is congested and catching up when it is not. Each piece is hashed before it moves. There is more than one app that uploads during recording and I have compared them including where mine loses.
+
+## Afterwards
+
+ - Write it down the same day. Times, badge numbers, what was said, what happened outside the frame.
+
+ - Get footage to legal support if anyone was arrested, before you post any of it.
+
+ - Do not send originals through a messaging app. Re-compression breaks verification. Share links or the files themselves.
+
+ - Consider a records request for body-worn camera footage and dispatch audio. Retention windows for unflagged recordings can be short.
+
+## Related
+
+ - How to film the police, step by step.
+
+ - Can police take your phone or delete your video?
+
+ - What the courts have actually held, including on buffer-zone laws.
+
+ - Setting up before the day.
+
+ Get Witness for Free
+ Get it on Google Play
+ Set it up before the day
+
+Written September 2026. Not legal advice, and not a substitute for local legal support. Sources: WITNESS, the ACLU and the National Lawyers Guild. No connection to WITNESS the organisation, whose name my app shares.
+
+---
+
+# Witness for Professionals: how Witness Pro works
+URL: https://witnesscamera.com/witness-for-professionals
+
+Witness for Professionals
+
+How Witness Pro works, for journalists, documentary makers, investigators and legal observers.
+
+The free app already does the part that protects footage: it records with the screen black, uploads every 15 seconds to storage you own, and hashes and time-stamps the result. Witness Pro adds picture quality and professional outputs on top of that. It never sits between you and the protection.
+
+## Who Pro is for
+
+Pro is for people who deliver footage to someone else and need more than a phone's default picture: an editor, a broadcaster, an attorney, an investigating body. Typical uses are documentary and investigative work, planned shoots where you control the connection, and coverage that has to go through a newsroom's grading and verification process.
+
+If you are filming an encounter as it happens and getting the footage off the phone matters most, you probably do not need Pro. The free 1080p setting uploads fastest, and that is the setting that survives a seized phone. The field guide covers that case.
+
+## What Pro adds
+
+The two apps share one idea and differ where the platforms do.
+
+ CapabilityiPhoneAndroid
+
+ Resolution1080p (free) or 4K1080p (free) or 4K
+ Frame rate24 (cinema), 25 (PAL), 30 or 60 fps24, 25, 30 or 60 fps
+ CodecH.264, HEVC 10-bit, ProRes 422 LT or HQH.264, HEVC 10-bit, or Mastering (very high bit rate HEVC)
+ Flat colour for gradingApple Log on iPhone 15 Pro and newer, with HEVC or ProRes10-bit HDR (HLG) on phones whose camera supports it, with HEVC or Mastering
+ On-screen date, time and locationYesYes, but not together with 10-bit HDR
+ One combined video from both camerasYes, on phones that can record bothYes, on phones that can record both
+ Shorter cut with the dead air removedYesNot at present
+ Evidence packages (PDF report)YesYes
+
+Android has no ProRes encoder on any device, and its public camera interface has no vendor-neutral Log profile. Mastering and 10-bit HDR are the closest equivalents, not the same thing, so an editor expecting ProRes or Apple Log files from an Android phone should say so up front.
+
+## What stays free
+
+ - Recording with the screen black, and starting it in one press.
+
+ - Live upload every 15 seconds to Google Drive, Dropbox, Nextcloud or WebDAV.
+
+ - SHA-256 hashing of every piece and the chain-of-custody manifest.
+
+ - Independent RFC 3161 time-stamping of each session.
+
+ - Sending every recording to an emergency contact as it arrives.
+
+ - Dual-camera recording at 1080p, 30 fps, H.264.
+
+The hashes and time-stamp are in every recording whether Pro is on or off. Anyone can check them with OpenSSL, without the app.
+
+## The trade-off: weight and upload speed
+
+Higher quality costs file size, and file size decides whether footage can leave the phone while you are still filming. The Pro page in the app shows these costs next to each choice. These figures use the same formula the app uses for H.264, HEVC and ProRes, on both iPhone and Android. They are estimates, and real bit rates vary with the scene. Android's Mastering codec is about 100 Mbps at 1080p 30 and scales with resolution and frame rate, so roughly 400 Mbps at 4K 30.
+
+ SettingUpload speed neededPer minuteUploads live
+
+ H.264, 1080p 308 Mbps60 MBYes
+ HEVC 10-bit, 1080p 3013 Mbps96 MBYes
+ H.264, 4K 3032 Mbps240 MBYes
+ HEVC 10-bit, 4K 3051 Mbps384 MBYes
+ HEVC 10-bit, 4K 60102 Mbps768 MBYes
+ ProRes 422 LT, 1080p 30102 Mbps765 MBNo, stays on the phone
+ ProRes 422 HQ, 1080p 30220 Mbps1.6 GBNo, stays on the phone
+ ProRes 422 HQ, 4K 30880 Mbps6.6 GBNo, stays on the phone
+
+For comparison, typical LTE gives 5 to 10 Mbps up, and 5G varies a great deal with where you are standing. Below the rate you need, the queue grows for as long as you keep recording. Nothing is lost when that happens: every piece stays on the phone until your storage confirms it, and a small preview copy of each piece goes ahead of the full file so something of every moment is safe early.
+
+ ProRes and Mastering never upload. They run at roughly twenty times the data rate of HEVC, so they are saved to your photo library or gallery on the phone and are not sent to your cloud storage or your emergency contact. If the phone is taken, those recordings go with it. Use them for planned work, not for an encounter you might lose the phone in. The app asks you to confirm before switching to ProRes.
+
+## Both cameras, or the best picture
+
+Recording both cameras at once is limited to 1080p, 30 fps and H.264, and cannot use Apple Log or HDR. If you choose anything above that, only the rear camera records. The app shows which setting turned the front camera off and offers one button to restore the dual-camera settings. When you do record both, Pro can also produce a single video with the front camera as a small inset, in addition to the two separate files.
+
+## Provenance: visible and invisible
+
+Pro can burn the date, time and coordinates into the picture, visible to anyone who watches the video. Some outlets want that on-screen. It is separate from the invisible metadata every recording already carries, which is the SHA-256 hash, the manifest and the independent time-stamp. Turning the burned-in version off removes none of that.
+
+## Evidence packages
+
+An evidence package turns a finished recording into something an attorney or an editor can read. It contains:
+
+ - A PDF report with the recording's start and end times, time zone, number of segments, capture device, first location fix, hashes of each segment and of any merged video, and the steps to verify them.
+
+ - The manifest.json the report describes.
+
+ - The time-stamp proof, where one was obtained.
+
+It contains no video, so it can be shared without exposing the footage. It is built from the phone's own archive, so it works with no network and after the footage has been cleared off the device. Your recordings and their proofs are kept whether or not you have Pro. Pro adds the report.
+
+ What this establishes, and what it does not. The hashes and time-stamp show that a file is unchanged since the phone recorded it and that the manifest existed at a given time. They do not show that the footage is a fair picture of events, and they say nothing about whether a particular court or outlet will accept it. That is a decision for them and for your lawyer.
+
+## Three set-ups worth starting from
+
+These are suggestions, not rules. Check each against your own phone and connection before you rely on it.
+
+ - An event as it happens. Free defaults, or HEVC at 1080p. It uploads while you film. This is the one that protects you if the phone is taken.
+
+ - A planned interview or a documented site. 4K at 24 or 25 fps in HEVC, with Apple Log or 10-bit HDR if you will grade it, on a fast connection or Wi-Fi. Switch on the burned-in timestamp if the outlet wants it.
+
+ - An archive-grade master. ProRes 422 HQ on iPhone or Mastering on Android, filmed from a stable position. It stays on the phone, so copy it off promptly.
+
+## Price and how to get it
+
+On the US App Store, Witness Pro is $1.99 a month, or $19.99 once for a purchase that does not renew and is tied to your Apple ID. Prices vary by country and are always shown in the app. On Google Play, the price is shown in the app and on the listing. Subscriptions are managed or cancelled in your store account settings, and Restore Purchases brings Pro back on a new phone.
+
+## Questions
+
+### Do I need Pro to protect my footage?
+
+ No. Black-screen recording, live upload every 15 seconds, SHA-256 hashing, the chain-of-custody manifest, RFC 3161 time-stamping and emergency contacts are all free and stay free. Pro adds picture quality and a few output formats, nothing that protects footage.
+
+### Can I see what Pro does before I pay?
+
+ Yes. The Witness Pro page in the app shows every control. The controls are inert until Pro is unlocked, so you can read what each one does and what it costs in file size before buying.
+
+### Does 4K upload live during a recording?
+
+ It can, but only if your connection is fast enough. 4K records faster than most mobile networks can send, so the upload queue grows while you film and the last pieces arrive after you stop. Nothing is lost, because every piece stays on the phone until your storage confirms it, and a small preview copy of each piece is sent ahead of the full file. If getting footage out during the event is what matters, 1080p is the setting that does it.
+
+### What happens to ProRes or Mastering recordings?
+
+ They stay on the phone. They are far too large to upload live, so they are saved to your photo library or gallery instead and are never sent to your cloud storage or to an emergency contact. That trades away the protection the rest of the app is built on, so choose it when picture quality matters more than that.
+
+### What happens if I cancel Pro?
+
+ Capture settings that need Pro return to the free defaults, so 4K goes back to 1080p. Your recordings and their proofs are kept either way. A one-time purchase has nothing to renew or cancel.
+
+### What does an evidence package contain?
+
+ A PDF report with the recording's timeline, device details, first location fix, segment hashes and verification steps, plus the manifest.json it describes and the time-stamp proof where one was obtained. It contains no video. The footage stays wherever you already keep it.
+
+## Get the app
+
+The free app is enough to see how everything works. Pro is unlocked from inside it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## Newsrooms, legal teams and production companies
+
+For questions about formats, verification or how the app fits a workflow, write to olmaster13@gmail.com. The developer holds no copy of any recording and cannot retrieve, confirm or produce footage, because the app has no server. Help is limited to explaining the format and the verification process. Related reading: how Witness works, how to verify footage and apps for journalists and filmmakers.
+
+---
+
+# How to verify video evidence has not been altered | Witness
+URL: https://witnesscamera.com/verify
+
+Verifying Witness footage
+
+For lawyers, newsrooms, investigators and courts receiving a recording.
+
+You do not need the app, the developer, or any cooperation from whoever filmed it. Everything needed to check a Witness recording travels with the footage, and the verification uses standard OpenSSL rather than anything proprietary.
+
+## What you should have received
+
+A Witness session folder contains three kinds of file:
+
+ - The video. Either the individual .mp4 chunks, or a single consolidated recording_rear.mp4 / recording_front.mp4 once the session was merged.
+
+ - The manifest. manifest_<session-id>.json, listing every chunk with its SHA-256 hash, capture times in UTC, and GPS coordinates.
+
+ - The time-stamp token. timestamp_<session-id>.tsr, a signed RFC 3161 response from an independent authority.
+
+If the time-stamp file is missing, the authority was unreachable when the recording ended. That is a gap in corroboration, not a sign of tampering. The hashes remain checkable.
+
+## Step 1. Do the videos match the manifest?
+
+Compute the SHA-256 of a video file:
+
+shasum -a 256 recording_rear.mp4 # macOS / Linux
+certutil -hashfile recording_rear.mp4 SHA256 # Windows
+Open the manifest and find the corresponding entry. Every chunk appears with a sha256 field, and consolidated videos appear under mergedVideos. The values must match exactly.
+
+A mismatch means the file is not byte-for-byte what the phone recorded. Note that any re-encoding will cause this, including the re-compression applied automatically by most messaging apps and social platforms. If footage reached you through WhatsApp, Signal, email or a social upload, expect the hash to differ, and ask for the original file.
+
+## Step 2. Is the manifest itself authentic and dated?
+
+This is the step that does not rely on trusting the person who filmed it. The time-stamp token was issued by a third party who signed a hash of the manifest at a moment they attest to.
+
+openssl ts -verify \
+ -data manifest_<session-id>.json \
+ -in timestamp_<session-id>.tsr \
+ -CAfile <authority-ca-cert>.pem
+A successful run prints Verification: OK. The manifest names the authority it used in its timestampAuthority field; the CA certificate comes from that authority's website.
+
+ A failure here is not automatically evidence of tampering. The most common cause by far is a missing or wrong CA certificate, which is a local configuration problem. Read the token's contents (step 3) before drawing any conclusion.
+
+## Step 3. Read what the authority actually attested
+
+To inspect the token directly, without CA validation:
+
+openssl ts -reply -in timestamp_<session-id>.tsr -text
+This prints the status, the timestamp, and the message digest the authority signed. Confirm that digest equals the SHA-256 of the manifest file:
+
+shasum -a 256 manifest_<session-id>.json
+If the two match, the authority signed this manifest, unmodified, at the time shown.
+
+## What the chain establishes
+
+ - Each video file hashes to a value listed in the manifest, so the footage is exactly what was recorded.
+
+ - The manifest hashes to the digest inside the time-stamp token, so the list of hashes has not been edited.
+
+ - The token is signed by an independent authority at a specific time, so that manifest, and therefore that footage, existed in this form at that moment.
+
+Editing the video breaks step 1. Editing the manifest to match the edited video breaks step 2. Reproducing the token requires the authority's private key. The three checks together are what makes the record hard to fake, and each one is independently checkable by you.
+
+## What it does not establish
+
+Being precise about this matters if the material is going to be relied on.
+
+ - It proves the footage existed at a time and has not changed since. It does not prove what the footage depicts, nor that it was recorded when it appears to have been, only that it cannot postdate the timestamp.
+
+ - Locations come from the device's GPS and inherit its accuracy, which is recorded per chunk in the manifest.
+
+ - Capture times come from the device clock and are corroborated, not replaced, by the time-stamp token.
+
+ - Absence of a manifest or token means the material is unverified by these means, not that it is false.
+
+## The instructions shipped with the footage
+
+Every manifest carries its own verification note, so the method travels with the evidence even if this page does not:
+
+This manifest is counter-signed by an independent RFC 3161 time-stamp authority, proving it existed unmodified before the time in the accompanying .tsr file. Because every chunk's SHA-256 is listed above, that proof extends to the footage itself. To verify: openssl ts -verify -data <this file> -in <timestampFileName> -CAfile <authority CA cert>. Any edit to this manifest, or to any file whose hash it lists, breaks the check.
+
+## Questions about a specific recording
+
+If you are examining Witness footage professionally and something does not check out, get in touch: olmaster13@gmail.com. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.
+
