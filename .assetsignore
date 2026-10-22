@@ -1,0 +1,6 @@
+# Files in this folder that aren't part of the website. Cloudflare reads this
+# at deploy time and leaves these out of the published assets.
+.git
+.wrangler
+.DS_Store
+.assetsignore
