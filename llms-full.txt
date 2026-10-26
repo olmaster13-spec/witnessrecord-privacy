@@ -45,6 +45,32 @@ We found no comparable student street protests in the Netherlands, Poland, Roman
 
  - Prepare beforehand. Passcode instead of biometrics, a full battery, a lawyer's number written on your arm, and a test recording before the day.
 
+## Coming up
+
+As of 26 October 2026, from press reports. Dates, places and times move, and calls circulating on social media are often unreliable. Confirm with the organisers and the authorities.
+
+ - Italy, 30 October. A 24-hour general strike called by USB, registered with the transport ministry on 6 October. Marches in cities are expected, but we found no confirmed city list. New in Italy: decree-law 190/2026, in force from 23 October, creates an offence of organised violence in demonstrations and allows arrests within 48 hours on the basis of video, including of minors; it must be converted into law within 60 days. That makes handling of raw footage more sensitive. On 20 November, CGIL has called its own general strike and the Collettivo Osa has announced a European student strike. Guide in Italian.
+
+ - Germany, Saturday 31 October. School protests announced under the names "Gen Z steht auf" and "Gen Z regelt", in cities including Berlin, Hamburg, Cologne, Frankfurt and Munich. The Berlin police are preparing a large operation, and according to the Tagesspiegel many cities had no registered assembly yet, with conflicting times and meeting points online. Guide in German.
+
+ - France, Thursday 5 November. A national strike and demonstrations called by UNSA, CFDT, CGT, FO and FSU over wages and public services, backing the pupil and student movement. Pupils are on the Toussaint holiday until 2 November. We found no officially declared gathering in Paris for 31 October. Guide in French.
+
+ - Greece, 17 November. The annual march for the Athens Polytechnic anniversary. Last year's march was estimated by the police at more than 15,000 people, with a large police presence and, according to several outlets, preventive detentions. The 2026 arrangements had not been announced. Guide in Greek.
+
+ - Spain, 20 and 21 November. An international student and youth strike on 20 November promoted by the Sindicato de Estudiantes, a demonstration in Catalonia on 21 November and strikes there from 26 November, while Madrid's indefinite education strike continues. Guide in Spanish.
+
+## Where guides differ
+
+The French digital-investigation NGO Index publishes Filmer la police : avant, pendant, après (updated 15 October 2026, in French). Some of its advice differs from ours.
+
+ - Speaking aloud. Index advises against commenting, so the soundtrack keeps what officers say and does not identify you. Other guides advise saying the time and place at key moments. Our view: if you worry your voice would identify you, stay silent. If you speak, stick to the time and what you see. Witness records sound either way.
+
+ - Location. Index advises against switching GPS on. Witness writes location into each recording's chain-of-custody record if you allow it, which ties footage to a place. You can decline location and everything else still works. Decide before the day.
+
+ - Live broadcasting. Index advises against filming live. Witness does not broadcast: it sends private pieces to storage you own. That is not the same as a public live stream.
+
+ - Where all the guides agree: stay several metres back, film wide with a visible landmark, avoid digital zoom, hold the phone horizontally, never edit the original, film with others from different angles, and do not publish at once.
+
 ## Where Witness fits
 
 Witness records with the screen black and uploads every 15 seconds to a storage account you own, so what was already sent survives a seized or smashed phone. Each piece is hashed and the session is time-stamped, and anyone can verify the footage without the app. It does not replace a lawyer, does not make anything lawful that is not, and does not protect you physically.
@@ -80,6 +106,14 @@ Witness records with the screen black and uploads every 15 seconds to a storage 
  - Police told you to delete your video or hand over your phone at a protest
 
  - If your teenager is going to a protest: how to prepare their phone
+
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
 
 ## Sources
 
@@ -182,6 +216,14 @@ The app is free. Set it up and test it before you need it.
 
  - If your teenager is going to a protest: how to prepare their phone
 
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
+
 Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
 
 ---
@@ -282,6 +324,14 @@ The app is free. Set it up and test it before you need it.
 
  - If your teenager is going to a protest: how to prepare their phone
 
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
+
 Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
 
 ---
@@ -370,7 +420,367 @@ The app is free. Set it up and test it before you need it.
 
  - Police told you to delete your video or hand over your phone at a protest
 
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
+
 Last updated 21 October 2026. Written on 21 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# How to film a dispersal order at a protest: what to capture
+URL: https://witnesscamera.com/filming-dispersal-order-protest-europe
+
+How to film a dispersal order at a protest: what to capture
+
+One of the most disputed moments afterwards, and one of the most often missed.
+
+When police order a crowd to disperse, what happens next is argued over for months: whether an order was really given, whether anyone could hear it, whether there was a way out, how long people had. Most footage misses it, because everyone is filming something else. This page is about capturing that moment safely, and about leaving when you are told to.
+
+ Short answer. When police order a crowd to disperse, capture whether an order was actually given and by whom, whether it was audible where the crowd stood, whether it named a way out and whether that way was open, and how long passed before force was used. Film from the edge, say the time aloud when the order is given and again when the line moves, then leave. In France, staying after dispersal orders can itself be an offence (article 431-4 of the Code pénal). Witness Camera uploads every 15 seconds, so what you filmed survives a seized phone.
+
+## What to capture
+
+ - That an order was given, and by whom. Film the person giving it, if you can do so from a safe distance, and anything that identifies who they are.
+
+ - Whether it was audible. Film from where the crowd is standing, pointed towards the source, so the recording captures what could actually be heard at that spot.
+
+ - Whether it named a way out, and whether that way was open. Pan slowly along the route that was announced.
+
+ - The time. Say the time aloud when the order is given and again when the line moves. The gap between the two is what is later disputed. If you worry that your voice would identify you, stay silent and let the time show on the recording instead.
+
+ - The lead-up. The twenty calm minutes before establish that a march was peaceful and where everyone stood.
+
+## Then leave
+
+Filming does not protect you from the consequences of staying. In France, voluntarily remaining in a gathering after the dispersal orders is an offence (article 431-4 of the Code pénal): one year in prison and a €15,000 fine, raised to three years and €45,000 if the face is deliberately concealed, according to the LDH legal note and secondary summaries of the text. Lawyers note that the offence requires the staying to be voluntary, which can be contested if someone did not hear the orders, but that is a defence to raise afterwards, not a plan. The rules differ by country and we have not verified them for the others. Check them for where you are, and when in doubt, go.
+
+## Stay safe while you film
+
+ - Keep two exits in mind and recheck them when the crowd moves. The real danger is being enclosed.
+
+ - Do not move towards the line to get a better shot. Footage from the edge is more useful and safer.
+
+ - Hold the phone visibly and horizontally, and do not use digital zoom. Both are advice from Index, a French digital-investigation NGO.
+
+ - Do not physically obstruct anything. Obstruction, not the camera, is the real legal risk in the countries our guides cover.
+
+## If you are in Germany
+
+Witness always records sound and has no setting to turn the microphone off. German law treats recording the non-publicly spoken word as an offence (section 201 StGB), and whether an officer's announcement at a public operation counts is disputed. See our German legal page. If you want to work without sound, Witness is currently the wrong tool.
+
+## Why upload while recording
+
+A dispersal order is exactly when phones get taken. Witness sends a piece every 15 seconds to storage you own, hashes each piece and time-stamps the session, so the footage of the order is likely to be safe before anyone reaches you. If the queue falls behind on a congested network, it sends a small low-resolution copy of each new piece first. Nothing is deleted from the phone until your storage confirms receipt.
+
+## Questions
+
+### What should I film when police order a crowd to disperse?
+
+ Whether an order was given and by whom, whether it was audible where the crowd stood, whether it named a way out and whether that way was open, and the time when the order was given and when the line moved. Film from the edge and leave when told to.
+
+### Is staying after a dispersal order illegal?
+
+ In France, voluntarily remaining in a gathering after the dispersal orders is an offence under article 431-4 of the Code pénal, with higher penalties if the face is concealed. The rules differ by country and we have not verified them for others. This is not legal advice.
+
+### Can I keep filming after the order is given?
+
+ Do not assume filming protects you. If you stay, you may be committing an offence whether or not you are filming. Comply with the order to leave, and film as you go if it is safe to do so.
+
+### How does Witness help here?
+
+ It uploads a piece every 15 seconds to your own cloud storage, so the footage of the order is likely to have left the phone before it can be taken. It records with the screen black, hashes every piece and time-stamps the session.
+
+## Set up Witness before the next day of action
+
+The app is free on iPhone and Android. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
+
+Written on 26 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# Filming an arrest at a protest: distance, identification, minors
+URL: https://witnesscamera.com/filming-an-arrest-at-a-protest-europe
+
+Filming an arrest at a protest: distance, identification, minors
+
+What is useful to capture, where to stand, and what to do with the footage.
+
+An arrest at a demonstration is the moment people most want to film and the moment where filming most often goes wrong: too close, too late, or posted before anyone has taken advice. This page covers the practical side and the limits. At the school and student protests of autumn 2026, many of those detained were minors, which changes what you should do with the footage.
+
+ Short answer. If you see an arrest at a protest, stay at a distance that does not interfere, keep the phone visible, film wide first so the context and numbers are clear, then capture the time, place and any visible identification number or name. Do not approach, interpose or comment at officers, and do not post the footage: give it to a lawyer. If the person detained is a minor, never publish identifiable images. Witness Camera uploads every 15 seconds, so what you filmed survives a seized phone.
+
+## Where to stand and what to capture
+
+ - Stay back. A distance of several metres, ideally with a clear line of sight from the edge of the crowd. Never physically interpose, and never touch anyone.
+
+ - Film wide first. A wide shot with a visible landmark shows how many people and officers were present and where they stood. Then move to a medium shot.
+
+ - Film how it began. The thirty seconds before an arrest are often what is most disputed.
+
+ - Capture identification. Where an officer's number or name is visible, include it. In France, officers on duty have worn an individual identification number (the RIO) since 2014. Rules differ elsewhere: in Germany many but not all states require identification for riot units, and we have not verified Italy, Spain or Greece.
+
+ - Say the time and place once, briefly, unless you prefer silence because your voice could identify you.
+
+ - Do not direct comments at officers. Insulting an officer while filming remains punishable in France, with or without a camera.
+
+## If the person arrested is a minor
+
+In France, 87% of those detained during the school protests were minors, according to the Justice Ministry cited by Time. In Turin on 16 October, the three people arrested were minors, according to the police headquarters reported by ANSA. Filming to document is one thing and publishing is another. Do not post identifiable images of a minor. Keep the original untouched and give it to a lawyer or a legal-support organisation if the family or the young person asks for it. If you publish anything at all, blur the faces of minors and bystanders on a copy.
+
+## What not to do with the footage
+
+ - Do not edit the original. Work on a copy.
+
+ - Do not post straight away. In France, recording and then spreading images of violence is an offence in itself, with an exception for footage made to serve as evidence. The safe route is a lawyer, not a feed.
+
+ - Do not hand it to anyone without thinking about who else it shows. It can identify protesters as well as officers.
+
+## Afterwards
+
+Write down at once what you saw: time, place, what was said, who else was there. Offer the footage to the person's lawyer. Keep the whole Witness session folder, including the manifest and time-stamp proof, which anyone can verify with OpenSSL without the app.
+
+## If you are in Germany
+
+Witness always records sound and has no setting to turn the microphone off, and German law makes recording the non-publicly spoken word an offence (section 201 StGB). See our German legal page.
+
+## Questions
+
+### Can I film an arrest at a protest?
+
+ In the countries our guides cover, filming police on duty in a public place is generally protected, and the real limit is physically obstructing an intervention. Stay back and do not interpose. This is not legal advice.
+
+### What should I capture when filming an arrest?
+
+ Wide context first, how it began, the time and place, and any visible identification number or name. Do not approach and do not comment at officers.
+
+### Should I post a video of an arrest?
+
+ Not straight away. Give it to a lawyer or a legal-support organisation first. If the person is a minor, never publish identifiable images. In France, spreading images of violence is an offence with an exception for footage made as evidence.
+
+### Does an arrest video prove who the officer was?
+
+ Not by itself. Footage without a visible number or name may not identify an officer, which has been a problem in Italian cases. Capture identification where you can do so safely.
+
+## Set up Witness before the next day of action
+
+The app is free on iPhone and Android. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+ - How to film a dispersal order at a protest: what to capture
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+ - After the protest: who to give footage of police conduct to
+
+Written on 26 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# Student and campus journalists: filming protests safely and lawfully
+URL: https://witnesscamera.com/student-journalists-filming-protests-europe
+
+Student and campus journalists: filming protests safely and lawfully
+
+The same limits as anyone, a few differences, and a publishing workflow that protects you and the people on camera.
+
+Student reporters are often the ones with the best access to a school or university protest. They face the same limits as everyone else on the street, plus a few questions of their own: whether a journalism exception applies, how to verify what they filmed, and how not to expose the people in it. This page is a practical guide, with the legal points taken from our country pages.
+
+ Short answer. Student and campus reporters filming protests have the same legal limits as anyone, with exceptions that may or may not cover them. In France the offence of recording and spreading images of violence does not apply to the normal exercise of a profession informing the public or to footage made as evidence. Italy's privacy code has a news-reporting exception that does not require a professional card. Greece applies a case-by-case journalism exemption even to non-professionals. Whether a campus outlet counts is not settled in what we checked, so do not assume it. Keep originals, verify, blur minors and have a second person review before publishing.
+
+## The legal points that differ by country
+
+ - France. Recording and spreading images of violence is an offence in itself (article 222-33-3 of the Code pénal, five years and €75,000 for spreading them), but the text does not apply to the normal exercise of a profession whose purpose is to inform the public, or to a recording made to serve as evidence in court. Whether an unpaid student outlet counts as such a profession is not clear from what we read, so ask a lawyer.
+
+ - Italy. The privacy code has an exception for news reporting: sharing an image to communicate news of general interest, without sensationalism or violating dignity. You do not need to be a professional journalist. Minors need particular caution. Italian legal page (in Italian).
+
+ - Germany. Publishing identifiable images without consent can infringe the right to one's own image (sections 22 and 33 KUG). There is an exception for events of contemporary historical interest, but its scope is disputed. Sound is a separate risk under section 201 StGB. German legal page (in German).
+
+ - Greece. The Court of Justice of the EU (case C-345/17, Buivids) held that citizens recording and publishing for a journalistic purpose can fall within the data-protection exemption, even if they are not professionals, assessed case by case, including whether blurring was available. Greek legal page (in Greek).
+
+ - Spain. Filming officers on duty needs no prior authorisation. Using the images in a way that creates a real and proven danger can be an administrative infringement under article 36.23 of Organic Law 4/2015, with respect for the right to information. Spanish legal page (in Spanish).
+
+## A safe workflow
+
+ - Record with provenance. Witness hashes every piece, writes a manifest and time-stamps the session, so you can show the footage is unaltered and dates from when you say.
+
+ - Never edit the original. Work on a copy for cutting and blurring.
+
+ - Check what metadata travels with the file. Witness can record your location in each recording's chain-of-custody record if you allow it. Decide whether that metadata should go out with a published copy.
+
+ - Blur minors and bystanders on the copy, and think about whether a face is needed at all.
+
+ - Get a second person to review before publishing: an editor, a lecturer, or a lawyer for anything involving violence or minors.
+
+ - Do not stream live. Index advises against broadcasting live, and a private upload to your own storage, which is what Witness does, is not a stream.
+
+## Protecting people and sources
+
+Your footage can identify protesters as well as officers. Keep it in storage you control, do not share raw files in group chats, and do not name or tag people. In Italy, the new decree-law 190/2026, in force from 23 October 2026, allows arrests within 48 hours based on video for some offences committed in demonstrations, which makes the handling of raw footage more sensitive still.
+
+## Verification
+
+Anyone can check Witness footage with OpenSSL, without the app, by comparing each file's hash against the manifest and checking the time-stamp token. See how to verify footage. A hash shows a file is unchanged since recording. It does not show that the footage is a fair picture of events.
+
+## Questions
+
+### Do student journalists have a legal exception for filming protests?
+
+ Sometimes, and it is not settled for campus outlets. France exempts the normal exercise of a profession informing the public and footage made as evidence. Italy's news-reporting exception does not require a professional card. Greece applies a case-by-case journalism exemption. Ask a lawyer before relying on any of them.
+
+### How do I show my protest footage is authentic?
+
+ Record with an app that hashes each piece and time-stamps the session, never edit the original, and keep the manifest and time-stamp proof. Witness does this, and the checks can be run with OpenSSL.
+
+### Should I blur faces before publishing protest footage?
+
+ Yes for minors and bystanders, on a copy, keeping the original. A face is rarely needed to tell the story.
+
+### Is it safe to livestream a protest?
+
+ Index advises against filming live. Witness does not stream: it uploads private pieces to your own storage.
+
+## Set up Witness before the next day of action
+
+The app is free on iPhone and Android. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - After the protest: who to give footage of police conduct to
+
+Written on 26 October 2026. The situation and the law change. This is not legal advice.
+
+---
+
+# After the protest: who to give footage of police conduct to
+URL: https://witnesscamera.com/what-to-do-with-protest-footage-europe
+
+After the protest: who to give footage of police conduct to
+
+Keep the original, take advice first, and know the official routes before you need them.
+
+Footage of police conduct is only useful if it reaches someone who can act on it, in a form that holds up. This page covers what to do with it afterwards and the official routes we could verify in five countries. Procedures change, so confirm them on the official sites, and take legal advice before you hand anything to anyone, authorities included, because the footage may show other people.
+
+ Short answer. After filming police conduct at a protest, keep the original and the full Witness session folder, write down what you saw while it is fresh, and take legal advice before publishing or handing footage over. Routes differ by country. In France: the IGPN (police) or IGGN (gendarmerie) reporting platform, a criminal complaint, or a referral to the Défenseur des droits. In Greece: the Ombudsman acts as the national mechanism for incidents of arbitrariness by police. In Spain: the Defensor del Pueblo has opened inquiries into police charges at protests. In Germany: some states have independent complaint offices and the Bundestag has a federal police commissioner. In Italy, a video alone may not identify an officer.
+
+## First, for every country
+
+ - Keep the original file and the whole session folder: videos, manifest and time-stamp proof.
+
+ - Write down at once what you saw, with the time and place.
+
+ - Do not post it. Take advice from a lawyer or a legal-support organisation you trust, because footage can show other people, including minors.
+
+ - Ask whether the person filmed, or their lawyer, wants a copy.
+
+## Country by country
+
+ - France. The IGPN (police) and IGGN (gendarmerie) have an online reporting platform, but a report on it is not a criminal complaint. A criminal complaint is filed through the IGPN's reception in Paris or at a police station elsewhere. The Défenseur des droits, the independent authority overseeing the conduct of security forces, can be referred to by online form, post or a local delegate. The LDH advises filing a complaint, which lets investigators requisition recordings and a medical examination. Sources: IGPN, LDH.
+
+ - Greece. The Ombudsman acts as the National Mechanism for the Investigation of Incidents of Arbitrariness, competent for complaints about police and coast guard personnel. It does not replace other complaint routes. Confirm the procedure on the Ombudsman's official site.
+
+ - Spain. The Defensor del Pueblo has opened inquiries into police conduct at protests, including after videos of a police charge on a teachers' demonstration in Valencia in May 2026, and admitted a complaint about riot equipment at Ferraz. It asked for the officers involved to be identified. We could not verify the filing procedure.
+
+ - Germany. The Bundestag has had a federal police commissioner since 2024, and several states have independent police complaint offices. Rules on officer identification for riot units vary by state. Amnesty argues that without identifiability convictions are hard. For a criminal complaint, see a lawyer. We could not verify the current position in every state.
+
+ - Italy. We found no verified practical guide. A recent case in Turin illustrates the problem: a young person hit by a tear-gas canister has video of the incident, but prosecutors have sought to close the case because the officers could not be identified, and the lawyer is opposing. Capture units, helmets, numbers, times and places where you safely can, and see a lawyer.
+
+## A caution about your own footage
+
+Footage can identify protesters as well as officers. In Italy, the decree-law of 22 October 2026, number 190, in force from 23 October, allows arrests within 48 hours on the basis of video for some offences in demonstrations, including for minors. It must be converted into law within 60 days and can change. This is one more reason to keep raw footage in your own storage and to take advice before you give it to anyone.
+
+## Questions
+
+### Who should I give footage of police violence at a protest to?
+
+ Take legal advice first. Then the routes depend on the country: in France the IGPN or IGGN, a criminal complaint or the Défenseur des droits; in Greece the Ombudsman; in Spain the Defensor del Pueblo; in Germany independent complaint offices in some states and the federal police commissioner; in Italy a lawyer and the prosecutor. Confirm each on its official site.
+
+### Is a report to the IGPN the same as a complaint?
+
+ No. According to the IGPN's own information, a report on its online platform is not a criminal complaint. A complaint is filed in person, at the IGPN in Paris or at a police station.
+
+### Should I post the video instead?
+
+ Not before taking advice. In France spreading images of violence is an offence with an exception for footage made as evidence, and footage can show minors and other protesters.
+
+### Why keep the whole Witness folder?
+
+ It contains the videos, the manifest with each file's hash and the time-stamp proof, which anyone can verify with OpenSSL without the app. That is what shows the footage is unaltered.
+
+## Set up Witness before the next day of action
+
+The app is free on iPhone and Android. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More in this series
+
+ - Filming the police at student protests across Europe
+
+ - Protest phone checklist: 10 steps before you film the police
+
+ - Police told you to delete your video or hand over your phone at a protest
+
+ - If your teenager is going to a protest: how to prepare their phone
+
+ - How to film a dispersal order at a protest: what to capture
+
+ - Filming an arrest at a protest: distance, identification, minors
+
+ - Student and campus journalists: filming protests safely and lawfully
+
+Written on 26 October 2026. The situation and the law change. This is not legal advice.
 
 ---
 
@@ -652,6 +1062,129 @@ The free app is enough to see how everything works. Pro is unlocked from inside 
 ## Newsrooms, legal teams and production companies
 
 For questions about formats, verification or how the app fits a workflow, write to olmaster13@gmail.com. The developer holds no copy of any recording and cannot retrieve, confirm or produce footage, because the app has no server. Help is limited to explaining the format and the verification process. Related reading: how Witness works, how to verify footage and apps for journalists and filmmakers.
+
+---
+
+# Apps for recording police, compared honestly by one of the developers
+URL: https://witnesscamera.com/compare
+
+What else is out there
+
+I built one of these. Here is the honest version anyway.
+
+I get asked how Witness compares to the other options often enough that it seemed worth writing down properly, including the parts where mine is not the answer. I have a stake in this, so read it with that in mind, and check the store listings yourself.
+
+ What I actually verified. Everything below about other apps comes from their own App Store or Google Play listings, read in August 2026. I have not run any of them through a real encounter, and I am not going to pretend otherwise. If I got something wrong about your app, email me and I will fix it.
+
+## The only question that really matters
+
+Ignore feature lists for a second. There is one question that decides whether any of this works: when does the video leave the phone?
+
+If the answer is "when you press stop," then a phone taken during the encounter takes everything with it. That is not a small gap. It is the entire scenario. Everything else, black screens, widgets, emergency contacts, is secondary to that.
+
+Almost every guide to filming police tells you to make sure your video is syncing to the cloud. Almost nobody points out that the usual way of doing that has exactly this problem.
+
+ Assumes a phone taken at nine minutes. The gap between the 45 second and 15 second rows is real but small; the gap between either of them and the top two rows is the whole argument.
+
+## Cop Watch Video Recorder
+
+$1.99, 4.0 stars from 34 ratings, by Pelau Imagineering.
+
+This is the closest thing to a direct competitor, and I want to be straight about it: it does continuous upload too. Its listing says the app "uploads your video every 45 seconds," alongside the older behaviour of starting the upload when you stop. So the core idea is not something I invented, and any page telling you otherwise is selling you something.
+
+Where it differs: it uploads to iCloud only, so you get whatever iCloud storage you have and no choice of destination. There is no black screen, though it has a Silent Mode so it stops announcing itself out loud. And there is nothing about hashing or timestamps, so you get the video but not a way to prove it is unedited.
+
+The thing I would actually weigh: the listing shows version 3.4, last updated 16 August 2021. Five years without an update, across five major iOS releases. That does not mean it is broken. It does mean nobody is fixing it when it breaks.
+
+## TurnSignl
+
+Subscription, iOS 15 and up.
+
+This is a genuinely different product and honestly the more interesting one. It connects you to a real attorney licensed in your state, live on video, while the stop is happening. The recording is a side effect; the lawyer is the point. In 2026 they added 60-plus languages and support for immigration matters.
+
+If what you want is a lawyer, buy this, not mine. I do not offer legal help of any kind and never will. The recording goes to your own cloud, which is fine, but you are paying for the attorney network, and if that is what you need then that is what you should pay for.
+
+The obvious trade: it is a subscription with people on the other end, so it costs real money, and it is oriented around traffic stops rather than protests or raids.
+
+## Legal Equalizer
+
+Its listing describes stream-to-cloud recording, sending video to three emergency contacts, and help finding a lawyer. I could not confirm the upload timing from public material, so I am not going to guess at it. Worth a look if the emergency-contact side is your priority.
+
+## Your phone's camera plus iCloud or Google Photos
+
+This is what most people actually use, and it deserves a serious answer rather than being dismissed.
+
+It is free, it is already on your phone, there is nothing to set up, and no app can be blamed for failing. For a lot of situations that is genuinely enough, and I would rather someone film with the stock camera than not film.
+
+The problem is specific. Photo library sync was built for convenience, not for this. It commonly waits for Wi-Fi, holds off when the battery is low, and, most importantly, treats your recording as one file that is not eligible to upload until you stop recording. A twelve minute video uploads nothing at minute eleven.
+
+So the footage you most want to survive, the last few minutes before someone takes the phone, is precisely the footage still sitting on it.
+
+## The Siri shortcut
+
+"Hey Siri, I'm getting pulled over" dims the screen, starts the front camera, messages a contact and drops the video in iCloud when it finishes. Free, hands-free, no install.
+
+I think everyone should set this up regardless of what else they use. It costs nothing. It has the same upload-at-the-end limitation as everything above, and it is front-camera oriented, which suits a traffic stop and not much else.
+
+## Where Witness stands
+
+Roughly 15 second pieces instead of 45. Your choice of Google Drive, Dropbox, Nextcloud or WebDAV instead of iCloud only. The screen is fully black rather than dimmed. Every piece is SHA-256 hashed on the device and the session manifest gets counter-signed by an independent timestamp authority, so someone can check the footage is unaltered without trusting me. There is no server on my end, so there is no copy of anything to subpoena.
+
+### Where it loses
+
+ No lawyer. TurnSignl puts a licensed attorney on the line. I put a file in your cloud account. If you are choosing between us for a traffic stop and you can afford it, theirs is the more useful product.
+
+ Nobody is watching. Mobile Justice sent footage to an ACLU affiliate who might act on it. Mine sends footage to you. That is better for privacy and worse if what you wanted was backup from an organisation.
+
+ Now on Android too, but new there. Witness Camera is on Google Play for Android 11 and later. This comparison is about iPhone apps. The Android version behaves the same where the platform allows, but Android shows a notification while recording that cannot be fully hidden, and its dual-camera mode is capped at 720p per camera. It has a much shorter track record than the iPhone version.
+
+ It needs setting up first. Not connected to a storage account, it saves nothing. Every app here works on the day; mine punishes you harder for skipping the five minutes beforehand.
+
+ Two ratings. Cop Watch has 34 and years of history. I have almost none. That is a real reason to be cautious and I would rather say it than have you discover it.
+
+## Apps and tools used at protests in Europe
+
+This section covers what people use at demonstrations in Europe, including the student and school protests of autumn 2026. Everything below comes from each project's own website or store listing, read on 26 October 2026. I have not run any of them through a real encounter, and I have a stake in this comparison, so check the sources yourself.
+
+ - Urgence Violences Policières (UVP). Free, aimed at filming police violence in France, with a French collective behind it. Its listing says footage is filmed and stored on the collective's servers, it is rated 18+, and the latest version shown on its US listing is 1.4 from May 2020. The difference that matters: your footage goes to a third party's servers, not your own storage, and the listing shows no updates for years.
+
+ - Tella (Horizontal, a US nonprofit). Free and open source, for Android and iOS. It encrypts files as they are captured, hides them from the gallery, can disguise the app, and can share to Tella Web, Uwazi, ODK, Google Drive, Dropbox and Nextcloud. Its site says files can be submitted when you have a reliable connection and does not describe upload during recording. Where it wins: encryption and concealment for people at real risk.
+
+ - ProofMode (Guardian Project, WITNESS and partners). A free, open-source Capture app for Android and iOS built around provenance. Its site does not say whether it uploads while you record. Where it wins: verification attached to a camera app you already like.
+
+ - eyeWitness to Atrocities (a UK charity). Captures video with metadata and sends it into a chain of custody for legal use. It is built for documenting international crimes, and its site lists it on Google Play. It is not an everyday protest tool, and the footage is sent to the charity, which compiles it for investigators.
+
+ - Signal. Not a recorder, but several protest-filming guides, including those of Go Film The Police and Index, recommend sending footage promptly to a trusted contact through it.
+
+As far as their own descriptions say, none of these sends your private footage to your own storage in pieces while you are still recording. That is the one thing Witness does differently. Each of the others does something Witness does not.
+
+ - If you are at real risk and need encryption and concealment, Tella is built for that and Witness is not.
+
+ - If you want verification on a camera app you already use, ProofMode.
+
+ - If you are documenting international crimes for a legal process, eyeWitness.
+
+ - If you want footage in your own cloud account while you are still filming, Witness. It records with the screen black and uploads every 15 seconds, and the hashes and time-stamp can be checked by anyone.
+
+Two cautions that apply to Witness here. It always records sound, which matters under German law (German legal page). And it can record your location if you allow it, which some guides advise against. See Filming the police at student protests across Europe for where guides differ.
+
+## What I would actually tell a friend
+
+Set up the Siri shortcut today, because it takes two minutes and costs nothing.
+
+If you are documenting anything where the phone might be taken, protests, raids, anything with a crowd, use something that uploads during the recording. Mine or Cop Watch, but check whether Cop Watch still works on your iOS version before you rely on it.
+
+If you drive a lot and worry about traffic stops specifically, and money is not the constraint, TurnSignl solves a problem none of the rest of us touch.
+
+If what you actually want is a wider kit rather than this one category, the roundup of iPhone apps for filmmakers and journalists covers camera, audio, verification and editing, with the same conflict disclosed.
+
+And if you are a legal observer or a journalist and the footage may end up contested, you want the hashing and timestamps, because "that video was edited" is the argument you will actually face.
+
+ Get Witness for Free
+ Get it on Google Play
+ Questions about the law
+
+Prices, ratings and features read from public store listings in August 2026 and they change. Nothing here is legal advice.
 
 ---
 
