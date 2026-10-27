@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to blur faces and anonymise voices in protest video</title>
+<meta name="description" content="A practical workflow for protecting people in footage: keep the original, blur a copy, treat pitch shifting as weak, and use subtitles. Tools, limits and risks.">
+<link rel="canonical" href="https://witnesscamera.com/how-to-anonymise-people-in-protest-video">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="How to blur faces and anonymise voices in protest video">
+<meta property="og:description" content="A practical workflow for protecting people in footage: keep the original, blur a copy, treat pitch shifting as weak, and use subtitles. Tools, limits and risks.">
+<meta property="og:url" content="https://witnesscamera.com/how-to-anonymise-people-in-protest-video">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to blur faces and anonymise voices in protest video",
+      "description": "A practical workflow for protecting people in footage: keep the original, blur a copy, treat pitch shifting as weak, and use subtitles. Tools, limits and risks.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/how-to-anonymise-people-in-protest-video"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I blur faces in a protest video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work on a copy, never the original. Use a tool that detects faces and blurs them, such as the free open-source DEFACE, then review the whole video, because detection can miss people. Pixelating before blurring is safer than a plain blur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is blurring faces enough to protect someone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Detection can miss faces, a plain blur can be partly undone, and Human Rights Watch found AI could reconstruct blurred faces enough to narrow identity. Treat it as reducing risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is changing the pitch of a voice enough to anonymise it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Pitch shifting can be reversed and speaking style still identifies people. Prefer subtitles, a transcript or a voice-over."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Witness blur faces or disguise voices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not currently. Witness records and protects the original. Blur and disguise a copy with another tool."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>How to blur faces and anonymise voices in protest video, and why it is hard</h1>
+<p class="tagline">Protecting the people in your footage without destroying the evidence.</p>
+
+<p class="lede">Footage of a demonstration can identify protesters, bystanders and minors, to police, to employers and to facial-recognition systems. Blurring faces and disguising voices reduces that risk, but neither is a guarantee. This page gives a workflow and states the limits. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Keep the original untouched as evidence, and publish only a blurred copy. Automatic face blurring misses faces, so review the whole video. Pixelating before blurring is safer than a plain blur, because a plain blur can be partly undone. Pitch-shifting a voice is weak on its own, because research exists on restoring pitch-shifted voices and speaking style still identifies people, so prefer subtitles, a transcript or removing the audio. Human Rights Watch has found that AI can reconstruct blurred faces enough to narrow identity, and now avoids capturing identifiable visual data where it can. Witness records the original; it does not currently blur faces or disguise voices.</p>
+</div>
+
+<h2>The workflow</h2>
+<ol>
+  <li><strong>Keep the original untouched.</strong> It is the evidence, and its hashes and time-stamp describe it. Never blur or edit it.</li>
+  <li><strong>Work on a copy</strong> for anything you publish.</li>
+  <li><strong>Blur faces and distinctive features</strong> of bystanders, minors and anyone who has not agreed. Also consider licence plates, tattoos, clothing and name tags.</li>
+  <li><strong>Review the whole copy,</strong> frame by frame where you can. Automatic detection misses faces turned away, small or partly hidden.</li>
+  <li><strong>Deal with audio,</strong> because voices and names identify people too.</li>
+  <li><strong>Strip or check metadata</strong> on the published copy, including location.</li>
+  <li><strong>Get a second person to look</strong> before publishing.</li>
+</ol>
+<h2>Blurring faces</h2>
+<ul>
+  <li><strong>DEFACE</strong> is a free, open-source desktop app for macOS, Windows and Linux that detects faces and blurs them in video. By its own page, processing stays on your computer, with no accounts, uploads or telemetry, and it warns that face detection can miss people, so check the full video before sharing.</li>
+  <li>The Go Film The Police guide also lists Signal's blur tools for faces.</li>
+  <li>Pixelate, then blur. A plain Gaussian blur of a face can be partly undone, which is why stronger tools pixelate first.</li>
+</ul>
+<h2>Why blurring is not a guarantee</h2>
+<p>The WITNESS organisation, unrelated to this app, has long warned that there can be no absolute guarantees of anonymity and that footage is vulnerable to seizure at many points. More recently Human Rights Watch tested AI refocusing tools on a blurred photo and found facial structure re-emerged, as reported by Tech Policy Press. Treat a blur as reducing risk, not removing it, and avoid capturing identifiable people when you can.</p>
+<h2>Voices</h2>
+<ul>
+  <li><strong>Pitch shifting alone is weak.</strong> It can be undone by shifting back, and research exists on restoring pitch-shifted voices. Speaking style, pauses and accent also identify people.</li>
+  <li><strong>Better options:</strong> publish subtitles or a transcript instead of the audio, remove the audio and add a voice-over from someone else, or do not publish speech from people who have not agreed.</li>
+  <li>If you do disguise a voice, assume a specialist could still reverse it.</li>
+</ul>
+<h2>Where Witness fits</h2>
+<p>Witness is the recorder: it keeps the original safe, hashed and time-stamped, and uploads it while you record. It does not currently blur faces or disguise voices, so do that on a copy with a tool like those above. Always blur a copy, never the original. See <a href="filming-police-student-protests-europe">protest footage guides</a> for minors and publishing.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>How do I blur faces in a protest video?</h3>
+  <p>Work on a copy, never the original. Use a tool that detects faces and blurs them, such as the free open-source DEFACE, then review the whole video, because detection can miss people. Pixelating before blurring is safer than a plain blur.</p>
+</div>
+<div class="qa">
+  <h3>Is blurring faces enough to protect someone?</h3>
+  <p>No. Detection can miss faces, a plain blur can be partly undone, and Human Rights Watch found AI could reconstruct blurred faces enough to narrow identity. Treat it as reducing risk.</p>
+</div>
+<div class="qa">
+  <h3>Is changing the pitch of a voice enough to anonymise it?</h3>
+  <p>No. Pitch shifting can be reversed and speaking style still identifies people. Prefer subtitles, a transcript or a voice-over.</p>
+</div>
+<div class="qa">
+  <h3>Does Witness blur faces or disguise voices?</h3>
+  <p>Not currently. Witness records and protects the original. Blur and disguise a copy with another tool.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

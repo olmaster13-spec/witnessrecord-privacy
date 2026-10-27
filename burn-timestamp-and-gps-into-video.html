@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burn a timestamp and GPS location into video on iPhone and Android</title>
+<meta name="description" content="How to put the date, time and coordinates on screen in your video with Witness Pro, how it differs from the hidden hash and manifest, and when outlets want it.">
+<link rel="canonical" href="https://witnesscamera.com/burn-timestamp-and-gps-into-video">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Burn a timestamp and GPS location into video on iPhone and Android">
+<meta property="og:description" content="How to put the date, time and coordinates on screen in your video with Witness Pro, how it differs from the hidden hash and manifest, and when outlets want it.">
+<meta property="og:url" content="https://witnesscamera.com/burn-timestamp-and-gps-into-video">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Burn a timestamp and GPS location into video on iPhone and Android",
+      "description": "How to put the date, time and coordinates on screen in your video with Witness Pro, how it differs from the hidden hash and manifest, and when outlets want it.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/burn-timestamp-and-gps-into-video"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Witness show the date, time and GPS on the video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with Pro. The Visible timestamp and location setting burns them into the picture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I lose the hashes if I turn burn-in off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The hashes, manifest and time-stamp are in every recording whether burn-in is on or off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does burn-in make footage more authentic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It makes the context visible. Authenticity rests on the hashes and the independent time-stamp, because an overlay can be cropped or recreated on a copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work with 10-bit HDR on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. On Android the visible timestamp cannot be combined with 10-bit HDR."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Burn a timestamp and GPS location into video on iPhone and Android</h1>
+<p class="tagline">Visible provenance in the picture, and how it differs from the invisible kind.</p>
+
+<p class="lede">Some outlets and insurers want the date, time and place visible on screen, the way a dashcam shows them. Witness Pro can burn that into the picture. This page explains what it does and how it relates to the provenance data every recording already carries. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Witness Pro can burn the date, time and coordinates into the picture itself, in a corner of the frame, visible to anyone who watches the video. It is a Pro setting called Visible timestamp and location. It is separate from the invisible provenance that every recording already carries, free: the SHA-256 hashes, the manifest and the independent time-stamp. Turning the visible version off removes none of that. On Android it cannot be combined with 10-bit HDR.</p>
+</div>
+
+<h2>Visible and invisible provenance</h2>
+<ul>
+  <li><strong>Invisible, always on, free:</strong> a SHA-256 hash of every piece, a manifest of UTC times and location, and an independent RFC 3161 time-stamp. Checkable with OpenSSL.</li>
+  <li><strong>Visible, Pro, optional:</strong> the date, time and coordinates drawn into the picture. Anyone watching can see them without any tool.</li>
+</ul>
+<p>They answer different questions. The visible overlay helps a viewer who will never run a command. The invisible record lets an expert check the file. Burn-in does not make the footage more authentic, and a visible overlay can be cropped out of a copy, which is one reason the hashes matter.</p>
+<h2>Turning it on</h2>
+<ol>
+  <li>Unlock Witness Pro and open the Pro page in the app.</li>
+  <li>Switch on <em>Visible timestamp and location</em>.</li>
+  <li>Allow location if you want coordinates. If you decline, the time and date can still be shown.</li>
+  <li>Record a short test and check the overlay in the corner.</li>
+</ol>
+<h2>When to use it</h2>
+<ul>
+  <li>Outlets that want dashcam-style on-screen provenance.</li>
+  <li>Site, property and damage documentation where the frame should carry its own context.</li>
+  <li>Footage that will be watched by people who will not verify files.</li>
+</ul>
+<h2>When not to</h2>
+<p>Coordinates in the picture reveal where you were to everyone who sees the video. For footage you will publish, especially where sources or bystanders could be put at risk, think about whether to show them on the published copy. Some protest-filming guides advise against recording location at all. See <a href="filming-police-student-protests-europe">where guides differ</a>.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Can Witness show the date, time and GPS on the video?</h3>
+  <p>Yes, with Pro. The Visible timestamp and location setting burns them into the picture.</p>
+</div>
+<div class="qa">
+  <h3>Do I lose the hashes if I turn burn-in off?</h3>
+  <p>No. The hashes, manifest and time-stamp are in every recording whether burn-in is on or off.</p>
+</div>
+<div class="qa">
+  <h3>Does burn-in make footage more authentic?</h3>
+  <p>No. It makes the context visible. Authenticity rests on the hashes and the independent time-stamp, because an overlay can be cropped or recreated on a copy.</p>
+</div>
+<div class="qa">
+  <h3>Does it work with 10-bit HDR on Android?</h3>
+  <p>No. On Android the visible timestamp cannot be combined with 10-bit HDR.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

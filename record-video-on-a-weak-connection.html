@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Record video on a weak connection: how Witness sends a preview first</title>
+<meta name="description" content="What happens to uploads on a crowded or slow mobile network: queueing, retries, nothing deleted until confirmed, and a low-resolution stand-in copy sent first.">
+<link rel="canonical" href="https://witnesscamera.com/record-video-on-a-weak-connection">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Record video on a weak connection: how Witness sends a preview first">
+<meta property="og:description" content="What happens to uploads on a crowded or slow mobile network: queueing, retries, nothing deleted until confirmed, and a low-resolution stand-in copy sent first.">
+<meta property="og:url" content="https://witnesscamera.com/record-video-on-a-weak-connection">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Record video on a weak connection: how Witness sends a preview first",
+      "description": "What happens to uploads on a crowded or slow mobile network: queueing, retries, nothing deleted until confirmed, and a low-resolution stand-in copy sent first.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/record-video-on-a-weak-connection"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happens to my video if there is no signal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pieces queue on the phone and upload as soon as connectivity returns. Nothing is deleted until your storage confirms receipt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the low-resolution stand-in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the upload queue falls behind, Witness sends a small low-resolution copy of each new piece first, so something of every moment arrives early. The full file replaces it later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it make extra copies on a good connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The stand-in is only made when the queue is visibly falling behind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does 4K make this worse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "4K records faster than most mobile networks can send, so the queue grows while you film. The free 1080p setting uploads fastest."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Record video on a weak connection: how Witness sends a preview first</h1>
+<p class="tagline">Crowds, rural areas and congested networks, and what keeps footage from being lost.</p>
+
+<p class="lede">Mobile networks fail exactly when many people need them: at large demonstrations, in crowds, in remote places. An uploading recorder has to behave sensibly when the connection is poor. This page explains what Witness does. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> When the connection is weak, Witness keeps each 15-second piece on the phone until your storage confirms receipt, retries failed uploads with exponential backoff and flushes the queue the moment connectivity returns. If the queue falls visibly behind, with several pieces outstanding or repeated failures, it encodes a small low-resolution copy of each new piece and sends that first, so something of every moment arrives during the event, then the full file replaces it. On a healthy connection no extra copy is made. High-quality settings such as 4K need a fast upload and can outrun a mobile network.</p>
+</div>
+
+<h2>What happens as the network degrades</h2>
+<ol>
+  <li><strong>Pieces queue on the phone.</strong> Nothing is deleted until your storage acknowledges it.</li>
+  <li><strong>Failures retry</strong> with exponential backoff, and retries are idempotent: they land on the same destination file, not a duplicate.</li>
+  <li><strong>A stand-in goes first.</strong> If several pieces are outstanding or uploads keep failing, Witness encodes a small low-resolution copy of each new piece and sends that, so something of every moment is safe early.</li>
+  <li><strong>The full file follows</strong> and replaces the stand-in once the network allows.</li>
+</ol>
+<h2>The numbers to compare against</h2>
+<p>A typical LTE connection gives 5 to 10 Mbps of upload, and 5G varies hugely with where you are standing. The app's own estimates: 1080p H.264 needs about 8 Mbps, 4K HEVC 10-bit about 51 Mbps, and ProRes far more. Below the rate your setting needs, the queue grows for as long as you keep recording.</p>
+<h2>What to do about it</h2>
+<ul>
+  <li>For anything where getting footage out matters, use the free 1080p setting. It uploads fastest.</li>
+  <li>Test on the connection you will actually have.</li>
+  <li>Bring a power bank: recording and uploading on a congested network is the worst case for a battery.</li>
+</ul>
+<h2>What it cannot do</h2>
+<p>It cannot upload without any signal. With no connection at all, pieces wait on the phone, which is the situation the app exists to avoid. And the pieces still on the phone when it is taken are lost.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>What happens to my video if there is no signal?</h3>
+  <p>Pieces queue on the phone and upload as soon as connectivity returns. Nothing is deleted until your storage confirms receipt.</p>
+</div>
+<div class="qa">
+  <h3>What is the low-resolution stand-in?</h3>
+  <p>If the upload queue falls behind, Witness sends a small low-resolution copy of each new piece first, so something of every moment arrives early. The full file replaces it later.</p>
+</div>
+<div class="qa">
+  <h3>Does it make extra copies on a good connection?</h3>
+  <p>No. The stand-in is only made when the queue is visibly falling behind.</p>
+</div>
+<div class="qa">
+  <h3>Why does 4K make this worse?</h3>
+  <p>4K records faster than most mobile networks can send, so the queue grows while you film. The free 1080p setting uploads fastest.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

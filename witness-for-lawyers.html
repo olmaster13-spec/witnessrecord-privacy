@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For lawyers: what a Witness evidence package contains and proves</title>
+<meta name="description" content="What lawyers receive from Witness footage: manifest, hashes, independent time-stamp and a PDF report, what they establish, and what they do not.">
+<link rel="canonical" href="https://witnesscamera.com/witness-for-lawyers">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="For lawyers: what a Witness evidence package contains and proves">
+<meta property="og:description" content="What lawyers receive from Witness footage: manifest, hashes, independent time-stamp and a PDF report, what they establish, and what they do not.">
+<meta property="og:url" content="https://witnesscamera.com/witness-for-lawyers">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "For lawyers: what a Witness evidence package contains and proves",
+      "description": "What lawyers receive from Witness footage: manifest, hashes, independent time-stamp and a PDF report, what they establish, and what they do not.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/witness-for-lawyers"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a Witness evidence package contain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A PDF report with the recording's timeline, time zone, number of segments, capture device, first location fix, segment hashes and verification steps, plus the manifest and the time-stamp proof where one was obtained. It contains no video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Witness footage admissible in court?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We make no claim about admissibility. The record shows the footage existed in this form at a time and has not changed since. Whether a court admits it is for the court and your jurisdiction's rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check a client's Witness footage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hash each video and compare with the manifest, then run openssl ts -verify on the manifest with the time-stamp authority's CA certificate. Our newsroom guide gives the commands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I tell clients before they record?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Connect their own storage, test it, keep the whole session folder, never edit the original, and avoid sending it through apps that re-encode video."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>For lawyers: what a Witness evidence package contains, and what it does and does not prove</h1>
+<p class="tagline">A precise account for people who will have to rely on, or challenge, the record.</p>
+
+<p class="lede">A client, a witness or an organisation hands you video recorded with Witness. This page explains what comes with it, what each part establishes and what it leaves open, so you can advise on its use without overclaiming. It is not legal advice and makes no claim about admissibility in any court. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Witness footage comes with a manifest (every file's SHA-256 hash, UTC capture times and GPS accuracy) and an independent RFC 3161 time-stamp of that manifest, which anyone can check with OpenSSL. Pro adds an evidence package: a PDF report with the timeline, device, first location fix, segment hashes and verification steps, plus the manifest and time-stamp proof, with no video. Together they show the footage existed in this form at a time and has not changed since. They do not show what it depicts, who held the phone, or whether a court will admit it. Keep originals, never edit, and log who has had custody.</p>
+</div>
+
+<h2>What the client gives you</h2>
+<ul>
+  <li>The <strong>video files</strong>, either as individual chunks or as consolidated recordings.</li>
+  <li>The <strong>manifest</strong>, <code>manifest_&lt;session-id&gt;.json</code>: every chunk's SHA-256, capture start and end times in UTC, and GPS coordinates with accuracy.</li>
+  <li>The <strong>time-stamp token</strong>, <code>timestamp_&lt;session-id&gt;.tsr</code>, a signed RFC 3161 response from an independent authority over a hash of the manifest.</li>
+  <li>Optionally, with Pro, an <strong>evidence package</strong>: a PDF report plus the manifest and token. The report covers the recording's start and end, time zone, number of segments, capture device, first location fix, the hashes of each segment and any merged video, and the steps to verify them. It contains no video.</li>
+</ul>
+<h2>What this establishes</h2>
+<p>Each video file hashes to a value in the manifest, so the footage is what the phone recorded. The manifest hashes to the value in the token, and a third party with no stake in the matter signed that value at a stated time. Together they establish that the footage existed in this form at that time and has not been modified since. Anyone can <a href="verify">verify the chain</a> with OpenSSL, without the app or the developer.</p>
+<h2>What it does not establish</h2>
+<ul>
+  <li><strong>What the footage depicts,</strong> or whether it is a fair picture of events.</li>
+  <li><strong>Who held the phone,</strong> or whether the device clock was right. The token shows the manifest cannot postdate it, and corroborates the capture times without replacing them.</li>
+  <li><strong>Location beyond the GPS's accuracy,</strong> recorded per chunk.</li>
+  <li><strong>Admissibility.</strong> That is a question for the court and the rules where you practise.</li>
+  <li>A <strong>missing token</strong> means no independent time proof, not that the footage is false.</li>
+</ul>
+<h2>Advising the client</h2>
+<ol>
+  <li><strong>Keep the originals.</strong> The whole session folder, never forwarded through an app that re-encodes video. A re-encoded copy will not match the manifest.</li>
+  <li><strong>Never edit the original.</strong> Cutting, blurring or compressing goes on a copy.</li>
+  <li><strong>Keep a log of custody:</strong> who copied it, when, and to where. The WITNESS organisation's guidance treats an unbroken chain of custody as an important indicator of authenticity, and the Berkeley Protocol on Digital Open Source Investigations stresses authenticity and chain of custody.</li>
+  <li><strong>Think about who the footage shows.</strong> It can identify third parties, including minors. Take advice before publication or disclosure.</li>
+  <li><strong>For a contested matter,</strong> consider a forensic examiner. The record helps them. It does not replace them.</li>
+</ol>
+<h2>The device and the account</h2>
+<p>Footage sits in the client's own Google Drive, Dropbox, Nextcloud or WebDAV account, which is subject to the provider's legal process. The developer has no copy and no server and cannot retrieve, confirm or produce footage. Witness always records sound, which some laws restrict, so check the recording rules where the footage was made.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>What does a Witness evidence package contain?</h3>
+  <p>A PDF report with the recording's timeline, time zone, number of segments, capture device, first location fix, segment hashes and verification steps, plus the manifest and the time-stamp proof where one was obtained. It contains no video.</p>
+</div>
+<div class="qa">
+  <h3>Is Witness footage admissible in court?</h3>
+  <p>We make no claim about admissibility. The record shows the footage existed in this form at a time and has not changed since. Whether a court admits it is for the court and your jurisdiction's rules.</p>
+</div>
+<div class="qa">
+  <h3>How do I check a client's Witness footage?</h3>
+  <p>Hash each video and compare with the manifest, then run openssl ts -verify on the manifest with the time-stamp authority's CA certificate. Our newsroom guide gives the commands.</p>
+</div>
+<div class="qa">
+  <h3>What should I tell clients before they record?</h3>
+  <p>Connect their own storage, test it, keep the whole session folder, never edit the original, and avoid sending it through apps that re-encode video.</p>
+</div>
+
+<h2>Try it free first</h2>
+<p>The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More guides by profession</h2>
+<ul>
+  <li><a href="witness-for-journalists">Witness for journalists: footage that survives a seized phone and shows where it came from</a></li>
+  <li><a href="verifying-witness-footage-for-newsrooms">For newsrooms: how to verify footage recorded with Witness in ten minutes</a></li>
+  <li><a href="witness-for-documentary-filmmakers">Witness for documentary and investigative filmmakers: picture quality with provenance</a></li>
+  <li><a href="witness-for-legal-observers">Witness for legal observers and legal-support teams</a></li>
+  <li><a href="witness-for-ngos-and-human-rights-teams">Witness for NGOs and human rights teams: a field documentation workflow</a></li>
+  <li><a href="witness-for-site-documentation">Tamper-evident documentation for work sites, tenancies and damage claims</a></li>
+  <li><a href="is-witness-pro-worth-it">Is Witness Pro worth it? Who should pay, and who should not</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="witness-for-lawyers">For lawyers: what a Witness evidence package contains, and what it does and does not prove</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

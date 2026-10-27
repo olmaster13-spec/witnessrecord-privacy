@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chain of custody for video: what a manifest records and how to check it</title>
+<meta name="description" content="What a video chain-of-custody log should contain, what Witness writes in its session manifest (hashes, UTC times, location, authority), and how to verify it.">
+<link rel="canonical" href="https://witnesscamera.com/video-chain-of-custody-log">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Chain of custody for video: what a manifest records and how to check it">
+<meta property="og:description" content="What a video chain-of-custody log should contain, what Witness writes in its session manifest (hashes, UTC times, location, authority), and how to verify it.">
+<meta property="og:url" content="https://witnesscamera.com/video-chain-of-custody-log">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Chain of custody for video: what a manifest records and how to check it",
+      "description": "What a video chain-of-custody log should contain, what Witness writes in its session manifest (hashes, UTC times, location, authority), and how to verify it.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/video-chain-of-custody-log"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should a video chain-of-custody record contain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each file, a fingerprint of it, when and where it was captured, and an independent proof of when the record existed. Witness's manifest holds the hashes, UTC times and location accuracy, and is time-stamped by an independent authority."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the manifest still written if my phone is taken mid-recording?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is rewritten and re-uploaded as the recording proceeds, so the record of everything captured so far is already in your storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Witness record my location in the manifest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you allow location, yes, with accuracy per chunk. It is optional: if you decline, everything else still works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is responsible for custody after the recording?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You are. The manifest covers capture. Keep a log of who copied or handled the files, and never edit the original."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Chain of custody for video: what a manifest records and how to check it</h1>
+<p class="tagline">A record of what existed, when, and whether it has changed.</p>
+
+<p class="lede">Chain of custody is a record of who has held a piece of evidence and what happened to it. For video, the first links are created at the moment of capture, and they are the hardest to reconstruct later. This page covers what a useful record contains and what Witness writes. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> A chain-of-custody record for video should list each file, a fingerprint of it, when and where it was captured, and an independent proof of when the record itself existed. Witness writes a session manifest, a JSON file listing every 15-second piece with its SHA-256 hash, UTC start and end times and GPS coordinates with accuracy, and has the manifest independently time-stamped. It is rewritten and re-uploaded as recording continues, so a record exists even if the phone is taken. It covers capture. Custody after that, who copied the files and when, you must keep yourself.</p>
+</div>
+
+<h2>What the organisation WITNESS says</h2>
+<p>The international human-rights organisation WITNESS, which is unrelated to this app, defines chain of custody as chronological documentation showing who has held or controlled a video file from the moment it was created, and treats an unbroken chain as an important indicator of authenticity. It also notes that hashes are a particularly important kind of metadata for evidentiary video. The Berkeley Protocol on Digital Open Source Investigations similarly stresses authenticity and chain of custody.</p>
+<h2>What Witness's manifest contains</h2>
+<ul>
+  <li>Every chunk, with its <strong>SHA-256 hash</strong>.</li>
+  <li>Capture <strong>start and end times in UTC</strong>.</li>
+  <li><strong>GPS coordinates with accuracy</strong>, if location was allowed. It is optional, and everything else works if declined.</li>
+  <li>Consolidated videos under <code>mergedVideos</code>, with their hashes.</li>
+  <li>The <strong>time-stamp authority</strong> used and a note on how to verify.</li>
+</ul>
+<p>The manifest is rewritten and re-uploaded as the recording proceeds, overwriting the same file. A record therefore exists in your storage during the event, not only if the session ends normally. When the session finishes, a hash of the manifest is <a href="trusted-timestamp-video-rfc-3161">independently time-stamped</a>.</p>
+<h2>What it does not cover</h2>
+<ul>
+  <li><strong>Custody after capture.</strong> Who copied the files, when, and to where. Keep that log yourself, and never edit the original.</li>
+  <li><strong>What the footage shows.</strong> The record shows it is unchanged, not that it is a fair picture of events.</li>
+  <li><strong>Location beyond GPS accuracy,</strong> which is recorded per chunk.</li>
+</ul>
+<h2>Checking it</h2>
+<p>Hash each video and compare with the manifest, then verify the time-stamp token. See <a href="verify">how to verify footage</a>, or <a href="verifying-witness-footage-for-newsrooms">the newsroom guide</a> for the commands. Pro can also turn a finished recording into a <a href="video-evidence-report-pdf">PDF evidence report</a>.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>What should a video chain-of-custody record contain?</h3>
+  <p>Each file, a fingerprint of it, when and where it was captured, and an independent proof of when the record existed. Witness's manifest holds the hashes, UTC times and location accuracy, and is time-stamped by an independent authority.</p>
+</div>
+<div class="qa">
+  <h3>Is the manifest still written if my phone is taken mid-recording?</h3>
+  <p>Yes. It is rewritten and re-uploaded as the recording proceeds, so the record of everything captured so far is already in your storage.</p>
+</div>
+<div class="qa">
+  <h3>Does Witness record my location in the manifest?</h3>
+  <p>If you allow location, yes, with accuracy per chunk. It is optional: if you decline, everything else still works.</p>
+</div>
+<div class="qa">
+  <h3>Who is responsible for custody after the recording?</h3>
+  <p>You are. The manifest covers capture. Keep a log of who copied or handled the files, and never edit the original.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

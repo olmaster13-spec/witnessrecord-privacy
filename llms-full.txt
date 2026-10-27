@@ -945,12 +945,19 @@ The two apps share one idea and differ where the platforms do.
  CapabilityiPhoneAndroid
 
  Resolution1080p (free) or 4K1080p (free) or 4K
+
  Frame rate24 (cinema), 25 (PAL), 30 or 60 fps24, 25, 30 or 60 fps
+
  CodecH.264, HEVC 10-bit, ProRes 422 LT or HQH.264, HEVC 10-bit, or Mastering (very high bit rate HEVC)
+
  Flat colour for gradingApple Log on iPhone 15 Pro and newer, with HEVC or ProRes10-bit HDR (HLG) on phones whose camera supports it, with HEVC or Mastering
+
  On-screen date, time and locationYesYes, but not together with 10-bit HDR
+
  One combined video from both camerasYes, on phones that can record bothYes, on phones that can record both
+
  Shorter cut with the dead air removedYesNot at present
+
  Evidence packages (PDF report)YesYes
 
 Android has no ProRes encoder on any device, and its public camera interface has no vendor-neutral Log profile. Mastering and 10-bit HDR are the closest equivalents, not the same thing, so an editor expecting ProRes or Apple Log files from an Android phone should say so up front.
@@ -978,12 +985,19 @@ Higher quality costs file size, and file size decides whether footage can leave 
  SettingUpload speed neededPer minuteUploads live
 
  H.264, 1080p 308 Mbps60 MBYes
+
  HEVC 10-bit, 1080p 3013 Mbps96 MBYes
+
  H.264, 4K 3032 Mbps240 MBYes
+
  HEVC 10-bit, 4K 3051 Mbps384 MBYes
+
  HEVC 10-bit, 4K 60102 Mbps768 MBYes
+
  ProRes 422 LT, 1080p 30102 Mbps765 MBNo, stays on the phone
+
  ProRes 422 HQ, 1080p 30220 Mbps1.6 GBNo, stays on the phone
+
  ProRes 422 HQ, 4K 30880 Mbps6.6 GBNo, stays on the phone
 
 For comparison, typical LTE gives 5 to 10 Mbps up, and 5G varies a great deal with where you are standing. Below the rate you need, the queue grows for as long as you keep recording. Nothing is lost when that happens: every piece stays on the phone until your storage confirms it, and a small preview copy of each piece goes ahead of the full file so something of every moment is safe early.
@@ -1026,6 +1040,28 @@ These are suggestions, not rules. Check each against your own phone and connecti
 
 On the US App Store, Witness Pro is $1.99 a month, or $29.99 once for a purchase that does not renew and is tied to your Apple ID. Prices vary by country and are always shown in the app. On Google Play, the price is shown in the app and on the listing. Subscriptions are managed or cancelled in your store account settings, and Restore Purchases brings Pro back on a new phone.
 
+## Guides by profession
+
+How Witness fits specific kinds of work, with its limits stated for each.
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+Every feature, explained one by one, is on Witness features explained.
+
 ## Questions
 
 ### Do I need Pro to protect my footage?
@@ -1062,6 +1098,1673 @@ The free app is enough to see how everything works. Pro is unlocked from inside 
 ## Newsrooms, legal teams and production companies
 
 For questions about formats, verification or how the app fits a workflow, write to olmaster13@gmail.com. The developer holds no copy of any recording and cannot retrieve, confirm or produce footage, because the app has no server. Help is limited to explaining the format and the verification process. Related reading: how Witness works, how to verify footage and apps for journalists and filmmakers.
+
+---
+
+# Witness for journalists: footage that survives a seized phone
+URL: https://witnesscamera.com/witness-for-journalists
+
+Witness for journalists: footage that survives a seized phone and shows where it came from
+
+Two problems at the moment of recording, and what Witness does about each.
+
+Journalists who cover protests, raids and confrontations face two problems that start before anything is published: losing footage when a phone is taken, damaged or locked, and later being asked to prove the footage is what they say it is. Witness is a free iPhone and Android app that addresses both while you record. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Witness Camera records with the screen black, sends a piece every 15 seconds to a Google Drive, Dropbox, Nextcloud or WebDAV account you own, hashes every piece with SHA-256 and has the session independently time-stamped (RFC 3161). For a journalist that means footage can leave the phone before it can be taken, an editor can be given access automatically, and anyone can check the files are unaltered. It does not prove what the footage shows, it always records sound, and it is not a complete security tool. Optional Pro adds 4K, frame rates, Apple Log or HDR and on-screen time and location.
+
+## The two problems
+
+ - Losing the footage. A phone that is taken, smashed or locked takes everything on it. Witness sends each 15-second piece to your own storage as it is recorded, so what had already gone is safe. The piece being recorded and any queued pieces are still on the phone.
+
+ - Proving the footage. A file alone proves little. Witness hashes every piece on the device before it uploads, writes a manifest of hashes, UTC times and location, and has the manifest independently time-stamped when the session ends. A desk can then check it with OpenSSL without trusting the reporter.
+
+## Setting it up as a reporter
+
+ - Connect storage. Google Drive or Dropbox is simplest. A newsroom Nextcloud or WebDAV server keeps footage away from US cloud providers, but WebDAV cannot share automatically, so you share the folder yourself.
+
+ - Name your editor as the emergency contact. With Google Drive or Dropbox they are given access to each recording's folder as footage arrives.
+
+ - Bind a fast start. iPhone: Action Button, Lock Screen widget or Siri. Android: Quick Settings tile, widget or assistant shortcut.
+
+ - Decide on the screen. The default is a black screen. If you want to frame shots, turn the viewfinder on from the Home screen, and you can toggle it while recording.
+
+ - Decide on location. Location ties footage to a place in the record. You can decline it and everything else still works. Some guides advise against it for safety, so decide before the day.
+
+ - Test for 30 seconds and check the file reached your storage.
+
+## What your editor receives
+
+A session folder with the video files, a manifest listing every file's SHA-256 hash, capture times and GPS accuracy, and an independent time-stamp token. Our newsroom guide shows how to check it in about ten minutes.
+
+ What Pro adds for journalists
+
+ - 4K and 24, 25 or 60 fps, for material that will be broadcast or graded.
+
+ - Apple Log (iPhone 15 Pro and newer) or 10-bit HDR on Android, for grading latitude.
+
+ - Visible date, time and location burned into the picture, for outlets that want on-screen provenance. The hash, manifest and time-stamp are in every recording whether this is on or not.
+
+ - A combined video from both cameras, so the reporter and the scene are in one file.
+
+ - Evidence packages: a PDF report with the timeline, hashes and verification steps for a finished recording, plus the manifest and time-stamp proof.
+
+ - Trade-off: higher quality uploads slower. 4K needs a fast connection, and ProRes or Mastering never upload. See how Pro works.
+
+## Where Witness is not enough
+
+ - It does not hide that you are recording. iOS shows its green recording indicator and Android shows a notification. Neither can be hidden.
+
+ - It always records sound, with no setting to turn the microphone off. That matters under some laws, such as German section 201 StGB.
+
+ - Your storage provider is a third party. Footage in Google Drive or Dropbox is reachable by legal process served on them. A newsroom Nextcloud avoids that.
+
+ - It does not use C2PA content credentials. It uses SHA-256 manifests and an RFC 3161 time-stamp. If your outlet requires C2PA, tell your editor.
+
+ - A hash shows a file is unchanged. It does not show that the footage is a fair picture of events. Verification, geolocation and corroboration still belong to your desk.
+
+ - It is not an encryption or concealment tool. For people at serious risk, compare Tella and ProofMode on our comparison page.
+
+## Questions
+
+### Do I need Witness Pro as a journalist?
+
+ No. The free app has black-screen recording, upload every 15 seconds, SHA-256 hashing, the manifest, independent time-stamping and emergency-contact sharing. Pro adds picture quality and outputs such as 4K, Apple Log, on-screen time and location, and evidence packages.
+
+### Can my editor receive my footage automatically?
+
+ Yes with Google Drive or Dropbox: the emergency contact is given access to each recording's folder as it arrives. With WebDAV or Nextcloud there is no automatic sharing, so you share the folder yourself.
+
+### Does Witness support C2PA content credentials?
+
+ No. It uses SHA-256 hashes, a manifest and an independent RFC 3161 time-stamp, which anyone can verify with OpenSSL. C2PA is a different system.
+
+### Is Witness safe for protecting a source?
+
+ Treat it as one layer, not a complete answer. It has no server, but it records sound, shows a recording indicator and stores footage with your chosen cloud provider. Decide about location in advance, and use tools built for concealment if your source is at serious risk.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# For newsrooms: verify footage recorded with Witness in ten minutes
+URL: https://witnesscamera.com/verifying-witness-footage-for-newsrooms
+
+For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+What to ask for, three checks, and what each result means.
+
+A contributor says they recorded something with Witness. This page is for the desk that has to decide what that is worth. The checks use standard OpenSSL and a hashing command, not the app, and do not depend on trusting the contributor or the developer. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Ask the contributor for the whole Witness session folder (the video files, manifest_.json and timestamp_.tsr), shared by link rather than forwarded through a messaging app that re-encodes video. Hash each video with SHA-256 and compare it with the manifest, run openssl ts -verify on the manifest with the time-stamp authority's CA certificate, then read the token. A pass shows the files are unchanged since the manifest was time-stamped. It does not show what the footage depicts, so geolocation, corroboration and sourcing still apply.
+
+## What to ask the contributor for
+
+ - The whole session folder, not a clip: the video files, manifest_<session-id>.json and timestamp_<session-id>.tsr.
+
+ - Shared by a link to the storage account (Google Drive, Dropbox, Nextcloud) or a direct download, not forwarded through WhatsApp or similar. Re-encoding changes the file, so its hash will no longer match, and that is a mismatch caused by the channel, not by tampering.
+
+ - Ideally with the contributor's name, the time and place they say it was recorded, so you have a claim to test the record against.
+
+## Check 1: do the files match the manifest?
+
+shasum -a 256 recording_rear.mp4 # macOS and Linux
+certutil -hashfile recording_rear.mp4 SHA256 # Windows
+
+Open the manifest. Every chunk has a sha256 field, and consolidated videos appear under mergedVideos. The values must match exactly. The manifest also lists capture start and end times in UTC and the GPS coordinates with their accuracy for each chunk.
+
+## Check 2: is the manifest authentic and dated?
+
+openssl ts -verify \
+ -data manifest_<session-id>.json \
+ -in timestamp_<session-id>.tsr \
+ -CAfile <authority-ca-cert>.pem
+
+A pass prints Verification: OK. The manifest names the time-stamp authority in its timestampAuthority field, and the CA certificate comes from that authority's website. A failure here is most often a missing or wrong CA certificate, a local configuration problem, so read the token before concluding anything.
+
+## Check 3: what did the authority actually attest?
+
+openssl ts -reply -in timestamp_<session-id>.tsr -text
+shasum -a 256 manifest_<session-id>.json
+
+Confirm that the digest in the token equals the SHA-256 of the manifest file. If it does, a third party with no stake in the matter signed this exact manifest, unmodified, at the time shown. Because the manifest lists every file's hash, that proof extends to the footage.
+
+## What a pass does and does not establish
+
+ - It establishes that the footage existed in this form at that time and has not changed since.
+
+ - It does not establish what the footage shows, or that it was recorded when it appears to have been: only that it cannot postdate the time-stamp.
+
+ - Capture times come from the device clock and are corroborated, not replaced, by the token. Locations come from the phone's GPS and inherit its accuracy.
+
+ - A missing manifest or token means the material is unverified by these means, not that it is false. If the authority was unreachable when the session ended, there is no token.
+
+ - Witness does not use C2PA content credentials. Its provenance is the manifest and the RFC 3161 token.
+
+## What the desk still has to do
+
+Everything a verification desk normally does: geolocate and chronolocate from the picture, corroborate with other sources, check the contributor, and consider context. The record narrows one question, whether the file is what was recorded. For wider practice, see the WITNESS organisation's guidance on video as evidence and the Berkeley Protocol on Digital Open Source Investigations, both of which stress authenticity and chain of custody. WITNESS is an unrelated human-rights organisation, not this app.
+
+## Questions
+
+### How do I verify footage recorded with Witness?
+
+ Get the whole session folder, hash each video with SHA-256 and compare with the manifest, run openssl ts -verify on the manifest with the time-stamp authority's CA certificate, and read the token to confirm its digest matches the manifest.
+
+### Why does the hash not match the video I was sent?
+
+ Most often because the video was re-encoded, which messaging apps and social platforms do automatically. Ask for the original files through a link to the storage account.
+
+### Does a verified Witness recording prove the footage is genuine?
+
+ No. It proves the footage existed in this form at that time and has not been altered since. It does not prove what it depicts, so normal verification still applies.
+
+### What if there is no time-stamp file?
+
+ The authority was probably unreachable when the session ended. That is a gap in corroboration, not a sign of tampering. The hashes can still be checked against the manifest.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Witness for documentary and investigative filmmakers
+URL: https://witnesscamera.com/witness-for-documentary-filmmakers
+
+Witness for documentary and investigative filmmakers: picture quality with provenance
+
+When to shoot for protection, when to shoot for the grade, and how to tell the two apart.
+
+Documentary and investigative work often needs two things that pull against each other: a picture good enough for broadcast, and a record that shows the footage is what you say it is. Witness Pro puts both in one phone app, with the cost of each choice shown in file size and upload speed. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Witness Pro lets filmmakers shoot 4K at 24, 25 or 60 fps in HEVC 10-bit, with Apple Log on iPhone 15 Pro and newer (or 10-bit HDR on Android), a combined picture-in-picture video, and ProRes 422 on iPhone for archive-grade masters. Every recording still gets SHA-256 hashes, a manifest and an independent time-stamp. The trade-off is upload speed: 4K can outrun a mobile connection, and ProRes never uploads. For planned interviews and site shoots, use Pro quality. For anything where the phone might be taken, use the free 1080p setting that uploads fastest.
+
+## Two kinds of shoot
+
+ - The protected shoot. A confrontation, a raid, a street. The risk is losing the footage. Use the free 1080p setting: it uploads fastest, and uploaded footage is what survives a seized phone.
+
+ - The planned shoot. An interview, a site, a location you control. The risk is a flat picture, not a seized phone. Use Pro quality on a fast connection or Wi-Fi.
+
+## What Pro gives you
+
+ - Resolution and frame rate: 4K, at 24 (cinema), 25 (PAL), 30 or 60 fps.
+
+ - Codec: H.264 or HEVC 10-bit, plus ProRes 422 LT or HQ on iPhone. On Android the equivalent is Mastering, a very high bit rate HEVC.
+
+ - Colour: Apple Log on iPhone 15 Pro and newer, with HEVC or ProRes. On Android, 10-bit HDR (HLG) on phones whose camera supports it. Android has no vendor-neutral Log profile, so tell your colourist what you are delivering.
+
+ - Both cameras in one file: a picture-in-picture video in addition to the two separate files. Both cameras at once is limited to 1080p, 30 fps and H.264, so choosing anything higher turns the front camera off.
+
+ - Highlight cut (iPhone): a shorter version with the dead air trimmed and the talking kept, in addition to the full recording.
+
+ - Burned-in date, time and location: optional, for outlets that want it on screen.
+
+## What it costs in file size and upload speed
+
+These figures use the app's own formula and are estimates.
+
+ SettingUpload speed neededPer minuteUploads live
+
+ H.264, 1080p 308 Mbps60 MBYes
+
+ HEVC 10-bit, 4K 3051 Mbps384 MBYes, on a fast connection
+
+ HEVC 10-bit, 4K 60102 Mbps768 MBYes, on a very fast connection
+
+ ProRes 422 HQ, 4K 30880 Mbps6.6 GBNo, stays on the phone
+
+Typical LTE gives 5 to 10 Mbps up. Nothing is lost when the queue falls behind: every piece stays on the phone until your storage confirms it, and a small preview copy goes first. But ProRes and Mastering are saved to the photo library or gallery and never uploaded, so copy those masters off the phone promptly.
+
+## A workflow that keeps both
+
+ - Shoot the planned material in Pro quality and copy the masters to your edit drive as usual.
+
+ - Keep the session folder (video, manifest, time-stamp) with the footage. It travels with the shot.
+
+ - For anything contentious, generate an evidence package: a PDF report with the timeline, device, first location fix, segment hashes and verification steps, plus the manifest and time-stamp proof. It contains no video, so it can go to a lawyer or an insurer without exposing the footage.
+
+ - Do not edit the original. Cut on a copy, so the hashes keep describing the camera original.
+
+## If you only need Log or ProRes
+
+Free camera apps such as Blackmagic Camera and Final Cut Camera are listed as free on the US App Store, and are built around manual control and high-end formats. If picture format is all you need, they may serve you better. Witness Pro is for when you also want the footage hashed, time-stamped and, where the settings allow, uploaded to storage you own.
+
+ Price
+
+ - $1.99 a month, or $29.99 once, on the US App Store. The Pro page in the app shows every control before you pay, and the controls are inert until it is unlocked. The one-time purchase has nothing to renew. See Is Witness Pro worth it?
+
+## Questions
+
+### Can Witness record Apple Log?
+
+ Yes, with Pro, on iPhone 15 Pro and newer, with an HEVC or ProRes codec. Both cameras at once cannot use Apple Log, so only the rear camera records when Log is on.
+
+### Does 4K upload live?
+
+ Only if the connection is fast enough. Nothing is lost if it is not: pieces stay on the phone until your storage confirms them, and a small preview copy is sent first.
+
+### What happens to ProRes recordings?
+
+ They stay on the phone, saved to the photo library, and are never uploaded to your cloud or sent to an emergency contact, because they are far too large to send live.
+
+### Is there an Android equivalent of ProRes and Apple Log?
+
+ Android has no ProRes encoder and no vendor-neutral Log profile. Witness offers Mastering, a very high bit rate HEVC kept on the phone, and 10-bit HDR on phones that support it.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# For lawyers: what a Witness evidence package contains and proves
+URL: https://witnesscamera.com/witness-for-lawyers
+
+For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+A precise account for people who will have to rely on, or challenge, the record.
+
+A client, a witness or an organisation hands you video recorded with Witness. This page explains what comes with it, what each part establishes and what it leaves open, so you can advise on its use without overclaiming. It is not legal advice and makes no claim about admissibility in any court. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Witness footage comes with a manifest (every file's SHA-256 hash, UTC capture times and GPS accuracy) and an independent RFC 3161 time-stamp of that manifest, which anyone can check with OpenSSL. Pro adds an evidence package: a PDF report with the timeline, device, first location fix, segment hashes and verification steps, plus the manifest and time-stamp proof, with no video. Together they show the footage existed in this form at a time and has not changed since. They do not show what it depicts, who held the phone, or whether a court will admit it. Keep originals, never edit, and log who has had custody.
+
+## What the client gives you
+
+ - The video files, either as individual chunks or as consolidated recordings.
+
+ - The manifest, manifest_<session-id>.json: every chunk's SHA-256, capture start and end times in UTC, and GPS coordinates with accuracy.
+
+ - The time-stamp token, timestamp_<session-id>.tsr, a signed RFC 3161 response from an independent authority over a hash of the manifest.
+
+ - Optionally, with Pro, an evidence package: a PDF report plus the manifest and token. The report covers the recording's start and end, time zone, number of segments, capture device, first location fix, the hashes of each segment and any merged video, and the steps to verify them. It contains no video.
+
+## What this establishes
+
+Each video file hashes to a value in the manifest, so the footage is what the phone recorded. The manifest hashes to the value in the token, and a third party with no stake in the matter signed that value at a stated time. Together they establish that the footage existed in this form at that time and has not been modified since. Anyone can verify the chain with OpenSSL, without the app or the developer.
+
+## What it does not establish
+
+ - What the footage depicts, or whether it is a fair picture of events.
+
+ - Who held the phone, or whether the device clock was right. The token shows the manifest cannot postdate it, and corroborates the capture times without replacing them.
+
+ - Location beyond the GPS's accuracy, recorded per chunk.
+
+ - Admissibility. That is a question for the court and the rules where you practise.
+
+ - A missing token means no independent time proof, not that the footage is false.
+
+## Advising the client
+
+ - Keep the originals. The whole session folder, never forwarded through an app that re-encodes video. A re-encoded copy will not match the manifest.
+
+ - Never edit the original. Cutting, blurring or compressing goes on a copy.
+
+ - Keep a log of custody: who copied it, when, and to where. The WITNESS organisation's guidance treats an unbroken chain of custody as an important indicator of authenticity, and the Berkeley Protocol on Digital Open Source Investigations stresses authenticity and chain of custody.
+
+ - Think about who the footage shows. It can identify third parties, including minors. Take advice before publication or disclosure.
+
+ - For a contested matter, consider a forensic examiner. The record helps them. It does not replace them.
+
+## The device and the account
+
+Footage sits in the client's own Google Drive, Dropbox, Nextcloud or WebDAV account, which is subject to the provider's legal process. The developer has no copy and no server and cannot retrieve, confirm or produce footage. Witness always records sound, which some laws restrict, so check the recording rules where the footage was made.
+
+## Questions
+
+### What does a Witness evidence package contain?
+
+ A PDF report with the recording's timeline, time zone, number of segments, capture device, first location fix, segment hashes and verification steps, plus the manifest and the time-stamp proof where one was obtained. It contains no video.
+
+### Is Witness footage admissible in court?
+
+ We make no claim about admissibility. The record shows the footage existed in this form at a time and has not changed since. Whether a court admits it is for the court and your jurisdiction's rules.
+
+### How do I check a client's Witness footage?
+
+ Hash each video and compare with the manifest, then run openssl ts -verify on the manifest with the time-stamp authority's CA certificate. Our newsroom guide gives the commands.
+
+### What should I tell clients before they record?
+
+ Connect their own storage, test it, keep the whole session folder, never edit the original, and avoid sending it through apps that re-encode video.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Witness for legal observers and legal-support teams
+URL: https://witnesscamera.com/witness-for-legal-observers
+
+Witness for legal observers and legal-support teams
+
+A recording that leaves the phone while you observe, and a way for a team to see it.
+
+Legal observers watch and record how police and protesters behave, and the usefulness of what they produce depends on whether it survives the day and can be relied on. This page covers how a legal-support team can use Witness, and where its limits are. It is not legal advice. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. For legal observers, Witness gives a recording that uploads every 15 seconds to storage the team owns, so notes and footage survive a seized phone. A coordinator named as emergency contact is given access to each recording automatically on Google Drive or Dropbox. Every piece is hashed and the session independently time-stamped. Observers should stay at a distance, never obstruct, and agree rules on sound, location and minors in advance. Witness always records sound, shows a recording indicator and has no team console.
+
+## Why it suits observation work
+
+ - Footage leaves the phone as you record. If an observer is detained or their phone is taken, what had uploaded is already with the team.
+
+ - A coordinator can see it. Name the coordinator as the emergency contact. With Google Drive or Dropbox they are granted access to each recording's folder automatically. WebDAV and Nextcloud cannot share automatically, so a team using its own server must share folders itself.
+
+ - A record that can be checked. Hashes, a manifest of UTC times and locations, and an independent time-stamp let a lawyer or an investigating body verify the files without trusting the observer.
+
+ - Start in one press from the Action Button, Lock Screen widget or Siri on iPhone, or a Quick Settings tile, widget or assistant shortcut on Android.
+
+## Agree these before the day
+
+ - Storage. One shared account or each observer's own? A team Nextcloud avoids US cloud providers but needs manual sharing.
+
+ - Sound. Witness always records it. In Germany, section 201 StGB makes recording the non-publicly spoken word an offence and Witness has no setting to turn the microphone off, so it may be the wrong tool there.
+
+ - Location. It ties footage to a place but is optional. Decide as a team. Some guides advise against enabling it.
+
+ - The screen. The default is black. Observers who need to be visibly identifiable can turn the viewfinder on, and iOS still shows a green recording indicator and Android a notification.
+
+ - Minors. Many protesters are under 18. Agree that raw footage stays in team storage and nothing is posted without review and blurring.
+
+ - Test. Every observer records 30 seconds and checks it arrived.
+
+## During and after
+
+ - Stay at a reasonable distance and never obstruct. Obstruction, not the camera, is the real legal risk in the countries our protest guides cover.
+
+ - Film wide first, capture the time and place, and where visible, officers' identification.
+
+ - Afterwards, keep the whole session folder, write down what you saw while it is fresh, and do not edit the original. Our guide on what to do with the footage covers who it can go to.
+
+ What Pro adds for observation teams
+
+ - Evidence packages: a PDF report per recording with its timeline, hashes and verification steps, with no video, which can go to a lawyer or a complaints body without exposing the footage.
+
+ - Visible date, time and location burned into the picture, if your reports use it.
+
+ - Quality settings are rarely the point for observation. For fast uploads, the free 1080p setting is the better choice.
+
+## Limits
+
+Witness has no accounts, no team console and no server, so a team manages access through its own storage provider. It records sound, shows a recording indicator and does not conceal that you are recording. It is not an encryption tool.
+
+## Questions
+
+### Can a coordinator receive observers' footage automatically?
+
+ Yes on Google Drive or Dropbox: the emergency contact is granted access to each recording's folder as footage arrives. On WebDAV or Nextcloud there is no automatic sharing.
+
+### Is the free app enough for observers?
+
+ Usually yes. Upload, hashing, the manifest, time-stamping and emergency-contact sharing are all free. Pro adds evidence packages and picture quality.
+
+### Does Witness record sound?
+
+ Always, and it has no setting to turn the microphone off. In Germany that is a legal risk under section 201 StGB.
+
+### Can observers use it covertly?
+
+ No. iOS shows a green recording indicator and Android shows a notification while recording, and neither can be hidden.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Witness for NGOs and human rights teams: a field workflow
+URL: https://witnesscamera.com/witness-for-ngos-and-human-rights-teams
+
+Witness for NGOs and human rights teams: a field documentation workflow
+
+Where footage goes, who can see it, and what to decide before anyone goes into the field.
+
+Civil-society teams that document events need footage to survive, a record that can be checked, and a clear answer to who holds the material. Witness is built around those three, with limits that matter for teams working in higher-risk settings. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. For NGOs, Witness offers upload during recording to storage you control, SHA-256 hashing, a manifest and an independent time-stamp, with no developer server in the middle. The decisions that matter are the storage provider (a team Nextcloud or WebDAV avoids US cloud providers but cannot share automatically; Google Drive and Dropbox can), a device policy (passcode, location, sound) and training. Witness is not an encryption or concealment tool, always records sound, and has no team console. Teams at serious risk should compare Tella, ProofMode and eyeWitness.
+
+## The decisions to make before the field
+
+ - Where footage goes. Google Drive or Dropbox: simplest, and supports automatic access for an emergency contact, but footage is reachable by legal process served on a large US provider. Nextcloud or WebDAV on a server you or a partner run: no US provider in the middle, but no automatic sharing.
+
+ - Who the emergency contact is. A named coordinator, not a personal contact who may be unreachable.
+
+ - Location and sound. Location is optional and some guides advise against it. Sound is always recorded.
+
+ - Device policy. A six-digit passcode instead of biometrics, a full battery and a power bank, and a test recording before every deployment.
+
+ - What gets published. Raw footage stays in team storage. Anything published is a blurred copy, reviewed, with minors and bystanders protected.
+
+## How Witness fits
+
+ - No developer server. Footage goes from the phone to the account you connected, and the only other thing that leaves is a hash of the manifest, sent to the time-stamp authority. The developer cannot see, retrieve or produce footage.
+
+ - Evidence packages (Pro) turn a finished recording into a PDF report a lawyer or a funder can read, with the manifest and time-stamp proof and no video.
+
+ - Start in one press and a field guide for training new staff.
+
+## Where to look at other tools
+
+From their own sites, read on 27 October 2026: Tella (Horizontal, a US nonprofit) is free and open source, encrypts files as they are captured, hides them from the gallery and can disguise the app. ProofMode (Guardian Project, WITNESS and partners) is free, open source and built around provenance. eyeWitness to Atrocities (a UK charity) sends footage into a chain of custody for legal use and is built for documenting international crimes. Witness is different in one respect: it uploads private footage to your own storage in pieces while you are still recording. See our comparison for where each wins.
+
+## Limits to state plainly to your team
+
+ - It does not conceal recording: iOS shows a green indicator and Android a notification.
+
+ - It always records sound, with no switch to turn the microphone off.
+
+ - It has no accounts, admin console or central server. Access is managed in your storage provider.
+
+ - A hash shows a file is unchanged. It does not show what the footage depicts.
+
+ Pro for teams
+
+ - Evidence packages, burned-in date, time and location, and quality settings are bought per person in the app store. The one-time purchase is $29.99 on the US App Store, and monthly is $1.99. There is no volume licence or team plan that we know of.
+
+## Questions
+
+### Is Witness suitable for high-risk human rights work?
+
+ It protects footage by uploading it during recording and makes it verifiable, but it does not encrypt or conceal. For people at serious risk, compare Tella and ProofMode and use Witness as one layer.
+
+### Can we use our own server?
+
+ Yes. Nextcloud and WebDAV are supported. They keep footage away from US cloud providers, but they cannot share recordings with an emergency contact automatically.
+
+### Does the developer see our footage?
+
+ No. There is no server and no account system. Footage goes from the phone to the storage you connected. A hash of the manifest goes to the time-stamp authority, which learns nothing else.
+
+### Is there a team plan?
+
+ Witness has no team console, and Pro is bought per person through the app store. We know of no volume licence.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Tamper-evident documentation for work sites, tenancies and claims
+URL: https://witnesscamera.com/witness-for-site-documentation
+
+Tamper-evident documentation for work sites, tenancies and damage claims
+
+A narrower use than the one Witness was built for, and an honest account of where it fits.
+
+Witness was built for people documenting situations where they do not feel safe, but the same properties are useful in ordinary disputes: a recording that was uploaded as it was made, hashed, and time-stamped by a third party. This page is about using it that way, and about when something else is better. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Witness can document site conditions, a tenancy handover or damage for a claim with video that uploads to your own cloud as it is recorded, is hashed with SHA-256, carries a manifest of times and locations and is independently time-stamped. Pro adds 4K, burned-in date, time and location, and a PDF evidence package. It is not an inspection tool: it has no checklists, annotations or report templates, no team console, and it does not decide what a dispute or a court will accept. Use it for the narrow job of showing that a recording existed and was not altered.
+
+## Who might use it this way
+
+ - Tenants and landlords documenting a property's condition at the start or end of a tenancy.
+
+ - Contractors and site managers recording conditions, defects or a disputed instruction.
+
+ - Anyone preparing a damage claim who wants a record that does not depend on trusting their own phone's clock.
+
+ - Small organisations that need a dated, checkable record of an event without a bespoke system.
+
+## Setting it up for this job
+
+ - Turn the viewfinder on from the Home screen so you can frame shots. The black screen is for protection, not for inspection work.
+
+ - Connect the storage you want the record in, such as the company Drive or Nextcloud.
+
+ - Use Pro for the picture: 4K, and the visible date, time and location burned into the image, so the frame carries its own context.
+
+ - Film a wide shot first, then details. Say what the room or area is.
+
+ - Keep the whole session folder with the claim file: video, manifest and time-stamp proof.
+
+ - Generate an evidence package for the person assessing the claim: a PDF with the timeline, device, location and hashes, with no video.
+
+## What the record shows, and what it does not
+
+ - It shows the footage existed in this form at the time-stamped moment and has not changed since, checkable by anyone with OpenSSL.
+
+ - It does not show what happened or whose fault it was, and does not decide whether an insurer, tribunal or court accepts it.
+
+ - Locations come from the phone's GPS and inherit its accuracy.
+
+## Privacy and sound
+
+Recording people has rules of its own. Witness always records sound, with no setting to turn the microphone off, and it embeds location if you allow it. Where people are in shot, check the recording and data-protection rules that apply, tell them where you are required to, and do not publish.
+
+## When to use something else
+
+If you need room-by-room checklists, annotated photos, signatures, report templates or several people working in one account, use a purpose-built inspection or claims tool. Witness has none of those and no team console. It is for the narrow job of proving a recording existed and was not altered.
+
+## Questions
+
+### Can I use Witness to document a rental property?
+
+ Yes for video evidence of condition: turn the viewfinder on, record, and keep the whole session folder. It is not an inspection tool, so it has no checklists or report templates.
+
+### Will an insurer or court accept a Witness recording?
+
+ We make no claim about that. The record shows the footage existed in this form at a time and has not changed since. Acceptance is for the insurer, tribunal or court.
+
+### Does Witness add a visible date and time to the video?
+
+ Yes, with Pro: the date, time and coordinates can be burned into the picture. The hash, manifest and time-stamp are in every recording whether this is on or not.
+
+### Do I need the black screen?
+
+ No. The default is black, but you can turn the viewfinder on from the Home screen to frame shots.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Is Witness Pro worth it? Who should pay, and who should not
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Is Witness Pro worth it? Who should pay, and who should not
+URL: https://witnesscamera.com/is-witness-pro-worth-it
+
+Is Witness Pro worth it? Who should pay, and who should not
+
+The price, what it buys, and the cases where the free app or a different tool is the better choice.
+
+Everything that protects footage in Witness is free and stays free. Pro adds picture quality and a few outputs, so the honest question is whether you need those. This page tries to answer it, including by sending some readers elsewhere. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.
+
+ Short answer. Witness Pro costs $1.99 a month or $29.99 once on the US App Store. It adds 4K, 24, 25 and 60 fps, HEVC 10-bit, ProRes (iPhone), Apple Log (iPhone 15 Pro and newer) or 10-bit HDR (Android), burned-in date, time and location, a combined two-camera video, a highlight cut (iPhone) and evidence packages. It is worth it for filmmakers who also want provenance, and for lawyers, NGOs and journalists who deliver evidence packages or on-screen provenance. It is not worth it for filming police encounters, where the free 1080p setting uploads fastest, or if you only want Log or ProRes, where free camera apps exist.
+
+## What is free, and stays free
+
+Black-screen recording, upload every 15 seconds to your own storage, SHA-256 hashing, the manifest, independent time-stamping, emergency-contact sharing and dual-camera recording at 1080p. Nothing that protects footage is behind the paywall.
+
+## What Pro adds
+
+ - 4K, and 24, 25, 30 or 60 fps.
+
+ - HEVC 10-bit, ProRes 422 LT or HQ on iPhone, or Mastering on Android.
+
+ - Apple Log on iPhone 15 Pro and newer, or 10-bit HDR on Android.
+
+ - Visible date, time and location burned into the picture.
+
+ - A combined video from both cameras, and on iPhone a shorter cut with the dead air trimmed.
+
+ - Evidence packages: a PDF report, the manifest and the time-stamp proof, with no video.
+
+## Who should pay
+
+ - Documentary and investigative filmmakers who want a gradeable picture and a hashed, time-stamped record in one app. See the filmmakers' guide.
+
+ - Lawyers, legal-support teams and NGOs who want to hand a PDF evidence package to someone who will rely on the footage. See the lawyers' guide.
+
+ - Journalists whose outlet wants on-screen time and location or 4K. See the journalists' guide.
+
+## Who should not
+
+ - Anyone filming a police encounter or a protest. The free 1080p setting uploads fastest, and uploaded footage is what survives a seized phone. 4K can outrun your connection, and ProRes never uploads.
+
+ - Anyone who only wants Log or ProRes. Blackmagic Camera and Final Cut Camera are listed as free on the US App Store, and are built around manual control and high-end formats.
+
+ - Anyone who needs inspection workflows or a team console. Witness has neither.
+
+## Monthly or one-time?
+
+$29.99 once is about fifteen months of the $1.99 monthly price. If you need Pro for a project of a few months, the monthly subscription costs less and you can cancel in your store account. If you expect to use it for more than about fifteen months, or simply do not want a renewal, the one-time purchase is cheaper, is tied to your Apple ID and comes back with Restore Purchases on a new phone. On Google Play, the price is shown in the app and on the listing.
+
+## Try before you pay
+
+The Pro page in the app shows every control, and the controls are inert until Pro is unlocked, so you can read what each does, and what it costs in file size, before buying. If you cancel, Pro settings return to the free defaults, so 4K goes back to 1080p. Your recordings and their proofs are kept either way. Details are on how Witness Pro works.
+
+## Questions
+
+### How much does Witness Pro cost?
+
+ $1.99 a month or $29.99 once on the US App Store. Prices vary by country and are shown in the app. On Google Play the price is shown in the app and on the listing.
+
+### Is the one-time purchase worth it?
+
+ It costs about fifteen months of the monthly price. It is cheaper if you will use Pro for longer than that, and it has nothing to renew or cancel.
+
+### What happens if I stop paying?
+
+ Pro capture settings return to the free defaults, so 4K goes back to 1080p. Your recordings and their proofs are kept.
+
+### Do I need Pro to protect my footage?
+
+ No. Uploading during recording, hashing, the manifest, the independent time-stamp and emergency-contact sharing are all free.
+
+## Try it free first
+
+The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More guides by profession
+
+ - Witness for journalists: footage that survives a seized phone and shows where it came from
+
+ - For newsrooms: how to verify footage recorded with Witness in ten minutes
+
+ - Witness for documentary and investigative filmmakers: picture quality with provenance
+
+ - For lawyers: what a Witness evidence package contains, and what it does and does not prove
+
+ - Witness for legal observers and legal-support teams
+
+ - Witness for NGOs and human rights teams: a field documentation workflow
+
+ - Tamper-evident documentation for work sites, tenancies and damage claims
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Witness features explained: recording, hashing, timestamps
+URL: https://witnesscamera.com/witness-features-explained
+
+Witness features explained
+
+What each feature does, how it works, and where its limits are.
+
+Witness Camera is a free iPhone and Android app for recording safely and keeping footage checkable. Each page below explains one feature in detail, including what it cannot do. Written by the developer, so read it with that in mind.
+
+ Short answer. Witness records with the screen black, uploads a piece every 15 seconds to storage you own, hashes every piece with SHA-256, writes a chain-of-custody manifest and gets it independently time-stamped. Pro adds picture quality, burned-in time and location, a highlight cut and PDF evidence reports. It does not hide the recording indicator, always records sound and adds no encryption of its own.
+
+## Features
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide: What a stealth or black-screen camera app can and cannot hide on iPhone and Android, why the recording indicator stays, and the legal question that matters first.
+
+ - How to hash video footage and prove it has not been altered: What a SHA-256 hash of a video proves, how to compute and compare one on any computer, and how Witness hashes every piece of footage on the phone before upload.
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works: How an independent time-stamp authority proves a video existed at a given time, how to verify a .tsr token with OpenSSL, and what Witness sends to the authority.
+
+ - Chain of custody for video: what a manifest records and how to check it: What a video chain-of-custody log should contain, what Witness writes in its session manifest (hashes, UTC times, location, authority), and how to verify it.
+
+ - Record video straight to cloud storage while you are still recording: Why ordinary cloud backup only uploads after you stop, and how Witness uploads a piece every 15 seconds to Google Drive, Dropbox, Nextcloud or WebDAV as you record.
+
+ - Send video and your location to a trusted contact while you record: How Witness shares each recording with an emergency contact as it arrives and lets you send your last known location with one tap. Free.
+
+ - Burn a timestamp and GPS location into video on iPhone and Android: How to put the date, time and coordinates on screen in your video with Witness Pro, how it differs from the hidden hash and manifest, and when outlets want it.
+
+ - Start recording video without unlocking your phone: How to start a recording in one press from the iPhone Action Button, Lock Screen widget or Siri, or an Android Quick Settings tile, widget or assistant shortcut.
+
+ - Record video straight to Nextcloud or your own WebDAV server: How to send video to your own Nextcloud or WebDAV server while recording, why it keeps footage away from US cloud providers, and the trade-off on sharing.
+
+ - Trim silence out of video automatically: the highlight cut: How Witness Pro automatically makes a shorter cut of a recording with the quiet dead air removed and the speech kept, and how it decides what counts as speech.
+
+ - Record with the front and rear camera at once on iPhone and Android: How dual-camera recording works in Witness: front and rear together, the 1080p limit, how Pro settings turn it off, and device support.
+
+ - Record video on a weak connection: how Witness sends a preview first: What happens to uploads on a crowded or slow mobile network: queueing, retries, nothing deleted until confirmed, and a low-resolution stand-in copy sent first.
+
+ - Does Witness encrypt video? What protects footage and what does not: An honest answer: Witness adds no encryption layer of its own. What protects footage on the phone and in your cloud, what does not, and which tools to look at.
+
+ - Generate a PDF evidence report from a video recording: What a Witness evidence package contains: a PDF report with timeline, device, location and segment hashes, the manifest and time-stamp proof, with no video.
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard: A practical workflow for protecting people in footage: keep the original, blur a copy, treat pitch shifting as weak, and use subtitles. Tools, limits and risks.
+
+For guides written for specific jobs, see Witness for Professionals.
+
+## Questions
+
+### What is Witness Camera?
+
+ A free iPhone and Android app for documenting situations where you may not be safe. It records with the screen black, uploads while recording to storage you own, and hashes and time-stamps the footage.
+
+### Which features are free?
+
+ Black-screen recording, upload during recording, SHA-256 hashing, the manifest, independent time-stamping, emergency-contact sharing and dual-camera recording at 1080p.
+
+### Which features need Pro?
+
+ 4K, frame rates, HEVC 10-bit, ProRes, Apple Log or HDR, burned-in time and location, the combined two-camera video, the highlight cut and evidence packages.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# How to hash video footage and prove it has not been altered
+URL: https://witnesscamera.com/hash-stamp-video-footage
+
+How to hash video footage and prove it has not been altered
+
+SHA-256 in plain terms, and what a matching hash does and does not show.
+
+Hash stamping a video means computing a short fingerprint of the file that changes completely if even one byte changes. If you recorded the fingerprint when the video was made, anyone can later check that the file they hold is the same. This page explains how it works, how to do it by hand, and what Witness does automatically. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. A SHA-256 hash is a 64-character fingerprint of a file. Change one byte and it changes completely, so a matching hash shows the file is identical to the one that was hashed. Compute one with shasum -a 256 on macOS and Linux or certutil -hashfile on Windows. The hash only means something if it was recorded when the video was made and kept somewhere you cannot alter. Witness computes a SHA-256 for every 15-second piece on the phone before it uploads, lists them in a manifest, and has an independent authority time-stamp that manifest. A match proves the file is unchanged, not that its content is true.
+
+## What a hash is
+
+A cryptographic hash function turns any file into a fixed-length string. SHA-256 gives 64 hexadecimal characters. The same file always gives the same string, and a different file, even one differing by a single byte, gives a completely different one. You cannot work backwards from the hash to the file.
+
+## How to hash a video yourself
+
+shasum -a 256 recording.mp4 # macOS and Linux
+certutil -hashfile recording.mp4 SHA256 # Windows
+
+Compare the output with the value you recorded earlier. They must be identical. Any difference, however small, means the file is not the same.
+
+## Why timing matters
+
+A hash computed today only shows the file has not changed since today. It proves nothing about the moment of recording. For a hash to count, it has to be computed as close to the moment of capture as possible and stored somewhere the person holding the footage cannot quietly alter. That is why Witness hashes on the phone, immediately.
+
+## What Witness does
+
+ - Records video in pieces of about 15 seconds. Each piece is finalised as a complete, playable file.
+
+ - Computes the SHA-256 of each piece on the device, before it is uploaded, so the hash describes the footage as it came off the camera.
+
+ - Lists every piece and its hash in a manifest that is rewritten and re-uploaded as the recording goes on, so the record exists in your storage even if the phone is taken mid-recording.
+
+ - At the end of a session, hashes the manifest and has it independently time-stamped.
+
+## What a matching hash does not show
+
+ - That the footage depicts what someone says it does.
+
+ - That it was recorded when it appears to have been, unless a trusted time-stamp covers the hash.
+
+ - Anything about a re-encoded copy: messaging apps and social platforms re-compress video, so the copy's hash will not match the original even though nothing was tampered with.
+
+For the full verification steps, see how to verify footage.
+
+## Questions
+
+### What does hashing a video prove?
+
+ That the file you hold is identical to the one that was hashed. It does not prove what the video shows, and it only helps if the original hash was recorded at the time and kept where it could not be altered.
+
+### How do I get the SHA-256 of a video?
+
+ Run shasum -a 256 <file> on macOS or Linux, or certutil -hashfile <file> SHA256 on Windows, and compare the result with the recorded value.
+
+### Why does the hash of a video sent over WhatsApp not match?
+
+ Messaging apps re-encode video, which changes the bytes. The mismatch comes from the channel, not tampering. Ask for the original file through a link to the storage account.
+
+### Does Witness hash every recording?
+
+ Yes. Every piece is hashed on the phone before upload, whether or not you use Pro, and the hashes are listed in a manifest.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Trusted timestamp for video: how RFC 3161 time-stamping works
+URL: https://witnesscamera.com/trusted-timestamp-video-rfc-3161
+
+Trusted timestamp for video: how RFC 3161 time-stamping works
+
+Why your phone's clock proves little, and what an independent signature adds.
+
+A timestamp written by a phone proves little, because a device's clock can be changed. An RFC 3161 trusted timestamp is different: an independent authority signs a statement that a particular hash existed at a particular moment. This page explains how it works and how to check one. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. An RFC 3161 time-stamp authority receives a hash, signs it together with the current time and returns a token. Anyone can verify the token later with openssl ts -verify. Witness hashes each 15-second piece, writes a manifest of the hashes, hashes the manifest and sends only that hash to a public authority, which returns a signed .tsr token. The chain shows the footage existed in this form before the stated time and has not changed. The authority learns nothing about the footage. If the authority is unreachable when a session ends, there is no token, which is a gap in corroboration, not a sign of tampering.
+
+## The problem it solves
+
+A manifest of hashes written on the phone is a self-attested log. The person with the phone could change the clock, or rewrite the log. A third party who has no stake in the matter and signs the hash at a moment they attest to closes that gap: the manifest cannot be older than the signature, and cannot have changed since.
+
+## How Witness uses it
+
+ - Each 15-second piece is hashed with SHA-256 on the phone.
+
+ - The hashes, UTC capture times and locations are written into a session manifest.
+
+ - When the session finishes, Witness takes a SHA-256 of the finished manifest and submits that hash to an RFC 3161 time-stamp authority. By default it uses FreeTSA, a long-standing public authority that needs no account.
+
+ - The authority returns a signed token, saved as timestamp_<session-id>.tsr beside the footage.
+
+Only the hash is sent. The authority learns that some document existed at a moment in time. It never learns what the document said, where it was made or who made it.
+
+## How to verify a token
+
+openssl ts -verify \
+ -data manifest_<session-id>.json \
+ -in timestamp_<session-id>.tsr \
+ -CAfile <authority-ca-cert>.pem
+
+openssl ts -reply -in timestamp_<session-id>.tsr -text
+
+The first command should print Verification: OK. The manifest names the authority in its timestampAuthority field, and the CA certificate comes from that authority's website. A failure is most often a missing or wrong certificate, so read the token with the second command and check that its digest equals the SHA-256 of the manifest.
+
+## What it shows, and what it does not
+
+ - It shows the footage existed in this form before the stated time and has not changed since.
+
+ - It does not show what the footage depicts, or that it was recorded at the moment it appears to have been: only that it cannot be newer than the token.
+
+ - Capture times still come from the device clock. The token corroborates them rather than replacing them.
+
+ - If the authority could not be reached when the session ended, there is no token. That means no independent time proof, not that the footage is false.
+
+Compare hash stamping and the manifest. The full steps are on how to verify footage.
+
+## Questions
+
+### What is an RFC 3161 timestamp?
+
+ A signed statement from an independent time-stamp authority that a particular hash existed at a particular moment. It is verifiable later with standard tools such as OpenSSL.
+
+### What does Witness send to the time-stamp authority?
+
+ Only a SHA-256 hash of the session manifest. The authority learns nothing about the footage, its location or who recorded it.
+
+### Which time-stamp authority does Witness use?
+
+ By default FreeTSA, a long-standing public authority that requires no account. The manifest records the authority used.
+
+### Why is there no .tsr file for my recording?
+
+ The authority was probably unreachable when the session ended. The hashes can still be checked against the manifest, but there is no independent proof of time.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Chain of custody for video: what a manifest records and how to check it
+URL: https://witnesscamera.com/video-chain-of-custody-log
+
+Chain of custody for video: what a manifest records and how to check it
+
+A record of what existed, when, and whether it has changed.
+
+Chain of custody is a record of who has held a piece of evidence and what happened to it. For video, the first links are created at the moment of capture, and they are the hardest to reconstruct later. This page covers what a useful record contains and what Witness writes. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. A chain-of-custody record for video should list each file, a fingerprint of it, when and where it was captured, and an independent proof of when the record itself existed. Witness writes a session manifest, a JSON file listing every 15-second piece with its SHA-256 hash, UTC start and end times and GPS coordinates with accuracy, and has the manifest independently time-stamped. It is rewritten and re-uploaded as recording continues, so a record exists even if the phone is taken. It covers capture. Custody after that, who copied the files and when, you must keep yourself.
+
+## What the organisation WITNESS says
+
+The international human-rights organisation WITNESS, which is unrelated to this app, defines chain of custody as chronological documentation showing who has held or controlled a video file from the moment it was created, and treats an unbroken chain as an important indicator of authenticity. It also notes that hashes are a particularly important kind of metadata for evidentiary video. The Berkeley Protocol on Digital Open Source Investigations similarly stresses authenticity and chain of custody.
+
+## What Witness's manifest contains
+
+ - Every chunk, with its SHA-256 hash.
+
+ - Capture start and end times in UTC.
+
+ - GPS coordinates with accuracy, if location was allowed. It is optional, and everything else works if declined.
+
+ - Consolidated videos under mergedVideos, with their hashes.
+
+ - The time-stamp authority used and a note on how to verify.
+
+The manifest is rewritten and re-uploaded as the recording proceeds, overwriting the same file. A record therefore exists in your storage during the event, not only if the session ends normally. When the session finishes, a hash of the manifest is independently time-stamped.
+
+## What it does not cover
+
+ - Custody after capture. Who copied the files, when, and to where. Keep that log yourself, and never edit the original.
+
+ - What the footage shows. The record shows it is unchanged, not that it is a fair picture of events.
+
+ - Location beyond GPS accuracy, which is recorded per chunk.
+
+## Checking it
+
+Hash each video and compare with the manifest, then verify the time-stamp token. See how to verify footage, or the newsroom guide for the commands. Pro can also turn a finished recording into a PDF evidence report.
+
+## Questions
+
+### What should a video chain-of-custody record contain?
+
+ Each file, a fingerprint of it, when and where it was captured, and an independent proof of when the record existed. Witness's manifest holds the hashes, UTC times and location accuracy, and is time-stamped by an independent authority.
+
+### Is the manifest still written if my phone is taken mid-recording?
+
+ Yes. It is rewritten and re-uploaded as the recording proceeds, so the record of everything captured so far is already in your storage.
+
+### Does Witness record my location in the manifest?
+
+ If you allow location, yes, with accuracy per chunk. It is optional: if you decline, everything else still works.
+
+### Who is responsible for custody after the recording?
+
+ You are. The manifest covers capture. Keep a log of who copied or handled the files, and never edit the original.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Record video straight to the cloud while you are still recording
+URL: https://witnesscamera.com/record-video-straight-to-cloud-while-recording
+
+Record video straight to cloud storage while you are still recording
+
+Why photo-library sync misses the footage that matters most, and what to use instead.
+
+Automatic cloud backup sounds like it solves the problem of losing footage. For long video it usually does not, because most backup treats a recording as one file that cannot upload until you stop. This page explains why, and how uploading during the recording works. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. Photo-library sync normally treats a recording in progress as one unfinished file and waits until you stop, often also waiting for Wi-Fi or a charged battery. A twelve-minute video uploads nothing at minute eleven. Witness records in pieces of about 15 seconds, finalises each as a complete file and uploads it straight away to the Google Drive, Dropbox, Nextcloud or WebDAV account you connected, using a background transfer so uploads continue if the app is suspended or the phone is locked. Pieces stay on the phone until your storage confirms them, and failed uploads retry automatically.
+
+## The limitation of ordinary backup
+
+iCloud and Google Photos sync were built for convenience. They commonly wait for Wi-Fi, hold off on low battery and, most importantly, do not upload a file that is still being written. So the minutes just before a phone is lost are the ones still sitting on it.
+
+## How uploading during recording works in Witness
+
+ - Pieces of about 15 seconds, each finalised as a complete, independently playable file the moment it ends.
+
+ - Upload starts immediately, over cellular or Wi-Fi, using a background transfer session so it continues if the app is suspended or the phone is locked.
+
+ - Nothing is deleted from the phone until your storage confirms receipt. A failed upload retries with exponential backoff, and the queue flushes when connectivity returns.
+
+ - Retries are safe. A retry after a partial failure lands on the same destination file, not a duplicate.
+
+ - A stand-in on bad networks. If the queue falls behind, Witness sends a small low-resolution copy of each new piece first, then the full file replaces it. See recording on a weak connection.
+
+## Where it can go
+
+Google Drive, Dropbox, Nextcloud or any WebDAV server. Nothing uploads until you connect one, so set it up and test it first. Footage goes from your phone to your own account. There is no Witness server in the middle.
+
+## What it cannot do
+
+ - The piece being recorded and queued pieces are still on the phone, so a seized phone can lose the last few seconds or whatever had not finished uploading.
+
+ - Very high-quality settings upload slower. 4K can outrun a mobile connection, and ProRes and Mastering never upload.
+
+ - Your storage provider is a third party, and footage there is reachable by legal process served on them.
+
+## Questions
+
+### Why doesn't iCloud or Google Photos upload my video while I record?
+
+ They treat a recording in progress as one unfinished file and wait until you stop, often also waiting for Wi-Fi or enough battery. The footage just before a phone is lost is the footage still on it.
+
+### How often does Witness upload?
+
+ Roughly every 15 seconds, as each piece is finalised, to Google Drive, Dropbox, Nextcloud or WebDAV.
+
+### What if the connection drops?
+
+ Pieces stay on the phone until your storage confirms them, retry automatically and flush when the connection returns.
+
+### Does anyone else see my footage?
+
+ No. It goes from your phone to the account you connected. Witness has no server and no account system.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Does Witness encrypt video? What protects footage and what does not
+URL: https://witnesscamera.com/does-witness-encrypt-video
+
+Does Witness encrypt video? What protects footage and what does not
+
+A direct answer to a question that deserves one.
+
+People reasonably ask whether footage recorded with Witness is encrypted. The honest answer is that Witness does not add an encryption layer of its own, and this page explains what that means in practice. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. No. Witness does not add its own encryption to footage. It relies on your phone's protections (a strong passcode) and on the storage provider you connect. It has no server of its own, so there is no Witness copy to be breached or subpoenaed, and the only thing sent to a third party besides your storage is a hash of the manifest. Footage in Google Drive or Dropbox is subject to those providers' security and legal process. If you need files encrypted as they are captured, hidden from the gallery or an app that can disguise itself, look at Tella.
+
+## What protects footage in Witness
+
+ - Your phone's passcode. Use a six-digit code rather than biometrics.
+
+ - Your storage provider's security. Footage goes to the account you connected and nowhere else.
+
+ - No developer server. There is no Witness backend to breach, and the developer cannot see, retrieve or produce footage.
+
+ - Integrity checks. SHA-256 hashes and an independent time-stamp show whether files have changed, which is about tamper-evidence, not secrecy.
+
+## What it does not do
+
+ - No end-to-end encryption of footage by Witness.
+
+ - It does not hide the app or the recording. iOS shows a green recording dot and Android a notification.
+
+ - It does not conceal files from someone who unlocks your phone.
+
+ - Footage in a US cloud provider is reachable by legal process served on the provider. A Nextcloud or WebDAV server you run avoids that.
+
+## Integrity is not secrecy
+
+Hashing and time-stamping make footage tamper-evident: anyone can check it has not changed. They do not make it confidential. Those are different properties, and many people mix them up.
+
+## If you need encryption
+
+From its own site, read on 27 October 2026, Tella (Horizontal, a US nonprofit) is free and open source for Android and iOS, encrypts files as they are captured, hides them from the gallery and can disguise the app. If your risk is a device search, compare it on our comparison page. Witness is for getting footage out of the phone and making it checkable.
+
+## Questions
+
+### Is Witness footage encrypted?
+
+ Witness adds no encryption layer of its own. It relies on your device passcode and your storage provider, and has no server of its own.
+
+### Can the developer see my footage?
+
+ No. There is no server and no account system. Footage goes from your phone to the storage account you connected.
+
+### What is the difference between hashing and encryption?
+
+ Hashing makes footage tamper-evident: it shows whether a file changed. Encryption makes it unreadable without a key. Witness does the first, not the second.
+
+### Which app encrypts files as they are captured?
+
+ Tella, per its own site, encrypts files as they are captured and can hide them and disguise the app. Compare it before relying on Witness where a device search is the risk.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Generate a PDF evidence report from a video recording
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# Generate a PDF evidence report from a video recording
+URL: https://witnesscamera.com/video-evidence-report-pdf
+
+Generate a PDF evidence report from a video recording
+
+Something a lawyer, an editor or an insurer can read, without exposing the footage.
+
+Video is hard to hand around: it is large, it identifies people and it cannot be skimmed. A report about the video, with proof it is intact, is often what the next person needs first. Witness Pro produces one. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. A Witness evidence package, available with Pro, turns a finished recording into a PDF report plus the manifest and time-stamp proof it describes. The report lists the recording's start and end, time zone, number of segments, capture device, first location fix, the hashes of every segment and any merged video, and the steps to verify them. It contains no video, so it can be shared without exposing the footage. It is built from the phone's own archive, so it works offline and after the footage has been cleared from the device.
+
+## What is in a package
+
+ - A PDF report with sections for the session (start, end, time zone, segment count), the capture device, the first location fix, the authenticity details, the segment hashes and any consolidated videos.
+
+ - The manifest, manifest.json, which the report describes.
+
+ - The time-stamp proof, where one was obtained.
+
+It contains no video, so it can go to a lawyer, an editor or an insurer before anyone decides whether to share the footage.
+
+## How it is built
+
+From the phone's local archive, not from your cloud account. It keeps working with no network and no Google account, and long after the footage itself has been cleared off the device. Open Evidence packages on the Pro page, pick a finished recording and export.
+
+## What it establishes
+
+It documents that the footage existed in this form at a time and shows how to verify that. It does not establish what the footage depicts, and it makes no claim about admissibility. See the lawyers' guide.
+
+## Free versus Pro
+
+The recordings and their proofs are kept either way. Pro adds the report. Price: $1.99 a month or $29.99 once on the US App Store. See Is Witness Pro worth it?
+
+## Questions
+
+### What does the Witness evidence package contain?
+
+ A PDF report, the manifest.json it describes and the time-stamp proof where one was obtained. It contains no video.
+
+### Does it work offline?
+
+ Yes. It is built from the phone's local archive, so it works with no network and after the footage has been cleared off the device.
+
+### Is it free?
+
+ The recordings and proofs are free. The report is a Pro feature.
+
+### Does the report prove the footage is genuine?
+
+ It documents that the footage existed in this form at a time and how to verify it. It does not prove what the footage depicts.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - How to blur faces and anonymise voices in protest video, and why it is hard
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
+
+---
+
+# How to blur faces and anonymise voices in protest video
+URL: https://witnesscamera.com/how-to-anonymise-people-in-protest-video
+
+How to blur faces and anonymise voices in protest video, and why it is hard
+
+Protecting the people in your footage without destroying the evidence.
+
+Footage of a demonstration can identify protesters, bystanders and minors, to police, to employers and to facial-recognition systems. Blurring faces and disguising voices reduces that risk, but neither is a guarantee. This page gives a workflow and states the limits. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+ Short answer. Keep the original untouched as evidence, and publish only a blurred copy. Automatic face blurring misses faces, so review the whole video. Pixelating before blurring is safer than a plain blur, because a plain blur can be partly undone. Pitch-shifting a voice is weak on its own, because research exists on restoring pitch-shifted voices and speaking style still identifies people, so prefer subtitles, a transcript or removing the audio. Human Rights Watch has found that AI can reconstruct blurred faces enough to narrow identity, and now avoids capturing identifiable visual data where it can. Witness records the original; it does not currently blur faces or disguise voices.
+
+## The workflow
+
+ - Keep the original untouched. It is the evidence, and its hashes and time-stamp describe it. Never blur or edit it.
+
+ - Work on a copy for anything you publish.
+
+ - Blur faces and distinctive features of bystanders, minors and anyone who has not agreed. Also consider licence plates, tattoos, clothing and name tags.
+
+ - Review the whole copy, frame by frame where you can. Automatic detection misses faces turned away, small or partly hidden.
+
+ - Deal with audio, because voices and names identify people too.
+
+ - Strip or check metadata on the published copy, including location.
+
+ - Get a second person to look before publishing.
+
+## Blurring faces
+
+ - DEFACE is a free, open-source desktop app for macOS, Windows and Linux that detects faces and blurs them in video. By its own page, processing stays on your computer, with no accounts, uploads or telemetry, and it warns that face detection can miss people, so check the full video before sharing.
+
+ - The Go Film The Police guide also lists Signal's blur tools for faces.
+
+ - Pixelate, then blur. A plain Gaussian blur of a face can be partly undone, which is why stronger tools pixelate first.
+
+## Why blurring is not a guarantee
+
+The WITNESS organisation, unrelated to this app, has long warned that there can be no absolute guarantees of anonymity and that footage is vulnerable to seizure at many points. More recently Human Rights Watch tested AI refocusing tools on a blurred photo and found facial structure re-emerged, as reported by Tech Policy Press. Treat a blur as reducing risk, not removing it, and avoid capturing identifiable people when you can.
+
+## Voices
+
+ - Pitch shifting alone is weak. It can be undone by shifting back, and research exists on restoring pitch-shifted voices. Speaking style, pauses and accent also identify people.
+
+ - Better options: publish subtitles or a transcript instead of the audio, remove the audio and add a voice-over from someone else, or do not publish speech from people who have not agreed.
+
+ - If you do disguise a voice, assume a specialist could still reverse it.
+
+## Where Witness fits
+
+Witness is the recorder: it keeps the original safe, hashed and time-stamped, and uploads it while you record. It does not currently blur faces or disguise voices, so do that on a copy with a tool like those above. Always blur a copy, never the original. See protest footage guides for minors and publishing.
+
+## Questions
+
+### How do I blur faces in a protest video?
+
+ Work on a copy, never the original. Use a tool that detects faces and blurs them, such as the free open-source DEFACE, then review the whole video, because detection can miss people. Pixelating before blurring is safer than a plain blur.
+
+### Is blurring faces enough to protect someone?
+
+ No. Detection can miss faces, a plain blur can be partly undone, and Human Rights Watch found AI could reconstruct blurred faces enough to narrow identity. Treat it as reducing risk.
+
+### Is changing the pitch of a voice enough to anonymise it?
+
+ No. Pitch shifting can be reversed and speaking style still identifies people. Prefer subtitles, a transcript or a voice-over.
+
+### Does Witness blur faces or disguise voices?
+
+ Not currently. Witness records and protects the original. Blur and disguise a copy with another tool.
+
+## Try it free
+
+The free app includes this. Set it up and test it before you need it.
+
+ Get Witness Camera for Free
+ Get it on Google Play
+
+## More Witness features explained
+
+ - Witness features explained
+
+ - Stealth mode camera apps for iPhone and Android: what they can and cannot hide
+
+ - How to hash video footage and prove it has not been altered
+
+ - Trusted timestamp for video: how RFC 3161 time-stamping works
+
+ - Chain of custody for video: what a manifest records and how to check it
+
+ - Record video straight to cloud storage while you are still recording
+
+ - Send video and your location to a trusted contact while you record
+
+ - Burn a timestamp and GPS location into video on iPhone and Android
+
+ - Start recording video without unlocking your phone
+
+ - Record video straight to Nextcloud or your own WebDAV server
+
+ - Trim silence out of video automatically: the highlight cut
+
+ - Record with the front and rear camera at once on iPhone and Android
+
+ - Record video on a weak connection: how Witness sends a preview first
+
+ - Does Witness encrypt video? What protects footage and what does not
+
+ - Generate a PDF evidence report from a video recording
+
+ - Witness for Professionals: how Witness Pro works
+
+Written on 27 October 2026. Features and prices change. This is not legal advice.
 
 ---
 
@@ -1215,6 +2918,7 @@ Compute the SHA-256 of a video file:
 
 shasum -a 256 recording_rear.mp4 # macOS / Linux
 certutil -hashfile recording_rear.mp4 SHA256 # Windows
+
 Open the manifest and find the corresponding entry. Every chunk appears with a sha256 field, and consolidated videos appear under mergedVideos. The values must match exactly.
 
 A mismatch means the file is not byte-for-byte what the phone recorded. Note that any re-encoding will cause this, including the re-compression applied automatically by most messaging apps and social platforms. If footage reached you through WhatsApp, Signal, email or a social upload, expect the hash to differ, and ask for the original file.
@@ -1227,6 +2931,7 @@ openssl ts -verify \
  -data manifest_<session-id>.json \
  -in timestamp_<session-id>.tsr \
  -CAfile <authority-ca-cert>.pem
+
 A successful run prints Verification: OK. The manifest names the authority it used in its timestampAuthority field; the CA certificate comes from that authority's website.
 
  A failure here is not automatically evidence of tampering. The most common cause by far is a missing or wrong CA certificate, which is a local configuration problem. Read the token's contents (step 3) before drawing any conclusion.
@@ -1236,9 +2941,11 @@ A successful run prints Verification: OK. The manifest names the authority it us
 To inspect the token directly, without CA validation:
 
 openssl ts -reply -in timestamp_<session-id>.tsr -text
+
 This prints the status, the timestamp, and the message digest the authority signed. Confirm that digest equals the SHA-256 of the manifest file:
 
 shasum -a 256 manifest_<session-id>.json
+
 If the two match, the authority signed this manifest, unmodified, at the time shown.
 
 ## What the chain establishes

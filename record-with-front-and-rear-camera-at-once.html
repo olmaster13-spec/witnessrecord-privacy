@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Record with the front and rear camera at once on iPhone and Android</title>
+<meta name="description" content="How dual-camera recording works in Witness: front and rear together, the 1080p limit, how Pro settings turn it off, and device support.">
+<link rel="canonical" href="https://witnesscamera.com/record-with-front-and-rear-camera-at-once">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Record with the front and rear camera at once on iPhone and Android">
+<meta property="og:description" content="How dual-camera recording works in Witness: front and rear together, the 1080p limit, how Pro settings turn it off, and device support.">
+<meta property="og:url" content="https://witnesscamera.com/record-with-front-and-rear-camera-at-once">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Record with the front and rear camera at once on iPhone and Android",
+      "description": "How dual-camera recording works in Witness: front and rear together, the 1080p limit, how Pro settings turn it off, and device support.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/record-with-front-and-rear-camera-at-once"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Witness record both cameras at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on phones that support it, as two separate videos at up to 1080p and 30 fps in H.264. Pro can add a combined picture-in-picture video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my front camera switch off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because a higher setting, such as 4K, 60 fps, Apple Log, HEVC or ProRes, is selected, and two cameras at once are limited to 1080p30 H.264. The Pro page shows which setting caused it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does dual camera work on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On phones that report concurrent camera support, capped at 720p per camera. Some phones do not support it and fall back to a single camera."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the picture-in-picture video free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the combined video is a Pro feature. The two separate videos are free."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Record with the front and rear camera at once on iPhone and Android</h1>
+<p class="tagline">The scene and the person recording it, in the same session.</p>
+
+<p class="lede">Recording both cameras at once documents the scene and the person filming it, which can matter when someone later disputes who said or did what. This page explains how Witness does it, and why quality settings can turn it off. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Witness can record the front and rear cameras at the same time as two separate videos, free, at up to 1080p and 30 fps in H.264. Pro can also produce one combined picture-in-picture video with the front camera as a small inset, in addition to the two files. Anything above 1080p30 H.264, including 4K, 60 fps, Apple Log, HEVC or ProRes, turns the front camera off, because two cameras at once are limited by the hardware. On Android, dual-camera mode is capped at 720p per camera and depends on the phone supporting concurrent cameras.</p>
+</div>
+
+<h2>What you get</h2>
+<ul>
+  <li><strong>Two separate videos,</strong> rear and front, each hashed and listed in the manifest.</li>
+  <li><strong>An optional combined video</strong> (Pro): the rear camera with the front camera as a small inset, in addition to, never instead of, the two files.</li>
+  <li>Both uploaded while recording like any other piece.</li>
+</ul>
+<h2>Why quality settings turn it off</h2>
+<p>Running two cameras at once is only guaranteed in the formats the hardware can sustain, in practice 1080p, 30 fps and H.264, never Apple Log. If you choose anything higher, Witness records only the rear camera. The Pro page says which setting turned the front camera off and offers a button to restore the dual-camera settings.</p>
+<h2>Device support</h2>
+<ul>
+  <li>Not every phone can run two cameras at once. On Android, concurrent-camera support is far from universal. Some phones report no concurrent pair, and Witness falls back to a single camera.</li>
+  <li>Android's guaranteed concurrent-camera format is 720p, so dual-camera recordings there are capped at 720p per camera.</li>
+  <li>Dual-camera recording is power- and heat-hungry, so long sessions may warm the phone.</li>
+</ul>
+<h2>When to use it</h2>
+<p>Dual camera suits a recorded conversation or a stop where the interaction matters as much as the surroundings. For a protest or an event where the footage must leave the phone quickly, a single camera at 1080p keeps files smaller. See <a href="witness-for-professionals">how Pro works</a> for the trade-offs.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Can Witness record both cameras at once?</h3>
+  <p>Yes, on phones that support it, as two separate videos at up to 1080p and 30 fps in H.264. Pro can add a combined picture-in-picture video.</p>
+</div>
+<div class="qa">
+  <h3>Why did my front camera switch off?</h3>
+  <p>Because a higher setting, such as 4K, 60 fps, Apple Log, HEVC or ProRes, is selected, and two cameras at once are limited to 1080p30 H.264. The Pro page shows which setting caused it.</p>
+</div>
+<div class="qa">
+  <h3>Does dual camera work on Android?</h3>
+  <p>On phones that report concurrent camera support, capped at 720p per camera. Some phones do not support it and fall back to a single camera.</p>
+</div>
+<div class="qa">
+  <h3>Is the picture-in-picture video free?</h3>
+  <p>No, the combined video is a Pro feature. The two separate videos are free.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

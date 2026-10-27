@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Witness for journalists: footage that survives a seized phone</title>
+<meta name="description" content="How journalists use Witness to keep footage safe, show where it came from and deliver it to an editor. Free on iPhone and Android, with optional Pro.">
+<link rel="canonical" href="https://witnesscamera.com/witness-for-journalists">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Witness for journalists: footage that survives a seized phone">
+<meta property="og:description" content="How journalists use Witness to keep footage safe, show where it came from and deliver it to an editor. Free on iPhone and Android, with optional Pro.">
+<meta property="og:url" content="https://witnesscamera.com/witness-for-journalists">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Witness for journalists: footage that survives a seized phone",
+      "description": "How journalists use Witness to keep footage safe, show where it came from and deliver it to an editor. Free on iPhone and Android, with optional Pro.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/witness-for-journalists"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need Witness Pro as a journalist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The free app has black-screen recording, upload every 15 seconds, SHA-256 hashing, the manifest, independent time-stamping and emergency-contact sharing. Pro adds picture quality and outputs such as 4K, Apple Log, on-screen time and location, and evidence packages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my editor receive my footage automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes with Google Drive or Dropbox: the emergency contact is given access to each recording's folder as it arrives. With WebDAV or Nextcloud there is no automatic sharing, so you share the folder yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Witness support C2PA content credentials?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It uses SHA-256 hashes, a manifest and an independent RFC 3161 time-stamp, which anyone can verify with OpenSSL. C2PA is a different system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Witness safe for protecting a source?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Treat it as one layer, not a complete answer. It has no server, but it records sound, shows a recording indicator and stores footage with your chosen cloud provider. Decide about location in advance, and use tools built for concealment if your source is at serious risk."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Witness for journalists: footage that survives a seized phone and shows where it came from</h1>
+<p class="tagline">Two problems at the moment of recording, and what Witness does about each.</p>
+
+<p class="lede">Journalists who cover protests, raids and confrontations face two problems that start before anything is published: losing footage when a phone is taken, damaged or locked, and later being asked to prove the footage is what they say it is. Witness is a free iPhone and Android app that addresses both while you record. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Witness Camera records with the screen black, sends a piece every 15 seconds to a Google Drive, Dropbox, Nextcloud or WebDAV account you own, hashes every piece with SHA-256 and has the session independently time-stamped (RFC 3161). For a journalist that means footage can leave the phone before it can be taken, an editor can be given access automatically, and anyone can check the files are unaltered. It does not prove what the footage shows, it always records sound, and it is not a complete security tool. Optional Pro adds 4K, frame rates, Apple Log or HDR and on-screen time and location.</p>
+</div>
+
+<h2>The two problems</h2>
+<ul>
+  <li><strong>Losing the footage.</strong> A phone that is taken, smashed or locked takes everything on it. Witness sends each 15-second piece to your own storage as it is recorded, so what had already gone is safe. The piece being recorded and any queued pieces are still on the phone.</li>
+  <li><strong>Proving the footage.</strong> A file alone proves little. Witness hashes every piece on the device before it uploads, writes a manifest of hashes, UTC times and location, and has the manifest independently time-stamped when the session ends. A desk can then <a href="verify">check it with OpenSSL</a> without trusting the reporter.</li>
+</ul>
+<h2>Setting it up as a reporter</h2>
+<ol>
+  <li><strong>Connect storage.</strong> Google Drive or Dropbox is simplest. A newsroom Nextcloud or WebDAV server keeps footage away from US cloud providers, but WebDAV cannot share automatically, so you share the folder yourself.</li>
+  <li><strong>Name your editor as the emergency contact.</strong> With Google Drive or Dropbox they are given access to each recording's folder as footage arrives.</li>
+  <li><strong>Bind a fast start.</strong> iPhone: Action Button, Lock Screen widget or Siri. Android: Quick Settings tile, widget or assistant shortcut.</li>
+  <li><strong>Decide on the screen.</strong> The default is a black screen. If you want to frame shots, turn the viewfinder on from the Home screen, and you can toggle it while recording.</li>
+  <li><strong>Decide on location.</strong> Location ties footage to a place in the record. You can decline it and everything else still works. Some guides advise against it for safety, so decide before the day.</li>
+  <li><strong>Test for 30 seconds</strong> and check the file reached your storage.</li>
+</ol>
+<h2>What your editor receives</h2>
+<p>A session folder with the video files, a manifest listing every file's SHA-256 hash, capture times and GPS accuracy, and an independent time-stamp token. Our <a href="verifying-witness-footage-for-newsrooms">newsroom guide</a> shows how to check it in about ten minutes.</p>
+<div class="note">
+  <p><strong>What Pro adds for journalists</strong></p>
+  <ul>
+    <li><strong>4K and 24, 25 or 60 fps</strong>, for material that will be broadcast or graded.</li>
+    <li><strong>Apple Log</strong> (iPhone 15 Pro and newer) or 10-bit HDR on Android, for grading latitude.</li>
+    <li><strong>Visible date, time and location burned into the picture</strong>, for outlets that want on-screen provenance. The hash, manifest and time-stamp are in every recording whether this is on or not.</li>
+    <li><strong>A combined video from both cameras</strong>, so the reporter and the scene are in one file.</li>
+    <li><strong>Evidence packages:</strong> a PDF report with the timeline, hashes and verification steps for a finished recording, plus the manifest and time-stamp proof.</li>
+    <li>Trade-off: higher quality uploads slower. 4K needs a fast connection, and ProRes or Mastering never upload. See <a href="witness-for-professionals">how Pro works</a>.</li>
+  </ul>
+</div>
+<h2>Where Witness is not enough</h2>
+<ul>
+  <li><strong>It does not hide that you are recording.</strong> iOS shows its green recording indicator and Android shows a notification. Neither can be hidden.</li>
+  <li><strong>It always records sound,</strong> with no setting to turn the microphone off. That matters under some laws, such as German section 201 StGB.</li>
+  <li><strong>Your storage provider is a third party.</strong> Footage in Google Drive or Dropbox is reachable by legal process served on them. A newsroom Nextcloud avoids that.</li>
+  <li><strong>It does not use C2PA content credentials.</strong> It uses SHA-256 manifests and an RFC 3161 time-stamp. If your outlet requires C2PA, tell your editor.</li>
+  <li><strong>A hash shows a file is unchanged. It does not show that the footage is a fair picture of events.</strong> Verification, geolocation and corroboration still belong to your desk.</li>
+  <li><strong>It is not an encryption or concealment tool.</strong> For people at serious risk, compare Tella and ProofMode on <a href="compare">our comparison page</a>.</li>
+</ul>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Do I need Witness Pro as a journalist?</h3>
+  <p>No. The free app has black-screen recording, upload every 15 seconds, SHA-256 hashing, the manifest, independent time-stamping and emergency-contact sharing. Pro adds picture quality and outputs such as 4K, Apple Log, on-screen time and location, and evidence packages.</p>
+</div>
+<div class="qa">
+  <h3>Can my editor receive my footage automatically?</h3>
+  <p>Yes with Google Drive or Dropbox: the emergency contact is given access to each recording's folder as it arrives. With WebDAV or Nextcloud there is no automatic sharing, so you share the folder yourself.</p>
+</div>
+<div class="qa">
+  <h3>Does Witness support C2PA content credentials?</h3>
+  <p>No. It uses SHA-256 hashes, a manifest and an independent RFC 3161 time-stamp, which anyone can verify with OpenSSL. C2PA is a different system.</p>
+</div>
+<div class="qa">
+  <h3>Is Witness safe for protecting a source?</h3>
+  <p>Treat it as one layer, not a complete answer. It has no server, but it records sound, shows a recording indicator and stores footage with your chosen cloud provider. Decide about location in advance, and use tools built for concealment if your source is at serious risk.</p>
+</div>
+
+<h2>Try it free first</h2>
+<p>The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More guides by profession</h2>
+<ul>
+  <li><a href="verifying-witness-footage-for-newsrooms">For newsrooms: how to verify footage recorded with Witness in ten minutes</a></li>
+  <li><a href="witness-for-documentary-filmmakers">Witness for documentary and investigative filmmakers: picture quality with provenance</a></li>
+  <li><a href="witness-for-lawyers">For lawyers: what a Witness evidence package contains, and what it does and does not prove</a></li>
+  <li><a href="witness-for-legal-observers">Witness for legal observers and legal-support teams</a></li>
+  <li><a href="witness-for-ngos-and-human-rights-teams">Witness for NGOs and human rights teams: a field documentation workflow</a></li>
+  <li><a href="witness-for-site-documentation">Tamper-evident documentation for work sites, tenancies and damage claims</a></li>
+  <li><a href="is-witness-pro-worth-it">Is Witness Pro worth it? Who should pay, and who should not</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="witness-for-journalists">Witness for journalists: footage that survives a seized phone and shows where it came from</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

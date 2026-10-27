@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trim silence out of video automatically: the highlight cut</title>
+<meta name="description" content="How Witness Pro automatically makes a shorter cut of a recording with the quiet dead air removed and the speech kept, and how it decides what counts as speech.">
+<link rel="canonical" href="https://witnesscamera.com/trim-silence-from-video-automatically">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Trim silence out of video automatically: the highlight cut">
+<meta property="og:description" content="How Witness Pro automatically makes a shorter cut of a recording with the quiet dead air removed and the speech kept, and how it decides what counts as speech.">
+<meta property="og:url" content="https://witnesscamera.com/trim-silence-from-video-automatically">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Trim silence out of video automatically: the highlight cut",
+      "description": "How Witness Pro automatically makes a shorter cut of a recording with the quiet dead air removed and the speech kept, and how it decides what counts as speech.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/trim-silence-from-video-automatically"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Witness remove silence from a video automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with Pro on iPhone. Highlight export produces a shorter cut with the quiet dead air trimmed and the talking kept, in addition to the full recording."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it change my original recording?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is produced in addition to the full recording, which stays intact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it tell speech from silence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It compares each half-second of audio with the recording's own quiet floor and treats anything about 8 dB louder as speech, with padding and merging so words are not clipped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it available on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not at present. Highlight export is an iPhone Pro feature."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Trim silence out of video automatically: the highlight cut</h1>
+<p class="tagline">A shorter, watchable cut of a long recording, alongside the full original.</p>
+
+<p class="lede">Long recordings of conversations are mostly waiting. Witness Pro can make a shorter cut with the dead air trimmed out and the talking kept, so someone can watch the substance without sitting through everything. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Highlight export in Witness Pro (iPhone) makes a shorter cut of the rear camera's video with quiet stretches removed and the stretches where someone is talking kept. It measures the recording's own level in half-second windows, treats anything about 8 dB above that recording's quiet floor as speech, pads each kept stretch by a second, and joins stretches less than 2.5 seconds apart. It is produced in addition to, never instead of, the full recording, so the original stays intact. Silent or no-audio recordings produce no cut.</p>
+</div>
+
+<h2>What it does</h2>
+<ul>
+  <li>Produces a <strong>second, shorter video</strong>. The full original is always kept.</li>
+  <li>Keeps stretches where someone is <strong>actually talking</strong>, including at ordinary conversational volume, not only shouting.</li>
+  <li>Trims quiet gaps between them.</li>
+</ul>
+<h2>How it decides what is speech</h2>
+<p>Speech levels vary with microphone gain and distance, so a fixed volume threshold would drop quiet but important talk. Witness measures each recording against its own ambient floor.</p>
+<ul>
+  <li>The audio is analysed in <strong>half-second windows</strong>.</li>
+  <li>A window counts as active when it is about <strong>8 dB above</strong> that recording's own quiet floor.</li>
+  <li>Each active stretch is <strong>padded by about a second</strong> on each side so a word at the edge is not clipped.</li>
+  <li>Stretches closer together than about <strong>2.5 seconds</strong> are merged, to avoid jump-cuts.</li>
+  <li>Stretches shorter than about a second are treated as stray noise and dropped.</li>
+</ul>
+<h2>When it is useful</h2>
+<ul>
+  <li>Interviews and recorded conversations you need to review quickly.</li>
+  <li>Sharing something watchable without asking a colleague or a lawyer to sit through an hour.</li>
+  <li>A rough first pass before editing.</li>
+</ul>
+<h2>Limits</h2>
+<ul>
+  <li>It is automatic and imperfect. Check the cut against the original before relying on it.</li>
+  <li>If nothing rises above the recording's own floor, or there is no audio track, there is no cut.</li>
+  <li>The cut is derived from the rear camera video, and adds to how long the recording takes to finish assembling.</li>
+  <li>It is a Pro feature on iPhone. The Android Pro page has no highlight export at present.</li>
+  <li>A trimmed cut is a copy. The hashes and time-stamp describe the original.</li>
+</ul>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Can Witness remove silence from a video automatically?</h3>
+  <p>Yes, with Pro on iPhone. Highlight export produces a shorter cut with the quiet dead air trimmed and the talking kept, in addition to the full recording.</p>
+</div>
+<div class="qa">
+  <h3>Does it change my original recording?</h3>
+  <p>No. It is produced in addition to the full recording, which stays intact.</p>
+</div>
+<div class="qa">
+  <h3>How does it tell speech from silence?</h3>
+  <p>It compares each half-second of audio with the recording's own quiet floor and treats anything about 8 dB louder as speech, with padding and merging so words are not clipped.</p>
+</div>
+<div class="qa">
+  <h3>Is it available on Android?</h3>
+  <p>Not at present. Highlight export is an iPhone Pro feature.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to hash video footage and prove it has not been altered</title>
+<meta name="description" content="What a SHA-256 hash of a video proves, how to compute and compare one on any computer, and how Witness hashes every piece of footage on the phone before upload.">
+<link rel="canonical" href="https://witnesscamera.com/hash-stamp-video-footage">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="How to hash video footage and prove it has not been altered">
+<meta property="og:description" content="What a SHA-256 hash of a video proves, how to compute and compare one on any computer, and how Witness hashes every piece of footage on the phone before upload.">
+<meta property="og:url" content="https://witnesscamera.com/hash-stamp-video-footage">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to hash video footage and prove it has not been altered",
+      "description": "What a SHA-256 hash of a video proves, how to compute and compare one on any computer, and how Witness hashes every piece of footage on the phone before upload.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/hash-stamp-video-footage"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to hash video footage and prove it has not been altered",
+      "description": "A SHA-256 hash is a 64-character fingerprint of a file. Change one byte and it changes completely, so a matching hash shows the file is identical to the one that was hashed. Compute one with shasum -a 256 on macOS and Linux or certutil -hashfile on Windows. The hash only means something if it was recorded when the video was made and kept somewhere you cannot alter. Witness computes a SHA-256 for every 15-second piece on the phone before it uploads, lists them in a manifest, and has an independent authority time-stamp that manifest. A match proves the file is unchanged, not that its content is true.",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Compute the hash",
+          "text": "Run shasum -a 256 on macOS or Linux, or certutil -hashfile  SHA256 on Windows."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Compare it with the recorded value",
+          "text": "The hash must match the value recorded when the video was made, character for character."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Check where the recorded value came from",
+          "text": "A hash is only evidence if it was recorded at the time and stored where it could not be changed."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does hashing a video prove?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That the file you hold is identical to the one that was hashed. It does not prove what the video shows, and it only helps if the original hash was recorded at the time and kept where it could not be altered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get the SHA-256 of a video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run shasum -a 256 <file> on macOS or Linux, or certutil -hashfile <file> SHA256 on Windows, and compare the result with the recorded value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the hash of a video sent over WhatsApp not match?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Messaging apps re-encode video, which changes the bytes. The mismatch comes from the channel, not tampering. Ask for the original file through a link to the storage account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Witness hash every recording?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every piece is hashed on the phone before upload, whether or not you use Pro, and the hashes are listed in a manifest."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>How to hash video footage and prove it has not been altered</h1>
+<p class="tagline">SHA-256 in plain terms, and what a matching hash does and does not show.</p>
+
+<p class="lede">Hash stamping a video means computing a short fingerprint of the file that changes completely if even one byte changes. If you recorded the fingerprint when the video was made, anyone can later check that the file they hold is the same. This page explains how it works, how to do it by hand, and what Witness does automatically. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> A SHA-256 hash is a 64-character fingerprint of a file. Change one byte and it changes completely, so a matching hash shows the file is identical to the one that was hashed. Compute one with shasum -a 256 on macOS and Linux or certutil -hashfile on Windows. The hash only means something if it was recorded when the video was made and kept somewhere you cannot alter. Witness computes a SHA-256 for every 15-second piece on the phone before it uploads, lists them in a manifest, and has an independent authority time-stamp that manifest. A match proves the file is unchanged, not that its content is true.</p>
+</div>
+
+<h2>What a hash is</h2>
+<p>A cryptographic hash function turns any file into a fixed-length string. SHA-256 gives 64 hexadecimal characters. The same file always gives the same string, and a different file, even one differing by a single byte, gives a completely different one. You cannot work backwards from the hash to the file.</p>
+<h2>How to hash a video yourself</h2>
+<pre><code>shasum -a 256 recording.mp4                 # macOS and Linux
+certutil -hashfile recording.mp4 SHA256      # Windows</code></pre>
+<p>Compare the output with the value you recorded earlier. They must be identical. Any difference, however small, means the file is not the same.</p>
+<h2>Why timing matters</h2>
+<p>A hash computed today only shows the file has not changed since today. It proves nothing about the moment of recording. For a hash to count, it has to be computed as close to the moment of capture as possible and stored somewhere the person holding the footage cannot quietly alter. That is why Witness hashes on the phone, immediately.</p>
+<h2>What Witness does</h2>
+<ul>
+  <li>Records video in pieces of about 15 seconds. Each piece is finalised as a complete, playable file.</li>
+  <li>Computes the SHA-256 of each piece <strong>on the device, before it is uploaded</strong>, so the hash describes the footage as it came off the camera.</li>
+  <li>Lists every piece and its hash in a <strong>manifest</strong> that is rewritten and re-uploaded as the recording goes on, so the record exists in your storage even if the phone is taken mid-recording.</li>
+  <li>At the end of a session, hashes the manifest and has it <a href="trusted-timestamp-video-rfc-3161">independently time-stamped</a>.</li>
+</ul>
+<h2>What a matching hash does not show</h2>
+<ul>
+  <li>That the footage depicts what someone says it does.</li>
+  <li>That it was recorded when it appears to have been, unless a trusted time-stamp covers the hash.</li>
+  <li>Anything about a re-encoded copy: messaging apps and social platforms re-compress video, so the copy's hash will not match the original even though nothing was tampered with.</li>
+</ul>
+<p>For the full verification steps, see <a href="verify">how to verify footage</a>.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>What does hashing a video prove?</h3>
+  <p>That the file you hold is identical to the one that was hashed. It does not prove what the video shows, and it only helps if the original hash was recorded at the time and kept where it could not be altered.</p>
+</div>
+<div class="qa">
+  <h3>How do I get the SHA-256 of a video?</h3>
+  <p>Run shasum -a 256 &lt;file&gt; on macOS or Linux, or certutil -hashfile &lt;file&gt; SHA256 on Windows, and compare the result with the recorded value.</p>
+</div>
+<div class="qa">
+  <h3>Why does the hash of a video sent over WhatsApp not match?</h3>
+  <p>Messaging apps re-encode video, which changes the bytes. The mismatch comes from the channel, not tampering. Ask for the original file through a link to the storage account.</p>
+</div>
+<div class="qa">
+  <h3>Does Witness hash every recording?</h3>
+  <p>Yes. Every piece is hashed on the phone before upload, whether or not you use Pro, and the hashes are listed in a manifest.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>The free app includes this. Set it up and test it before you need it.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More Witness features explained</h2>
+<ul>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+  <li><a href="stealth-mode-camera-app">Stealth mode camera apps for iPhone and Android: what they can and cannot hide</a></li>
+  <li><a href="trusted-timestamp-video-rfc-3161">Trusted timestamp for video: how RFC 3161 time-stamping works</a></li>
+  <li><a href="video-chain-of-custody-log">Chain of custody for video: what a manifest records and how to check it</a></li>
+  <li><a href="record-video-straight-to-cloud-while-recording">Record video straight to cloud storage while you are still recording</a></li>
+  <li><a href="send-video-and-location-to-emergency-contact">Send video and your location to a trusted contact while you record</a></li>
+  <li><a href="burn-timestamp-and-gps-into-video">Burn a timestamp and GPS location into video on iPhone and Android</a></li>
+  <li><a href="start-recording-without-unlocking-phone">Start recording video without unlocking your phone</a></li>
+  <li><a href="record-video-to-nextcloud-or-webdav">Record video straight to Nextcloud or your own WebDAV server</a></li>
+  <li><a href="trim-silence-from-video-automatically">Trim silence out of video automatically: the highlight cut</a></li>
+  <li><a href="record-with-front-and-rear-camera-at-once">Record with the front and rear camera at once on iPhone and Android</a></li>
+  <li><a href="record-video-on-a-weak-connection">Record video on a weak connection: how Witness sends a preview first</a></li>
+  <li><a href="does-witness-encrypt-video">Does Witness encrypt video? What protects footage and what does not</a></li>
+  <li><a href="video-evidence-report-pdf">Generate a PDF evidence report from a video recording</a></li>
+  <li><a href="how-to-anonymise-people-in-protest-video">How to blur faces and anonymise voices in protest video, and why it is hard</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="hash-stamp-video-footage">How to hash video footage and prove it has not been altered</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

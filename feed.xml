@@ -5,8 +5,169 @@
   <link>https://witnesscamera.com/</link>
   <description>Guides on filming police and ICE, the law around recording, and how Witness Camera works. An independent iOS app for documenting encounters with law enforcement.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 26 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 12:00:00 +0000</lastBuildDate>
   <atom:link href="https://witnesscamera.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Stealth mode camera app for iPhone and Android: what it can hide</title>
+    <link>https://witnesscamera.com/stealth-mode-camera-app</link>
+    <guid isPermaLink="true">https://witnesscamera.com/stealth-mode-camera-app</guid>
+    <description>What a stealth or black-screen camera app can and cannot hide on iPhone and Android, why the recording indicator stays, and the legal question that matters first.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to hash video footage and prove it has not been altered</title>
+    <link>https://witnesscamera.com/hash-stamp-video-footage</link>
+    <guid isPermaLink="true">https://witnesscamera.com/hash-stamp-video-footage</guid>
+    <description>What a SHA-256 hash of a video proves, how to compute and compare one on any computer, and how Witness hashes every piece of footage on the phone before upload.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Trusted timestamp for video: how RFC 3161 time-stamping works</title>
+    <link>https://witnesscamera.com/trusted-timestamp-video-rfc-3161</link>
+    <guid isPermaLink="true">https://witnesscamera.com/trusted-timestamp-video-rfc-3161</guid>
+    <description>How an independent time-stamp authority proves a video existed at a given time, how to verify a .tsr token with OpenSSL, and what Witness sends to the authority.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Chain of custody for video: what a manifest records and how to check it</title>
+    <link>https://witnesscamera.com/video-chain-of-custody-log</link>
+    <guid isPermaLink="true">https://witnesscamera.com/video-chain-of-custody-log</guid>
+    <description>What a video chain-of-custody log should contain, what Witness writes in its session manifest (hashes, UTC times, location, authority), and how to verify it.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Record video straight to the cloud while you are still recording</title>
+    <link>https://witnesscamera.com/record-video-straight-to-cloud-while-recording</link>
+    <guid isPermaLink="true">https://witnesscamera.com/record-video-straight-to-cloud-while-recording</guid>
+    <description>Why ordinary cloud backup only uploads after you stop, and how Witness uploads a piece every 15 seconds to Google Drive, Dropbox, Nextcloud or WebDAV as you record.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Send video and your location to a trusted contact while you record</title>
+    <link>https://witnesscamera.com/send-video-and-location-to-emergency-contact</link>
+    <guid isPermaLink="true">https://witnesscamera.com/send-video-and-location-to-emergency-contact</guid>
+    <description>How Witness shares each recording with an emergency contact as it arrives and lets you send your last known location with one tap. Free.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Burn a timestamp and GPS location into video on iPhone and Android</title>
+    <link>https://witnesscamera.com/burn-timestamp-and-gps-into-video</link>
+    <guid isPermaLink="true">https://witnesscamera.com/burn-timestamp-and-gps-into-video</guid>
+    <description>How to put the date, time and coordinates on screen in your video with Witness Pro, how it differs from the hidden hash and manifest, and when outlets want it.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Start recording video without unlocking your phone</title>
+    <link>https://witnesscamera.com/start-recording-without-unlocking-phone</link>
+    <guid isPermaLink="true">https://witnesscamera.com/start-recording-without-unlocking-phone</guid>
+    <description>How to start a recording in one press from the iPhone Action Button, Lock Screen widget or Siri, or an Android Quick Settings tile, widget or assistant shortcut.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Record video straight to Nextcloud or your own WebDAV server</title>
+    <link>https://witnesscamera.com/record-video-to-nextcloud-or-webdav</link>
+    <guid isPermaLink="true">https://witnesscamera.com/record-video-to-nextcloud-or-webdav</guid>
+    <description>How to send video to your own Nextcloud or WebDAV server while recording, why it keeps footage away from US cloud providers, and the trade-off on sharing.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Trim silence out of video automatically: the highlight cut</title>
+    <link>https://witnesscamera.com/trim-silence-from-video-automatically</link>
+    <guid isPermaLink="true">https://witnesscamera.com/trim-silence-from-video-automatically</guid>
+    <description>How Witness Pro automatically makes a shorter cut of a recording with the quiet dead air removed and the speech kept, and how it decides what counts as speech.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Record with the front and rear camera at once on iPhone and Android</title>
+    <link>https://witnesscamera.com/record-with-front-and-rear-camera-at-once</link>
+    <guid isPermaLink="true">https://witnesscamera.com/record-with-front-and-rear-camera-at-once</guid>
+    <description>How dual-camera recording works in Witness: front and rear together, the 1080p limit, how Pro settings turn it off, and device support.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Record video on a weak connection: how Witness sends a preview first</title>
+    <link>https://witnesscamera.com/record-video-on-a-weak-connection</link>
+    <guid isPermaLink="true">https://witnesscamera.com/record-video-on-a-weak-connection</guid>
+    <description>What happens to uploads on a crowded or slow mobile network: queueing, retries, nothing deleted until confirmed, and a low-resolution stand-in copy sent first.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Does Witness encrypt video? What protects footage and what does not</title>
+    <link>https://witnesscamera.com/does-witness-encrypt-video</link>
+    <guid isPermaLink="true">https://witnesscamera.com/does-witness-encrypt-video</guid>
+    <description>An honest answer: Witness adds no encryption layer of its own. What protects footage on the phone and in your cloud, what does not, and which tools to look at.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Generate a PDF evidence report from a video recording</title>
+    <link>https://witnesscamera.com/video-evidence-report-pdf</link>
+    <guid isPermaLink="true">https://witnesscamera.com/video-evidence-report-pdf</guid>
+    <description>What a Witness evidence package contains: a PDF report with timeline, device, location and segment hashes, the manifest and time-stamp proof, with no video.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to blur faces and anonymise voices in protest video</title>
+    <link>https://witnesscamera.com/how-to-anonymise-people-in-protest-video</link>
+    <guid isPermaLink="true">https://witnesscamera.com/how-to-anonymise-people-in-protest-video</guid>
+    <description>A practical workflow for protecting people in footage: keep the original, blur a copy, treat pitch shifting as weak, and use subtitles. Tools, limits and risks.</description>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness for journalists: footage that survives a seized phone</title>
+    <link>https://witnesscamera.com/witness-for-journalists</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-journalists</guid>
+    <description>How journalists use Witness to keep footage safe, show where it came from and deliver it to an editor. Free on iPhone and Android, with optional Pro.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>For newsrooms: verify footage recorded with Witness in ten minutes</title>
+    <link>https://witnesscamera.com/verifying-witness-footage-for-newsrooms</link>
+    <guid isPermaLink="true">https://witnesscamera.com/verifying-witness-footage-for-newsrooms</guid>
+    <description>A step-by-step check for verification desks: what to ask a contributor for, the hash and time-stamp commands, what a pass proves, and what it does not.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness for documentary and investigative filmmakers</title>
+    <link>https://witnesscamera.com/witness-for-documentary-filmmakers</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-documentary-filmmakers</guid>
+    <description>Shooting quality with provenance: 4K, Apple Log or HDR, ProRes, dual camera and evidence packages, with the upload and file-size trade-offs stated plainly.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>For lawyers: what a Witness evidence package contains and proves</title>
+    <link>https://witnesscamera.com/witness-for-lawyers</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-lawyers</guid>
+    <description>What lawyers receive from Witness footage: manifest, hashes, independent time-stamp and a PDF report, what they establish, and what they do not.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness for legal observers and legal-support teams</title>
+    <link>https://witnesscamera.com/witness-for-legal-observers</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-legal-observers</guid>
+    <description>How legal observers can use Witness at demonstrations: shared storage, a coordinator as emergency contact, footage that survives a seized phone, and limits.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness for NGOs and human rights teams: a field workflow</title>
+    <link>https://witnesscamera.com/witness-for-ngos-and-human-rights-teams</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-ngos-and-human-rights-teams</guid>
+    <description>A documentation workflow for civil-society teams: where footage goes, device policy, training, evidence packages, and how Witness compares with Tella.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Tamper-evident documentation for work sites, tenancies and claims</title>
+    <link>https://witnesscamera.com/witness-for-site-documentation</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-for-site-documentation</guid>
+    <description>Using Witness to document site conditions, tenancies and damage claims with hashed, time-stamped video, and when a dedicated inspection tool is better.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Is Witness Pro worth it? Who should pay, and who should not</title>
+    <link>https://witnesscamera.com/is-witness-pro-worth-it</link>
+    <guid isPermaLink="true">https://witnesscamera.com/is-witness-pro-worth-it</guid>
+    <description>An honest buyer's guide to Witness Pro: what it adds, what free camera apps already do, the monthly versus one-time price, and who should skip it.</description>
+    <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
   <item>
     <title>How to film a dispersal order at a protest: what to capture</title>
     <link>https://witnesscamera.com/filming-dispersal-order-protest-europe</link>

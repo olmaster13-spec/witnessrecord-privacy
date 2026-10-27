@@ -54,7 +54,7 @@
   <url><loc>https://witnesscamera.com/ro/privacy</loc><lastmod>2026-09-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://witnesscamera.com/sv/privacy</loc><lastmod>2026-09-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://witnesscamera.com/iceblock-removed</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://witnesscamera.com/witness-for-professionals</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-professionals</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://witnesscamera.com/de/witness-fuer-profis</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://witnesscamera.com/el/witness-gia-epaggelmaties</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://witnesscamera.com/es/witness-para-profesionales</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -118,4 +118,28 @@
   <url><loc>https://witnesscamera.com/es/grabar-una-detencion-en-una-manifestacion</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://witnesscamera.com/es/periodistas-estudiantes-grabar-manifestaciones</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://witnesscamera.com/es/despues-de-la-manifestacion-a-quien-entregar-las-imagenes</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-journalists</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/verifying-witness-footage-for-newsrooms</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-documentary-filmmakers</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-lawyers</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-legal-observers</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-ngos-and-human-rights-teams</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-for-site-documentation</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/is-witness-pro-worth-it</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/witness-features-explained</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/stealth-mode-camera-app</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/hash-stamp-video-footage</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/trusted-timestamp-video-rfc-3161</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/video-chain-of-custody-log</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/record-video-straight-to-cloud-while-recording</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/send-video-and-location-to-emergency-contact</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/burn-timestamp-and-gps-into-video</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/start-recording-without-unlocking-phone</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/record-video-to-nextcloud-or-webdav</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/trim-silence-from-video-automatically</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/record-with-front-and-rear-camera-at-once</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/record-video-on-a-weak-connection</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/does-witness-encrypt-video</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/video-evidence-report-pdf</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://witnesscamera.com/how-to-anonymise-people-in-protest-video</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

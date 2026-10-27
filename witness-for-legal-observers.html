@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Witness for legal observers and legal-support teams</title>
+<meta name="description" content="How legal observers can use Witness at demonstrations: shared storage, a coordinator as emergency contact, footage that survives a seized phone, and limits.">
+<link rel="canonical" href="https://witnesscamera.com/witness-for-legal-observers">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Witness for legal observers and legal-support teams">
+<meta property="og:description" content="How legal observers can use Witness at demonstrations: shared storage, a coordinator as emergency contact, footage that survives a seized phone, and limits.">
+<meta property="og:url" content="https://witnesscamera.com/witness-for-legal-observers">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Witness for legal observers and legal-support teams",
+      "description": "How legal observers can use Witness at demonstrations: shared storage, a coordinator as emergency contact, footage that survives a seized phone, and limits.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/witness-for-legal-observers"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can a coordinator receive observers' footage automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes on Google Drive or Dropbox: the emergency contact is granted access to each recording's folder as footage arrives. On WebDAV or Nextcloud there is no automatic sharing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the free app enough for observers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually yes. Upload, hashing, the manifest, time-stamping and emergency-contact sharing are all free. Pro adds evidence packages and picture quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Witness record sound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always, and it has no setting to turn the microphone off. In Germany that is a legal risk under section 201 StGB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can observers use it covertly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. iOS shows a green recording indicator and Android shows a notification while recording, and neither can be hidden."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Witness for legal observers and legal-support teams</h1>
+<p class="tagline">A recording that leaves the phone while you observe, and a way for a team to see it.</p>
+
+<p class="lede">Legal observers watch and record how police and protesters behave, and the usefulness of what they produce depends on whether it survives the day and can be relied on. This page covers how a legal-support team can use Witness, and where its limits are. It is not legal advice. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> For legal observers, Witness gives a recording that uploads every 15 seconds to storage the team owns, so notes and footage survive a seized phone. A coordinator named as emergency contact is given access to each recording automatically on Google Drive or Dropbox. Every piece is hashed and the session independently time-stamped. Observers should stay at a distance, never obstruct, and agree rules on sound, location and minors in advance. Witness always records sound, shows a recording indicator and has no team console.</p>
+</div>
+
+<h2>Why it suits observation work</h2>
+<ul>
+  <li><strong>Footage leaves the phone as you record.</strong> If an observer is detained or their phone is taken, what had uploaded is already with the team.</li>
+  <li><strong>A coordinator can see it.</strong> Name the coordinator as the emergency contact. With Google Drive or Dropbox they are granted access to each recording's folder automatically. WebDAV and Nextcloud cannot share automatically, so a team using its own server must share folders itself.</li>
+  <li><strong>A record that can be checked.</strong> Hashes, a manifest of UTC times and locations, and an independent time-stamp let a lawyer or an investigating body <a href="verify">verify the files</a> without trusting the observer.</li>
+  <li><strong>Start in one press</strong> from the Action Button, Lock Screen widget or Siri on iPhone, or a Quick Settings tile, widget or assistant shortcut on Android.</li>
+</ul>
+<h2>Agree these before the day</h2>
+<ul>
+  <li><strong>Storage.</strong> One shared account or each observer's own? A team Nextcloud avoids US cloud providers but needs manual sharing.</li>
+  <li><strong>Sound.</strong> Witness always records it. In Germany, section 201 StGB makes recording the non-publicly spoken word an offence and Witness has no setting to turn the microphone off, so it may be the wrong tool there.</li>
+  <li><strong>Location.</strong> It ties footage to a place but is optional. Decide as a team. Some guides advise against enabling it.</li>
+  <li><strong>The screen.</strong> The default is black. Observers who need to be visibly identifiable can turn the viewfinder on, and iOS still shows a green recording indicator and Android a notification.</li>
+  <li><strong>Minors.</strong> Many protesters are under 18. Agree that raw footage stays in team storage and nothing is posted without review and blurring.</li>
+  <li><strong>Test.</strong> Every observer records 30 seconds and checks it arrived.</li>
+</ul>
+<h2>During and after</h2>
+<ul>
+  <li>Stay at a reasonable distance and never obstruct. Obstruction, not the camera, is the real legal risk in the countries our <a href="filming-police-student-protests-europe">protest guides</a> cover.</li>
+  <li>Film wide first, capture the time and place, and where visible, officers' identification.</li>
+  <li>Afterwards, keep the whole session folder, write down what you saw while it is fresh, and do not edit the original. Our guide on <a href="what-to-do-with-protest-footage-europe">what to do with the footage</a> covers who it can go to.</li>
+</ul>
+<div class="note">
+  <p><strong>What Pro adds for observation teams</strong></p>
+  <ul>
+    <li><strong>Evidence packages:</strong> a PDF report per recording with its timeline, hashes and verification steps, with no video, which can go to a lawyer or a complaints body without exposing the footage.</li>
+    <li><strong>Visible date, time and location</strong> burned into the picture, if your reports use it.</li>
+    <li>Quality settings are rarely the point for observation. For fast uploads, the free 1080p setting is the better choice.</li>
+  </ul>
+</div>
+<h2>Limits</h2>
+<p>Witness has no accounts, no team console and no server, so a team manages access through its own storage provider. It records sound, shows a recording indicator and does not conceal that you are recording. It is not an encryption tool.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Can a coordinator receive observers' footage automatically?</h3>
+  <p>Yes on Google Drive or Dropbox: the emergency contact is granted access to each recording's folder as footage arrives. On WebDAV or Nextcloud there is no automatic sharing.</p>
+</div>
+<div class="qa">
+  <h3>Is the free app enough for observers?</h3>
+  <p>Usually yes. Upload, hashing, the manifest, time-stamping and emergency-contact sharing are all free. Pro adds evidence packages and picture quality.</p>
+</div>
+<div class="qa">
+  <h3>Does Witness record sound?</h3>
+  <p>Always, and it has no setting to turn the microphone off. In Germany that is a legal risk under section 201 StGB.</p>
+</div>
+<div class="qa">
+  <h3>Can observers use it covertly?</h3>
+  <p>No. iOS shows a green recording indicator and Android shows a notification while recording, and neither can be hidden.</p>
+</div>
+
+<h2>Try it free first</h2>
+<p>The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More guides by profession</h2>
+<ul>
+  <li><a href="witness-for-journalists">Witness for journalists: footage that survives a seized phone and shows where it came from</a></li>
+  <li><a href="verifying-witness-footage-for-newsrooms">For newsrooms: how to verify footage recorded with Witness in ten minutes</a></li>
+  <li><a href="witness-for-documentary-filmmakers">Witness for documentary and investigative filmmakers: picture quality with provenance</a></li>
+  <li><a href="witness-for-lawyers">For lawyers: what a Witness evidence package contains, and what it does and does not prove</a></li>
+  <li><a href="witness-for-ngos-and-human-rights-teams">Witness for NGOs and human rights teams: a field documentation workflow</a></li>
+  <li><a href="witness-for-site-documentation">Tamper-evident documentation for work sites, tenancies and damage claims</a></li>
+  <li><a href="is-witness-pro-worth-it">Is Witness Pro worth it? Who should pay, and who should not</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="witness-for-legal-observers">Witness for legal observers and legal-support teams</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

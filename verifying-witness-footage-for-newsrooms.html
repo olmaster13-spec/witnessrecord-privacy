@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For newsrooms: verify footage recorded with Witness in ten minutes</title>
+<meta name="description" content="A step-by-step check for verification desks: what to ask a contributor for, the hash and time-stamp commands, what a pass proves, and what it does not.">
+<link rel="canonical" href="https://witnesscamera.com/verifying-witness-footage-for-newsrooms">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="For newsrooms: verify footage recorded with Witness in ten minutes">
+<meta property="og:description" content="A step-by-step check for verification desks: what to ask a contributor for, the hash and time-stamp commands, what a pass proves, and what it does not.">
+<meta property="og:url" content="https://witnesscamera.com/verifying-witness-footage-for-newsrooms">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "For newsrooms: verify footage recorded with Witness in ten minutes",
+      "description": "A step-by-step check for verification desks: what to ask a contributor for, the hash and time-stamp commands, what a pass proves, and what it does not.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/verifying-witness-footage-for-newsrooms"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I verify footage recorded with Witness?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Get the whole session folder, hash each video with SHA-256 and compare with the manifest, run openssl ts -verify on the manifest with the time-stamp authority's CA certificate, and read the token to confirm its digest matches the manifest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the hash not match the video I was sent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most often because the video was re-encoded, which messaging apps and social platforms do automatically. Ask for the original files through a link to the storage account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a verified Witness recording prove the footage is genuine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It proves the footage existed in this form at that time and has not been altered since. It does not prove what it depicts, so normal verification still applies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if there is no time-stamp file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The authority was probably unreachable when the session ended. That is a gap in corroboration, not a sign of tampering. The hashes can still be checked against the manifest."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>For newsrooms: how to verify footage recorded with Witness in ten minutes</h1>
+<p class="tagline">What to ask for, three checks, and what each result means.</p>
+
+<p class="lede">A contributor says they recorded something with Witness. This page is for the desk that has to decide what that is worth. The checks use standard OpenSSL and a hashing command, not the app, and do not depend on trusting the contributor or the developer. This guide is written by the developer of Witness Camera, so read it with that in mind. Everything about other tools comes from their own sites and store listings, and where Witness is the weaker choice, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> Ask the contributor for the whole Witness session folder (the video files, manifest_<session>.json and timestamp_<session>.tsr), shared by link rather than forwarded through a messaging app that re-encodes video. Hash each video with SHA-256 and compare it with the manifest, run openssl ts -verify on the manifest with the time-stamp authority's CA certificate, then read the token. A pass shows the files are unchanged since the manifest was time-stamped. It does not show what the footage depicts, so geolocation, corroboration and sourcing still apply.</p>
+</div>
+
+<h2>What to ask the contributor for</h2>
+<ul>
+  <li>The <strong>whole session folder</strong>, not a clip: the video files, <code>manifest_&lt;session-id&gt;.json</code> and <code>timestamp_&lt;session-id&gt;.tsr</code>.</li>
+  <li>Shared by a <strong>link to the storage account</strong> (Google Drive, Dropbox, Nextcloud) or a direct download, not forwarded through WhatsApp or similar. Re-encoding changes the file, so its hash will no longer match, and that is a mismatch caused by the channel, not by tampering.</li>
+  <li>Ideally with the contributor's <strong>name, the time and place they say it was recorded</strong>, so you have a claim to test the record against.</li>
+</ul>
+<h2>Check 1: do the files match the manifest?</h2>
+<pre><code>shasum -a 256 recording_rear.mp4        # macOS and Linux
+certutil -hashfile recording_rear.mp4 SHA256   # Windows</code></pre>
+<p>Open the manifest. Every chunk has a <code>sha256</code> field, and consolidated videos appear under <code>mergedVideos</code>. The values must match exactly. The manifest also lists capture start and end times in UTC and the GPS coordinates with their accuracy for each chunk.</p>
+<h2>Check 2: is the manifest authentic and dated?</h2>
+<pre><code>openssl ts -verify \
+  -data manifest_&lt;session-id&gt;.json \
+  -in timestamp_&lt;session-id&gt;.tsr \
+  -CAfile &lt;authority-ca-cert&gt;.pem</code></pre>
+<p>A pass prints <code>Verification: OK</code>. The manifest names the time-stamp authority in its <code>timestampAuthority</code> field, and the CA certificate comes from that authority's website. A failure here is most often a missing or wrong CA certificate, a local configuration problem, so read the token before concluding anything.</p>
+<h2>Check 3: what did the authority actually attest?</h2>
+<pre><code>openssl ts -reply -in timestamp_&lt;session-id&gt;.tsr -text
+shasum -a 256 manifest_&lt;session-id&gt;.json</code></pre>
+<p>Confirm that the digest in the token equals the SHA-256 of the manifest file. If it does, a third party with no stake in the matter signed this exact manifest, unmodified, at the time shown. Because the manifest lists every file's hash, that proof extends to the footage.</p>
+<h2>What a pass does and does not establish</h2>
+<ul>
+  <li><strong>It establishes</strong> that the footage existed in this form at that time and has not changed since.</li>
+  <li><strong>It does not establish</strong> what the footage shows, or that it was recorded when it appears to have been: only that it cannot postdate the time-stamp.</li>
+  <li><strong>Capture times</strong> come from the device clock and are corroborated, not replaced, by the token. <strong>Locations</strong> come from the phone's GPS and inherit its accuracy.</li>
+  <li><strong>A missing manifest or token</strong> means the material is unverified by these means, not that it is false. If the authority was unreachable when the session ended, there is no token.</li>
+  <li><strong>Witness does not use C2PA content credentials.</strong> Its provenance is the manifest and the RFC 3161 token.</li>
+</ul>
+<h2>What the desk still has to do</h2>
+<p>Everything a verification desk normally does: geolocate and chronolocate from the picture, corroborate with other sources, check the contributor, and consider context. The record narrows one question, whether the file is what was recorded. For wider practice, see the WITNESS organisation's guidance on video as evidence and the Berkeley Protocol on Digital Open Source Investigations, both of which stress authenticity and chain of custody. WITNESS is an unrelated human-rights organisation, not this app.</p>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>How do I verify footage recorded with Witness?</h3>
+  <p>Get the whole session folder, hash each video with SHA-256 and compare with the manifest, run openssl ts -verify on the manifest with the time-stamp authority's CA certificate, and read the token to confirm its digest matches the manifest.</p>
+</div>
+<div class="qa">
+  <h3>Why does the hash not match the video I was sent?</h3>
+  <p>Most often because the video was re-encoded, which messaging apps and social platforms do automatically. Ask for the original files through a link to the storage account.</p>
+</div>
+<div class="qa">
+  <h3>Does a verified Witness recording prove the footage is genuine?</h3>
+  <p>No. It proves the footage existed in this form at that time and has not been altered since. It does not prove what it depicts, so normal verification still applies.</p>
+</div>
+<div class="qa">
+  <h3>What if there is no time-stamp file?</h3>
+  <p>The authority was probably unreachable when the session ended. That is a gap in corroboration, not a sign of tampering. The hashes can still be checked against the manifest.</p>
+</div>
+
+<h2>Try it free first</h2>
+<p>The free app already has the parts that protect and verify footage. Pro is unlocked from inside it, and its controls are visible before you pay.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>More guides by profession</h2>
+<ul>
+  <li><a href="witness-for-journalists">Witness for journalists: footage that survives a seized phone and shows where it came from</a></li>
+  <li><a href="witness-for-documentary-filmmakers">Witness for documentary and investigative filmmakers: picture quality with provenance</a></li>
+  <li><a href="witness-for-lawyers">For lawyers: what a Witness evidence package contains, and what it does and does not prove</a></li>
+  <li><a href="witness-for-legal-observers">Witness for legal observers and legal-support teams</a></li>
+  <li><a href="witness-for-ngos-and-human-rights-teams">Witness for NGOs and human rights teams: a field documentation workflow</a></li>
+  <li><a href="witness-for-site-documentation">Tamper-evident documentation for work sites, tenancies and damage claims</a></li>
+  <li><a href="is-witness-pro-worth-it">Is Witness Pro worth it? Who should pay, and who should not</a></li>
+  <li><a href="witness-for-professionals">Witness for Professionals: how Witness Pro works</a></li>
+</ul>
+<p class="muted">Written on 27 October 2026. Features and prices change. This is not legal advice.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="verifying-witness-footage-for-newsrooms">For newsrooms: how to verify footage recorded with Witness in ten minutes</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
