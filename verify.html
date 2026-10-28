@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to verify video evidence has not been altered | Witness</title>
-<meta name="description" content="Confirm a recording is unedited and predates a given moment, using OpenSSL on your own machine. Written for lawyers, newsrooms and courts.">
+<title>Verify Witness footage in your browser | Witness</title>
+<meta name="description" content="Drop in a Witness recording with its manifest and time-stamp proof to check it is unaltered and when it existed. Runs entirely in your browser, nothing is uploaded. OpenSSL steps included.">
 <link rel="canonical" href="https://witnesscamera.com/verify">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/app-icon.webp" type="image/webp">
@@ -81,7 +81,7 @@
         "@id": "https://witnesscamera.com/#org"
       },
       "datePublished": "2026-08-31",
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-10-27",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://witnesscamera.com/verify"
@@ -111,6 +111,27 @@
   ]
 }
 </script>
+<style>
+.checker { margin: 28px 0 36px; }
+.drop { display: block; border: 1.5px dashed var(--line-strong); border-radius: var(--r-surface); background: var(--surface); padding: 30px 20px; text-align: center; cursor: pointer; transition: border-color .2s var(--ease), background .2s var(--ease); }
+.drop:hover, .drop.over, .drop:focus-within { border-color: var(--red); background: var(--surface-2); }
+.drop strong { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: 6px; }
+.drop span { color: var(--text-3); font-size: .9rem; }
+.drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.private { display: flex; gap: 8px; align-items: center; color: var(--text-2); font-size: .88rem; margin-top: 12px; }
+#summary { font-weight: 600; margin: 18px 0 6px; min-height: 1.2em; }
+#results { list-style: none; padding: 0; margin: 0; }
+.vrow { display: grid; grid-template-columns: 22px 1fr; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.vtitle { font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.vdetail { color: var(--text-2); font-size: .92rem; overflow-wrap: anywhere; margin-top: 2px; }
+.vicon { width: 18px; height: 18px; border-radius: 50%; margin-top: 3px; background: var(--text-3); }
+.vrow.good .vicon { background: var(--green); }
+.vrow.bad .vicon { background: var(--red); }
+.vrow.warn .vicon { background: var(--amber); }
+.vrow.pending .vicon { background: transparent; border: 2px solid var(--text-3); border-top-color: transparent; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .vrow.pending .vicon { animation: none; } }
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -135,15 +156,29 @@
 <h1>Verifying Witness footage</h1>
 <p class="tagline">For lawyers, newsrooms, investigators and courts receiving a recording.</p>
 
-<p class="lede">You do not need the app, the developer, or any cooperation from whoever filmed it. Everything needed to check a Witness recording travels with the footage, and the verification uses standard OpenSSL rather than anything proprietary.</p>
+<p class="lede">You do not need the app, the developer, or any cooperation from whoever filmed it. Everything needed to check a Witness recording travels with the footage. Check it right here, or with standard OpenSSL using the steps further down.</p>
 
-<h2>What you should have received</h2>
+<section class="checker" aria-labelledby="check-h">
+<h2 id="check-h">Check files now</h2>
+<label class="drop" id="drop">
+  <input type="file" id="files" multiple>
+  <strong>Drop the files here, or tap to choose them</strong>
+  <span>The video, photo or audio files, plus the <code>.json</code> manifest or record and the <code>.tsr</code> proof that came with them. Add as many as you like at once.</span>
+</label>
+<p class="private">Files are checked inside this browser tab and never leave your device. This page has no server and keeps nothing.</p>
+<p id="summary" aria-live="polite"></p>
+<ul id="results" aria-live="polite"></ul>
+</section>
+<p>Green means the check passed, amber means something needed for a full check is missing, red means a check failed. The time-stamp signature is checked against the certificate of FreeTSA, the authority Witness uses. The steps below do the same checks by hand, if you would rather not rely on this page.</p>
+
+<h2>Checking by hand: what you should have received</h2>
 <p>A Witness session folder contains three kinds of file:</p>
 <ul>
   <li><strong>The video.</strong> Either the individual <code>.mp4</code> chunks, or a single consolidated <code>recording_rear.mp4</code> / <code>recording_front.mp4</code> once the session was merged.</li>
   <li><strong>The manifest.</strong> <code>manifest_&lt;session-id&gt;.json</code>, listing every chunk with its SHA-256 hash, capture times in UTC, and GPS coordinates.</li>
   <li><strong>The time-stamp token.</strong> <code>timestamp_&lt;session-id&gt;.tsr</code>, a signed RFC 3161 response from an independent authority.</li>
 </ul>
+<p>Photos, audio recordings and imported files come with a <code>record.json</code> and <code>record.tsr</code> instead of a manifest, and are checked the same way. An imported file's proof starts when it was imported into Witness, not when it was made.</p>
 <p>If the time-stamp file is missing, the authority was unreachable when the recording ended. That is a gap in corroboration, not a sign of tampering. The hashes remain checkable.</p>
 
 <h2>Step 1. Do the videos match the manifest?</h2>
@@ -196,6 +231,7 @@ certutil -hashfile recording_rear.mp4 SHA256   # Windows</code></pre>
 <p>If you are examining Witness footage professionally and something does not check out, get in touch: <strong>olmaster13@gmail.com</strong>. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.</p>
 </article>
 </main>
+<script src="verify.js" defer></script>
 
 <footer class="site-foot">
   <div class="wrap">
