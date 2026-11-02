@@ -2,14 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "witnessrecord",
   "compatibility_date": "2026-08-28",
-  // Only for /api/usage, the app's opt-in anonymous counts; the rest of the
-  // site is served from the assets as before.
-  "main": "_worker/index.js",
-  "analytics_engine_datasets": [{ "binding": "USAGE", "dataset": "witness_usage" }],
   "assets": {
     "directory": ".",
-    "binding": "ASSETS",
-    "run_worker_first": ["/api/*"],
     // "none" turned out to also disable the implicit "/" -> "/index.html"
     // mapping, taking the homepage down. Back to the platform default, which
     // costs inner pages one redirect hop but keeps "/" working.

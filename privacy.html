@@ -88,7 +88,7 @@
 <body>
 
 <h1>Witness Privacy Policy</h1>
-<p class="updated">Last updated: November 2, 2026</p>
+<p class="updated">Last updated: September 15, 2026</p>
 <p class="lang-switch">Also available in:
 <strong>English</strong><span> · </span>
 <a href="https://witnesscamera.com/de/privacy">Deutsch</a><span> · </span>
@@ -108,7 +108,7 @@
 <h2>Summary</h2>
 <div class="summary">
 <ul>
-  <li>Witness has no server that receives your recordings or your data. The only thing the developer's website can receive is the optional, anonymous usage counts described below, and only if you turn them on.</li>
+  <li>Witness does not have a server. There is no backend operated by the developer.</li>
   <li>Video, audio, location, and event logs the app records go <strong>directly from your device to the cloud storage account you choose</strong> — Google Drive, Dropbox, or a WebDAV server such as Nextcloud that you provide — nowhere else.</li>
   <li>The developer of Witness cannot see, access, or receive your recordings, your location, or your cloud account's other data at any point.</li>
   <li>Whichever provider you choose, the app requests only the most restricted access that provider offers, confined to a folder the app itself creates. It cannot read, list, or modify any other file in your account.</li>
@@ -126,9 +126,7 @@
 <tr><td>Emergency contact names/emails (if you add any)</td><td>Automatically sharing each recording with people you trust, as it uploads</td><td>Stored on your device; when a recording starts uploading, each contact's email is sent to your provider's sharing API (Google Drive or Dropbox) to grant them view access to that recording's folder. This feature is unavailable on WebDAV, which has no sharing mechanism to use</td></tr>
 </table>
 
-<p>By default the app collects no analytics, uses no advertising or tracking SDKs, and sends no data to the developer; the one optional exception is described below. The only third parties contacted are whichever cloud storage provider you connect, for the sole purpose of uploading files to your own account there, and a time-stamp authority, which receives nothing but a cryptographic hash (see below).</p>
-
-<p><strong>Optional anonymous usage counts.</strong> In Settings, under “Help improve Witness”, you can turn on “Share anonymous usage counts”. It is off unless you turn it on. When on, the app sends the developer's website (witnesscamera.com, run on Cloudflare) short counts such as how a recording was started (in the app, the Action Button or Siri, or the widget), whether the camera was showing, a rounded recording length, whether the first upload succeeded, and the app version. It never sends your location, recordings, file or folder names, anything you type, or any identifier for you or your device, and the batches are sent without cookies. Only totals are kept. Turning it off stops it and deletes anything not yet sent.</p>
+<p>The app does not collect analytics, does not use advertising or tracking SDKs, and does not transmit any data to the developer. The only third parties contacted are whichever cloud storage provider you connect, for the sole purpose of uploading files to your own account there, and a time-stamp authority, which receives nothing but a cryptographic hash (see below).</p>
 
 <h2>Cloud storage access</h2>
 <p>Witness supports three kinds of storage account, and you choose one when you connect the app:</p>

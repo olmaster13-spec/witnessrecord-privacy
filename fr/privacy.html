@@ -88,7 +88,7 @@
 <body>
 
 <h1>Politique de confidentialité de Witness</h1>
-<p class="updated">Dernière mise à jour : 2 novembre 2026</p>
+<p class="updated">Dernière mise à jour : 15 septembre 2026</p>
 <p class="lang-switch">Également disponible en :
 <a href="https://witnesscamera.com/privacy">English</a><span> · </span>
 <a href="https://witnesscamera.com/de/privacy">Deutsch</a><span> · </span>
@@ -108,7 +108,7 @@
 <h2>Résumé</h2>
 <div class="summary">
 <ul>
-  <li>Witness n'a aucun serveur qui reçoit vos enregistrements ou vos données. Le site du développeur ne peut recevoir que les statistiques d'usage anonymes et facultatives décrites plus bas, et seulement si vous les activez.</li>
+  <li>Witness n'a pas de serveur. Aucun backend n'est exploité par le développeur.</li>
   <li>Vidéo, audio, position et journaux d'événements enregistrés par l'application vont <strong>directement de votre appareil vers le compte de stockage cloud que vous choisissez</strong> — Google Drive, Dropbox, ou un serveur WebDAV tel que Nextcloud que vous fournissez — nulle part ailleurs.</li>
   <li>Le développeur de Witness ne peut à aucun moment voir, accéder à, ou recevoir vos vidéos, votre position, ou les autres données de votre compte cloud.</li>
   <li>Quel que soit le fournisseur choisi, l'application ne demande que l'accès le plus restreint que ce fournisseur propose, limité à un dossier que l'application crée elle-même. Elle ne peut lire, lister ou modifier aucun autre fichier de votre compte.</li>
@@ -126,9 +126,7 @@
 <tr><td>Noms/e-mails des contacts d'urgence (si vous en ajoutez)</td><td>Partage automatique de chaque enregistrement avec des personnes de confiance, au fur et à mesure de l'envoi</td><td>Stockés sur votre appareil ; dès qu'un enregistrement commence à s'envoyer, l'adresse e-mail de chaque contact est transmise à l'API de partage de votre fournisseur (Google Drive ou Dropbox) pour lui accorder un accès en consultation au dossier de cet enregistrement. Cette fonction est indisponible avec WebDAV, qui ne dispose d'aucun mécanisme de partage</td></tr>
 </table>
 
-<p>Par défaut, l'application ne collecte aucune donnée analytique, n'utilise aucun SDK publicitaire ou de suivi et n'envoie aucune donnée au développeur ; la seule exception, facultative, est décrite plus bas. Les seuls tiers contactés sont le fournisseur de stockage cloud que vous connectez, dans le seul but d'envoyer des fichiers vers votre propre compte, et une autorité d'horodatage, qui ne reçoit rien d'autre qu'une empreinte cryptographique (voir ci-dessous).</p>
-
-<p><strong>Statistiques d'usage anonymes facultatives.</strong> Dans Réglages, sous « Aidez à améliorer Witness », vous pouvez activer « Partager des statistiques d'usage anonymes ». C'est désactivé tant que vous ne l'activez pas. Une fois activé, l'application envoie au site du développeur (witnesscamera.com, hébergé sur Cloudflare) de courts comptages, comme la façon dont un enregistrement a démarré (dans l'app, via le bouton Action ou Siri, ou via le widget), si la caméra était affichée, une durée d'enregistrement arrondie, si le premier envoi a réussi, et la version de l'app. Elle n'envoie jamais votre position, vos enregistrements, des noms de fichiers ou de dossiers, ce que vous saisissez ni aucun identifiant de vous ou de votre appareil, et sans cookies. Seuls des totaux sont conservés. Le désactiver l'arrête et supprime ce qui n'a pas encore été envoyé.</p>
+<p>L'application ne collecte pas de données analytiques, n'utilise aucun SDK publicitaire ou de suivi, et ne transmet aucune donnée au développeur. Les seuls tiers contactés sont le fournisseur de stockage cloud que vous connectez, dans le seul but d'envoyer des fichiers vers votre propre compte, et une autorité d'horodatage, qui ne reçoit rien d'autre qu'une empreinte cryptographique (voir ci-dessous).</p>
 
 <h2>Accès au stockage cloud</h2>
 <p>Witness prend en charge trois types de comptes de stockage, et vous en choisissez un lors de la connexion de l'application :</p>
