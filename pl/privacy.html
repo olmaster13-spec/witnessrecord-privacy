@@ -88,7 +88,7 @@
 <body>
 
 <h1>Polityka prywatności Witness</h1>
-<p class="updated">Ostatnia aktualizacja: 15 września 2026</p>
+<p class="updated">Ostatnia aktualizacja: 2 listopada 2026</p>
 <p class="lang-switch">Dostępne również w:
 <a href="https://witnesscamera.com/privacy">English</a><span> · </span>
 <a href="https://witnesscamera.com/de/privacy">Deutsch</a><span> · </span>
@@ -108,7 +108,7 @@
 <h2>Podsumowanie</h2>
 <div class="summary">
 <ul>
-  <li>Witness nie ma serwera. Nie istnieje żaden backend obsługiwany przez dewelopera.</li>
+  <li>Witness nie ma serwera, który odbiera Twoje nagrania lub dane. Strona dewelopera może otrzymać wyłącznie opisane niżej opcjonalne, anonimowe statystyki użycia, i tylko jeśli je włączysz.</li>
   <li>Wideo, audio, lokalizacja i dzienniki zdarzeń nagrywane przez aplikację trafiają <strong>bezpośrednio z Twojego urządzenia do wybranego przez Ciebie konta w chmurze</strong> — Google Drive, Dropbox lub podanego przez Ciebie serwera WebDAV, np. Nextcloud — i nigdzie więcej.</li>
   <li>Deweloper Witness nie może w żadnym momencie zobaczyć, uzyskać dostępu ani otrzymać Twoich nagrań, Twojej lokalizacji ani innych danych z Twojego konta w chmurze.</li>
   <li>Niezależnie od wybranego dostawcy, aplikacja żąda tylko najbardziej ograniczonego dostępu, jaki ten dostawca oferuje, ograniczonego do folderu utworzonego przez samą aplikację. Nie może odczytać, wyświetlić listy ani zmodyfikować żadnego innego pliku na Twoim koncie.</li>
@@ -126,7 +126,9 @@
 <tr><td>Imiona/e-maile kontaktów alarmowych (jeśli dodano)</td><td>Automatyczne udostępnianie każdego nagrania osobom, którym ufasz, w miarę jego wysyłania</td><td>Przechowywane na Twoim urządzeniu; gdy nagranie zaczyna być wysyłane, adres e-mail każdego kontaktu jest wysyłany do interfejsu udostępniania Twojego dostawcy (Google Drive lub Dropbox), aby przyznać mu dostęp do podglądu folderu tego nagrania. Ta funkcja jest niedostępna w WebDAV, który nie ma żadnego mechanizmu udostępniania</td></tr>
 </table>
 
-<p>Aplikacja nie zbiera danych analitycznych, nie korzysta z SDK reklamowych czy śledzących i nie przesyła żadnych danych do dewelopera. Jedynymi kontaktowanymi stronami trzecimi są dostawca chmury, którego połączysz, wyłącznie w celu wysyłania plików na Twoje własne konto tam, oraz urząd znakowania czasem, który otrzymuje wyłącznie kryptograficzny skrót (patrz poniżej).</p>
+<p>Domyślnie aplikacja nie zbiera danych analitycznych, nie korzysta z SDK reklamowych ani śledzących i nie wysyła danych do dewelopera; jedyny, opcjonalny wyjątek opisano niżej. Jedynymi kontaktowanymi stronami trzecimi są dostawca chmury, którego połączysz, wyłącznie w celu wysyłania plików na Twoje własne konto tam, oraz urząd znakowania czasem, który otrzymuje wyłącznie kryptograficzny skrót (patrz poniżej).</p>
+
+<p><strong>Opcjonalne anonimowe statystyki użycia.</strong> W Ustawieniach, w sekcji „Pomóż ulepszyć Witness”, możesz włączyć „Udostępniaj anonimowe statystyki użycia”. Jest wyłączone, dopóki go nie włączysz. Gdy jest włączone, aplikacja wysyła na stronę dewelopera (witnesscamera.com, działającą na Cloudflare) krótkie zliczenia, np. jak rozpoczęto nagranie (w aplikacji, przyciskiem czynności lub przez Siri, albo z widżetu), czy kamera była widoczna, zaokrągloną długość nagrania, czy pierwsze przesłanie się udało oraz wersję aplikacji. Nigdy nie wysyła Twojej lokalizacji, nagrań, nazw plików ani folderów, niczego, co wpisujesz, ani żadnego identyfikatora Ciebie lub urządzenia, i bez plików cookie. Przechowywane są tylko sumy. Wyłączenie zatrzymuje to i usuwa wszystko, co nie zostało jeszcze wysłane.</p>
 
 <h2>Dostęp do przechowywania w chmurze</h2>
 <p>Witness obsługuje trzy rodzaje kont w chmurze, a jedno z nich wybierasz podczas łączenia aplikacji:</p>

@@ -88,7 +88,7 @@
 <body>
 
 <h1>Privacybeleid van Witness</h1>
-<p class="updated">Laatst bijgewerkt: 15 september 2026</p>
+<p class="updated">Laatst bijgewerkt: 2 november 2026</p>
 <p class="lang-switch">Ook beschikbaar in:
 <a href="https://witnesscamera.com/privacy">English</a><span> · </span>
 <a href="https://witnesscamera.com/de/privacy">Deutsch</a><span> · </span>
@@ -108,7 +108,7 @@
 <h2>Samenvatting</h2>
 <div class="summary">
 <ul>
-  <li>Witness heeft geen server. Er is geen backend die door de ontwikkelaar wordt beheerd.</li>
+  <li>Witness heeft geen server die je opnamen of gegevens ontvangt. Het enige wat de website van de ontwikkelaar kan ontvangen, zijn de optionele, anonieme gebruikstellingen die hieronder staan beschreven, en alleen als je ze aanzet.</li>
   <li>Video, audio, locatie en gebeurtenislogboeken die de app opneemt, gaan <strong>rechtstreeks van je apparaat naar het cloudopslagaccount dat je kiest</strong> — Google Drive, Dropbox, of een door jou opgegeven WebDAV-server zoals Nextcloud — en nergens anders naartoe.</li>
   <li>De ontwikkelaar van Witness kan je opnames, je locatie of andere gegevens van je cloudaccount op geen enkel moment zien, benaderen of ontvangen.</li>
   <li>Welke aanbieder je ook kiest, de app vraagt alleen de meest beperkte toegang die die aanbieder biedt, beperkt tot een map die de app zelf aanmaakt. De app kan geen ander bestand in je account lezen, weergeven of wijzigen.</li>
@@ -126,7 +126,9 @@
 <tr><td>Namen/e-mailadressen van noodcontacten (indien toegevoegd)</td><td>Automatisch delen van elke opname met mensen die je vertrouwt, terwijl deze wordt geüpload</td><td>Opgeslagen op je apparaat; wanneer een opname begint te uploaden, wordt het e-mailadres van elk contact naar de deel-API van je aanbieder (Google Drive of Dropbox) gestuurd om hem weergavetoegang te geven tot de map van die opname. Deze functie is niet beschikbaar bij WebDAV, dat geen deelmechanisme heeft om te gebruiken</td></tr>
 </table>
 
-<p>De app verzamelt geen analysegegevens, gebruikt geen advertentie- of tracking-SDK's, en stuurt geen gegevens naar de ontwikkelaar. De enige derden die worden benaderd, zijn de cloudopslagaanbieder die je verbindt, uitsluitend om bestanden naar je eigen account daar te uploaden, en een tijdstempelautoriteit, die niets ontvangt behalve een cryptografische hash (zie hieronder).</p>
+<p>Standaard verzamelt de app geen analysegegevens, gebruikt ze geen advertentie- of tracking-SDK's en stuurt ze geen gegevens naar de ontwikkelaar; de enige optionele uitzondering staat hieronder beschreven. De enige derden die worden benaderd, zijn de cloudopslagaanbieder die je verbindt, uitsluitend om bestanden naar je eigen account daar te uploaden, en een tijdstempelautoriteit, die niets ontvangt behalve een cryptografische hash (zie hieronder).</p>
+
+<p><strong>Optionele anonieme gebruikstellingen.</strong> In Instellingen, onder ‘Help Witness verbeteren’, kun je ‘Anonieme gebruikstellingen delen’ aanzetten. Het staat uit tenzij je het aanzet. Als het aan staat, stuurt de app de website van de ontwikkelaar (witnesscamera.com, op Cloudflare) korte tellingen, zoals hoe een opname werd gestart (in de app, met de Actieknop of Siri, of via de widget), of de camera zichtbaar was, een afgeronde opnameduur, of de eerste upload lukte, en de appversie. Ze stuurt nooit je locatie, opnamen, bestands- of mapnamen, iets wat je typt of een kenmerk van jou of je apparaat, en zonder cookies. Alleen totalen worden bewaard. Uitzetten stopt het en wist wat nog niet verstuurd is.</p>
 
 <h2>Toegang tot cloudopslag</h2>
 <p>Witness ondersteunt drie soorten opslagaccounts, en je kiest er één wanneer je de app verbindt:</p>

@@ -88,7 +88,7 @@
 <body>
 
 <h1>Politica de confidențialitate Witness</h1>
-<p class="updated">Ultima actualizare: 15 septembrie 2026</p>
+<p class="updated">Ultima actualizare: 2 noiembrie 2026</p>
 <p class="lang-switch">Disponibilă și în:
 <a href="https://witnesscamera.com/privacy">English</a><span> · </span>
 <a href="https://witnesscamera.com/de/privacy">Deutsch</a><span> · </span>
@@ -108,7 +108,7 @@
 <h2>Rezumat</h2>
 <div class="summary">
 <ul>
-  <li>Witness nu are server. Nu există niciun backend operat de dezvoltator.</li>
+  <li>Witness nu are un server care să primească înregistrările sau datele tale. Singurul lucru pe care îl poate primi site-ul dezvoltatorului sunt contorizările de utilizare anonime și opționale descrise mai jos, și doar dacă le activezi.</li>
   <li>Videoclipul, sunetul, locația și jurnalele de evenimente înregistrate de aplicație ajung <strong>direct de pe dispozitivul tău în contul de stocare cloud pe care îl alegi</strong> — Google Drive, Dropbox, sau un server WebDAV precum Nextcloud, furnizat de tine — și nicăieri altundeva.</li>
   <li>Dezvoltatorul Witness nu poate, în niciun moment, să vadă, să acceseze sau să primească înregistrările tale, locația ta, sau alte date din contul tău cloud.</li>
   <li>Indiferent de furnizorul ales, aplicația solicită doar accesul cel mai restrâns oferit de acel furnizor, limitat la un folder pe care aplicația însăși îl creează. Nu poate citi, lista sau modifica niciun alt fișier din contul tău.</li>
@@ -126,7 +126,9 @@
 <tr><td>Nume/e-mailuri ale contactelor de urgență (dacă adaugi vreunul)</td><td>Partajarea automată a fiecărei înregistrări cu persoanele în care ai încredere, pe măsură ce este încărcată</td><td>Stocate pe dispozitivul tău; când o înregistrare începe să fie încărcată, adresa de e-mail a fiecărui contact este trimisă către API-ul de partajare al furnizorului tău (Google Drive sau Dropbox) pentru a-i acorda acces de vizualizare la folderul acelei înregistrări. Această funcție nu este disponibilă pe WebDAV, care nu are niciun mecanism de partajare de utilizat</td></tr>
 </table>
 
-<p>Aplicația nu colectează date analitice, nu folosește SDK-uri de publicitate sau urmărire, și nu transmite niciun fel de date către dezvoltator. Singurele terțe părți contactate sunt furnizorul de stocare cloud pe care îl conectezi, exclusiv cu scopul de a încărca fișiere în propriul tău cont acolo, și o autoritate de marcare temporală, care nu primește nimic altceva decât o amprentă criptografică (vezi mai jos).</p>
+<p>Implicit, aplicația nu colectează date analitice, nu folosește SDK-uri de publicitate sau urmărire și nu trimite date dezvoltatorului; singura excepție, opțională, este descrisă mai jos. Singurele terțe părți contactate sunt furnizorul de stocare cloud pe care îl conectezi, exclusiv cu scopul de a încărca fișiere în propriul tău cont acolo, și o autoritate de marcare temporală, care nu primește nimic altceva decât o amprentă criptografică (vezi mai jos).</p>
+
+<p><strong>Contorizări de utilizare anonime, opționale.</strong> În Setări, la „Ajută la îmbunătățirea Witness”, poți activa „Partajează contorizări anonime de utilizare”. Este dezactivat până îl activezi. Când este activ, aplicația trimite site-ului dezvoltatorului (witnesscamera.com, găzduit pe Cloudflare) contorizări scurte, precum modul în care a pornit o înregistrare (în aplicație, cu butonul de Acțiune sau Siri, ori din widget), dacă se vedea camera, o durată rotunjită a înregistrării, dacă prima încărcare a reușit și versiunea aplicației. Nu trimite niciodată locația ta, înregistrări, nume de fișiere sau dosare, ce scrii ori vreun identificator al tău sau al dispozitivului, și fără cookie-uri. Se păstrează doar totaluri. Dezactivarea îl oprește și șterge ce nu a fost încă trimis.</p>
 
 <h2>Accesul la stocarea cloud</h2>
 <p>Witness acceptă trei tipuri de conturi de stocare, iar tu alegi unul atunci când conectezi aplicația:</p>

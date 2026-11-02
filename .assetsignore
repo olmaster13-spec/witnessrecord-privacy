@@ -4,3 +4,5 @@
 .wrangler
 .DS_Store
 .assetsignore
+_worker
+wrangler.jsonc
