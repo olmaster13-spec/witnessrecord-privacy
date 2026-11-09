@@ -2980,3 +2980,398 @@ This manifest is counter-signed by an independent RFC 3161 time-stamp authority,
 
 If you are examining Witness footage professionally and something does not check out, get in touch: olmaster13@gmail.com. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.
 
+# Gen Z protests: how to document them safely with your phone
+URL: https://witnesscamera.com/gen-z-protests-how-to-document-safely
+
+## Gen Z protests: how to document them safely with your phone
+
+One set of habits that works in any country, plus where the law differs.
+
+Young people have led protests in dozens of countries in the last two years, and almost every one of them has produced phone video of police. This page is for anyone holding the phone: a student, a parent, a reporter or a bystander. The habits below hold everywhere. The law does not, so each section says where to check. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. Decide what you are for (evidence, news or testimony), film wide and steady from a safe distance, keep the phone's contents safe from seizure by uploading while you record, never promise yourself that deleting on demand is required, and write down times and places straight afterwards. The legal position on filming police differs by country, and filming never makes you immune from a dispersal order. Witness is a free iPhone and Android app that records with the screen dark and uploads footage as it is recorded, but it cannot hide the recording indicator and it always records sound.
+
+## Where the protests are
+
+Coverage by CNN, CIVICUS, Context and Britannica describes youth-led protest waves across Europe (France, Germany, Spain, Portugal, Italy, Greece, Belgium, Albania, Bulgaria, Serbia, Turkey), Asia (Nepal, Indonesia, the Philippines, India, Bangladesh), Africa (Kenya, Madagascar, Morocco, Tanzania, Togo) and Latin America (Peru, Mexico). Lists differ between sources and the situation changes weekly, so treat this as a map of where the habits below are most needed, not a ranking.
+
+In early November 2026 the heaviest day-to-day coverage is from France, where CNN reported the largest day of protests in years on 5 November and CNBC described clashes on a fourth straight weekend on 8 November. Organisers of the German "Gen Z regelt" protests told the Washington Post that more than 100,000 people took part over the Halloween weekend. Figures from organisers and governments rarely match; use them only as a rough scale.
+
+## Before you go: five habits that work in any country
+
+  - Decide your role. Evidence for yourself, material for a news outlet and a record for a lawyer need different things. Our guide to what to do with the footage covers who to give it to.
+
+  - Set up the phone at home. Update it, charge it, turn on a passcode, switch off previews of messages on the lock screen, and test your recording app once. A panic is the wrong time to find a permission prompt. The protest phone checklist has the full list.
+
+  - Send footage off the phone while you record. Phones get dropped, confiscated and unlocked under pressure. Footage that is only on the phone is the footage you are most likely to lose. Witness uploads a 15 second piece at a time to storage you own, such as Google Drive, Dropbox or Nextcloud, so most of a recording is elsewhere by the time you stop.
+
+  - Agree a plan with someone. Tell a trusted person where you will be and when you will check in. Witness can send a text with your last known position to an emergency contact when you tap Send.
+
+  - Think about other people in the frame before you post. Footage you keep as evidence and footage you publish are different decisions. Faces of bystanders, minors and anyone who could be targeted later are the reason to hold back, blur or ask first. See how to anonymise people in protest video.
+
+## During: what to film and how
+
+  - Film wide, steady and long. A single wide shot that shows what led up to an incident is worth more than a close, shaky clip that starts after it. Hold the phone horizontally.
+
+  - Keep your distance and stay behind any line the police set. Filming does not give you the right to cross a cordon, and obstruction is the usual reason people are stopped while filming.
+
+  - Know the dispersal signals. If police order a crowd to leave, staying can itself be an offence in many countries, however peaceful you are. Our guides cover filming a dispersal order and filming an arrest.
+
+  - Say the time and place aloud, if you choose. It helps the timeline. It is also on the soundtrack, and some guides advise against speaking at all. Both are fair choices; pick one deliberately.
+
+  - If you are told to stop or to delete, stay calm and keep your hands visible. Do not argue about the law at the scene. See can police make you delete your video? and what to say if asked.
+
+## After: the first hour matters most
+
+  - Write down the time, place, units and anything the footage does not show while you still remember it.
+
+  - Do not edit the original. Work on copies. Edits and re-exports change a file's fingerprint and make it harder to show it is unchanged.
+
+  - Give the original to a person who can use it: a lawyer, a legal-observer group, a news desk or a complaints body. See Witness for legal observers and the verification page, which checks a Witness recording in your browser without uploading it.
+
+## The law depends on where you stand
+
+In many democracies filming on-duty police in public is lawful, with limits on obstruction, on recording audio and on publishing identifiable officers. In others it is risky or criminalised. Do not assume the rule from a country you know. Guides we have written so far:
+
+  - France, Germany and the United Kingdom (English)
+
+  - France (français), Germany (Deutsch), Italy (italiano), Spain (español), Greece (Ελληνικά)
+
+  - Europe country by country and the United States (immigration agents)
+
+  - Recording laws and consent rules
+
+  We have not yet written country guides for Kenya, Indonesia, the Philippines, India, Nepal, Peru or Mexico, and we will not guess at their law. If you are filming in a place with a history of violent policing or of prosecuting people who film, speak to a local lawyer or a local human-rights group before you go, and consider whether the risk of being seen to film is higher than the value of the footage.
+
+## What Witness does and does not do here
+
+  - Does: record with the screen dark, upload while recording to storage you own, fingerprint each piece with SHA-256, write a manifest with UTC times and optional location, and get that manifest time-stamped by an independent authority. The features page explains each step.
+
+  - Does not: hide the green or orange recording dot on iPhone or the notification on Android, stop recording sound, add encryption of its own, or make footage admissible anywhere. A hash shows a file has not changed, not what it shows.
+
+  - Compare: see how Witness compares with Tella, ProofMode, eyeWitness and others, including where each is the better choice.
+
+## Questions
+
+  
+## How do I film a protest safely?
+
+  Film wide and steady from a distance, stay behind any police line, upload footage off your phone while you record, tell someone where you are, and write down times and places afterwards. Know whether staying after a dispersal order is an offence where you are.
+
+  
+## Is it legal to film police at a protest?
+
+  In many democracies it is lawful to film on-duty police in a public place, with limits on obstruction, audio recording and publishing identifiable officers. In others it is risky or an offence. The rule depends on the country you are standing in, so check before you go.
+
+  
+## What if the police take my phone?
+
+  They may be able to seize it in some circumstances, and a passcode and encryption on the phone help. Footage that has already uploaded to your own cloud storage stays out of their reach. Whether you can be made to unlock it depends on the country, so do not hand over a passcode at the scene and ask for a lawyer.
+
+  
+## Which app records a protest and uploads while recording?
+
+  Witness Camera for iPhone and Android uploads a 15 second piece at a time to Google Drive, Dropbox, Nextcloud or WebDAV while recording. Other tools, such as Tella and ProofMode, take different approaches; see our comparison.
+
+  
+## Can I film with the screen off?
+
+  Yes, with Witness the display stays dark while it records. The iPhone green camera dot and orange microphone dot, and the Android notification, cannot be hidden by any app.
+
+## Try it free
+
+Set it up and test it at home before you need it. The free app includes black-screen recording, upload while recording and a verifiable record of each recording.
+
+  Get Witness Camera for Free
+  Get it on Google Play
+
+## Related guides
+
+  - Is it legal to film police in France?
+
+  - Is it legal to film police in the UK? A guide for England and Wales
+
+  - Is it legal to film police in Germany?
+
+  - Filming the police in Europe: country by country
+
+Written on 9 November 2026. Protest dates, laws and prices change. This is not legal advice.
+
+# Is it legal to film police in France?
+URL: https://witnesscamera.com/is-it-legal-to-film-police-in-france
+
+## Is it legal to film police in France?
+
+An English guide for visitors, expats and reporters at the 2026 protests.
+
+France has had four straight weekends of mass protests, and many of the people filming are not French. This page answers the question in English and says what we are sure of and what we are not. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. Filming on-duty police in a public place is generally not an offence in France, and the Conseil constitutionnel struck down in 2021 a provision that would have punished malicious publication of police images. The real risks at a protest are different: staying in a gathering after dispersal orders, obstructing officers, and publishing images with an intent to harm. Police cannot lawfully demand that you delete footage, but they can seize a phone as part of a criminal procedure. This is general information, not legal advice. Laws change and courts differ; check with a local lawyer or a legal-observer group before you rely on it.
+
+## What is happening
+
+Protests that began in September over living costs and conditions in schools have continued for several weeks. CNN reported the largest day of protests in years on 5 November, with tear gas used in Lyon, and CNBC reported clashes on a fourth straight weekend on 7 and 8 November. Further dates are announced by unions and student groups at short notice, so check current news the day before and treat any date in this page as out of date.
+
+## What the law says, as far as we can verify
+
+  - Filming police in public. There is no general offence of filming on-duty police in a public place. A 2021 attempt to criminalise the "provocation to identify" officers with a manifest intent to harm them, in the "sécurité globale" law, was struck down by the Conseil constitutionnel (decision 2021-817 DC of 20 May 2021) as too imprecise. The government had said the target was publication with intent to harm, not filming.
+
+  - Blurring officers' faces. A secondary legal guide states that blurring is not a legal requirement for publishing since that decision. We could not check this against the primary text, so treat it as unconfirmed.
+
+  - Staying after a dispersal order. Remaining in a gathering after being told to disperse can be an offence in its own right, and the penalty is higher if the face is concealed. Filming does not protect you from this. Our French guide to filming a dispersal order explains the signals.
+
+  - Publishing violent images. French law punishes some publication of violent acts, with exceptions for evidence and for professional news activity. See the French legal page for the detail and the articles to read in the original.
+
+  - Deletion and seizure. Police have no power to order you to delete footage. A phone can be seized as evidence in a criminal procedure, which is one reason to upload while recording.
+
+  We could not retrieve the primary texts from Légifrance while preparing this page. Penalties and article numbers in French law change; read the current text or ask a French lawyer before relying on them.
+
+## If you are a visitor or an expat
+
+  - Nothing in French law that we know of gives foreigners fewer rights to film than French citizens, but a foreigner arrested at a protest faces extra consequences, such as immigration and visa questions. Ask your embassy or a lawyer if you are unsure.
+
+  - Keep your passport or residence card with you if you are required to carry it, and keep your phone locked.
+
+  - Stay out of areas the police have closed. Paris authorities have banned some gatherings and refused requests; a banned gathering is not a safe place to film.
+
+## Practical steps in France
+
+  - Set up the phone before you leave. Use our French checklist or the English one.
+
+  - Film from a distance, behind the line, with a wide frame. Say the time and place aloud only if you choose to.
+
+  - If asked to leave, leave. If asked to delete, say politely that you will not, and show your hands.
+
+  - If you are injured or witness an injury, keep the footage and the time. In France you can report police conduct to the IGPN, the national police's internal inspectorate, or to the Défenseur des droits. An IGPN online report is not the same as a formal complaint, so ask a lawyer how to file one. See after the protest: who to give the footage to (in French).
+
+## What Witness adds, and what it cannot do
+
+Witness records with the screen dark and uploads a piece every 15 seconds to storage you own, so if the phone is taken, most of the recording is already elsewhere. Each piece is hashed, and the manifest is time-stamped by an independent authority. It cannot hide the recording dot or the Android notification, always records sound, and adds no encryption of its own. The app and the French guides are available in French: see comment filmer la police.
+
+## Questions
+
+  
+## Is it legal to film police in France?
+
+  Filming on-duty police in a public place is generally not an offence. The risks at a protest come from other rules: staying after a dispersal order, obstructing officers, and publishing images with an intent to harm.
+
+  
+## Can French police make me delete my video?
+
+  They have no power to order deletion. They can, in a criminal procedure, seize a phone as evidence, which is why uploading footage off the phone while you record is sensible.
+
+  
+## Can I post a video of police on social media in France?
+
+  Generally yes, with care. The Conseil constitutionnel struck down a 2021 provision on malicious publication of police images, but other rules on privacy and on violent images still apply. Consider blurring bystanders and take legal advice for sensitive footage.
+
+  
+## Is it safe to film French protests as a tourist?
+
+  The risk is mostly from being close to clashes, tear gas and dispersal operations. Stay out of banned or closed areas, keep a distance and leave when told to.
+
+  
+## Where can I complain about police behaviour in France?
+
+  The IGPN inspectorate and the Défenseur des droits are two routes. An online IGPN report is not a formal complaint; ask a lawyer how to proceed.
+
+## Try it free
+
+Set it up and test it at home before you need it. The free app includes black-screen recording, upload while recording and a verifiable record of each recording.
+
+  Get Witness Camera for Free
+  Get it on Google Play
+
+## Related guides
+
+  - Gen Z protests: how to document them safely with your phone
+
+  - Is it legal to film police in the UK? A guide for England and Wales
+
+  - Is it legal to film police in Germany?
+
+  - Filming the police in Europe: country by country
+
+Written on 9 November 2026. Protest dates, laws and prices change. This is not legal advice.
+
+# Is it legal to film police in the UK? A guide for England and Wales
+URL: https://witnesscamera.com/is-it-legal-to-film-police-in-the-uk
+
+## Is it legal to film police in the UK? A guide for England and Wales
+
+You may film. Police still have other powers.
+
+People searching this are usually standing at a protest or have just seen an arrest. The short version is reassuring and incomplete. This guide covers England and Wales; Scotland and Northern Ireland have separate laws. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. In England and Wales there is no offence of filming or photographing police in a public place, and Liberty says you may film police, including at a stop and search or arrest. The Public Order Act 2023 stops police using certain powers for the sole purpose of preventing someone observing or reporting on a protest. Police need another reason, such as obstruction, to act against you, and they have no legal power to make you delete footage. Publishing or sharing images of officers can carry separate risks. This is general information, not legal advice. Laws change and courts differ; check with a local lawyer or a legal-observer group before you rely on it.
+
+## What the guidance from rights groups says
+
+  - Filming is lawful. Liberty states that you are legally allowed to film or photograph police, including when observing or intervening in a stop and search or arrest, or when monitoring and reporting on their conduct at a protest.
+
+  - Police need another reason to stop you. Liberty adds that police must have some other lawful reason to use their powers against someone monitoring a protest, such as obstruction. The Public Order Act 2023, as Liberty describes it, bars police from using their powers for the sole purpose of preventing someone from observing or reporting on a protest.
+
+  - No power to delete. Guides from rights organisations say officers have no legal power to delete your images or destroy film. A phone can be seized in some circumstances, such as a lawful arrest; ask for a solicitor.
+
+  - Publishing carries its own risk. Privacy International's fact sheet warns that there are circumstances in which it may be an offence to publish or distribute a photograph of a police officer, and notes that photos posted online can be used to identify people at a protest. It refers to section 58A of the Terrorism Act 2000, which concerns collecting or publishing information about police that is likely to be useful to someone preparing an act of terrorism. A reasonable-excuse defence exists. Read the fact sheet and take advice if your footage identifies officers in an unusual way.
+
+## Where it can go wrong
+
+  - Obstruction. Standing in the way of officers, blocking a line or interfering with an arrest can be treated as obstruction, whether or not you are filming.
+
+  - Conditions on protests. Police can impose conditions on assemblies and processions under the Public Order Act 1986. Ignoring them is an offence, and filming does not excuse it.
+
+  - Police buildings and sensitive sites. Filming near police stations and some other sites can raise security concerns and attract questions.
+
+  - Being filmed back. Police also film protests. If privacy matters to you, think about what you post and who is identifiable.
+
+## If an officer tells you to stop or to delete
+
+  - Stay calm and keep your hands visible.
+
+  - Ask which power they are using and why. You do not have to argue the law at the scene.
+
+  - You may keep recording unless there is a lawful reason to stop. Do not unlock your phone or give a passcode at the scene; ask for a solicitor if you are arrested.
+
+  - Write down the time, place and any officer numbers straight afterwards.
+
+## Where to get help
+
+Liberty publishes advice for people monitoring and reporting on protests, and legal observer groups attend many demonstrations. See Witness for legal observers. The detail of any one case belongs with a solicitor who handles protest and public-order law.
+
+## What Witness adds, and what it cannot do
+
+Witness records with the screen dark and uploads while recording, hashes each piece and has the manifest independently time-stamped, so footage can be shown to be unchanged. It cannot hide the recording indicator, always records sound, and adds no encryption of its own. For other countries see filming the police in Europe.
+
+## Questions
+
+  
+## Is it legal to film police in the UK?
+
+  In England and Wales there is no offence of filming police in a public place, according to guidance from Liberty. Police can still act on other grounds, such as obstruction. Scotland and Northern Ireland have separate laws.
+
+  
+## Can UK police make me delete my footage?
+
+  Rights organisations say police have no legal power to make you delete images. A phone can be seized in some circumstances, such as a lawful arrest.
+
+  
+## Can I post a video of police officers online in the UK?
+
+  Often yes, but Privacy International warns that publishing photographs of officers can in some circumstances be an offence, including under section 58A of the Terrorism Act 2000. Get advice if the footage is unusual.
+
+  
+## Does the Public Order Act 2023 protect people filming protests?
+
+  Liberty says it prevents police using certain powers for the sole purpose of stopping someone observing or reporting on a protest. They can still act if there is another lawful reason.
+
+  
+## Can police film me at a protest?
+
+  Yes, police do film protests. Think about who is identifiable in anything you post.
+
+## Try it free
+
+Set it up and test it at home before you need it. The free app includes black-screen recording, upload while recording and a verifiable record of each recording.
+
+  Get Witness Camera for Free
+  Get it on Google Play
+
+## Related guides
+
+  - Gen Z protests: how to document them safely with your phone
+
+  - Is it legal to film police in France?
+
+  - Is it legal to film police in Germany?
+
+  - Filming the police in Europe: country by country
+
+Written on 9 November 2026. Protest dates, laws and prices change. This is not legal advice.
+
+# Is it legal to film police in Germany?
+URL: https://witnesscamera.com/is-it-legal-to-film-police-in-germany
+
+## Is it legal to film police in Germany?
+
+Filming is generally allowed. Publishing and audio are where people get into trouble.
+
+Germany saw large student-led protests at the end of October, and many people filming them are asking this in English. The honest answer has three parts: filming, publishing and sound. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. Filming police operations in Germany is generally permitted. The risk lies in publishing identifiable footage without consent, which can breach the Kunsturhebergesetz (up to one year in prison or a fine), and in recording audio, which is a separate issue under section 201 of the Strafgesetzbuch. Police may ask filmers to identify themselves. Courts disagree on details, so ask a lawyer about footage you plan to publish. This is general information, not legal advice. Laws change and courts differ; check with a local lawyer or a legal-observer group before you rely on it.
+
+## Filming
+
+German legal commentary says that filming and photographing police operations is generally permitted. The criminal exposure under the Kunsturhebergesetz (KUG) arises when images are distributed or shown publicly without the consent of the person depicted. Police may still ask you to identify yourself. One older administrative court decision reported by Legal Tribune Online (LTO) found that police could not simply assume that footage would be published; they needed concrete indications. That decision is about 13 years old, so check whether it still reflects the case law.
+
+## Publishing
+
+  - Portraits of police officers generally cannot be published without their consent, unless the publication relates to a police operation of special public interest, according to German legal guides.
+
+  - Breaching the right to one's own image under section 33 KUG can carry up to a year in prison or a fine. A Berlin Kammergericht ruling in November 2023 dealt with a fine for filming a police operation.
+
+  - One lawyer's guide advises blurring faces when publishing videos of routine police operations. Footage kept as evidence and given to a lawyer or court is treated differently from footage posted on social media.
+
+## Sound
+
+Recording the non-public spoken word without consent can be an offence under section 201 of the Strafgesetzbuch. How this applies to officers on duty in public is contested, and we do not claim to settle it. Witness always records sound, and you cannot turn it off. If you are in Germany, that is a real consideration; ask a lawyer, and think about who is speaking close to your phone.
+
+## What to do in practice
+
+  - Film wide, from a distance, behind the line.
+
+  - Keep the original. If you publish, blur identifiable faces of officers and bystanders first.
+
+  - If police ask for your identity, comply with identification; do not give a passcode. Ask what the legal basis is and note the time.
+
+  - Give evidence footage to a lawyer or a recognised legal-observer organisation rather than posting it first. In German see Polizei filmen: was ist erlaubt? and the guide for school and student protests.
+
+## What Witness adds, and what it cannot do
+
+Witness records with the screen dark, uploads while recording to storage you own, hashes each piece and has the manifest independently time-stamped. It cannot hide the recording indicator, cannot record without sound, and does not blur faces. See how to anonymise people in protest video for what to use instead.
+
+## Questions
+
+  
+## Is it legal to film police in Germany?
+
+  Filming police operations is generally permitted. Publishing identifiable images without consent can breach the Kunsturhebergesetz, and recording sound can raise a separate issue under section 201 of the Strafgesetzbuch.
+
+  
+## Can I post a video of German police on social media?
+
+  It is risky if officers are identifiable. German guides advise blurring faces unless the footage relates to an operation of special public interest, and taking legal advice.
+
+  
+## Do I have to show my ID if I film police in Germany?
+
+  Police may ask filmers to identify themselves. One older court decision said they need concrete indications of intended publication; check current case law.
+
+  
+## Is recording audio of police illegal in Germany?
+
+  Recording the non-public spoken word without consent can be an offence under section 201 StGB. How it applies to officers in public is contested. Ask a lawyer.
+
+  
+## Where can I read this in German?
+
+  See our German guide, Polizei filmen: was ist erlaubt?
+
+## Try it free
+
+Set it up and test it at home before you need it. The free app includes black-screen recording, upload while recording and a verifiable record of each recording.
+
+  Get Witness Camera for Free
+  Get it on Google Play
+
+## Related guides
+
+  - Gen Z protests: how to document them safely with your phone
+
+  - Is it legal to film police in France?
+
+  - Is it legal to film police in the UK? A guide for England and Wales
+
+  - Filming the police in Europe: country by country
+
+Written on 9 November 2026. Protest dates, laws and prices change. This is not legal advice.
