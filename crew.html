@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Join a Witness crew</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .crew { max-width: 34rem; margin: 4rem auto; padding: 0 1rem; text-align: center; }
+  .crew a.button { display: inline-block; margin: .5rem; padding: .8rem 1.4rem; border-radius: 999px;
+                   background: #fff; color: #000; text-decoration: none; font-weight: 600; }
+  .crew p { line-height: 1.5; }
+</style>
+</head>
+<body>
+<main class="crew">
+  <h1>Join a Witness crew</h1>
+  <p>Someone invited you to record an event together. Open the invite in the Witness app to join their crew.</p>
+  <p><a class="button" id="open" href="witnessrecord://crew">Open in Witness</a></p>
+  <p>Don't have Witness yet? Install it, then tap this link again.</p>
+  <p><a class="button" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426">Get Witness on the App Store</a></p>
+  <p><small>The invite stays in your browser: the part of the link after # is never sent to this website.</small></p>
+</main>
+<script>
+  // The crew travels in the fragment, which browsers never send to a server.
+  var hash = location.hash;
+  if (hash.length > 1) {
+    var target = "witnessrecord://crew" + hash;
+    document.getElementById("open").href = target;
+    location.replace(target);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why phone clocks disagree, and how to line up videos anyway</title>
+<meta name="description" content="Phones that show the same minute can differ by seconds. How phone time is set, how large the error can be, how clocks can be compared in a round trip, and what that means for syncing video and for evidence.">
+<link rel="canonical" href="https://witnesscamera.com/why-phone-clocks-disagree">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/app-icon.webp" type="image/webp">
+<link rel="apple-touch-icon" href="img/app-icon.png">
+<meta name="theme-color" content="#08080a">
+<meta name="apple-itunes-app" content="app-id=6800375426">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Witness Camera">
+<meta property="og:title" content="Why phone clocks disagree, and how to line up videos anyway">
+<meta property="og:description" content="Phones that show the same minute can differ by seconds. How phone time is set, how large the error can be, how clocks can be compared in a round trip, and what that means for syncing video and for evidence.">
+<meta property="og:url" content="https://witnesscamera.com/why-phone-clocks-disagree">
+<meta property="og:image" content="https://witnesscamera.com/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://witnesscamera.com/img/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Why phone clocks disagree, and how to line up videos anyway",
+      "description": "Phones that show the same minute can differ by seconds. How phone time is set, how large the error can be, how clocks can be compared in a round trip, and what that means for syncing video and for evidence.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://witnesscamera.com/#org"
+      },
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://witnesscamera.com/why-phone-clocks-disagree"
+      },
+      "image": "https://witnesscamera.com/img/og-card.png"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do two phones show different times?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each sets its clock from a network time source at different moments and the request and reply can take different times, so the result can be off by an unknown amount. Each clock can also drift between checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far apart can phone clocks be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually a fraction of a second, but there is no guarantee. Android's documentation gives a theoretical worst case of about 2.5 seconds for its network time method."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I sync two phones to the same clock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compare them directly by sending a time back and forth, removing the round-trip delay, and applying the difference. Witness Crew does this on iPhone when the Crew screen is open on both phones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a matched clock prove when something happened?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It shows how two phones relate to each other. Independent time-stamping is what proves a recording existed by a certain time."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://witnesscamera.com/#org",
+      "name": "Witness Camera",
+      "url": "https://witnesscamera.com/",
+      "email": "olmaster13@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://witnesscamera.com/img/app-icon.png"
+      },
+      "alternateName": [
+        "Witness",
+        "Witness: Camera Beyond Reach",
+        "Witness Camera app"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426",
+        "https://play.google.com/store/apps/details?id=com.witnessrecord.app"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Overview</a>
+      <a href="witness-for-professionals">Witness Pro</a>
+      <a href="how-it-works">How it works</a>
+      <a href="field-guide">Field guide</a>
+      <a href="verify">Verify</a>
+      <a href="faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="wrap narrow prose">
+<h1>Why phone clocks disagree, and what to do about it</h1>
+<p class="tagline">How phones get the time, how far off it can be, and how to put several phones on one clock.</p>
+
+<p class="lede">When you line up video from two phones, the file timestamps almost never agree. This page explains why, how big the gap can be, and the idea behind comparing two clocks over a short link. It is background for <a href="witness-crew-record-together">Witness Crew</a> and for anyone syncing footage by hand. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.</p>
+
+<div class="note">
+  <p><strong>Short answer.</strong> A phone sets its clock from a network time source, and the process can be off by an unknown amount because the request and the reply may travel for different lengths of time. Two phones can therefore disagree by a fraction of a second or more. You can measure the difference between two phones by sending a time back and forth and removing the round-trip delay; Witness Crew does this and stamps each recording with the result.</p>
+</div>
+
+<h2>Where a phone gets the time</h2>
+<p>Most phones set their clock automatically from a network time source, sometimes the mobile carrier and sometimes an internet time server. Android's documentation says it uses the Simple Network Time Protocol, SNTP, over UDP, by default asking Google's public time servers, and that by default it does so about once a day. Android 14 and later can use more than one server. Between checks, the phone's own clock keeps time and can drift. I have not found Apple's published accuracy figures for iPhone, so I will not give one.</p>
+<h2>Why the answer can be wrong</h2>
+<p>SNTP assumes the request takes as long to reach the server as the reply takes to come back. If the two legs differ, the error grows. Android's documentation gives a theoretical worst case of about 2.5 seconds, when all the delay is on one leg. Mobile networks can add uneven delays like this. In normal conditions the error is usually far smaller, but it is not measured for you and not shown to you.</p>
+<p>The result is that two phones on different carriers, or one set a day ago and one set a minute ago, can disagree by more than a video frame, which at 30 frames per second is a thirtieth of a second.</p>
+<h2>How to compare two clocks directly</h2>
+<p>Two phones near each other can compare clocks without a server, the same way network time works. This is the method Witness Crew uses:</p>
+<ol>
+  <li>Phone A sends a message with the time it was sent.</li>
+  <li>Phone B records when the message arrived and when it replied, and puts both in the reply.</li>
+  <li>Phone A notes when the reply arrived. The round-trip time, minus the time B spent before replying, is the delay of the trip.</li>
+  <li>B's clock is taken to have read its time at the middle of the trip, which gives an offset between the two clocks, with an error of at most half the delay.</li>
+  <li>Repeat in a quick burst and keep the exchange with the shortest delay, because the shorter the trip, the less room there is for error.</li>
+</ol>
+<p>In Witness Crew, each member other than the organizer sends a burst of twelve of these exchanges to each phone it meets (the organizer's clock is the reference and is never measured), discards any answer that took a second or more, and keeps the tightest result. Offsets chain back to the organizer, so two members who never met each other still share one timeline, with the uncertainty of each link added up. The Crew screen shows the resulting match in milliseconds, and each recording's manifest carries the offset and its uncertainty.</p>
+<h2>What this means in practice</h2>
+<ul>
+  <li><strong>For editing:</strong> a measured offset places a clip to within a frame or better when the uncertainty is small, without any audio matching. Audio sync is still a good check. See <a href="how-to-sync-videos-from-multiple-phones">how to sync videos from multiple phones</a>.</li>
+  <li><strong>For logging:</strong> if you note the time by hand, remember it is the phone's time, which may be off.</li>
+  <li><strong>For evidence:</strong> a matched clock tells you how two phones relate to each other. It does not prove what time it really was. For that, an independent time-stamp authority signs a hash of the recording's manifest, as in <a href="trusted-timestamp-video-rfc-3161">trusted time-stamping with RFC 3161</a>.</li>
+</ul>
+<h2>Limits</h2>
+<ul>
+  <li>The method needs the phones to be in contact once, nearby, before filming. Without that, Crew uses each phone's own time.</li>
+  <li>It corrects the difference between clocks at that moment. A phone's clock can drift afterwards, so match clocks shortly before filming, not days before.</li>
+  <li>The shortest-delay rule assumes the trip is about equally fast in both directions, which is the same assumption network time makes. A short trip limits how wrong that can be, but does not remove it.</li>
+</ul>
+
+<h2>Questions</h2>
+<div class="qa">
+  <h3>Why do two phones show different times?</h3>
+  <p>Each sets its clock from a network time source at different moments and the request and reply can take different times, so the result can be off by an unknown amount. Each clock can also drift between checks.</p>
+</div>
+<div class="qa">
+  <h3>How far apart can phone clocks be?</h3>
+  <p>Usually a fraction of a second, but there is no guarantee. Android's documentation gives a theoretical worst case of about 2.5 seconds for its network time method.</p>
+</div>
+<div class="qa">
+  <h3>How can I sync two phones to the same clock?</h3>
+  <p>Compare them directly by sending a time back and forth, removing the round-trip delay, and applying the difference. Witness Crew does this on iPhone when the Crew screen is open on both phones.</p>
+</div>
+<div class="qa">
+  <h3>Does a matched clock prove when something happened?</h3>
+  <p>No. It shows how two phones relate to each other. Independent time-stamping is what proves a recording existed by a certain time.</p>
+</div>
+
+<h2>Try it free</h2>
+<p>Set it up and test it at home before you need it. Crew is free, like the rest of the recording basics.</p>
+<div class="actions" style="margin:22px 0 8px">
+  <a class="btn btn-primary" href="https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Get Witness Camera for Free</a>
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.witnessrecord.app"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.2v17.6a.8.8 0 0 0 1.2.7l14.4-8.8a.8.8 0 0 0 0-1.4L6.2 2.5A.8.8 0 0 0 5 3.2z"/></svg>Get it on Google Play</a>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+  <li><a href="how-to-sync-videos-from-multiple-phones">How to sync videos from multiple phones</a></li>
+  <li><a href="how-to-film-an-event-with-multiple-phones">How to film an event with several phones</a></li>
+  <li><a href="witness-crew-record-together">Witness Crew: record together on several iPhones</a></li>
+  <li><a href="witness-features-explained">Witness features explained</a></li>
+</ul>
+<p class="muted">Written on 23 November 2026. Menu names in video editors change between versions; check your editor's current help. Crew features are as of Witness 1.1.13 for iPhone.</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./" style="margin-bottom:10px"><img src="img/witness-mark.webp" alt="" width="26" height="26">Witness Camera</a>
+        <div class="muted">Document encounters. Preserve the footage.</div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="why-phone-clocks-disagree">Why phone clocks disagree, and what to do about it</a>
+        <a href="witness-app">Which Witness app?</a>
+        <a href="witness-record">About Witness Camera</a>
+        <a href="who-made-this">Who made it</a>
+        <a href="filming-the-police-in-europe">Filming police in Europe</a>
+        <a href="how-to-film-police">How to film police</a>
+        <a href="how-to-record-police">Recording safely</a>
+        <a href="filming-police-protest">Filming at a protest</a>
+        <a href="filming-police-student-protests-europe">Student protests in Europe</a>
+        <a href="can-police-delete-your-video">Can they take your phone?</a>
+        <a href="recording-law">Recording law</a>
+        <a href="how-to-film-ice">How to film ICE</a>
+        <a href="recording-ice">Recognising ICE</a>
+        <a href="ice-at-your-door">ICE at your door</a>
+        <a href="record-iphone-screen-off">Recording screen-off</a>
+        <a href="record-screen-off">What screen-off means</a>
+        <a href="best-apps-journalists-filmmakers">Apps for journalists</a>
+        <a href="compare">Compare apps</a>
+        <a href="mobile-justice-alternative">Mobile Justice alternative</a>
+        <a href="how-it-works">How it works</a>
+        <a href="field-guide">Field guide</a>
+        <a href="verify">Verify footage</a>
+        <a href="witness-for-professionals">Witness for Professionals</a>
+        <a href="faq">FAQ</a>
+        <a href="privacy">Privacy</a>
+      </nav>
+    </div>
+    <p class="foot-note">iPhone: iOS 17 and later. Android: 11 and later. Questions, bug reports, or enquiries from newsrooms and legal teams: <a href="mailto:olmaster13@gmail.com">olmaster13@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

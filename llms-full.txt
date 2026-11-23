@@ -3375,3 +3375,382 @@ Set it up and test it at home before you need it. The free app includes black-sc
   - Filming the police in Europe: country by country
 
 Written on 9 November 2026. Protest dates, laws and prices change. This is not legal advice.
+
+# How to sync videos from multiple phones: audio, claps, markers or a shared clock
+URL: https://witnesscamera.com/how-to-sync-videos-from-multiple-phones
+
+## How to sync videos from multiple phones
+
+Audio, a clap, a marker or a shared clock: what works, what fails, and how to shoot for it.
+
+Two phones filmed the same moment and now you have two files that start at different times. Lining them up is easy when you planned for it and slow when you did not. This guide covers the four methods in use, what the main editors offer, and what to do on the day so the edit takes minutes. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. Most editors sync phone clips by matching the sound, so keep audio on for every phone and make a loud clap or call out the time at the start. If the sound is poor, line clips up by a marker you set at the same moment. Phones rarely share timecode, so the other option is to stamp every recording on one common clock before filming, which is what Witness Crew does on iPhone.
+
+## Why clips from different phones do not line up
+
+Each phone starts recording when its owner presses the button, so every file begins at a different moment. Each phone also keeps its own clock, and two phones that both show the same minute can still disagree by a second or more. A file's start time is therefore good for putting clips in rough order and poor for lining them up to a frame. See why phone clocks disagree for how far off they can be.
+
+## Method 1: sync by audio waveform
+
+This is the default in most editors. The software compares the sound in each clip and slides them until the waveforms match. Apple's documentation says to record audio on every camera and recording device in a multicam production, and that Final Cut Pro's automatic angle synchronization relies on audio waveforms. Apple also says some recordings are not suited to the feature and that long processing times are possible.
+
+  - Works best when every phone hears the same loud event: a clap, a shout, a siren, a crowd chant.
+
+  - Fails when one phone is muted, wind covers the microphone, the phones are far apart so the sound arrives at different times, or the only sound is quiet and continuous.
+
+  - Sound travels slowly. A phone 30 metres from the clap hears it about a tenth of a second after a phone beside it, roughly three frames at 30 frames per second. Close enough for most edits, visible in a tight cut.
+
+## Method 2: sync by a clap or marker you set yourself
+
+If automatic sync gives up, find one sharp moment that every clip shows, such as the clap, a flash, a door slamming or a car passing, and mark it at the same point in each clip. Final Cut Pro can use the first marker of each clip as the sync point. Frame.io's tutorials describe setting a marker at the same moment in each clip and choosing markers for angle sync in DaVinci Resolve. It takes a minute per clip and always works if the moment is visible or audible in every one.
+
+## Method 3: sync by timecode
+
+Cinema cameras and audio recorders can share a timecode signal, and Premiere Pro and DaVinci Resolve can sync by it. Phones do not normally share timecode with each other, so this method is for dedicated cameras. Rode's guide for Premiere Pro describes the Timecode choice in the Synchronize Point menu for gear that has a timecode generator.
+
+## Method 4: sync by a shared clock set before you film
+
+If all the phones agree on the time before recording starts, each file's start time can be used to place it on the timeline with no audio matching at all. This is useful when the audio is unusable, for example a loud crowd, wind or a phone filming in a pocket. Witness Crew does this on iPhone: the phones measure their clocks against each other, every recording is stamped with its offset, and the app can export timelines with every angle already placed. See Witness Crew and how to film an event with several phones.
+
+## What the main editors offer
+
+  Editor | Sync by audio | Other options (per vendor and tutorial documentation)
+  Final Cut Pro | Angle Synchronization set to Automatic when creating a multicam clip; Synchronize Clips with "Use audio for synchronization" | Timecode; first frame or first marker as the sync point; manual angle adjustment in the angle editor
+  Premiere Pro | Multi-camera source sequence, synchronized by audio | Timecode in the Synchronize Point menu; markers
+  DaVinci Resolve | Auto Sync Audio with the Waveform setting | Timecode; Auto Align Clips; markers for angle sync
+
+  Menu names move between versions and I have not re-checked every release. Treat the table as a map of what to look for, and read your editor's current help for the exact steps.
+
+## Shooting so that syncing is easy
+
+  - Keep sound on for every phone, including the one filming from a distance.
+
+  - Start every phone before the action, and make one loud, sharp sound where all of them can hear it.
+
+  - Do not stop and restart a phone mid-event if you can avoid it. Every restart is a new file to sync.
+
+  - Overlap: if one phone must stop, another should still be running, so you never have to bridge a gap.
+
+  - Note the time and place each phone started, in writing, straight afterwards.
+
+## A note on evidence
+
+Syncing is for watching and editing. If the footage may matter as evidence, keep every original untouched and work on copies, because editing changes a file's fingerprint. Hashing and time-stamping explains why, and the verification page checks a Witness recording in your browser without uploading it.
+
+## How do I sync videos from different phones?
+
+  Import all the clips into a video editor and sync them by audio, which Final Cut Pro, Premiere Pro and DaVinci Resolve can all do. If the sound is poor, mark the same moment in each clip, or place them from start times recorded on a common clock.
+
+## Can I sync phone videos without a clap?
+
+  Often yes, if the phones recorded the same loud sound such as a crowd, a siren or music. A clap or spoken count makes it reliable, and a marker or shared clock covers the cases where the audio does not match.
+
+## Why do my synced angles drift apart?
+
+  Common causes are a clip with variable timing, a long clip synced at only one point, or phones far apart so the sound arrives at different moments. Check the start and the end, and split and re-sync long clips.
+
+## Do phones share timecode?
+
+  Not normally. Timecode sync is meant for cameras and recorders with a timecode generator. For phones, use audio, a marker, or a common clock.
+
+## Is there a free way to record several phones on one clock?
+
+  Witness Crew on iPhone is free. The phones are matched to the crew organizer's clock and each recording is stamped with its offset. It is not available on Android yet.
+
+## Related guides
+
+  - How to film an event with several phones: a plan for a group
+
+  - Witness Crew: record an event on several iPhones and watch every angle together
+
+  - Why phone clocks disagree, and how to line up videos anyway
+
+
+Written on 23 November 2026. Menu names in video editors change between versions; check your editor's current help. Crew features are as of Witness 1.1.13 for iPhone.
+
+# How to film an event with several phones: a plan for a group
+URL: https://witnesscamera.com/how-to-film-an-event-with-multiple-phones
+
+## How to film an event with several phones
+
+Positions, overlap, one clock and a shared folder, for a group that wants every angle.
+
+One phone sees one side. What it misses, another one can catch: the start of an incident, a face, a badge number, the crowd behind. This is a plan for a small group that wants to cover an event together and still have usable footage afterwards. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. Agree roles and positions before you go, add a phone that stays wide, start everyone before the action, never leave a gap with nobody filming, and put every recording on a common clock and in a shared folder so each person's footage reaches the others as it uploads. On iPhone, Witness Crew handles the clock and the sharing.
+
+## Why film in a group
+
+  - Coverage. A wide shot shows what led up to an incident. A close shot shows detail. A shot from behind shows what the others cannot see.
+
+  - Corroboration. Several independent angles of one moment tend to be harder to dispute than one clip.
+
+  - Redundancy. If one phone is dropped, taken or runs flat, the others still have the moment. In Witness Crew the folder of each recording is shared with the whole crew as it uploads, so if a phone is taken, the others already have its footage.
+
+## Before: roles and positions
+
+  - One wide phone that stays back and keeps the whole scene in frame. If you only get one clip that matters, it is usually this one.
+
+  - One or two closer phones for detail: what people are doing, what is said, what is held.
+
+  - One phone that watches the edges: where people arrive from, where they leave to, and any vehicles.
+
+  - Agree what nobody does. Nobody crosses a police line or blocks anyone for the shot. Filming does not make you immune from a dispersal order. See filming a dispersal order and how to film police.
+
+  - Agree what happens if someone is stopped. The others keep filming from a safe distance and the footage goes to the person you chose in advance.
+
+## Setting up a Witness crew (iPhone)
+
+This is the order the app itself suggests. Crew is available on iPhone. It is not available on Android yet.
+
+  - One person opens the Crew screen from the people icon on the main screen, types an event name and starts a crew. Everyone adds their name and email so the crew can see who joined and share footage with them.
+
+  - The others scan the code with the iPhone Camera, or open the link the organizer sends. Anyone who has the code or link can join, so share it only with your group.
+
+  - Before you start, keep the Crew screen open near each other for a few seconds so the phones match clocks. Apart, the phones still work; they use their own time, which is usually within a fraction of a second.
+
+  - Connect cloud storage on the home screen first. Each phone uploads to its own Google Drive or Dropbox, and Witness shares each recording's folder with the other members' emails as it uploads. Folders on Nextcloud or a WebDAV server cannot be shared automatically.
+
+  - Record as usual. The phones that are filming show as filming now on the Crew screen of the others.
+
+## During: keep the cover continuous
+
+  - Start before the action and keep going. A phone that stops and restarts creates a gap and a second file.
+
+  - Stagger breaks if someone has to stop, so at least one phone is always running.
+
+  - Keep the phone's sound on. It also helps a later audio sync as a backup to the shared clock. See how to sync videos from multiple phones.
+
+## After: watch, choose, hand over
+
+  - Open the crew in Witness and watch all the angles together on the phone, or export a video of your cut. Witness Crew explains each option.
+
+  - Keep every original in its owner's cloud untouched. The previews and the exported cut are for watching and sharing, not the primary record.
+
+  - Write down who was where and when, while you remember.
+
+  - Give the originals to someone who can use them: a lawyer, a legal-observer group or a news desk. See what to do with protest footage.
+
+## Limits and trade-offs
+
+  - More phones means more people who can be identified, stopped or asked to unlock a phone. Weigh whether a smaller group is safer.
+
+  - Everyone in a crew sees each other's name and email. Use a name you are comfortable sharing with the group.
+
+  - Witness cannot hide the green or orange recording indicator on iPhone, and always records sound.
+
+  - This is general guidance, not legal advice. Rules on filming differ by country; see recording laws.
+
+## How many phones should film an event?
+
+  As many as you can manage safely and no more. Two or three with different jobs, one wide and one or two close, covers most of the value. More phones add coverage and add people at risk.
+
+## How do I make sure the videos line up?
+
+  Put the phones on one clock before you start, or make a loud clap on every phone and sync by audio afterwards. Witness Crew on iPhone matches clocks and stamps every recording with its offset.
+
+## What if one of our phones is taken?
+
+  If it uploaded while recording, most of its footage is already in its owner's cloud. In Witness Crew the recording's folder is also shared with the other members' emails, on Google Drive and Dropbox, so they already have access.
+
+## Do all members need the same app?
+
+  For Crew, yes: each member needs Witness on iPhone. Videos from any other phone can still be added to an edit by syncing them by audio.
+
+## Related guides
+
+  - How to sync videos from multiple phones: audio, claps, markers or a shared clock
+
+  - Witness Crew: record an event on several iPhones and watch every angle together
+
+  - Why phone clocks disagree, and how to line up videos anyway
+
+
+Written on 23 November 2026. Menu names in video editors change between versions; check your editor's current help. Crew features are as of Witness 1.1.13 for iPhone.
+
+# Witness Crew: record an event on several iPhones and watch every angle together
+URL: https://witnesscamera.com/witness-crew-record-together
+
+## Witness Crew: record together on several iPhones
+
+One shared clock, every angle in one place, and no Witness server in between.
+
+Crew lets several iPhones film the same event into one shared case. This page explains exactly what it does and what it does not do, in the order you would use it. It is free and is part of Witness 1.1.13 for iPhone. Crew is available on iPhone. It is not available on Android yet. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. A crew is a small group of Witness users who filmed one event. Members join by scanning a code or opening a link, the phones match their clocks, every recording is stamped with its place on the crew's clock, and each recording's folder is shared with the others. Afterwards you can watch every angle in sync, cut between them and export one video, or export multicam timelines for Final Cut Pro, Premiere Pro or DaVinci Resolve. Footage still goes to each member's own cloud; Witness has no server.
+
+## What a crew is
+
+A crew is a name for one event and a list of the phones filming it. The organizer, whoever started it, has the clock the others are measured against. Everyone who joins adds a name and an email so the crew can see who is in and share footage with them. New recordings join the active crew, and you can leave a crew to stop that without losing the recordings already in it.
+
+## Joining
+
+  - Code: the organizer shows a QR code. Others scan it with the iPhone Camera.
+
+  - Link: the organizer sends an invite link, which opens in Witness. If Witness is not installed, the link page offers the App Store.
+
+  - The link does not tell this website anything about the crew. The crew travels in the part of the link after the # sign, which browsers do not send to a server.
+
+  - Anyone who has the code or link can join, so share it only with the people you trust. It contains the key that protects the crew's data.
+
+## How the clocks are matched
+
+Phones on a crew screen near each other find each other over Wi-Fi or Bluetooth, with no internet needed, and compare clocks the way network time works: one phone sends its time, the other answers with its own, and the delay of the round trip is measured and allowed for. A short burst of exchanges is made and the best is kept. Measurements chain back to the organizer, so two members who never met still end up on one timeline. The Crew screen shows how close the match is, in milliseconds. Details are in why phone clocks disagree.
+
+Until a phone has measured its clock against someone, it uses its own time, which the app describes as usually within a fraction of a second. Each recording's manifest records the crew it belonged to, the member and the offset that was applied.
+
+## Staying in step
+
+  - Over the internet: the member list, who is filming now and the list of recordings travel through the app's public iCloud database, sealed with a key that only the crew has. Apple stores encrypted data and Witness has no server to see it. Any iPhone signed in to iCloud can take part, on the free tier too.
+
+  - Nearby: phones with the Crew screen open also swap the same information directly, with no internet. This asks for Local Network permission, and only when the Crew screen is open. Nothing is broadcast during a recording.
+
+  - Freshness: the app checks while the Crew screen is open, and about once a minute while you are recording into a crew, so a new member or recording can take up to a minute to appear.
+
+## Where the footage goes
+
+Not through the crew. Each phone keeps uploading to its own storage as usual. For Google Drive and Dropbox, Witness then shares the folder of each crew recording with the other members' emails, in the same way it does for emergency contacts, and the Crew screen has a button to open it. Folders on Nextcloud or a WebDAV server cannot be shared automatically; the app says so next to those recordings. Members without an email on file do not receive footage.
+
+## Watching every angle
+
+When a crew recording stops, each camera's video is made smaller, sealed with the crew's key and posted through the same iCloud database. Other members' phones fetch the previews they lack while the Crew screen is open. Previews cover up to the first 20 minutes of a recording. The full-quality footage stays in each member's own cloud. The previews are for watching and choosing angles, not for evidence.
+
+The player puts every angle on one timeline: play, scrub, and tap a camera to cut to it at that moment. Playback follows your cuts, and where the camera you chose was not filming, it falls back to one that was. You can set In and Out points to work on part of a long event and zoom the timeline to them.
+
+## Exporting
+
+  - One video: your cut, either the whole timeline or In to Out, rendered as a 16:9, 720p video with the sound of the angle chosen, then shared or saved to Photos. Built from the previews, so it is preview quality. Portrait and landscape clips are fitted whole inside the frame, with black where no one was filming.
+
+  - Multicam timelines: a Final Cut Pro file with one angle per recording, and an older-format XML that Premiere Pro and DaVinci Resolve can import, with one video track per angle. A README lists each angle's start on the crew clock. The files contain no footage: they point at a folder layout of one folder per member, and your editor can relink by file name if your files are somewhere else.
+
+  I have built these timelines to the formats' published structure and placed angles to the nearest frame at 30 frames per second, but I have not opened them in every version of every editor. If an editor will not import one, tell me which and which version.
+
+## What Crew does not do
+
+  - It is not available on Android yet, and every member needs Witness on iPhone.
+
+  - It does not make footage admissible or prove anything by itself. A matched clock is a measurement with a stated margin, not a certificate. For independent time proof see trusted time-stamping.
+
+  - It does not hide the recording indicator or the sound.
+
+  - A crew started before 1.1.12 syncs only nearby until the organizer shows the code or sends the link again.
+
+  - A phone that dies mid-recording stops counting as filming after a few hours.
+
+  - There is no live view of other phones' cameras while recording. Watching happens after a recording stops.
+
+## Is Witness Crew free?
+
+  Yes. Crew is part of the free app. Pro adds capture quality and extras and is not needed for Crew.
+
+## Does Crew use a Witness server?
+
+  No. Witness has no server. The crew's list and previews are encrypted with a key held only by the crew and stored in Apple's iCloud, and each phone uploads footage to its own cloud.
+
+## Can I use Crew on Android?
+
+  Not yet. Crew is available on iPhone.
+
+## Can I edit crew footage in Final Cut Pro, Premiere Pro or DaVinci Resolve?
+
+  Crew exports a Final Cut Pro multicam file and an XML that Premiere Pro and DaVinci Resolve can import, with every angle placed on the crew clock. The files point at your downloaded footage, so you may need to relink by file name.
+
+## How accurate is the sync?
+
+  The Crew screen shows the measured match in milliseconds once phones have compared clocks. Phones that never met a crew member use their own time, usually within a fraction of a second.
+
+## Who can see my name and email?
+
+  Only the members of your crew. They travel inside the crew's code, link and encrypted sync.
+
+## Related guides
+
+  - How to sync videos from multiple phones: audio, claps, markers or a shared clock
+
+  - How to film an event with several phones: a plan for a group
+
+  - Why phone clocks disagree, and how to line up videos anyway
+
+
+Written on 23 November 2026. Menu names in video editors change between versions; check your editor's current help. Crew features are as of Witness 1.1.13 for iPhone.
+
+# Why phone clocks disagree, and how to line up videos anyway
+URL: https://witnesscamera.com/why-phone-clocks-disagree
+
+## Why phone clocks disagree, and what to do about it
+
+How phones get the time, how far off it can be, and how to put several phones on one clock.
+
+When you line up video from two phones, the file timestamps almost never agree. This page explains why, how big the gap can be, and the idea behind comparing two clocks over a short link. It is background for Witness Crew and for anyone syncing footage by hand. Written by the developer of Witness Camera, so read it with that in mind; where another approach is better, it says so.
+
+  Short answer. A phone sets its clock from a network time source, and the process can be off by an unknown amount because the request and the reply may travel for different lengths of time. Two phones can therefore disagree by a fraction of a second or more. You can measure the difference between two phones by sending a time back and forth and removing the round-trip delay; Witness Crew does this and stamps each recording with the result.
+
+## Where a phone gets the time
+
+Most phones set their clock automatically from a network time source, sometimes the mobile carrier and sometimes an internet time server. Android's documentation says it uses the Simple Network Time Protocol, SNTP, over UDP, by default asking Google's public time servers, and that by default it does so about once a day. Android 14 and later can use more than one server. Between checks, the phone's own clock keeps time and can drift. I have not found Apple's published accuracy figures for iPhone, so I will not give one.
+
+## Why the answer can be wrong
+
+SNTP assumes the request takes as long to reach the server as the reply takes to come back. If the two legs differ, the error grows. Android's documentation gives a theoretical worst case of about 2.5 seconds, when all the delay is on one leg. Mobile networks can add uneven delays like this. In normal conditions the error is usually far smaller, but it is not measured for you and not shown to you.
+
+The result is that two phones on different carriers, or one set a day ago and one set a minute ago, can disagree by more than a video frame, which at 30 frames per second is a thirtieth of a second.
+
+## How to compare two clocks directly
+
+Two phones near each other can compare clocks without a server, the same way network time works. This is the method Witness Crew uses:
+
+  - Phone A sends a message with the time it was sent.
+
+  - Phone B records when the message arrived and when it replied, and puts both in the reply.
+
+  - Phone A notes when the reply arrived. The round-trip time, minus the time B spent before replying, is the delay of the trip.
+
+  - B's clock is taken to have read its time at the middle of the trip, which gives an offset between the two clocks, with an error of at most half the delay.
+
+  - Repeat in a quick burst and keep the exchange with the shortest delay, because the shorter the trip, the less room there is for error.
+
+In Witness Crew, each member other than the organizer sends a burst of twelve of these exchanges to each phone it meets (the organizer's clock is the reference and is never measured), discards any answer that took a second or more, and keeps the tightest result. Offsets chain back to the organizer, so two members who never met each other still share one timeline, with the uncertainty of each link added up. The Crew screen shows the resulting match in milliseconds, and each recording's manifest carries the offset and its uncertainty.
+
+## What this means in practice
+
+  - For editing: a measured offset places a clip to within a frame or better when the uncertainty is small, without any audio matching. Audio sync is still a good check. See how to sync videos from multiple phones.
+
+  - For logging: if you note the time by hand, remember it is the phone's time, which may be off.
+
+  - For evidence: a matched clock tells you how two phones relate to each other. It does not prove what time it really was. For that, an independent time-stamp authority signs a hash of the recording's manifest, as in trusted time-stamping with RFC 3161.
+
+## Limits
+
+  - The method needs the phones to be in contact once, nearby, before filming. Without that, Crew uses each phone's own time.
+
+  - It corrects the difference between clocks at that moment. A phone's clock can drift afterwards, so match clocks shortly before filming, not days before.
+
+  - The shortest-delay rule assumes the trip is about equally fast in both directions, which is the same assumption network time makes. A short trip limits how wrong that can be, but does not remove it.
+
+## Why do two phones show different times?
+
+  Each sets its clock from a network time source at different moments and the request and reply can take different times, so the result can be off by an unknown amount. Each clock can also drift between checks.
+
+## How far apart can phone clocks be?
+
+  Usually a fraction of a second, but there is no guarantee. Android's documentation gives a theoretical worst case of about 2.5 seconds for its network time method.
+
+## How can I sync two phones to the same clock?
+
+  Compare them directly by sending a time back and forth, removing the round-trip delay, and applying the difference. Witness Crew does this on iPhone when the Crew screen is open on both phones.
+
+## Does a matched clock prove when something happened?
+
+  No. It shows how two phones relate to each other. Independent time-stamping is what proves a recording existed by a certain time.
+
+## Related guides
+
+  - How to sync videos from multiple phones: audio, claps, markers or a shared clock
+
+  - How to film an event with several phones: a plan for a group
+
+  - Witness Crew: record an event on several iPhones and watch every angle together
+
+
+Written on 23 November 2026. Menu names in video editors change between versions; check your editor's current help. Crew features are as of Witness 1.1.13 for iPhone.

@@ -5,8 +5,36 @@
   <link>https://witnesscamera.com/</link>
   <description>Guides on filming police and ICE, the law around recording, and how Witness Camera works. An independent iOS app for documenting encounters with law enforcement.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 27 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 12:00:00 +0000</lastBuildDate>
   <atom:link href="https://witnesscamera.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Why phone clocks disagree, and how to line up videos anyway</title>
+    <link>https://witnesscamera.com/why-phone-clocks-disagree</link>
+    <guid isPermaLink="true">https://witnesscamera.com/why-phone-clocks-disagree</guid>
+    <description>Phones that show the same minute can differ by seconds. How phone time is set, how large the error can be, how clocks can be compared in a round trip, and what that means for syncing video and for evidence.</description>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Witness Crew: record an event on several iPhones and watch every angle together</title>
+    <link>https://witnesscamera.com/witness-crew-record-together</link>
+    <guid isPermaLink="true">https://witnesscamera.com/witness-crew-record-together</guid>
+    <description>How Witness Crew works on iPhone: joining by code or link, matching clocks, sharing each recording with the crew, watching all angles in sync, cutting an edit and exporting it, and what it does not do.</description>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to film an event with several phones: a plan for a group</title>
+    <link>https://witnesscamera.com/how-to-film-an-event-with-multiple-phones</link>
+    <guid isPermaLink="true">https://witnesscamera.com/how-to-film-an-event-with-multiple-phones</guid>
+    <description>A practical plan for filming a protest, meeting or incident with several phones: who stands where, how to start together, how to keep every angle on one clock and what to do afterwards.</description>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to sync videos from multiple phones: audio, claps, markers or a shared clock</title>
+    <link>https://witnesscamera.com/how-to-sync-videos-from-multiple-phones</link>
+    <guid isPermaLink="true">https://witnesscamera.com/how-to-sync-videos-from-multiple-phones</guid>
+    <description>Four ways to line up video from several phones in one edit, with what Final Cut Pro, Premiere Pro and DaVinci Resolve offer, why clips drift, and how to shoot so syncing is easy.</description>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 +0000</pubDate>
+  </item>
   <item>
     <title>Gen Z protests: how to document them safely with your phone</title>
     <link>https://witnesscamera.com/gen-z-protests-how-to-document-safely</link>
