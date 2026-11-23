@@ -3403,7 +3403,7 @@ This is the default in most editors. The software compares the sound in each cli
 
 ## Method 2: sync by a clap or marker you set yourself
 
-If automatic sync gives up, find one sharp moment that every clip shows, such as the clap, a flash, a door slamming or a car passing, and mark it at the same point in each clip. Final Cut Pro can use the first marker of each clip as the sync point. Frame.io's tutorials describe setting a marker at the same moment in each clip and choosing markers for angle sync in DaVinci Resolve. It takes a minute per clip and always works if the moment is visible or audible in every one.
+If automatic sync gives up, find one sharp moment that every clip shows, such as the clap, a flash, a door slamming or a car passing, and mark it at the same point in each clip. Final Cut Pro can use the first marker of each clip as the sync point. Frame.io's tutorials describe setting a marker at the same moment in each clip and choosing markers for angle sync in DaVinci Resolve. It takes a minute per clip and works whenever the moment is visible or audible in every one.
 
 ## Method 3: sync by timecode
 
