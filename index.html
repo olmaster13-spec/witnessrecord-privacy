@@ -238,6 +238,21 @@
   </div>
 </section>
 
+<section class="film" id="film" aria-label="Watch the film">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Watch the film</p>
+      <h2 class="headline">Witness in 43 seconds.</h2>
+    </div>
+    <div class="film-frame rv">
+      <video id="film-video" controls playsinline preload="none" poster="img/film-poster.webp" width="1920" height="1080">
+        <source src="media/witness-film.mp4" type="video/mp4">
+      </video>
+      <button class="film-play" type="button" aria-label="Play the Witness film"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a.7.7 0 0 0 1.07.6l10.3-6.5a.7.7 0 0 0 0-1.2L9.07 4.9A.7.7 0 0 0 8 5.5z"/></svg><span>Play film</span></button>
+    </div>
+  </div>
+</section>
+
 <section class="tour" id="how">
   <div class="wrap">
     <div class="sec-head rv">
@@ -563,5 +578,10 @@
   </div>
 </footer>
 
+<script>
+(function(){var v=document.getElementById('film-video'),b=document.querySelector('.film-play');if(!v||!b)return;
+b.addEventListener('click',function(){v.play();});
+v.addEventListener('play',function(){b.hidden=true;});})();
+</script>
 </body>
 </html>
