@@ -253,6 +253,34 @@
   </div>
 </section>
 
+<section id="code">
+  <div class="wrap feature">
+    <div class="rv">
+      <p class="eyebrow">Public source code</p>
+      <h2 class="headline">Every line of the app is public</h2>
+      <p>The full source code of Witness Camera for iPhone and Android is published on GitHub. You do not have to take our word that footage goes only to your account, that there is no Witness server, or how the fingerprints and crew encryption work. A developer, a newsroom or a digital-rights group can read it and build it themselves.</p>
+      <p>The code is published for inspection under the PolyForm Strict licence: anyone can read, build and check it, but not republish it as another app. That keeps copycat apps off the stores while leaving nothing hidden.</p>
+      <p><a class="more" href="https://github.com/witness-camera/witness">Read the source on GitHub</a></p>
+    </div>
+    <figure class="feature-media terminal rv d1">
+      <div class="terminal-bar" aria-hidden="true">Check it yourself</div>
+      <div class="terminal-body">
+<div><span class="t-prompt">$</span> <span class="t-cmd">git clone github.com/witness-camera/witness</span></div>
+<div>ios/  android/  LICENSE.md  SECURITY.md</div>
+<div>&nbsp;</div>
+<div><span class="t-prompt">$</span> <span class="t-cmd">grep -rho "https://[a-z.]*api[a-z.]*" ios</span></div>
+<div>https://www.googleapis.com</div>
+<div>https://api.dropboxapi.com</div>
+<div>https://content.dropboxapi.com</div>
+<div class="t-note">only your own cloud. No Witness server</div>
+<div>&nbsp;</div>
+<div><span class="t-prompt">$</span> <span class="t-cmd">./gradlew assembleDebug</span></div>
+<div class="t-ok">BUILD SUCCESSFUL</div>
+      </div>
+    </figure>
+  </div>
+</section>
+
 <section class="tour" id="how">
   <div class="wrap">
     <div class="sec-head rv">
@@ -435,34 +463,6 @@
 <div><span class="t-cmd">    -in timestamp_9F2C.tsr \</span></div>
 <div><span class="t-cmd">    -CAfile tsa-ca.pem</span></div>
 <div class="t-ok">Verification: OK</div>
-      </div>
-    </figure>
-  </div>
-</section>
-
-<section id="code">
-  <div class="wrap feature">
-    <div class="rv">
-      <p class="eyebrow">Public source code</p>
-      <h2 class="headline">Every line of the app is public</h2>
-      <p>The full source code of Witness Camera for iPhone and Android is published on GitHub. You do not have to take our word that footage goes only to your account, that there is no Witness server, or how the fingerprints and crew encryption work. A developer, a newsroom or a digital-rights group can read it and build it themselves.</p>
-      <p>The code is published for inspection under the PolyForm Strict licence: anyone can read, build and check it, but not republish it as another app. That keeps copycat apps off the stores while leaving nothing hidden.</p>
-      <p><a class="more" href="https://github.com/witness-camera/witness">Read the source on GitHub</a></p>
-    </div>
-    <figure class="feature-media terminal rv d1">
-      <div class="terminal-bar" aria-hidden="true">Check it yourself</div>
-      <div class="terminal-body">
-<div><span class="t-prompt">$</span> <span class="t-cmd">git clone github.com/witness-camera/witness</span></div>
-<div>ios/  android/  LICENSE.md  SECURITY.md</div>
-<div>&nbsp;</div>
-<div><span class="t-prompt">$</span> <span class="t-cmd">grep -rho "https://[a-z.]*api[a-z.]*" ios</span></div>
-<div>https://www.googleapis.com</div>
-<div>https://api.dropboxapi.com</div>
-<div>https://content.dropboxapi.com</div>
-<div class="t-note">only your own cloud. No Witness server</div>
-<div>&nbsp;</div>
-<div><span class="t-prompt">$</span> <span class="t-cmd">./gradlew assembleDebug</span></div>
-<div class="t-ok">BUILD SUCCESSFUL</div>
       </div>
     </figure>
   </div>
