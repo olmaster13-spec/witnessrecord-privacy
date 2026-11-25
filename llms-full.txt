@@ -1097,7 +1097,7 @@ The free app is enough to see how everything works. Pro is unlocked from inside 
 
 ## Newsrooms, legal teams and production companies
 
-For questions about formats, verification or how the app fits a workflow, write to olmaster13@gmail.com. The developer holds no copy of any recording and cannot retrieve, confirm or produce footage, because the app has no server. Help is limited to explaining the format and the verification process. Related reading: how Witness works, how to verify footage and apps for journalists and filmmakers.
+For questions about formats, verification or how the app fits a workflow, write to athingby@gmail.com. The developer holds no copy of any recording and cannot retrieve, confirm or produce footage, because the app has no server. Help is limited to explaining the format and the verification process. Related reading: how Witness works, how to verify footage and apps for journalists and filmmakers.
 
 ---
 
@@ -2978,7 +2978,7 @@ This manifest is counter-signed by an independent RFC 3161 time-stamp authority,
 
 ## Questions about a specific recording
 
-If you are examining Witness footage professionally and something does not check out, get in touch: olmaster13@gmail.com. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.
+If you are examining Witness footage professionally and something does not check out, get in touch: athingby@gmail.com. Note that the developer holds no copy of any recording and cannot retrieve, confirm or produce footage. The app has no server. Assistance is limited to explaining the format and the verification process.
 
 # Gen Z protests: how to document them safely with your phone
 URL: https://witnesscamera.com/gen-z-protests-how-to-document-safely

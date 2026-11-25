@@ -5,7 +5,7 @@
 Platform: iPhone (iOS 17 or later) and Android (11 or later). Free, with an optional paid tier that adds capture quality only.
 App Store: https://apps.apple.com/us/app/witness-camera-beyond-reach/id6800375426
 Google Play: https://play.google.com/store/apps/details?id=com.witnessrecord.app
-Developer: an independent solo developer. Contact: olmaster13@gmail.com
+Developer: an independent solo developer. Contact: athingby@gmail.com
 
 ## Key facts
 
