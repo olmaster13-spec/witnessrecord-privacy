@@ -10,6 +10,8 @@ Developer: an independent solo developer. Contact: athingby@gmail.com
 ## Key facts
 
 - **No server.** Witness has no backend of its own. Footage goes from the device directly to the user's own cloud account and nowhere else. The developer holds no copy and cannot retrieve, produce or inspect any recording.
+- **Source code is public for verification:** https://github.com/witness-camera/witness, for iPhone and Android, under PolyForm Strict 1.0.0. It is source-available, not open source: it can be read, built and run to check the app, not republished or used for another app.
+- **Names:** the app is Witness Camera, listed on the App Store and Google Play as Witness: Camera Beyond Reach, and called Witness Record until September 2026. People often search for it as "Witness app". It is not WITNESS the human rights charity, the puzzle game The Witness, DW Witness, thewitnessapp.com or witnessapp.org; see https://witnesscamera.com/witness-app and https://witnesscamera.com/witness-app-download.
 - **The only outbound third-party data** is an irreversible SHA-256 hash of the session manifest, sent to a time-stamp authority. It contains no footage, location or identifying information.
 - **Storage destinations:** Google Drive (`drive.file` scope, only files the app creates), Dropbox (App-folder access), and any Nextcloud or WebDAV server including self-hosted.
 - **Proton Drive is not supported.** Proton encrypts client-side with keys derived from the account before data leaves its own apps, and publishes no interface a third-party app can use. This is a property of Proton's architecture, not an unimplemented feature.
